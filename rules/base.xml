@@ -3273,6 +3273,18 @@
         </variant>
         <variant>
           <configItem>
+            <name>winkeys</name>
+            <description>Czech (QWERTZ, Windows)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>winkeys-qwerty</name>
+            <description>Czech (QWERTY, Windows)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>qwerty-mac</name>
             <description>Czech (QWERTY, Macintosh)</description>
           </configItem>
@@ -3298,18 +3310,6 @@
             <languageList>
               <iso639Id>rus</iso639Id>
             </languageList>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>winkeys</name>
-            <description>Czech (QWERTZ, Windows)</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>winkeys-qwerty</name>
-            <description>Czech (QWERTY, Windows)</description>
           </configItem>
         </variant>
       </variantList>
@@ -5935,30 +5935,6 @@
           <configItem>
             <name>intl</name>
             <description>Turkish (intl., with dead keys)</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>ot</name>
-            <description>Ottoman (Q)</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>otf</name>
-            <description>Ottoman (F)</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>otk</name>
-            <description>Old Turkic</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
-            <name>otkf</name>
-            <description>Old Turkic (F)</description>
           </configItem>
         </variant>
       </variantList>

@@ -650,3 +650,24 @@ xkb_symbols "oldhun_magic_numpad" {
     key <KPSU> {[ KP_Subtract, KP_Subtract,	KP_Subtract, KP_Subtract ]};
     key <KPAD> {[ KP_Add, KP_Add, KP_Add, KP_Add ]};
 };
+
+// English (US layout with Hungarian characters)
+// Hungarian characters are included on right alt layer
+partial alphanumeric_keys
+xkb_symbols "us" {
+    include "us"
+    name[Group1] = "Hungarian (US)";
+
+    key <AD03>  {[ e,            E,          eacute,        Eacute       ]}; // e E é É
+    key <AD05>  {[ t,            T,          udoubleacute,  Udoubleacute ]}; // t T ű Ű
+    key <AD06>  {[ y,            Y,          udiaeresis,    Udiaeresis   ]}; // y Y ü Ü
+    key <AD07>  {[ u,            U,          uacute,        Uacute       ]}; // u U ú Ú
+    key <AD08>  {[ i,            I,          iacute,        Iacute       ]}; // i I í Í
+    key <AD09>  {[ o,            O,          oacute,        Oacute       ]}; // o O ó Ó
+    key <AD10>  {[ p,            P,          odiaeresis,    Odiaeresis   ]}; // p P ö Ö
+    key <AD11>  {[ bracketleft,  braceleft,  odoubleacute,  Odoubleacute ]}; // [ { ő Ő
+
+    key <AC01>  {[ a,            A,          aacute,        Aacute       ]}; // a A á Á
+
+    include "level3(ralt_switch)"
+};

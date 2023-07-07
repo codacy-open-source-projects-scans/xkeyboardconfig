@@ -215,8 +215,8 @@ xkb_symbols "dvorak" {
 // Lower row
     key <LSGT> { [     ccedilla,        Ccedilla,            backslash,              bar ] };
     key <AB01> { [    semicolon,           colon,           0x01000331,       0x0100032D ] };
-    key <AB02> { [            q,               Q,           0x01000259,       0x0100018F ] };
-    key <AB03> { [            j,               J,           0x01000292,       0x010001B7 ] };
+    key <AB02> { [            q,               Q,                schwa,            SCHWA ] };
+    key <AB03> { [            j,               J,                  ezh,              EZH ] };
     key <AB04> { [            k,               K,        guillemotleft,       0x01002039 ] };
     key <AB05> { [            x,               X,             multiply,         division ] };
     key <AB06> { [            b,               B,       guillemotright,       0x0100203A ] };
@@ -294,10 +294,10 @@ xkb_symbols "nativo" {
     key <LSGT> { [    semicolon,           colon,           0x01000331,       0x0100032D ] };
     key <AB01> { [            y,               Y,                  yen,              yen ] };
     key <AB02> { [     ccedilla,        Ccedilla,            backslash,              bar ] };
-    key <AB03> { [            j,               J,           0x01000292,       0x010001B7 ] };
+    key <AB03> { [            j,               J,                  ezh,              EZH ] };
     key <AB04> { [            b,               B,        guillemotleft,       0x01002039 ] };
     key <AB05> { [            k,               K,       guillemotright,       0x0100203A ] };
-    key <AB06> { [            q,               Q,           0x01000259,       0x0100018F ] };
+    key <AB06> { [            q,               Q,                schwa,            SCHWA ] };
     key <AB07> { [            v,               V,   doublelowquotemark,   singlelowquotemark ] };
     key <AB08> { [            g,               G,  leftdoublequotemark,  leftsinglequotemark ] };
     key <AB09> { [            f,               F, rightdoublequotemark, rightsinglequotemark ] };

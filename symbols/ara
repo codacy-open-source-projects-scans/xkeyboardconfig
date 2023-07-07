@@ -261,7 +261,7 @@ xkb_symbols "olpc" {
     //    but these the place of kasra and kasratan which establish themselves in the braces’ former steads.
     //  ‣ The … character on <BKSL> is replaced by |, because OLPC laptops have no <LSGT> key installed where the bar is else placed.
 
-    key <TLDE> {[           grave,      asciitilde, percent, U2030     ]};
+    key <TLDE> {[           grave,      asciitilde, percent, permille  ]};
 
     key <AE01> {[       Arabic_1,          exclam,  1                  ]};
     key <AE02> {[       Arabic_2,              at,  2                  ]};
@@ -344,6 +344,13 @@ xkb_symbols "mac" {
 // Macintosh Arabic QWERTY layout
 // https://github.com/unicode-org/cldr/blob/main/keyboards/osx/ar-t-k0-osx-qwerty.xml
 // LSGT is modified to match TLDE rather than having ^C on all levels
+//
+// NOTE: The original layout has a dead hamza on <BKSL>.
+//
+// TODO: Replace none with dead_hamza. This keysym is being implemented in
+// https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/merge_requests/78
+// and the compose sequences in
+// https://gitlab.freedesktop.org/xorg/lib/libx11/-/merge_requests/218
 
 partial alphanumeric_keys
 xkb_symbols "mac-phonetic" {
@@ -375,7 +382,7 @@ xkb_symbols "mac-phonetic" {
     key <AD10> {[ Arabic_tehmarbuta,            Arabic_teh,         Arabic_shadda,         Arabic_peh ]};
     key <AD11> {[       Arabic_theh,            braceright,          bracketright,         braceright ]};
     key <AD12> {[        Arabic_zah,             braceleft,           bracketleft,          braceleft ]};
-    key <BKSL> {[      Arabic_hamza, Arabic_hamzaunderalef,    Arabic_hamzaonalef, Arabic_maddaonalef ]};
+    key <BKSL> {[              none, Arabic_hamzaunderalef,    Arabic_hamzaonalef, Arabic_maddaonalef ]};
 
     key <AC01> {[       Arabic_alef,    Arabic_maddaonalef,          Arabic_fatha,    Arabic_fathatan ]};
     key <AC02> {[       Arabic_seen,          Arabic_sheen,            Arabic_sad,      Arabic_shadda ]};

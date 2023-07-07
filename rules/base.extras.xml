@@ -294,6 +294,13 @@
             <description>Old Hungarian (for ligatures)</description>
           </configItem>
         </variant>
+        <variant>
+          <configItem popularity="exotic">
+            <name>us</name>
+            <shortDescription>us</shortDescription>
+            <description>Hungarian (US)</description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1518,14 +1525,32 @@
         </variant>
         <variant>
           <configItem popularity="exotic">
+            <name>us</name>
+            <description>Turkish (i and ı swapped)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem popularity="exotic">
             <name>otk</name>
             <description>Old Turkic</description>
           </configItem>
         </variant>
         <variant>
           <configItem popularity="exotic">
-            <name>us</name>
-            <description>Turkish (Turkey, Latin Q, Swap i and ı)</description>
+            <name>otkf</name>
+            <description>Old Turkic (F)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem popularity="exotic">
+            <name>ot</name>
+            <description>Ottoman (Q)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem popularity="exotic">
+            <name>otf</name>
+            <description>Ottoman (F)</description>
           </configItem>
         </variant>
       </variantList>

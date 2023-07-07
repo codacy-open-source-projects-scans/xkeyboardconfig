@@ -159,7 +159,7 @@ xkb_symbols "gillbt" {
     key <AC05>	{[ g,          G,           U0263,        U0194       ]}; // ɣ, Ɣ
     key <AC11>	{[ apostrophe, quotedbl,    U0301,        U0301       ]}; // combining acute
 
-    key <AB01>	{[ z,          Z,           U0292,        U01B7       ]}; // ʒ, Ʒ
+    key <AB01>	{[ z,          Z,           ezh,          EZH         ]}; // ʒ, Ʒ
     key <AB02>	{[ U0269,      U0196,       x,            X           ]}; // ɩ, Ɩ
     key <AB03>	{[ c,          C,           ccedilla,     Ccedilla    ]}; // ç, Ç
 };

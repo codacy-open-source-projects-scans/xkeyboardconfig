@@ -1990,7 +1990,7 @@ xkb_symbols "scn" {
     include "us(intl)"
     name[Group1]="Sicilian (US keyboard)";
 
-    key <AD03> { [      e,       E, U0259,       U018F ] };
+    key <AD03> { [      e,       E, schwa,       SCHWA ] };
     key <AC03> { [      d,       D, U1E0D,       U1E0C ] };
     key <AC04> { [      f,       F, U0111,       U0110 ] };
     key <AC06> { [      h,       H, U1E25,       U1E24 ] };
@@ -2109,7 +2109,7 @@ xkb_symbols "crd" {
   key <AD02> { [         w,           W, U02B7, U02B7 ] };
   key <AE07> { [         7,   ampersand, U0294        ] };
   key <AD01> { [         q,           Q, U221A        ] };
-  key <AB04> { [         v,           V, U0259        ] };
+  key <AB04> { [         v,           V, schwa        ] };
   key <BKSL> { [ backslash,         bar, U026B        ] };
   key <AD03> { [         e,           E, U025B        ] };
   key <AD08> { [         i,           I, U026A        ] };

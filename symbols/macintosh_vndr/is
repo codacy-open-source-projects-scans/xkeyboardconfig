@@ -64,12 +64,12 @@ xkb_symbols "basic" {
 	key <AE02> {	[	2,		quotedbl, 	at,		VoidSymbol	]	};
 	key <AE03> {	[	3,		numbersign, 	U2122,		sterling	]	};
 	key <AE04> {	[	4,		dollar, 	U00A2,		EuroSign	]	};
-	key <AE05> {	[	5,		percent, 	U2030,		infinity	]	};
+	key <AE05> {	[	5,		percent,	permille,	infinity	]	};
 	key <AE06> {	[	6,		ampersand, 	asciicircum,	U2044		]	};
-	key <AE07> {	[	7,		slash, 	backslash,	U00F7		]	};
+	key <AE07> {	[	7,		slash, 		backslash,	U00F7		]	};
 	key <AE08> {	[	8,		parenleft, 	bracketleft,	braceleft	]	};
 	key <AE09> {	[	9,		parenright, 	bracketright,	braceright	]	};
-	key <AE10> {	[	0,		equal, 	U2260,		U2248		]	};
+	key <AE10> {	[	0,		equal,		U2260,		U2248		]	};
 	key <AE11> {	[	odiaeresis,	Odiaeresis, 	oslash,		Oslash		]	};
 	key <AE12> {	[	minus,		underscore, 	endash,		emdash		]	};
 

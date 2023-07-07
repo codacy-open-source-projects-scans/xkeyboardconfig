@@ -123,10 +123,10 @@ xkb_symbols "nativo" {
     key <LSGT> { [ guillemotleft, guillemotright,           0x01002039,       0x0100203A ] };
     key <AB01> { [            y,               Y,                  yen,              yen ] };
     key <AB02> { [     ccedilla,        Ccedilla                                         ] };
-    key <AB03> { [            j,               J,           0x01000292,       0x010001B7 ] };
+    key <AB03> { [            j,               J,                  ezh,              EZH ] };
     key <AB04> { [            b,               B,           apostrophe,         quotedbl ] };
     key <AB05> { [            k,               K,             currency,        brokenbar ] };
-    key <AB06> { [            q,               Q,           0x01000259,       0x0100018F ] };
+    key <AB06> { [            q,               Q,                schwa,            SCHWA ] };
     key <AB07> { [            v,               V,   doublelowquotemark,   singlelowquotemark ] };
     key <AB08> { [            g,               G,  leftdoublequotemark,  leftsinglequotemark ] };
     key <AB09> { [            f,               F, rightdoublequotemark, rightsinglequotemark ] };

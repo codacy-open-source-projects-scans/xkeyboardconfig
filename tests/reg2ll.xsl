@@ -7,6 +7,16 @@
             doctype-system="xkb.dtd"
             indent="no"/>
 
+ <!-- convert the base.xml format's content into a
+   list of layout(variant):"name" lines, e.g.
+      af:"Dari"
+      af(fa-olpc):"Dari (Afghanistan, OLPC)"
+      af(ps-olpc):"Pashto (Afghanistan, OLPC)"
+      af(ps):"Pashto"
+      af(uz-olpc):"Uzbek (Afghanistan, OLPC)"
+      af(uz):"Uzbek (Afghanistan)"
+  -->
+
 <xsl:template match="modelList|optionList|name|description|shortDescription|configItem"/>
 <xsl:strip-space elements="*"/>
 

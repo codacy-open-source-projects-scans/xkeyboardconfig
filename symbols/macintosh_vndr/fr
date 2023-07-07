@@ -68,7 +68,7 @@ xkb_symbols "extended" {
     key <AC08> {	[	  k,	K,		Egrave,			Ediaeresis	]	};
     key <AC09> {	[	  l,	L,		notsign,		bar		]	};
     key <AC10> {	[	  m,	M,		mu,			Oacute		]	};
-    key <AC11> {	[    ugrave,	percent,	Ugrave,			0x1002030	]	};
+    key <AC11> {	[    ugrave,	percent,	Ugrave,			permille	]	};
     key <BKSL> {	[ dead_grave,	sterling,	at,			numbersign	]	};
 
     key <LSGT> {	[	 less,	  greater,	lessthanequal,		greaterthanequal]	};

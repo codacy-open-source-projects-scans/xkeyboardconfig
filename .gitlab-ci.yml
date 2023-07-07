@@ -40,6 +40,7 @@ variables:
 
 
 stages:
+  - sanity
   - prep
   - build
   - dist
@@ -95,6 +96,24 @@ check-merge-request:
       junit: results.xml
   allow_failure: true
   dependencies: []
+
+#
+# Verify that commit messages are as expected
+#
+
+check-commit:
+  extends:
+    - .fdo.ci-fairy
+  stage: sanity
+  script:
+    - ci-fairy -vv check-commits --junit-xml=results.xml
+  except:
+    - master@$FDO_UPSTREAM_REPO
+  variables:
+    GIT_DEPTH: 100
+  artifacts:
+    reports:
+      junit: results.xml
 
 meson_install:
   extends: .meson_build
@@ -222,7 +241,7 @@ match group names to registry:
   needs: ['container-prep']
   stage: test
   script:
-    - "./tests/genLists4Comparison.sh"
+    - "./tests/verify-group-names.sh"
 
 
 # libxkbcommon's xkbcli list prints out YAML-like format, if yq cannot parse it, our
