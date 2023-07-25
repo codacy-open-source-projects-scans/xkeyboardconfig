@@ -181,9 +181,9 @@ xkb_symbols "mac" {
 
 
 partial alphanumeric_keys
-xkb_symbols "mac_intl" { 
+xkb_symbols "mac_intl" {
 
-    include "latin" 
+    include "latin"
 
     name[Group1]="English (UK, Macintosh, intl.)";
 

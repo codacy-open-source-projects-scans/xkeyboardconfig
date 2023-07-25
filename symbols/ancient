@@ -134,7 +134,7 @@ xkb_symbols "uga" {
     key <AB04> {[   U10397,   braceright     ]};  // 𐎗 }
     key <AB05> {[   U1039F,   U2039          ]};  // 𐎟 ‹
     key <AB06> {[ question,   U203A          ]};  // ? ›
-    key <AB07> {[   U002BC,   apostrophe     ]};  // ʼ '
+    key <AB07> {[    U02BC,   apostrophe     ]};  // ʼ '
     key <AB08> {[   U10386,   comma          ]};  // 𐎆 ,
     key <AB09> {[   U10387,   period         ]};  // 𐎇 .
     key <AB10> {[   U10391,   periodcentered ]};  // 𐎑 ·

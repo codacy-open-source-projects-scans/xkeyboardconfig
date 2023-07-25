@@ -2127,8 +2127,8 @@
         </variant>
         <variant>
           <configItem>
-            <name>eeyek</name>
-            <description>Manipuri (Eeyek)</description>
+            <name>mni</name>
+            <description>Manipuri (Meitei)</description>
             <languageList>
               <iso639Id>mni</iso639Id>
             </languageList>
@@ -4670,7 +4670,7 @@
         <variant>
           <configItem>
             <name>ibm</name>
-            <description>Lithuanian (IBM LST 1205-92)</description>
+            <description>Lithuanian (IBM)</description>
           </configItem>
         </variant>
         <variant>

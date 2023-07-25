@@ -190,7 +190,7 @@ xkb_symbols "alt-intl" {
 
   key <AC10> { [  semicolon, colon,	     dead_ogonek,   dead_diaeresis  ] };
   key <AC11> { [ dead_acute, dead_diaeresis, apostrophe,    quotedbl	    ] };
-  
+
   key <AB02> { [	  x, X,              periodcentered, dead_stroke    ] };
   key <AB08> { [      comma, less,	     dead_cedilla,  dead_caron	    ] };
   key <AB09> { [     period, greater,	     dead_abovedot, dead_circumflex ] };
@@ -675,23 +675,16 @@ xkb_symbols "dvorak-mac" {
     include "level3(ralt_switch)"
 };
 
-// phonetic layout for Russian letters on an US keyboard
-// by Ivan Popov <pin@konvalo.org> 2005-07-17
-
-// level3 modifier is a shortcut to the "us" meaning of the keys where
-// we place cyrillic letters, handy for accessing the corresponding
-// punctuation marks.
-// It is important to have access to punctuation marks, and the rest of
-// alphabetical keys are added for being consequent so that the users
-// can expect the level3 modifier to give what the key label shows.
-
+// A phonetic layout for typing Russian on a US keyboard.
+// Originally by Ivan Popov <pin@konvalo.org>, 2005.
+// (The punctuation symbols that are displaced by Cyrillic letters
+// have been put on levels 3 and 4, reachable with AltGr.)
 partial alphanumeric_keys
 xkb_symbols "rus" {
 
     include "us(basic)"
-    name[Group1]= "Russian (US, phonetic)";
 
-key.type[group1]="FOUR_LEVEL_ALPHABETIC";
+    name[Group1]= "Russian (US, phonetic)";
 
     key	<LatA> {	[ Cyrillic_a, Cyrillic_A ]	};
     key	<LatB> {	[ Cyrillic_be, Cyrillic_BE ]	};
@@ -2209,7 +2202,7 @@ xkb_symbols "3l-cros" {
     };
 };
 
-// A 3l variant for emacs users, which maps control to caps lock and (re)maps 
+// A 3l variant for emacs users, which maps control to caps lock and (re)maps
 // tab back to tab.
 partial modifier_keys
 xkb_symbols "3l-emacs" {

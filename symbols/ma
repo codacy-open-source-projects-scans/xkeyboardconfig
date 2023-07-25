@@ -331,14 +331,14 @@ xkb_symbols "tifinagh-alt-phonetic" {
 
 partial alphanumeric_keys
 xkb_symbols "rif" {
-     // Tarifit keyboard (QWERTY varient)   
+     // Tarifit keyboard (QWERTY varient)
      // By Ilyahoo Proshel <ip@ipshel.com> 2021
      // Only "ʷ ɛ ṭ ḍ γ ḥ ẓ ṣ" are supported by Rif Community.
 
     include "us"
 
-    name[Group1]= "Tarifit"; 
-    
+    name[Group1]= "Tarifit";
+
     key <AD02>	{[	w,	W,		U02B7 	]}; // ʷ
     key <AD03>	{[	e,	E,		U025B,		U0190	]}; // e E ɛ Ɛ
     key <AD05>	{[	t,	T,		U1E6D,		U1E6C	]}; // t T ṭ Ṭ
@@ -351,4 +351,3 @@ xkb_symbols "rif" {
 
     include "level3(ralt_switch)"
 };
-

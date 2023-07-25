@@ -356,4 +356,3 @@ xkb_symbols "zgt" {
 
 	include "level3(ralt_switch)"
 };
-

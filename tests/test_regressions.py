@@ -40,7 +40,7 @@ KEYCODE_PATTERN = re.compile(
           [A-Z]         # Start with an upper case letter
           [A-Z0-9]{1,3} # Followed by up to 3 characters
         # Latin aliases
-        | Lat[A-Z]      
+        | Lat[A-Z]
         # Special cases
         | VOL-
         | VOL\+

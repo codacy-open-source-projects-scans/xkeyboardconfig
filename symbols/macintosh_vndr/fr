@@ -3,8 +3,8 @@
 // adapted to the new input layer :
 //        Martin Costabel <costabel@wanadoo.fr> 3-jan-2001
 //////////////////////////////////////////////////////////////////
-// Petites Modification le juillet 2005 par Bin Zhang <bb.zhang@free.fr> : 
-// 1) La ligne 83 : remplacer les deux "VoidSymbol" par oe et OE 
+// Petites Modification le juillet 2005 par Bin Zhang <bb.zhang@free.fr> :
+// 1) La ligne 83 : remplacer les deux "VoidSymbol" par oe et OE
 // 2) La ligne 89 : remplacer "VoidSymbol" par "EuroSign"
 // ( 1) et 2) fonctionnent sous UTF-8, mais pas sous iso-8859-1. )
 // 3) Remplacer la ligne 148 par la ligne 149 pour que la touche Alt_L
@@ -93,7 +93,7 @@ xkb_symbols "extended" {
 xkb_symbols "nodeadkeys" {
 include "macintosh_vndr/fr(extended)"
     name[Group1]= "France - Mac, no dead keys";
-    
+
     key <AE01> {	[   ampersand,	  1,	  	VoidSymbol,	  	acute	]	}; // MISSING: Apple
     key <AD11> {	[asciicircum,diaeresis,ocircumflex, 		Ocircumflex	]	};
     key <BKSL> {	[ grave,	sterling,	at,			numbersign	]	};

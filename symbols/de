@@ -301,7 +301,7 @@ xkb_symbols "ro_nodeadkeys" {
 };
 
 // German Dvorak keymap by Thorsten Staerk (www.staerk.de/thorsten)
-// Have acute and grave as dead keys, tilde and circumflex alive as they are needed 
+// Have acute and grave as dead keys, tilde and circumflex alive as they are needed
 // in many programming languages.
 // to use this keymap, use a 105-key-keyboard and the command setxkbmap -model pc105 -layout dvorak -variant de
 // source: http://www-lehre.informatik.uni-osnabrueck.de/~rfreund/dvorak.php
@@ -628,7 +628,7 @@ xkb_symbols "dsb_qwertz"
 partial alphanumeric_keys
 xkb_symbols "qwerty" {
 
-    // This layout should work exactly as a de with the exception 
+    // This layout should work exactly as a de with the exception
     // of 'Z' and 'Y' keys, which are in the qwerty style (ie. swapped).
     // 2008 by Matej Košík <kosik@fiit.stuba.sk>
 

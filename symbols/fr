@@ -519,12 +519,12 @@ xkb_symbols "bepo_latin9" {
     key <SPCE> { [           space,  nobreakspace,    underscore,   nobreakspace ] }; // ␣ (espace insécable) _ (espace insécable)
 };
 
-// Version 1.1rc2 of the Bépo keyboard layout, 
+// Version 1.1rc2 of the Bépo keyboard layout,
 // normalized by the AFNOR NF Z71‐300 norm.
-// 
+//
 // Layout: https://bepo.fr/wiki/Version_1.1rc2
 // Normalization: https://normalisation.afnor.org/actualites/faq-clavier-francais/
-// 
+//
 // ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────╔═════════╗
 // │ # ¶│ 1 „│ 2 “│ 3 ”│ 4 ⩽│ 5 ⩾║ 6  │ 7 ¬│ 8 ¼│ 9 ½│ 0 ¾│ ° ′│ ` ″║         ║
 // │ $ –│ " —│ « <│ » >│ ( [│ ) ]║ @ ^│ + ±│ - −│ / ÷│ * ×│ = ≠│ % ‰║ <--     ║

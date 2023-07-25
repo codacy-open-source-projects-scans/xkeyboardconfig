@@ -6,7 +6,6 @@
 
 import argparse
 import pathlib
-import os
 from pyparsing import (
     Word,
     Literal,
@@ -120,7 +119,7 @@ class XkbLoader:
             grammar = OneOrMore(section)
             grammar.ignore(cppStyleComment)
             try:
-                result = grammar.parseFile(fd)
+                grammar.parseFile(fd)
             except ParseException as e:
                 raise XkbLoader.XkbParserException(str(e))
 
@@ -153,8 +152,6 @@ def print_section(s, filter_section=None, indent=0):
         # hardcoding "basic" is good enough
         layout, variant = result.layout, result.variant or "basic"
 
-        # include "foo(bar)" means file "foo", section bar
-        includefile = xkb_basedir / layout
         include_sections = XkbLoader.load_symbols(layout)
         for include_section in include_sections:
             print_section(include_section, filter_section=variant, indent=indent + 4)

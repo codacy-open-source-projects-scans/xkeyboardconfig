@@ -138,7 +138,7 @@ xkb_symbols "mac" {
     include "level3(ralt_switch)"
 };
 
-// Used by Georgian people in Italy, 
+// Used by Georgian people in Italy,
 // contributed by Vladimer Sichinava
 partial alphanumeric_keys
 xkb_symbols "geo" {

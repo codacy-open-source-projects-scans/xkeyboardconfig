@@ -139,9 +139,9 @@ xkb_symbols "qwertz" {
 // Polish Dvorak keymaps
 // by Rafal Rzepecki <divide@users.sf.net>
 
-// The base keymap "pl" places Polish quotes on quotemark key and 
-// moves the dead symbols from there to "1/!" key. If you are used to common 
-// dead keys placement, you could use "pl_altquotes"; in this layout 
+// The base keymap "pl" places Polish quotes on quotemark key and
+// moves the dead symbols from there to "1/!" key. If you are used to common
+// dead keys placement, you could use "pl_altquotes"; in this layout
 // dead keys remain in the old place, whereas Polish quotes are placed on the
 // "1/!" key. If you do not use Polish quotes at all, you can use "pl_basic" map.
 
@@ -430,7 +430,7 @@ xkb_symbols "ru_phonetic_dvorak" {
 // EXTRAS:
 
 // A Polish keymap with a comprehensive set of quotes, dashes, and dead accents
-// 
+//
 // See http://marcinwolinski.pl/keyboard/ for a description.
 //
 // ┌────┐

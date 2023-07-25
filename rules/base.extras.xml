@@ -857,7 +857,7 @@
               <iso639Id>neg</iso639Id>
             </languageList>
           </configItem>
-        </variant>        
+        </variant>
         <variant>
           <configItem popularity="exotic">
             <name>winkeys-p</name>

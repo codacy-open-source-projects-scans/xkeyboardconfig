@@ -115,6 +115,20 @@ check-commit:
     reports:
       junit: results.xml
 
+#
+# Format Python code with python-black
+#
+python-black:
+  extends:
+    - .fdo.ci-fairy
+  stage: sanity
+  before_script:
+    - python3 -m venv venv
+    - source venv/bin/activate
+    - pip3 install black
+  script:
+    - black --check --diff .
+
 meson_install:
   extends: .meson_build
   stage: build
@@ -152,7 +166,7 @@ xkbcommon build:
   stage: build
   script:
     # Ensure there are no leftovers
-    - rm -rf xorgproto libxkbcommon 
+    - rm -rf xorgproto libxkbcommon
     # Get latest xorgproto so we definitely have all keysyms
     - git clone --depth=1 https://gitlab.freedesktop.org/xorg/proto/xorgproto
     - export X11_HEADERS_PREFIX="$PWD/xorgproto/"

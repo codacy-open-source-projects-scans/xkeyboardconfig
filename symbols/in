@@ -2290,15 +2290,12 @@ xkb_symbols "guj-kagapa" {
 // ---- END Gujarati KaGaPa ----
 
 
-// Description	: Keymap for Manipuri language (Meetei mayek script)
-// Encoding	: Unicode (http://www.unicode.org)
-// Author	: Santosh Heigrujam <santosh.tomba@gmail.com>
-// Date		: December, 2013
-
+// Layout for the Manipuri language (using "Meetei Mayek", the Meitei script).
+// Originally by: Santosh Heigrujam <santosh.tomba@gmail.com>, 2013.
 partial alphanumeric_keys modifier_keys
-xkb_symbols "eeyek" {
+xkb_symbols "mni" {
 
-    name[Group1]= "Manipuri (Eeyek)";
+    name[Group1]= "Manipuri (Meitei)";
 
     key <TLDE> {	[     grave,	asciitilde	]	};
     key <AE01> {	[	  Uabf1,	exclam		]	};
@@ -2351,8 +2348,6 @@ xkb_symbols "eeyek" {
     key <AB10> {	[     slash,	question	]	};
 
     key <BKSL> {	[ backslash,         bar	]	};
-
-    include "level3(ralt_switch)"
 };
 
 // This layout is developed by Niranjan Tambe in July 2019

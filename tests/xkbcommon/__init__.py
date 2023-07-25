@@ -18,7 +18,6 @@ from ctypes.util import find_library
 from enum import Enum, IntFlag
 from functools import reduce
 from pathlib import Path
-from sys import stdout
 from typing import TYPE_CHECKING, Any, NamedTuple, Optional, TypeAlias
 
 ###############################################################################

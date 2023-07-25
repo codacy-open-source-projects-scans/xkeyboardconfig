@@ -51,7 +51,7 @@ xkb_symbols "azerty"
 	key <AB09> { [ colon, slash, U0323 ] };	// COLON, SLASH, COMBINING DOT BELOW
 	key <AB10> { [ exclam, U00A7 ] };	// EXCLAMATION MARK, SECTION SIGN
 	key <AC01> { [ q, Q, U2014, U2013 ] };	// SMALL LETTER Q, CAPITAL LETTER Q, EM DASH, EN DASH
-	key <AC02> { [ s, S, U201C, U201D ] };	// SMALL LETTER S, CAPITAL LETTER S, LEFT DOUBLE QUOTES, RIGHT DOUBLE QUOTES 
+	key <AC02> { [ s, S, U201C, U201D ] };	// SMALL LETTER S, CAPITAL LETTER S, LEFT DOUBLE QUOTES, RIGHT DOUBLE QUOTES
 	key <AC03> { [ d, D, U0257, U018A ] };	// SMALL LETTER D, CAPITAL LETTER D, SMALL LETTER D WITH HOOK, CAPITAL LETTER D WITH HOOK
 	key <AC04> { [ f, F, U00E6, U00C6 ] };	// SMALL LETTER F, CAPITAL LETTER F, SMALL LIGATURE AE, CAPITAL LIGATURE AE
 	key <AC05> { [ g, G, U02BC, UA78B ] };	// SMALL LETTER G, CAPITAL LETTER G, CURVED GLOTTAL, CAPITAL LETTER GLOTTAL (SALTILLO)
@@ -332,7 +332,7 @@ xkb_symbols "mmuock" {
    key <AD09> { [          o,           O,      Greek_phi,     Greek_PHI ] };
    key <AD10> { [          p,           P,       Greek_pi,      Greek_PI ] };
    key <AD11> { [     oslash,      Oslash,    bracketleft,     braceleft ] };
-   key <AD12> { [Greek_sigma, Greek_SIGMA,   bracketright,    braceright ] }; 
+   key <AD12> { [Greek_sigma, Greek_SIGMA,   bracketright,    braceright ] };
 
    key <AC01> { [          a,           A,          U0303                ] }; // tone 0
    key <AC02> { [          s,           S,          U0304                ] }; // tone 1
