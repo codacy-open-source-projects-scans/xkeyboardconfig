@@ -372,7 +372,7 @@ xkb_symbols "ovd" {
 
     include "se(basic)"
 
-    name[Group1]="Elfdalian (Swedish, with combining ogonek)";
+    name[Group1]="Elfdalian (Sweden, with combining ogonek)";
 
     key <AD12> {[ U0328,  dead_circumflex,  dead_tilde,  dead_caron ]};
 };

@@ -114,8 +114,10 @@ xkb_symbols "std" {
     include "level3(ralt_switch)"
 };
 
-// A weird compromise layout between the old LST 1205-92 standard
-// (also known as IBM layout) and the new LST 1582:2000 standard.
+// Lithuanian keymap based on the old LST 1205-92 standard (also known as IBM layout).
+// https://web.archive.org/web/20060629123341/http://www.kada.lt/litwin/Kbdlta.gif
+// "Programmer mode" is implemented partially: just the symbols that are missing on
+// the first two levels are available via AltGr (instead of via a dead tilde key).
 // Originally by Piter PUNK <piterpk@terra.com.br>, 2006.
 partial alphanumeric_keys modifier_keys
 xkb_symbols "ibm" {

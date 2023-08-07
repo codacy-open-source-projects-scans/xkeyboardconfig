@@ -5350,12 +5350,6 @@
         </variant>
         <variant>
           <configItem>
-            <name>phonetic_fr</name>
-            <description>Russian (phonetic, French)</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
             <name>ab</name>
             <description>Abkhazian (Russia)</description>
             <languageList>

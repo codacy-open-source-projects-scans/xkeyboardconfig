@@ -758,7 +758,7 @@
         <variant>
           <configItem popularity="exotic">
             <name>phonetic_mac</name>
-            <description>Russian (phonetic Macintosh)</description>
+            <description>Russian (phonetic, Macintosh)</description>
           </configItem>
         </variant>
         <variant>
@@ -1468,7 +1468,7 @@
         <variant>
           <configItem popularity="exotic">
             <name>ovd</name>
-            <description>Elfdalian (Swedish, with combining ogonek)</description>
+            <description>Elfdalian (Sweden, with combining ogonek)</description>
             <languageList>
               <iso639Id>ovd</iso639Id>
             </languageList>

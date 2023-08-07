@@ -25,7 +25,7 @@ xkb_symbols "basic" {
     key <AE12>  { [dead_acute, dead_caron,  dead_macron, dead_cedilla ] };
 
     key <AD01>  { [         q,          Q,    backslash,     NoSymbol ] };
-    key <AD02>  { [         w,          W,          bar,     Nosymbol ] };
+    key <AD02>  { [         w,          W,          bar,     NoSymbol ] };
     key <AD03>  { [         e,          E,     EuroSign,     NoSymbol ] };
     key <AD04>  { [         r,          R,     NoSymbol,     NoSymbol ] };
     key <AD05>  { [         t,          T,     NoSymbol,     NoSymbol ] };
@@ -54,7 +54,7 @@ xkb_symbols "basic" {
 
     key <LSGT>  { [ backslash,        bar,        slash,     NoSymbol ] };
     key <AB01>  { [         y,          Y,       degree,     NoSymbol ] };
-    key <AB02>  { [         x,          X,   numbersign,     Nosymbol ] };
+    key <AB02>  { [         x,          X,   numbersign,     NoSymbol ] };
     key <AB03>  { [         c,          C,    ampersand,     NoSymbol ] };
     key <AB04>  { [         v,          V,           at,     NoSymbol ] };
     key <AB05>  { [         b,          B,    braceleft,     NoSymbol ] };
