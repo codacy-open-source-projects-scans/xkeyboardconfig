@@ -1370,6 +1370,7 @@
         <variant>
           <configItem>
             <name>haw</name>
+            <!-- Keyboard indicator for Hawaian layouts -->
             <shortDescription>haw</shortDescription>
             <description>Hawaiian</description>
             <languageList>
@@ -2148,8 +2149,8 @@
         <variant>
           <configItem>
             <name>guj-kagapa</name>
-            <!-- Keyboard indicator for Hindi layouts -->
-            <shortDescription>guj</shortDescription>
+            <!-- Keyboard indicator for Gujarati layouts -->
+            <shortDescription>gu</shortDescription>
             <description>Gujarati (KaGaPa, phonetic)</description>
             <languageList>
               <iso639Id>guj</iso639Id>
@@ -2285,10 +2286,10 @@
         </variant>
         <variant>
            <configItem>
-            <name>olck</name>
-            <!-- Keyboard indicator for Ol Chiki layouts -->
+            <name>sat</name>
+            <!-- Keyboard indicator for Santali layouts -->
             <shortDescription>sat</shortDescription>
-            <description>Ol Chiki</description>
+            <description>Santali (Ol Chiki)</description>
             <languageList>
               <!-- sat-Olck: http://www.ethnologue.com/language/sat -->
               <iso639Id>sat</iso639Id>
@@ -2656,6 +2657,7 @@
     <layout>
       <configItem>
         <name>dz</name>
+        <!-- Keyboard indicator for Kabyle layouts -->
         <shortDescription>kab</shortDescription>
         <description>Berber (Algeria, Latin)</description>
         <countryList>
@@ -2710,6 +2712,7 @@
         <variant>
           <configItem>
             <name>ar</name>
+            <!-- Keyboard indicator for Arabic layouts -->
             <shortDescription>ar</shortDescription>
             <description>Arabic (Algeria)</description>
             <languageList>
@@ -2840,6 +2843,8 @@
         <variant>
           <configItem>
             <name>french</name>
+            <!-- Keyboard indicator for French layouts -->
+            <shortDescription>fr</shortDescription>
             <description>French (Cameroon)</description>
             <languageList>
               <iso639Id>fra</iso639Id>
@@ -2958,10 +2963,10 @@
             </languageList>
           </configItem>
         </variant>
-        <!-- Keyboard Layout for Shan -->
         <variant>
           <configItem>
             <name>shn</name>
+            <!-- Keyboard indicator for Shan layouts -->
             <shortDescription>shn</shortDescription>
             <description>Shan</description>
             <languageList>
@@ -2973,7 +2978,8 @@
         <variant>
           <configItem>
             <name>zgt</name>
-            <shortDescription>zgt</shortDescription>
+            <!-- Keyboard indicator for Shan layouts -->
+            <shortDescription>shn</shortDescription>
             <description>Shan (Zawgyi Tai)</description>
             <languageList>
               <iso639Id>shn</iso639Id>
@@ -2981,11 +2987,11 @@
             </languageList>
           </configItem>
         </variant>
-        <!-- Keyboard Layout for Mon -->
         <variant>
           <configItem>
             <name>mnw</name>
-            <shortDescription>mon</shortDescription>
+            <!-- Keyboard indicator for Mon layouts -->
+            <shortDescription>mnw</shortDescription>
             <description>Mon</description>
             <languageList>
               <iso639Id>mnw</iso639Id>
@@ -2996,7 +3002,8 @@
         <variant>
           <configItem>
             <name>mnw-a1</name>
-            <shortDescription>mon-a1</shortDescription>
+            <!-- Keyboard indicator for Mon layouts -->
+            <shortDescription>mnw</shortDescription>
             <description>Mon (A1)</description>
             <languageList>
               <iso639Id>mnw</iso639Id>
@@ -3181,6 +3188,7 @@
         <variant>
           <configItem>
             <name>ug</name>
+            <!-- Keyboard indicator for Uigur layouts -->
             <shortDescription>ug</shortDescription>
             <description>Uyghur</description>
             <languageList>
@@ -3471,6 +3479,7 @@
         <variant>
           <configItem>
             <name>azb</name>
+            <!-- Keyboard indicator for South Azerbaijani layouts -->
             <shortDescription>azb</shortDescription>
             <description>Azerbaijani (Iran)</description>
             <languageList>
@@ -3527,7 +3536,7 @@
     <layout>
       <configItem>
         <name>iq</name>
-        <!-- Keyboard indicator for Iraqi layouts -->
+        <!-- Keyboard indicator for Arabic layouts -->
         <shortDescription>ar</shortDescription>
         <description>Iraqi</description>
         <countryList>
@@ -3880,6 +3889,7 @@
     <layout>
       <configItem>
         <name>gn</name>
+        <!-- Keyboard indicator for N'Ko layouts -->
         <shortDescription>nqo</shortDescription>
         <description>N'Ko (AZERTY)</description>
         <countryList>
@@ -5825,8 +5835,8 @@
         <variant>
           <configItem>
             <name>us</name>
-            <!-- Keyboard indicator for US layouts -->
-            <shortDescription>us</shortDescription>
+            <!-- Keyboard indicator for Sinhala layouts -->
+            <shortDescription>si</shortDescription>
             <description>Sinhala (US)</description>
           </configItem>
         </variant>
@@ -6315,6 +6325,7 @@
         <variant>
           <configItem>
             <name>ara</name>
+            <!-- Keyboard indicator for Arabic layouts -->
             <shortDescription>ar</shortDescription>
             <description>Arabic (Pakistan)</description>
             <languageList>
@@ -6600,7 +6611,8 @@
     <layout>
       <configItem>
         <name>tg</name>
-        <shortDescription>fr-tg</shortDescription>
+        <!-- Keyboard indicator for French layouts -->
+        <shortDescription>fr</shortDescription>
         <description>French (Togo)</description>
         <countryList>
           <iso3166Id>TG</iso3166Id>
@@ -6811,7 +6823,8 @@
     <layout>
       <configItem>
         <name>md</name>
-        <shortDescription>md</shortDescription>
+        <!-- Keyboard indicator for Moldavian layouts -->
+        <shortDescription>ro</shortDescription>
         <description>Moldavian</description>
         <countryList>
           <iso3166Id>MD</iso3166Id>
@@ -6824,6 +6837,7 @@
         <variant>
           <configItem>
             <name>gag</name>
+            <!-- Keyboard indicator for Gagauz layouts -->
             <shortDescription>gag</shortDescription>
             <description>Gagauz (Moldova)</description>
             <languageList>
@@ -6836,6 +6850,7 @@
     <layout>
       <configItem>
         <name>id</name>
+        <!-- Keyboard indicator for Indonesian layouts -->
         <shortDescription>id</shortDescription>
         <description>Indonesian (Latin)</description>
         <countryList>
@@ -6892,6 +6907,7 @@
     <layout>
       <configItem>
         <name>my</name>
+        <!-- Keyboard indicator for Malay layouts -->
         <shortDescription>ms</shortDescription>
         <description>Malay (Jawi, Arabic Keyboard)</description>
         <countryList>

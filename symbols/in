@@ -9,8 +9,8 @@
 //     - Gujarati
 //     - Kannada
 //     - Malayalam
-//     - Ol Chiki
 //     - Oriya
+//     - Santali
 //     - Tamil
 //     - Telugu
 //     - Urdu
@@ -27,8 +27,7 @@
 //     http://ekushey.org/projects/shadhinota/index.html
 // - Microsoft Windows XP SP2: Indic Language Standards - an Introduction:
 //     http://www.bhashaindia.com/MSProducts/XpSp2/Articles/IndicLanguageStandards.aspx
-// - Ol Chiki:
-//    http://www.unicode.org/L2/L2005/05243r-n2984-ol-chiki.pdf (fig. 9)
+
 
 // Devangari is the default. Kill me if I am wrong:)
 default partial alphanumeric_keys
@@ -879,13 +878,12 @@ xkb_symbols "mal_lalitha" {
 };
 
 
+// Layout for Santali, using the Ol Chiki script.
+// (https://www.unicode.org/L2/L2005/05243r-n2984-ol-chiki.pdf, figure 9)
 partial alphanumeric_keys
-xkb_symbols "olck" {
+xkb_symbols "sat" {
 
-    // Layout for the Ol Chiki script.
-    // http://www.unicode.org/L2/L2005/05243r-n2984-ol-chiki.pdf (figure 9)
-
-    name[Group1]= "Ol Chiki";
+    name[Group1]= "Santali (Ol Chiki)";
 
     key <TLDE>	{[  grave,  U1C7B		]};
     key <AE01>	{[  U1C51,  exclam		]};

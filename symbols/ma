@@ -89,34 +89,34 @@ xkb_symbols "tifinagh-phonetic" {
 
     name[Group1]="Berber (Morocco, Tifinagh phonetic)";
 
-    key <LatA>	{[ U2d30 ]};
-    key <LatZ>	{[ U2d63, U2d65 ]};
-    key <LatE>	{[ U2d3b,   any, U20ac ]};
-    key <LatR>	{[ U2d54, U2d55 ]};
-    key <LatT>	{[ U2d5c, U2d5f ]};
-    key <LatY>	{[ U2d62 ]};
-    key <LatU>	{[ U2d53 ]};
-    key <LatI>	{[ U2d49 ]};
-    key <LatO>	{[ U2d44 ]};
-    key <LatP>	{[ U2d43 ]};
+    key <AD01>	{[ U2d30 ]};
+    key <AD02>	{[ U2d63, U2d65 ]};
+    key <AD03>	{[ U2d3b,   any, U20ac ]};
+    key <AD04>	{[ U2d54, U2d55 ]};
+    key <AD05>	{[ U2d5c, U2d5f ]};
+    key <AD06>	{[ U2d62 ]};
+    key <AD07>	{[ U2d53 ]};
+    key <AD08>	{[ U2d49 ]};
+    key <AD09>	{[ U2d44 ]};
+    key <AD10>	{[ U2d43 ]};
 
-    key <LatQ>	{[ U2d47 ]};
-    key <LatS>	{[ U2d59, U2d5a ]};
-    key <LatD>	{[ U2d37, U2d39 ]};
-    key <LatF>	{[ U2d3c ]};
-    key <LatG>	{[ U2d33 ]};
-    key <LatH>	{[ U2d40 ]};
-    key <LatJ>	{[ U2d4a ]};
-    key <LatK>	{[ U2d3d ]};
-    key <LatL>	{[ U2d4d ]};
-    key <LatM>	{[ U2d4e ]};
+    key <AC01>	{[ U2d47 ]};
+    key <AC02>	{[ U2d59, U2d5a ]};
+    key <AC03>	{[ U2d37, U2d39 ]};
+    key <AC04>	{[ U2d3c ]};
+    key <AC05>	{[ U2d33 ]};
+    key <AC06>	{[ U2d40 ]};
+    key <AC07>	{[ U2d4a ]};
+    key <AC08>	{[ U2d3d ]};
+    key <AC09>	{[ U2d4d ]};
+    key <AC10>	{[ U2d4e ]};
 
-    key <LatW>	{[ U2d61, U2d6f ]};
-    key <LatX>	{[ U2d45 ]};
-    key <LatC>	{[ U2d5b ]};
-    key <LatV>	{[ U2d56 ]};
-    key <LatB>	{[ U2d31 ]};
-    key <LatN>	{[ U2d4f ]};
+    key <AB01>	{[ U2d61, U2d6f ]};
+    key <AB02>	{[ U2d45 ]};
+    key <AB03>	{[ U2d5b ]};
+    key <AB04>	{[ U2d56 ]};
+    key <AB05>	{[ U2d31 ]};
+    key <AB06>	{[ U2d4f ]};
 
     include "level3(ralt_switch)"
 };
@@ -194,34 +194,34 @@ xkb_symbols "tifinagh-extended-phonetic" {
 
     name[Group1]="Berber (Morocco, Tifinagh extended phonetic)";
 
-    key <LatA>	{[ U2d30 ]};
-    key <LatZ>	{[ U2d63, U2d65 ]};
-    key <LatE>	{[ U2d3b,   any, U20ac ]};
-    key <LatR>	{[ U2d54, U2d55 ]};
-    key <LatT>	{[ U2d5c, U2d5f ]};
-    key <LatY>	{[ U2d62 ]};
-    key <LatU>	{[ U2d53 ]};
-    key <LatI>	{[ U2d49 ]};
-    key <LatO>	{[ U2d44 ]};
-    key <LatP>	{[ U2d43 ]};
+    key <AD01>	{[ U2d30 ]};
+    key <AD02>	{[ U2d63, U2d65 ]};
+    key <AD03>	{[ U2d3b,   any, U20ac ]};
+    key <AD04>	{[ U2d54, U2d55 ]};
+    key <AD05>	{[ U2d5c, U2d5f ]};
+    key <AD06>	{[ U2d62 ]};
+    key <AD07>	{[ U2d53 ]};
+    key <AD08>	{[ U2d49 ]};
+    key <AD09>	{[ U2d44 ]};
+    key <AD10>	{[ U2d43 ]};
 
-    key <LatQ>	{[ U2d47 ]};
-    key <LatS>	{[ U2d59, U2d5a ]};
-    key <LatD>	{[ U2d37, U2d39 ]};
-    key <LatF>	{[ U2d3c ]};
-    key <LatG>	{[ U2d33 ]};
-    key <LatH>	{[ U2d40 ]};
-    key <LatJ>	{[ U2d4a ]};
-    key <LatK>	{[ U2d3d ]};
-    key <LatL>	{[ U2d4d ]};
-    key <LatM>	{[ U2d4e ]};
+    key <AC01>	{[ U2d47 ]};
+    key <AC02>	{[ U2d59, U2d5a ]};
+    key <AC03>	{[ U2d37, U2d39 ]};
+    key <AC04>	{[ U2d3c ]};
+    key <AC05>	{[ U2d33 ]};
+    key <AC06>	{[ U2d40 ]};
+    key <AC07>	{[ U2d4a ]};
+    key <AC08>	{[ U2d3d ]};
+    key <AC09>	{[ U2d4d ]};
+    key <AC10>	{[ U2d4e ]};
 
-    key <LatW>	{[ U2d61 ]};
-    key <LatX>	{[ U2d45 ]};
-    key <LatC>	{[ U2d5b ]};
-    key <LatV>	{[ U2d56 ]};
-    key <LatB>	{[ U2d31 ]};
-    key <LatN>	{[ U2d4f ]};
+    key <AB01>	{[ U2d61 ]};
+    key <AB02>	{[ U2d45 ]};
+    key <AB03>	{[ U2d5b ]};
+    key <AB04>	{[ U2d56 ]};
+    key <AB05>	{[ U2d31 ]};
+    key <AB06>	{[ U2d4f ]};
 
     include "level3(ralt_switch)"
 };
@@ -296,34 +296,34 @@ xkb_symbols "tifinagh-alt-phonetic" {
 
     name[Group1]="Berber (Morocco, Tifinagh phonetic, alt.)";
 
-    key <LatA>	{[ U2d30 ]};
-    key <LatZ>	{[ U2d63, U2d65, U2d64 ]};
-    key <LatE>	{[ U2d3b ]};
-    key <LatR>	{[ U2d54, U2d55 ]};
-    key <LatT>	{[ U2d5c, U2d5f, U2d5d ]};
-    key <LatY>	{[ U2d62 ]};
-    key <LatU>	{[ U2d53 ]};
-    key <LatI>	{[ U2d49 ]};
-    key <LatO>	{[ U2d44 ]};
-    key <LatP>	{[ U2d43, U2d52 ]};
+    key <AD01>	{[ U2d30 ]};
+    key <AD02>	{[ U2d63, U2d65, U2d64 ]};
+    key <AD03>	{[ U2d3b ]};
+    key <AD04>	{[ U2d54, U2d55 ]};
+    key <AD05>	{[ U2d5c, U2d5f, U2d5d ]};
+    key <AD06>	{[ U2d62 ]};
+    key <AD07>	{[ U2d53 ]};
+    key <AD08>	{[ U2d49 ]};
+    key <AD09>	{[ U2d44 ]};
+    key <AD10>	{[ U2d43, U2d52 ]};
 
-    key <LatQ>	{[ U2d47, U2d48 ]};
-    key <LatS>	{[ U2d59, U2d5a ]};
-    key <LatD>	{[ U2d37, U2d39, U2d38, U2d3a ]};
-    key <LatF>	{[ U2d3c ]};
-    key <LatG>	{[ U2d33, U2d36, U2d34, U2d35 ]};
-    key <LatH>	{[ U2d40, U2d42, U2d41 ]};
-    key <LatJ>	{[ U2d4a, U2d4c, U2d4b ]};
-    key <LatK>	{[ U2d3d, U2d3e, U2d3f ]};
-    key <LatL>	{[ U2d4d ]};
-    key <LatM>	{[ U2d4e ]};
+    key <AC01>	{[ U2d47, U2d48 ]};
+    key <AC02>	{[ U2d59, U2d5a ]};
+    key <AC03>	{[ U2d37, U2d39, U2d38, U2d3a ]};
+    key <AC04>	{[ U2d3c ]};
+    key <AC05>	{[ U2d33, U2d36, U2d34, U2d35 ]};
+    key <AC06>	{[ U2d40, U2d42, U2d41 ]};
+    key <AC07>	{[ U2d4a, U2d4c, U2d4b ]};
+    key <AC08>	{[ U2d3d, U2d3e, U2d3f ]};
+    key <AC09>	{[ U2d4d ]};
+    key <AC10>	{[ U2d4e ]};
 
-    key <LatW>	{[ U2d61, U2d6f, U2d60 ]};
-    key <LatX>	{[ U2d45, U2d46 ]};
-    key <LatC>	{[ U2d5b, U2d5e ]};
-    key <LatV>	{[ U2d56, U2d57, U2d58 ]};
-    key <LatB>	{[ U2d31, U2d31, U2d32 ]};
-    key <LatN>	{[ U2d4f, U2d50, U2d51 ]};
+    key <AB01>	{[ U2d61, U2d6f, U2d60 ]};
+    key <AB02>	{[ U2d45, U2d46 ]};
+    key <AB03>	{[ U2d5b, U2d5e ]};
+    key <AB04>	{[ U2d56, U2d57, U2d58 ]};
+    key <AB05>	{[ U2d31, U2d31, U2d32 ]};
+    key <AB06>	{[ U2d4f, U2d50, U2d51 ]};
 
     include "level3(ralt_switch)"
 };

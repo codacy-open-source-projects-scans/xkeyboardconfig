@@ -99,15 +99,15 @@ xkb_symbols "phonetic" {
 	// Belarusian i and ў (u-short) instead of щ (shcha). We also
 	// keep originals on level3 just in case.
 	key <AD12> {[ Byelorussian_shortu, Byelorussian_SHORTU, Cyrillic_shcha, Cyrillic_SHCHA ]};
-	key <LatI> {[ Ukrainian_i, Ukrainian_I, Cyrillic_i, Cyrillic_I ]};
+	key <AD08> {[ Ukrainian_i, Ukrainian_I, Cyrillic_i, Cyrillic_I ]};
 
 	// Lets also add level3+u to enable another way to input u-short
-	key <LatU> {[ Cyrillic_u, Cyrillic_U, Byelorussian_shortu, Byelorussian_SHORTU ]};
+	key <AD07> {[ Cyrillic_u, Cyrillic_U, Byelorussian_shortu, Byelorussian_SHORTU ]};
 
 	// Since we already enable level3 lets also do alternative
 	// means for io and hardsign.
-	key <LatE> {[ Cyrillic_ie, Cyrillic_IE, Cyrillic_io, Cyrillic_IO ]};
-	key <LatX> {[ Cyrillic_softsign, Cyrillic_SOFTSIGN, Cyrillic_hardsign, Cyrillic_HARDSIGN ]};
+	key <AD03> {[ Cyrillic_ie, Cyrillic_IE, Cyrillic_io, Cyrillic_IO ]};
+	key <AB02> {[ Cyrillic_softsign, Cyrillic_SOFTSIGN, Cyrillic_hardsign, Cyrillic_HARDSIGN ]};
 
 	include "level3(ralt_switch)"
 };

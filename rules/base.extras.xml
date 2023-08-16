@@ -240,17 +240,6 @@
             </languageList>
           </configItem>
         </variant>
-        <variant>
-          <configItem popularity="exotic">
-            <name>lld</name>
-            <shortDescription>de_lld</shortDescription>
-            <description>German (Ladin)</description>
-            <languageList>
-              <iso639Id>deu</iso639Id>
-              <iso639Id>lld</iso639Id>
-            </languageList>
-          </configItem>
-        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1267,9 +1256,20 @@
           <configItem popularity="exotic">
             <name>lld</name>
             <shortDescription>it_lld</shortDescription>
-            <description>Italian (Ladin)</description>
+            <description>Ladin (Italian keyboard)</description>
             <languageList>
               <iso639Id>ita</iso639Id>
+              <iso639Id>lld</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem popularity="exotic">
+            <name>lldde</name>
+            <shortDescription>de_lld</shortDescription>
+            <description>Ladin (German keyboard)</description>
+            <languageList>
+              <iso639Id>deu</iso639Id>
               <iso639Id>lld</iso639Id>
             </languageList>
           </configItem>
