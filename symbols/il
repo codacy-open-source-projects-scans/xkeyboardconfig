@@ -71,6 +71,29 @@ xkb_symbols "basic" {
     include "level3(ralt_switch)"
 };
 
+// This implements part 2 of the Israeli SI-1452 standard (from 2018).
+// Comma, period, slash, and apostrophe are placed where they are in the
+// basic US layout too.  This means that Taw and Finalzade are moved to
+// the upper row; and Finalnun is moved too, to avoid confusion with its
+// former lefthand neighbor Waw (both being a kind of vertical line).
+partial alphanumeric_keys
+xkb_symbols "si2" {
+
+    include "il(basic)"
+
+    name[Group1]= "Hebrew (SI-1452-2)";
+
+    key <AD01>	{[ hebrew_finalzade	]};
+    key <AD02>	{[ hebrew_finalnun	]};
+    key <AD08>	{[ hebrew_taw		]};
+
+    key <AC11>	{[ apostrophe		]};
+
+    key <AB08>	{[ comma		]};
+    key <AB09>	{[ period		]};
+    key <AB10>	{[ slash		]};
+};
+
 
 // Niqqud on the second level, based on Dekel Tsur's Hebrew mapping for LyX.
 partial alphanumeric_keys

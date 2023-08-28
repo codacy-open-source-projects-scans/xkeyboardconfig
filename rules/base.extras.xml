@@ -245,16 +245,27 @@
     <layout>
       <configItem popularity="exotic">
         <name>eg</name>
-        <shortDescription>cop</shortDescription>
-        <description>Coptic</description>
+        <shortDescription>ar</shortDescription>
+        <description>Arabic (Egypt)</description>
         <countryList>
           <iso3166Id>EG</iso3166Id>
         </countryList>
         <languageList>
-          <iso639Id>cop</iso639Id>
-          <iso639Id>egy</iso639Id>
+          <iso639Id>ara</iso639Id>
         </languageList>
       </configItem>
+      <variantList>
+        <variant>
+          <configItem popularity="exotic">
+            <name>cop</name>
+            <shortDescription>cop</shortDescription>
+            <description>Coptic</description>
+            <languageList>
+              <iso639Id>cop</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
+      </variantList>
     </layout>
     <layout>
       <configItem popularity="exotic">

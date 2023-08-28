@@ -1,9 +1,19 @@
 // Keyboard layouts for Egypt.
 
+default
+xkb_symbols "basic" {
+
+    include "ara(basic)"
+
+    name[Group1]= "Arabic (Egypt)";
+};
+
+
+// EXTRAS:
+
 // Coptic-language layout, based on https://coptic-dictionary.org,
 // with added diacritics.
-default  partial alphanumeric_keys modifier_keys
-xkb_symbols "basic" {
+xkb_symbols "cop" {
 
    name[Group1]= "Coptic";
 

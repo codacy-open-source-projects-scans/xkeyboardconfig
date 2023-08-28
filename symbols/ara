@@ -60,13 +60,6 @@ xkb_symbols "basic" {
     include "level3(ralt_switch)"
 };
 
-// Synonym for the default.
-partial alphanumeric_keys
-xkb_symbols "qwerty" {
-    include "ara(basic)"
-    name[Group1]= "Arabic (QWERTY)";
-};
-
 
 // Replaces the Western numeral signs with Arabic-script digits on the keypad,
 // pushing the Western digits to the third level accessible by the right Alt key.
@@ -115,13 +108,6 @@ xkb_symbols "digits" {
     key <AE10> {[   Arabic_0,      parenleft,  0,         any ]};
 
     include "ara(digits_KP)"
-};
-
-// Synonym for the layout with the Latin-script and Arabic-script digits switched.
-partial alphanumeric_keys
-xkb_symbols "qwerty_digits" {
-    include "ara(digits)"
-    name[Group1]= "Arabic (QWERTY, Eastern Arabic numerals)";
 };
 
 
