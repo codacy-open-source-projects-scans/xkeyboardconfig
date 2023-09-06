@@ -2110,8 +2110,8 @@
         <variant>
           <configItem>
             <name>zawgyi</name>
-            <shortDescription>zg</shortDescription>
-            <description>Burmese Zawgyi</description>
+            <shortDescription>my-zwg</shortDescription>
+            <description>Burmese (Zawgyi)</description>
             <languageList>
               <iso639Id>mya</iso639Id>
             </languageList>
@@ -2137,7 +2137,6 @@
             <description>Mon (A1)</description>
             <languageList>
               <iso639Id>mnw</iso639Id>
-              <iso639Id>eng</iso639Id>
             </languageList>
           </configItem>
         </variant>
@@ -2156,12 +2155,10 @@
         <variant>
           <configItem>
             <name>zgt</name>
-            <!-- Keyboard indicator for Shan layouts -->
-            <shortDescription>shn</shortDescription>
-            <description>Shan (Zawgyi Tai)</description>
+            <shortDescription>shn-zwg</shortDescription>
+            <description>Shan (Zawgyi)</description>
             <languageList>
               <iso639Id>shn</iso639Id>
-              <iso639Id>eng</iso639Id>
             </languageList>
           </configItem>
         </variant>
