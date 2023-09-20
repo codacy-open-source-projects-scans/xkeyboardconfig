@@ -208,6 +208,7 @@ xkb_symbols "dvorak_altquotes" {
 // * English/Polish close quote on AltGr+b (similar location as in
 //   latin(basic) but moved right because AltGr+x is taken for zacute).
 // * Polish open and close quote on AltGr+j.
+// * Ccedilla on AltGr+g
 //
 // Those rules overwrite only the following rules from us(dvp):
 // * ccedilla on AltGr+c
@@ -226,6 +227,7 @@ xkb_symbols "dvp" {
     key <AE01> { [ ampersand,    percent,        doublelowquotemark, rightdoublequotemark ] };
 
     // upper row, right side
+    key <AD07> { [ g,            G,              ccedilla,        Ccedilla   ] };
     key <AD08> { [ c,            C,              cacute,          Cacute     ] };
     key <AD10> { [ l,            L,              lstroke,         Lstroke    ] };
 
