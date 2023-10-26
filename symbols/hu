@@ -452,6 +452,7 @@ xkb_symbols "def_common" {
 // 2020 - Added ligature-capable layout (with zero-width-joiner), added copyright, copyleft symbols.
 // 2020 - Added ZWNJ key to "Old Hungarian (for ligatures)", changed its ohu_lig id to oldhunlig.
 // Added "oldhun_magic_numpad" for both "Old Hungarian" layouts, as a specialised numpad.
+// 2023, Added decimal comma
 
 // Old Hungarian layout
 partial alphanumeric_keys
@@ -540,7 +541,7 @@ key.type[Group1]="FOUR_LEVEL_ALPHABETIC";
 //Old Hungarian n, N
     key <AB07> {[ U10CD8, U10C98, less ]};
 //Old Hungarian m, M
-    key <AB08> {[ U2E41, U2E2E, U204F ]};
+    key <AB08> {[ U2E41, U2E2E, U204F, comma ]};
 //reversed question mark,reversed semicolon, reversed comma
     key <AB09> {[ period, colon, greater ]};
     key <AB10> {[ minus, underscore, asterisk ]};

@@ -601,13 +601,16 @@ xkb_symbols "mac_nodeadkeys" {
 
     key <TLDE>	{ [ asciicircum,    degree,     notsign       ]	};
     key <AE04>	{ [          4,     dollar,  onequarter,     currency ]	};
+    key <AE06>	{ [          6,  ampersand, bracketright, asciicircum ] };
     key <AE12>	{ [      acute,      grave,     cedilla       ]	};
+    key <AD07>	{ [          u,          U,   diaeresis,       Aacute ] };
     key <AD11>	{ [ udiaeresis, Udiaeresis,   diaeresis       ]	};
     key <AD12>	{ [       plus,   asterisk,  asciitilde,       macron ]	};
     key <AC10>	{ [ odiaeresis, Odiaeresis,       acute       ]	};
     key <AC11>	{ [ adiaeresis, Adiaeresis, asciicircum       ]	};
-
     key <BKSL>	{ [ numbersign, apostrophe, rightsinglequotemark ] };
+
+    key <AB06>	{ [          n,          N,  asciitilde,        U203A ] };
 };
 
 partial alphanumeric_keys

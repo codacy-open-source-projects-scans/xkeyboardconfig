@@ -331,23 +331,6 @@ xkb_symbols "lldde" {
     key <AD10> {[ p, P, ediaeresis, Ediaeresis ]};
 };
 
-partial alphanumeric_keys
-xkb_symbols "intl" {
-
-    include "it(basic)"
-
-    name[Group1] = "Italian (intl., with dead keys)";
-
-    key <AD03> {[      e,           E,    EuroSign,           schwa ]};
-
-    key <AC03> {[      d,           D,       U1E0D,           U1E0C ]};
-    key <AC04> {[      f,           F,       U0111,           U0110 ]};
-    key <AC06> {[      h,           H,       U1E25,           U1E24 ]};
-    key <AC11> {[ agrave,      degree,  numbersign,           U1D58 ]};
-
-    key <AB02> {[      x,           X,       U03C7,           U03A7 ]};
-};
-
 // Layout for Sicilian, by Cadèmia Siciliana <l10n@cademiasiciliana.org>, 2017.
 partial alphanumeric_keys
 xkb_symbols "scn" {
@@ -355,8 +338,6 @@ xkb_symbols "scn" {
     include "it(basic)"
 
     name[Group1] = "Sicilian";
-
-    key <AE12> {[ iacute, asciicircum,  asciitilde, dead_circumflex ]};
 
     key <AD03> {[      e,           E,    EuroSign,     ecircumflex ]};
     key <AD04> {[      r,           R,  ediaeresis,      Ediaeresis ]};
@@ -369,10 +350,6 @@ xkb_symbols "scn" {
     key <AC03> {[      d,           D,       U1E0D,           U1E0C ]}; // ḍ Ḍ
     key <AC04> {[      f,           F,     dstroke,         Dstroke ]};
     key <AC11> {[ agrave,      degree,  numbersign,           U1D58 ]}; // # ᵘ
-
-    // Pushed ugrave to the third level (replacing the dead_grave),
-    // since it's common to write mixed Sicilian / Italian.
-    key <BKSL> {[ uacute,     section,      ugrave,      dead_breve ]};
 
     key <AB02> {[      x,           X,   Greek_chi,       Greek_CHI ]};
     // The uppercase Ccedilla (Ç) can be reached by using CapsLock.
