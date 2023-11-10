@@ -96,11 +96,6 @@ partial alphanumeric_keys
 };
 
 partial alphanumeric_keys
-	xkb_symbols "qwerty" {
-	include "ara(qwerty)"
-};
-
-partial alphanumeric_keys
 	xkb_symbols "azerty" {
 	include "ara(azerty)"
 };
@@ -108,11 +103,6 @@ partial alphanumeric_keys
 partial alphanumeric_keys
 	xkb_symbols "digits" {
 	include "ara(digits)"
-};
-
-partial alphanumeric_keys
-	xkb_symbols "qwerty_digits" {
-	include "ara(qwerty_digits)"
 };
 
 partial alphanumeric_keys

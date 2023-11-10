@@ -205,7 +205,7 @@ xkb_symbols "alt" {
 
     key <AD03>	{[         e,           E,       EuroSign,          none ]};
     key <AD07>	{[         u,           U,     udiaeresis,    Udiaeresis ]};
-    key <AD08>	{[         i,           I,       idotless,     Iabovedot ]};
+    key <AD08>	{[         i,           I,       idotless,     Iabovedot ], type[group1] = "FOUR_LEVEL_ALPHABETIC" };
     key <AD09>	{[         o,           O,     odiaeresis,    Odiaeresis ]};
     key <AC01>	{[         a,           A,    acircumflex,   Acircumflex ]};
     key <AC02>	{[         s,           S,       scedilla,      Scedilla ]};
@@ -292,7 +292,7 @@ xkb_symbols "intl" {
     key <AD03>	{[         e,          E,        EuroSign,          cent ]};
     key <AD05>	{[         t,          T,           U20BA,          none ]};
     key <AD07>	{[         u,          U,     ucircumflex,   Ucircumflex ]};
-    key <AD08>	{[  idotless,          I,     icircumflex,   Icircumflex ]};
+    key <AD08>	{[  idotless,          I,     icircumflex,   Icircumflex ], type[group1] = "FOUR_LEVEL_ALPHABETIC" };
     key <AD09>	{[         o,          O,     ocircumflex,   Ocircumflex ]};
     key <AD10>	{[         p,          P,            none,          none ]};
     key <AD11>	{[    gbreve,     Gbreve,  dead_diaeresis                ]};

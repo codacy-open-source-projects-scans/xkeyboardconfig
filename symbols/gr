@@ -7,14 +7,17 @@
 
 default  partial alphanumeric_keys
 xkb_symbols "basic" {
+
 	include "gr(simple)"
 
 	name[Group1] = "Greek";
 
-	key <AE01> {[  any,  any,            any,    onesuperior ]};
+	key <TLDE> {[  any,  any,          U2015                 ]}; // ―
+	key <AE01> {[  any,  any,          U2022,    onesuperior ]}; // •
 	key <AE02> {[  any,  any,        onehalf,    twosuperior ]};
 	key <AE03> {[  any,  any,       sterling,  threesuperior ]};
 	key <AE04> {[  any,  any,     onequarter,  threequarters ]};
+	key <AE05> {[  any,  any,       EuroSign,       permille ]};
 	key <AE06> {[  any,  any,          U03F0                 ]}; // ϰ
 	key <AE07> {[  any,  any,          U03D7,          U03CF ]}; // ϗ Ϗ
 	key <AE08> {[  any,  any,          U20AF                 ]}; // ₯
@@ -27,13 +30,16 @@ xkb_symbols "basic" {
 	key <AD06> {[  any,  any,          U03D2,          U03D2 ]}; // ϒ ϒ
 	key <AD07> {[  any,  any,          U03D1,          U03F4 ]}; // ϑ ϴ
 	key <AD08> {[  any,  any,          U037B,          U03FD ]}; // ͻ Ͻ
+	key <AD09> {[  any,  any,          U03D9,          U03D8 ]}; // ϙ Ϙ
 	key <AD10> {[  any,  any,          U03E1,          U03E0 ]}; // ϡ Ϡ
 	key <AD11> {[  any,  any,     dead_tilde,    dead_macron ]};
 	key <AD12> {[  any,  any,      dead_iota,     dead_breve ]};
 
+	key <AC02> {[  any,  any,        section                 ]};
 	key <AC03> {[  any,  any,      downarrow,        uparrow ]};
 	key <AC04> {[  any,  any,          U03D5,      Greek_PHI ]}; // ϕ Φ
 	key <AC05> {[  any,  any,          U03DD,          U03DC ]}; // ϝ Ϝ
+	key <AC06> {[  any,  any,          U03F3,          U037F ]}; // ϳ Ϳ
 	key <AC07> {[  any,  any,          U037C,          U03FE ]}; // ͼ Ͼ
 	key <AC08> {[  any,  any,          U03DF,          U03DE ]}; // ϟ Ϟ
 	key <AC09> {[  any,  any,          U03F2,          U03F9 ]}; // ϲ Ϲ
@@ -47,10 +53,9 @@ xkb_symbols "basic" {
 	key <AB05> {[  any,  any,          U03D0                 ]}; // ϐ
 	key <AB06> {[  any,  any,          U0374,          U0375 ]}; // ʹ ͵
 	key <AB07> {[  any,  any,          U03FB,          U03FA ]}; // ϻ Ϻ
-	key <AB08> {[  any,  any,  guillemotleft                 ]};
+	key <AB08> {[  any,  any,  guillemotleft,       ellipsis ]};
 	key <AB09> {[  any,  any, guillemotright, periodcentered ]};
 
-	include "eurosign(5)"
 	include "eurosign(e)"
 
 	include "level3(ralt_switch)"
@@ -120,60 +125,10 @@ xkb_symbols "simple" {
     include "kpdl(comma)"
 };
 
-
-// Greek - Extended
-// ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━━┓
-// │ ~   │ !   │ @   │ #   │ $   │ %   │ ^   │ &   │ *   │ (   │ )   │ _   │ +   ┃Backspace  ┃
-// │ `   │ 1   │ 2 ² │ 3 ³ │ 4 £ │ 5 € │ 6   │ 7   │ 8   │ 9   │ 0 ° │ - ± │ =   ┃           ┃
-// ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━━━┫
-// ┃       ┃ :   │ Σ   │ Ε   │ Ρ   │ Τ   │ Υ   │ Θ   │ Ι   │ Ο   │ Π   │ {   │ }   ┃Enter    ┃
-// ┃Tab    ┃ ; · │ ς   │ ε € │ ρ ® │ τ   │ υ ¥ │ θ   │ ι   │ ο   │ π   │ [   │ ]   ┃         ┃
-// ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓        ┃
-// ┃Caps    ┃ Α   │ Σ   │ Δ   │ Φ   │ Γ   │ Η   │ Ξ   │ Κ   │ Λ   │ ¨   │ "   │ |   ┃        ┃
-// ┃Lock    ┃ α   │ σ   │ δ   │ φ   │ γ   │ η   │ ξ   │ κ   │ λ   │ ´   │ '   │ \   ┃        ┃
-// ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━━━┫
-// ┃       ┃ »   │ Ζ   │ Χ   │ Ψ   │ Ω   │ Β   │ Ν   │ Μ   │ <   │ >   │ ?   ┃               ┃
-// ┃Shift  ┃ «   │ ζ § │ χ   │ ψ © │ ω   │ β   │ ν   │ μ   │ , « │ . » │ /   ┃Shift          ┃
-// ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴──┲━━┷━━━━┳┷━━━━━┻┳━━━━━━━┳━━━━━━┫
-// ┃       ┃       ┃       ┃                                  ┃       ┃       ┃       ┃      ┃
-// ┃Ctrl   ┃Meta   ┃Alt    ┃              Space               ┃AltGr  ┃Meta   ┃Menu   ┃Ctrl  ┃
-// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹──────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━━━━┛
-
-partial alphanumeric_keys
-xkb_symbols "extended" {
-
-    include "gr(simple)"
-
-    name[Group1] = "Greek (extended)";
-
-    key.type[Group1] = "THREE_LEVEL";
-
-    key <TLDE>	{[  any,  any,          U2015 ]}; // ―
-    key <AE02>	{[  any,  any,    twosuperior ]}; // ²
-    key <AE03>	{[  any,  any,  threesuperior ]}; // ³
-    key <AE04>	{[  any,  any,       sterling ]}; // £
-    key <AE10>	{[  any,  any,         degree ]}; // °
-    key <AE11>	{[  any,  any,      plusminus ]}; // ±
-
-    key <AD01>	{[  any,  any, periodcentered ]}; // ·
-    key <AD04>	{[  any,  any,     registered ]}; // ®
-    key <AD06>	{[  any,  any,            yen ]}; // ¥
-
-    key <AB01>	{[  any,  any,        section ]}; // §
-    key <AB03>	{[  any,  any,      copyright ]}; // ©
-    key <AB08>	{[  any,  any,  guillemotleft ]}; // «
-    key <AB09>	{[  any,  any, guillemotright ]}; // »
-
-    include "eurosign(5)"
-    include "eurosign(e)"
-
-    include "level3(ralt_switch)"
-};
-
 partial alphanumeric_keys
 xkb_symbols "polytonic" {
 
-    include "gr(extended)"
+    include "gr(basic)"
 
     name[Group1] = "Greek (polytonic)";
 
@@ -190,7 +145,7 @@ xkb_symbols "polytonic" {
     key <AC02>	{[ Greek_sigma,  Greek_SIGMA,      U03DB,  U03DA ]}; // ϛ Ϛ (stigmata)
     key <AC04>	{[ Greek_phi,    Greek_PHI,        U03DD,  U03DC ]}; // ϝ Ϝ
     key <AC07>	{[ Greek_xi,     Greek_XI,         U03F3,  U037F ]}; // ϳ Ϳ
-    key <AC08>	{[ Greek_kappa,  Greek_KAPPA,      U03D7,  U03CF ]}; // κ Κ (kai symbol)
+    key <AC08>	{[ Greek_kappa,  Greek_KAPPA,      U03D7,  U03CF ]}; // ϗ Ϗ (kai symbols)
 
     key.type[Group1] = "THREE_LEVEL";
     key <AC10>	{[ dead_acute,   dead_psili                      ]};

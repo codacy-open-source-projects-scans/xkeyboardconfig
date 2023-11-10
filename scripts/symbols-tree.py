@@ -6,6 +6,7 @@
 
 import argparse
 import pathlib
+import dataclasses
 from pyparsing import (
     Word,
     Literal,
@@ -25,12 +26,15 @@ from pyparsing import (
 xkb_basedir = None
 
 
+@dataclasses.dataclass
 class XkbSymbols:
-    def __init__(self, file, name):
-        self.file = file  # Path to the file this section came from
-        self.layout = file.name  # XKb - filename is the layout name
-        self.name = name
-        self.includes = []
+    file: pathlib.Path  # Path to the file this section came from
+    name: str
+    includes: list[str] = dataclasses.field(default_factory=list)
+
+    @property
+    def layout(self) -> str:
+        return self.file.name  # XKb - filename is the layout name
 
     def __str__(self):
         return f"{self.layout}({self.name}): {self.includes}"
@@ -65,7 +69,7 @@ class XkbLoader:
     def load_symbols(cls, file):
         return cls.instance().load_symbols_file(file)
 
-    def load_symbols_file(self, file):
+    def load_symbols_file(self, file) -> list[XkbSymbols]:
         file = self.xkb_basedir / file
         try:
             return self.loaded[file]
@@ -132,7 +136,7 @@ def lit(string):
     return Literal(string).suppress()
 
 
-def print_section(s, filter_section=None, indent=0):
+def print_section(s: XkbSymbols, filter_section: str | None = None, indent=0):
     if filter_section and s.name != filter_section:
         return
 
@@ -157,13 +161,22 @@ def print_section(s, filter_section=None, indent=0):
             print_section(include_section, filter_section=variant, indent=indent + 4)
 
 
-def list_sections(sections, filter_section=None, indent=0):
+def list_sections(sections: list[XkbSymbols], filter_section: str | None = None):
     for section in sections:
         print_section(section, filter_section)
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="XKB symbol tree viewer")
+    parser = argparse.ArgumentParser(
+        description="""
+            XKB symbol tree viewer.
+
+            This tool takes a symbols file and optionally a section in that
+            file and recursively walks the include directives in that section.
+            The resulting tree may be useful for checking which files
+            are affected when a single section is modified.
+            """
+    )
     parser.add_argument(
         "file",
         metavar="file-or-directory",
@@ -186,9 +199,12 @@ if __name__ == "__main__":
 
     XkbLoader.create(xkb_basedir)
 
-    for file in files:
-        try:
-            sections = XkbLoader.load_symbols(file.resolve())
-            list_sections(sections, filter_section=ns.section)
-        except XkbLoader.XkbParserException:
-            pass
+    try:
+        for file in files:
+            try:
+                sections = XkbLoader.load_symbols(file.resolve())
+                list_sections(sections, filter_section=ns.section)
+            except XkbLoader.XkbParserException:
+                pass
+    except KeyboardInterrupt:
+        pass

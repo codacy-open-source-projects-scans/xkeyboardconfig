@@ -297,6 +297,32 @@ xkb_symbols "fur" {
 	include "level3(ralt_switch)"
 };
 
+// Layout for Sicilian, by Cademia Siciliana <l10n@cademiasiciliana.org>, 2023.
+partial alphanumeric_keys
+xkb_symbols "scn" {
+
+    include "it(basic)"
+
+    name[Group1] = "Sicilian";
+
+    key <AD02> {[      w,           W,       schwa,           SCHWA ]}; // ə Ə
+    key <AD03> {[      e,           E,    EuroSign,     ecircumflex ]};
+    key <AD04> {[      r,           R,  ediaeresis,      Ediaeresis ]};
+    key <AD07> {[      u,           U, ucircumflex,     Ucircumflex ]};
+    key <AD08> {[      i,           I, icircumflex,     Icircumflex ]};
+    key <AD09> {[      o,           O, ocircumflex,     Ocircumflex ]};
+
+    key <AC01> {[      a,           A, acircumflex,     Acircumflex ]};
+    key <AC02> {[      s,           S,      scaron,          Scaron ]};
+    key <AC03> {[      d,           D,       U1E0D,           U1E0C ]}; // ḍ Ḍ
+    key <AC04> {[      f,           F,     dstroke,         Dstroke ]};
+    key <AC11> {[ agrave,      degree,  numbersign,           U1D58 ]}; // # ᵘ
+
+    key <AB02> {[      x,           X,   Greek_chi,       Greek_CHI ]};
+    // The uppercase Ccedilla (Ç) can be reached by using CapsLock.
+    key <AB03> {[      c,           C,    ccedilla,       copyright ]};
+};
+
 
 // EXTRAS:
 
@@ -329,31 +355,6 @@ xkb_symbols "lldde" {
     name[Group1] = "Ladin (German keyboard)";
 
     key <AD10> {[ p, P, ediaeresis, Ediaeresis ]};
-};
-
-// Layout for Sicilian, by Cadèmia Siciliana <l10n@cademiasiciliana.org>, 2017.
-partial alphanumeric_keys
-xkb_symbols "scn" {
-
-    include "it(basic)"
-
-    name[Group1] = "Sicilian";
-
-    key <AD03> {[      e,           E,    EuroSign,     ecircumflex ]};
-    key <AD04> {[      r,           R,  ediaeresis,      Ediaeresis ]};
-    key <AD07> {[      u,           U, ucircumflex,     Ucircumflex ]};
-    key <AD08> {[      i,           I, icircumflex,     Icircumflex ]};
-    key <AD09> {[      o,           O, ocircumflex,     Ocircumflex ]};
-
-    key <AC01> {[      a,           A, acircumflex,     Acircumflex ]};
-    key <AC02> {[      s,           S,      scaron,          Scaron ]};
-    key <AC03> {[      d,           D,       U1E0D,           U1E0C ]}; // ḍ Ḍ
-    key <AC04> {[      f,           F,     dstroke,         Dstroke ]};
-    key <AC11> {[ agrave,      degree,  numbersign,           U1D58 ]}; // # ᵘ
-
-    key <AB02> {[      x,           X,   Greek_chi,       Greek_CHI ]};
-    // The uppercase Ccedilla (Ç) can be reached by using CapsLock.
-    key <AB03> {[      c,           C,    ccedilla,       copyright ]};
 };
 
 // Dvorak layout for Italian.

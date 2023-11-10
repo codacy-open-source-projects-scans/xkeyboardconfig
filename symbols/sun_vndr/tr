@@ -114,18 +114,3 @@ partial alphanumeric_keys
 	xkb_symbols "olpc" {
 	include "tr(olpc)"
 };
-
-partial alphanumeric_keys
-	xkb_symbols "crh" {
-	include "tr(crh)"
-};
-
-partial alphanumeric_keys
-	xkb_symbols "crh_f" {
-	include "tr(crh_f)"
-};
-
-partial alphanumeric_keys
-	xkb_symbols "crh_alt" {
-	include "tr(crh_alt)"
-};

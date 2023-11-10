@@ -4002,12 +4002,6 @@
         </variant>
         <variant>
           <configItem>
-            <name>extended</name>
-            <description>Greek (extended)</description>
-          </configItem>
-        </variant>
-        <variant>
-          <configItem>
             <name>nodeadkeys</name>
             <description>Greek (no dead keys)</description>
           </configItem>
