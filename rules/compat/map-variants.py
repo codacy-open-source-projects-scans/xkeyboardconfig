@@ -71,7 +71,11 @@ def write_layout_n(dest, mappings, number, write_header):
         second_layout = (
             str(l2) if l2.variant else "{}%(v[{}])".format(l2.layout, number)
         )
-        dest.write("  *		{}		=	{}+{}{}\n".format(l1, base, second_layout, suffix))
+        dest.write(
+            "  *		{}		=	{}+{}{}\n".format(
+                l1, base, second_layout, suffix
+            )
+        )
 
 
 # mlv_s
@@ -79,13 +83,21 @@ def write_fixed_layout_variant(dest, mappings, write_header):
     if write_header:
         dest.write("! model		layout		variant		=	symbols\n")
     for l1, l2 in mappings:
-        dest.write("  *		{}		{}		=	pc+{}\n".format(l1.layout, l1.variant, l2))
+        dest.write(
+            "  *		{}		{}		=	pc+{}\n".format(
+                l1.layout, l1.variant, l2
+            )
+        )
 
 
 # mlnvn_s
 def write_layout_n_variant_n(dest, mappings, number, write_header):
     if write_header:
-        dest.write("! model		layout[{}]	variant[{}]	=	symbols\n".format(number, number))
+        dest.write(
+            "! model		layout[{}]	variant[{}]	=	symbols\n".format(
+                number, number
+            )
+        )
 
     # symbols is
     #   +layout(variant):2
