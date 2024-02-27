@@ -545,8 +545,6 @@ xkb_symbols "bepo_afnor" {
 
 	name[Group1]= "French (BEPO, AFNOR)";
 
-	include "pc(pc105)"
-
 	key <TLDE> { type[group1] = "FOUR_LEVEL", [ dollar, numbersign, endash, paragraph ] }; // $ # – ¶
 	key <AE01> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ quotedbl, 1, emdash, doublelowquotemark ] }; // " 1 — „
 	key <AE02> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ guillemotleft, 2, less, leftdoublequotemark ] }; // « 2 < “
