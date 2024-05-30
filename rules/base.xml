@@ -7876,6 +7876,12 @@
       </option>
       <option>
         <configItem>
+          <name>scrolllock:mod3</name>
+          <description>Map Scroll Lock to Mod3</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>srvrkeys:none</name>
           <description>Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server</description>
         </configItem>

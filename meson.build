@@ -1,5 +1,5 @@
 project('xkeyboard-config',
-        version: '2.41',
+        version: '2.41.99',
         license: 'MIT/Expat',
         meson_version: '>= 0.54.0')
 
@@ -25,10 +25,27 @@ pkgconfig.generate(
     dataonly: true,
 )
 
-# KcGST only need to be installed as-is
-foreach dir: ['compat', 'geometry', 'keycodes', 'symbols', 'types']
-    install_subdir(dir, install_dir: dir_xkb_base)
+# KcG.T only need to be installed as-is
+foreach dir: ['compat', 'geometry', 'keycodes', 'types']
+    install_subdir(dir,
+                   exclude_files: ['custom'],
+                   install_dir: dir_xkb_base)
 endforeach
+
+# symbols have a few symlinks that we need to skip
+symlinks = [
+    'caps',
+    'esperanto',
+    'grp',
+    'japan',
+    'korean',
+    'lv2',
+    'lv3',
+    'lv5',
+]
+install_subdir('symbols',
+               exclude_files: symlinks,
+               install_dir: dir_xkb_base)
 
 # Rules are a bit more complicated
 subdir('rules')
