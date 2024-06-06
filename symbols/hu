@@ -614,9 +614,12 @@ xkb_symbols "oldhun_sk_sh" {
     name[Group1] = "Old Hungarian (Carpathian Highlands, S as Sh)";
     key.type[Group1] = "FOUR_LEVEL_ALPHABETIC";  
     include "hu(ohu_sk_fullcaps_req)"
+    key.type[Group1] = "FOUR_LEVEL";
     include "hu(ohu_sk_nocaps_req)"
+    key.type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC";
     include "hu(ohu_sk_semicaps_req)"
     include "hu(oldhun_magic_numpad)"
+    key.type[Group1] = "FOUR_LEVEL_ALPHABETIC";
     include "hu(SK_Sh)"  
     include "level3(ralt_switch)"
 
@@ -627,9 +630,12 @@ xkb_symbols "oldhun_sk_sz" {
     name[Group1] = "Old Hungarian (Carpathian Highlands, S as Sz)";
     key.type[Group1] = "FOUR_LEVEL_ALPHABETIC";  
     include "hu(ohu_sk_fullcaps_req)"
+    key.type[Group1] = "FOUR_LEVEL";
     include "hu(ohu_sk_nocaps_req)"
+    key.type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC";
     include "hu(ohu_sk_semicaps_req)"
     include "hu(oldhun_magic_numpad)"
+    key.type[Group1] = "FOUR_LEVEL_ALPHABETIC";
     include "hu(SK_Sz)"  
     include "level3(ralt_switch)"
 };
