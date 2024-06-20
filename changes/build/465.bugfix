@@ -1,0 +1,2 @@
+Relaxed Python version requirement to support ≥ 3.9.
+Improved version detection and corresponding error messages.

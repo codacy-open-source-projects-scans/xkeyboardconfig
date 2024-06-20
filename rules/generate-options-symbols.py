@@ -7,13 +7,19 @@
 
 from __future__ import annotations
 import argparse
-from enum import StrEnum, unique
+from enum import unique
 import sys
 import xml.etree.ElementTree as ET
-
 from typing import Generator, Iterable
 from dataclasses import dataclass
 from pathlib import Path
+
+try:
+    # Available from Python 3.11
+    from enum import StrEnum
+except ImportError:
+    # Fallback to external package
+    from strenum import StrEnum
 
 
 def error(msg):

@@ -53,7 +53,7 @@ xkb_symbols "super" {
 hidden partial modifier_keys
 xkb_symbols "hyper" {
     key <CAPS> { [ Hyper_L ], type[group1] = "ONE_LEVEL" };
-    modifier_map Mod4 { <CAPS> };
+    modifier_map Mod3 { <CAPS> };
 };
 
 hidden partial modifier_keys

@@ -166,6 +166,13 @@
     </model>
     <model>
       <configItem>
+        <name>abnt2</name>
+        <description>Brazilian ABNT2</description>
+        <vendor>Generic</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>brother</name>
         <description>Brother Internet</description>
         <vendor>Brother</vendor>
@@ -677,6 +684,13 @@
     </model>
     <model>
       <configItem>
+        <name>jp106</name>
+        <description>Japanese 106-key</description>
+        <vendor>Generic</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
         <name>flexpro</name>
         <description>Keytronic FlexPro</description>
         <vendor>Keytronic</vendor>
@@ -687,6 +701,13 @@
         <name>kinesis</name>
         <description>Kinesis</description>
         <vendor>Kinesis</vendor>
+      </configItem>
+    </model>
+    <model>
+      <configItem>
+	<name>kr106</name>
+	<description>Korean 106-key</description>
+	<vendor>Generic</vendor>
       </configItem>
     </model>
     <model>

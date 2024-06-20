@@ -1,7 +1,7 @@
 project('xkeyboard-config',
-        version: '2.41.99',
+        version: '2.42',
         license: 'MIT/Expat',
-        meson_version: '>= 0.54.0')
+        meson_version: '>= 0.56.0')
 
 dir_data        = join_paths(get_option('prefix'), get_option('datadir'))
 dir_xkb_base    = join_paths(dir_data, 'X11', 'xkb')
@@ -99,7 +99,7 @@ if enable_pytest
     test('pytest', pytest,
          args: pytest_args,
          env: ['XKB_CONFIG_ROOT=@0@'.format(meson.build_root())],
-         workdir: meson.source_root(),
+         workdir: meson.project_source_root(),
          timeout: 60)
 endif
 
