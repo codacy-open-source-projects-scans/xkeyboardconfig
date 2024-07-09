@@ -485,6 +485,7 @@ default xkb_keycodes "evdev" {
 	<I550> = 550;		// #define KEY_LIGHTS_TOGGLE       542
 	<I568> = 568;		// #define KEY_ALS_TOGGLE          560
 	<I569> = 569;		// #define KEY_ROTATE_LOCK_TOGGLE  561
+	<I570> = 570;		// #define KEY_REFRESH_RATE_TOGGLE 562
 	<I584> = 584;		// #define KEY_BUTTONCONFIG        576
 	<I585> = 585;		// #define KEY_TASKMANAGER         577
 	<I586> = 586;		// #define KEY_JOURNAL             578

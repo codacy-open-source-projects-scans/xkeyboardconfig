@@ -1,6 +1,6 @@
 # vim: set expandtab shiftwidth=2 tabstop=8 textwidth=0:
 
-.templates_sha: &template_sha 007f3e2fe2235328e77d3cd4ce007ab41cd9ce6c # see https://docs.gitlab.com/ee/ci/yaml/#includefile
+.templates_sha: &template_sha b61a03cabbf308e81289f7aaaf0b5a80a34ffb99 # see https://docs.gitlab.com/ee/ci/yaml/#includefile
 
 
 include:
@@ -32,7 +32,7 @@ variables:
 
   # Changing the tag will rebuild the container images. The value is just a
   # string, but we use the date for human benefits.
-  FDO_DISTRIBUTION_TAG: '2024-01-10.0'
+  FDO_DISTRIBUTION_TAG: '2024-06-21.1'
 
   # xkbcommon: needed to share artifacts between jobs
   XKBCOMMON_DIR: 'libxkbcommon'

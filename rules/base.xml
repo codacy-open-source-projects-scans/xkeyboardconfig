@@ -7661,6 +7661,12 @@
       </option>
       <option>
         <configItem>
+          <name>caps:digits_row_independent_lock</name>
+          <description>Shift + Caps locks the digits on the digits row, Caps Lock alone behaves as usual (Azerty layouts)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>caps:none</name>
           <description>Caps Lock is disabled</description>
         </configItem>

@@ -106,3 +106,30 @@ xkb_symbols "digits_row" {
     key <AE09>	{ [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
     key <AE10>	{ [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
 };
+
+// The Shift + Caps Lock combination inverts the first two levels only.
+// Originally designed for layouts with digits on the second level of the
+// digits row (e.g. Azerty layouts).
+// This allows users to have direct access to digits while keeping
+// usual capitalization via Caps Lock.
+hidden partial alphanumeric_keys
+xkb_symbols "digits_row_independent_lock" {
+    key <CAPS> {
+        type[Group1] = "TWO_LEVEL",
+        symbols[Group1] = [ NoSymbol, ISO_Level5_Lock ]
+    };
+
+    key.type[group1] = "FOUR_LEVEL_LOCKABLE_LEVEL2";
+
+    // No symbol defined: we just want to change the key type
+    key <AE01>	{ [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE02>	{ [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE03>	{ [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE04>	{ [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE05>	{ [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE06>	{ [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE07>	{ [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE08>	{ [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE09>	{ [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+    key <AE10>	{ [ NoSymbol, NoSymbol, NoSymbol, NoSymbol ] };
+};
