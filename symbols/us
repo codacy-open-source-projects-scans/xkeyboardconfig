@@ -938,11 +938,11 @@ xkb_symbols "colemak_dh_wide_iso" {
     include "us(colemak_dh_wide)"
     name[Group1]= "English (Colemak-DH Wide ISO)";
 
-    key <AD12> { [ numbersign, asciitilde,    backslash,        bar ] };
+    key <AD12> { [      slash,   question, questiondown, asciitilde ] };
     key <BKSL> { [ apostrophe,   quotedbl,       otilde,     Otilde ] };
 
     key <AB05> { [  backslash,        bar,   asciitilde,  brokenbar ] };
-    key <AB06> { [      slash,   question, questiondown, asciitilde ] };
+    key <AB06> { [ numbersign, asciitilde,    backslash,        bar ] };
 };
 
 // Colemak-DH (ortholinear) symbols for xkb on X.Org Server 7.x

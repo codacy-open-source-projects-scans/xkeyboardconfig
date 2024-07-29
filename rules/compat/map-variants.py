@@ -6,15 +6,16 @@ import sys
 
 
 class Layout(object):
+    PATTERN = re.compile(r"(?P<layout>[^(]+)\((?P<variant>[^)]+)\)")
+
     def __init__(self, layout, variant=None):
-        self.layout = layout
-        self.variant = variant
-        if "(" in layout:
+        if match := self.PATTERN.match(layout):
             assert variant is None
             # parse a layout(variant) string
-            match = re.match(r"([^(]+)\(([^)]+)\)", layout)
-            self.layout = match.groups()[0]
-            self.variant = match.groups()[1]
+            layout = match.group("layout")
+            variant = match.group("variant")
+        self.layout = layout
+        self.variant = variant
 
     def __str__(self):
         if self.variant:
@@ -26,19 +27,21 @@ class Layout(object):
 def read_file(path):
     """Returns a list of two-layout tuples [(layout1, layout2), ...]"""
 
-    # This parses both input files, one with two elements, one with four.
-    pattern = re.compile(r"([^\s]+)\s+([^\s]+)\s*([^\s]*)\s*([^\s]*)")
-
     layouts = []
     for line in open(path):
-        match = re.match(pattern, line.strip())
-        groups = [g for g in match.groups() if g]  # drop empty groups
-        if len(groups) == 2:
+        # Remove optional comment
+        line = line.split("//")[0]
+        # Split on whitespaces
+        groups = tuple(line.split())
+        length = len(groups)
+        if length == 2:
             l1 = Layout(groups[0])
             l2 = Layout(groups[1])
-        else:
+        elif length == 4:
             l1 = Layout(groups[0], groups[1])
             l2 = Layout(groups[2], groups[3])
+        else:
+            raise ValueError(f"Invalid line: {line}")
         layouts.append((l1, l2))
     return layouts
 
@@ -48,6 +51,8 @@ def write_fixed_layout(dest, mappings, write_header):
     if write_header:
         dest.write("! model		layout				=	symbols\n")
     for l1, l2 in mappings:
+        if l1.variant:
+            raise ValueError(f"Unexpected variant: {l1}")
         dest.write("  *		{}			=	pc+{}\n".format(l1, l2))
 
 
@@ -68,6 +73,8 @@ def write_layout_n(dest, mappings, number, write_header):
     suffix = "" if number == 1 else ":{}".format(number)
 
     for l1, l2 in mappings:
+        if l1.variant:
+            raise ValueError(f"Unexpected variant: {l1}")
         second_layout = (
             str(l2) if l2.variant else "{}%(v[{}])".format(l2.layout, number)
         )
@@ -83,6 +90,8 @@ def write_fixed_layout_variant(dest, mappings, write_header):
     if write_header:
         dest.write("! model		layout		variant		=	symbols\n")
     for l1, l2 in mappings:
+        if not l1.variant:
+            raise ValueError(f"Expected variant: {l1}")
         dest.write(
             "  *		{}		{}		=	pc+{}\n".format(
                 l1.layout, l1.variant, l2
@@ -110,6 +119,8 @@ def write_layout_n_variant_n(dest, mappings, number, write_header):
     suffix = "" if number == 1 else ":{}".format(number)
 
     for l1, l2 in mappings:
+        if not l1.variant:
+            raise ValueError(f"Expected variant: {l1}")
         second_layout = (
             str(l2) if l2.variant else "{}%(v[{}])".format(l2.layout, number)
         )

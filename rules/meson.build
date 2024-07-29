@@ -104,7 +104,6 @@ if get_option('compat-rules')
                                '--number=@0@'.format(lvl),
                                '@OUTPUT@',
                                layout_mappings,
-                               variant_mappings,
                            ],
                            output: ml_s_file,
                            install: false)
