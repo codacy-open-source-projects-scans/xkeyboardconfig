@@ -66,6 +66,17 @@ xkb_symbols "numlock" {
     key <CAPS> { [ Num_Lock ], type[group1] = "ONE_LEVEL" };
 };
 
+hidden partial modifier_keys
+xkb_symbols "ctrl_shifted_capslock" {
+    key <CAPS> {
+        type[Group1] = "TWO_LEVEL",
+        symbols[Group1] = [ Control_L, Caps_Lock ],
+	// Explicit actions are preferred over modMap None/Control { Caps_Lock }
+        // because they have no side effect
+        actions[Group1] = [ SetMods(modifiers=Control), LockMods(modifiers=Lock) ]
+    };
+};
+
 // This changes the <CAPS> key to become a Control modifier,
 // but it will still produce the Caps_Lock keysym; this is
 // useful for apps that need to distinguish it from usual

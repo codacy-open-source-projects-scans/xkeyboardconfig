@@ -936,9 +936,11 @@ partial alphanumeric_keys
 	include "sun_vndr/de(sun_type6)"
 };
 
-partial alphanumeric_keys
-xkb_symbols "adnw_base" {
+partial alphanumeric_keys modifier_keys keypad_keys
+xkb_symbols "adnw" {
     include "de(neo_base)"
+
+    name[Group1]= "German (Aus der Neo-Welt)";
 
     key.type[Group1] = "EIGHT_LEVEL_WITH_LEVEL5_LOCK";
     key <AD04> { [ period,                  enfilledcircbullet,      NoSymbol,                U03D1,                   NoSymbol,                NoSymbol,                U21A6,                   NoSymbol                 ] };
@@ -975,14 +977,6 @@ xkb_symbols "adnw_base" {
     key <AB08> { [ w,                       W,                       NoSymbol,                Greek_omega,             NoSymbol,                NoSymbol,                Greek_OMEGA,             NoSymbol                 ] };
     key <AB09> { [ m,                       M,                       NoSymbol,                Greek_mu,                NoSymbol,                NoSymbol,                ifonlyif,                NoSymbol                 ] };
     key <AB10> { [ z,                       Z,                       NoSymbol,                Greek_zeta,              NoSymbol,                NoSymbol,                U2124,                   NoSymbol                 ] };
-};
-
-partial alphanumeric_keys modifier_keys keypad_keys
-xkb_symbols "adnw" {
-
-    include "de(adnw_base)"
-
-    name[Group1]= "German (Aus der Neo-Welt)";
 
     include "shift(both_capslock)"
     include "level3(caps_switch)"
@@ -991,9 +985,11 @@ xkb_symbols "adnw" {
     include "level5(ralt_switch_lock)"
 };
 
-partial alphanumeric_keys
-xkb_symbols "koy_base" {
+partial alphanumeric_keys modifier_keys keypad_keys
+xkb_symbols "koy" {
     include "de(neo_base)"
+
+    name[Group1]= "German (KOY)";
 
     key.type[Group1] = "EIGHT_LEVEL_WITH_LEVEL5_LOCK";
     key <AD02> { [ period,                  enfilledcircbullet,      NoSymbol,                U03D1,                   NoSymbol,                NoSymbol,                U21A6,                   NoSymbol                 ] };
@@ -1030,14 +1026,6 @@ xkb_symbols "koy_base" {
     key <AB08> { [ w,                       W,                       NoSymbol,                Greek_omega,             NoSymbol,                NoSymbol,                Greek_OMEGA,             NoSymbol                 ] };
     key <AB09> { [ m,                       M,                       NoSymbol,                Greek_mu,                NoSymbol,                NoSymbol,                ifonlyif,                NoSymbol                 ] };
     key <AB10> { [ j,                       J,                       NoSymbol,                Greek_theta,             NoSymbol,                NoSymbol,                Greek_THETA,             NoSymbol                 ] };
-};
-
-partial alphanumeric_keys modifier_keys keypad_keys
-xkb_symbols "koy" {
-
-    include "de(koy_base)"
-
-    name[Group1]= "German (KOY)";
 
     include "shift(both_capslock)"
     include "level3(caps_switch)"
@@ -1101,21 +1089,15 @@ xkb_symbols "bone" {
     include "level5(ralt_switch_lock)"
 };
 
-partial alphanumeric_keys
-xkb_symbols "bone_eszett_home_base" {
+partial alphanumeric_keys modifier_keys keypad_keys
+xkb_symbols "bone_eszett_home" {
     include "de(bone_base)"
+
+    name[Group1]= "German (Bone, eszett in the home row)";
 
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC_WITH_LEVEL5_LOCK";
     key <AD11> { [ q,                       Q,                       NoSymbol,                U03D5,                   NoSymbol,                NoSymbol,                U211A,                   NoSymbol                 ] };
     key <AC11> { [ ssharp,                  U1E9E,                   NoSymbol,                Greek_finalsmallsigma,   NoSymbol,                NoSymbol,                jot,                     NoSymbol                 ] };
-};
-
-partial alphanumeric_keys modifier_keys keypad_keys
-xkb_symbols "bone_eszett_home" {
-
-    include "de(bone_eszett_home_base)"
-
-    name[Group1]= "German (Bone, eszett in the home row)";
 
     include "shift(both_capslock)"
     include "level3(caps_switch)"
@@ -1180,21 +1162,15 @@ xkb_symbols "neo_qwertz" {
     include "level5(ralt_switch_lock)"
 };
 
-partial alphanumeric_keys
-xkb_symbols "neo_qwerty_base" {
+partial alphanumeric_keys modifier_keys keypad_keys
+xkb_symbols "neo_qwerty" {
     include "de(neo_qwertz_base)"
+
+    name[Group1]= "German (Neo, QWERTY)";
 
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC_WITH_LEVEL5_LOCK";
     key <AD06> { [ y,                       Y,                       NoSymbol,                Greek_upsilon,           NoSymbol,                NoSymbol,                nabla,                   NoSymbol                 ] };
     key <AB01> { [ z,                       Z,                       NoSymbol,                Greek_zeta,              NoSymbol,                NoSymbol,                U2124,                   NoSymbol                 ] };
-};
-
-partial alphanumeric_keys modifier_keys keypad_keys
-xkb_symbols "neo_qwerty" {
-
-    include "de(neo_qwerty_base)"
-
-    name[Group1]= "German (Neo, QWERTY)";
 
     include "shift(both_capslock)"
     include "level3(caps_switch)"
