@@ -19,7 +19,7 @@ parts = [
     '0009-model_geometry.part',
     '0011-modellayoutvariant_symbols.part',
     '0013-modellayout_symbols.part',
-    '0015-modellayout1_symbols.part',
+    '0016-modellayout1_symbols.part',
     '0018-modellayout2_symbols.part',
     '0020-modellayout3_symbols.part',
     '0022-modellayout4_symbols.part',
@@ -80,7 +80,7 @@ if get_option('compat-rules')
   # each with the level name in the filename
   lvl_ml_s = {
     '0': '0012-ml_s.part',
-    '1': '0014-ml1_s.part',
+    '1': '0015-ml1_s.part',
     '2': '0017-ml2_s.part',
     '3': '0019-ml3_s.part',
     '4': '0021-ml4_s.part',
@@ -88,7 +88,7 @@ if get_option('compat-rules')
 
   lvl_mlv_s = {
     '0': '0010-mlv_s.part',
-    '1': '0016-ml1v1_s.part',
+    '1': '0014-ml1v1_s.part',
     '2': '0023-ml2v2_s.part',
     '3': '0024-ml3v3_s.part',
     '4': '0025-ml4v4_s.part',
@@ -100,7 +100,6 @@ if get_option('compat-rules')
                            build_by_default: true,
                            command: [
                                map_variants_py,
-                               '--want=mls',
                                '--number=@0@'.format(lvl),
                                '@OUTPUT@',
                                layout_mappings,
@@ -114,7 +113,7 @@ if get_option('compat-rules')
                            build_by_default: true,
                            command: [
                                map_variants_py,
-                               '--want=mlvs',
+                               '--has-variant',
                                '--number=@0@'.format(lvl),
                                '@OUTPUT@',
                                variant_mappings,

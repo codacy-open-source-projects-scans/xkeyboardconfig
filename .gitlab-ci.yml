@@ -75,7 +75,7 @@ container-prep:
         tar xf "$BUILDDIR/$TARBALL" -C tarball/ --strip-components=1;
         pushd tarball > /dev/null;
       fi
-    - meson "$BUILDDIR" -Dprefix="$INSTDIR"
+    - meson setup "$BUILDDIR" -Dprefix="$INSTDIR"
     - meson configure "$BUILDDIR"
     - ninja -C "$BUILDDIR"
     - if test x"$NINJA_EXTRA_COMMAND" != "x"; then ninja -C "$BUILDDIR" $NINJA_EXTRA_COMMAND; fi
@@ -349,6 +349,9 @@ keymap_tests:
     - export PYTHONPATH="$PWD/tests:$PYTHONPATH"
     # Run the tests
     - pytest --junitxml=results.xml
+             tests
+             --layout-compat-config rules/compat/layoutsMapping.lst
+             --layout-compat-config rules/compat/variantsMapping.lst
   artifacts:
     reports:
       junit: results.xml

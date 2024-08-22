@@ -32,23 +32,9 @@ foreach dir: ['compat', 'geometry', 'keycodes', 'types']
                    install_dir: dir_xkb_base)
 endforeach
 
-# symbols have a few symlinks that we need to skip
-symlinks = [
-    'caps',
-    'esperanto',
-    'grp',
-    'japan',
-    'korean',
-    'lv2',
-    'lv3',
-    'lv5',
-]
-install_subdir('symbols',
-               exclude_files: symlinks,
-               install_dir: dir_xkb_base)
-
-# Rules are a bit more complicated
+# Rules and symbols are a bit more complicated
 subdir('rules')
+subdir('symbols')
 
 # man page
 xsltproc = find_program('xsltproc', required: false)
@@ -84,6 +70,13 @@ pytest = find_program('pytest-3', 'pytest', required: false)
 enable_pytest = python.found() and pytest.found()
 if enable_pytest
     pytest_args = ['--verbose', '--log-level=DEBUG']
+    if get_option('compat-rules')
+        pytest_args += [
+            'tests',
+            '--layout-compat-config', layout_mappings,
+            '--layout-compat-config', variant_mappings,
+        ]
+    endif
     # use pytest xdist if available, it really speeds up the tests cases
     optional_python_modules = ['xdist']
     if pymod.find_installation('python3', modules: optional_python_modules, required: false).found()
@@ -93,12 +86,17 @@ if enable_pytest
     # copy our data files over to the build directory so we can use the
     # builddir as XKB_CONFIG_ROOT
     foreach dir: ['compat', 'geometry', 'keycodes', 'symbols', 'types']
-        run_command('tests/copydir.sh', dir, check: true)
+        run_command(
+            'tests/copydir.py',
+            dir,
+            dir == 'symbols' ? compat_symbols : [],
+            check: true
+        )
     endforeach
 
     test('pytest', pytest,
          args: pytest_args,
-         env: ['XKB_CONFIG_ROOT=@0@'.format(meson.build_root())],
+         env: ['XKB_CONFIG_ROOT=@0@'.format(meson.project_build_root())],
          workdir: meson.project_source_root(),
          timeout: 60)
 endif

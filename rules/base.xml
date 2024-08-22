@@ -8308,6 +8308,18 @@
     </group>
     <group allowMultipleSelection="true">
       <configItem>
+        <name>fkeys</name>
+        <description>Function keys</description>
+      </configItem>
+      <option>
+        <configItem>
+          <name>fkeys:basic_13-24</name>
+          <description>Use F13-F24 as usual function keys</description>
+        </configItem>
+      </option>
+    </group>
+    <group allowMultipleSelection="true">
+      <configItem>
         <name>custom</name>
         <description>Miscellaneous options</description>
       </configItem>

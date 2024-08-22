@@ -13,6 +13,7 @@ from ctypes import (
     c_uint32,
     cdll,
     create_string_buffer,
+    string_at,
 )
 from ctypes.util import find_library
 from enum import Enum, IntFlag
@@ -23,6 +24,15 @@ from typing import TYPE_CHECKING, Any, NamedTuple, Optional, TypeAlias
 ###############################################################################
 # Types
 ###############################################################################
+
+
+class allocated_c_char_p(c_char_p):
+    """
+    This class is used in place of c_char_p when we need to free it manually.
+    Python would convert c_char_p to a bytes string and we would not be able to free it.
+    """
+
+    pass
 
 
 class xkb_context(Structure):
@@ -144,6 +154,10 @@ xkbcommon.xkb_keymap_new_from_names.restype = POINTER(xkb_keymap)
 xkbcommon.xkb_keymap_key_by_name.argtypes = [POINTER(xkb_keymap), c_char_p]
 xkbcommon.xkb_keymap_key_by_name.restype = xkb_keycode_t
 
+xkbcommon.xkb_keymap_get_as_string.argtypes = [POINTER(xkb_keymap), xkb_keymap_format]
+# Note: should be c_char_p; see comment in the definiton of allocated_c_char_p.
+xkbcommon.xkb_keymap_get_as_string.restype = allocated_c_char_p
+
 xkbcommon.xkb_state_new.argtypes = [POINTER(xkb_keymap)]
 xkbcommon.xkb_state_new.restype = POINTER(xkb_state)
 
@@ -190,6 +204,11 @@ xkbcommon.xkb_keymap_num_leds.restype = xkb_led_index_t
 xkbcommon.xkb_state_led_index_is_active.argtypes = [POINTER(xkb_state), xkb_led_index_t]
 xkbcommon.xkb_state_led_index_is_active.restype = c_int
 
+if libc_path := find_library("c"):
+    libc = cdll.LoadLibrary(libc_path)
+else:
+    raise ValueError("Cannot import libc")
+
 
 def load_keymap(
     xkb_config_root: Path,
@@ -228,6 +247,13 @@ def load_keymap(
 
 def unref_keymap(keymap: xkb_keymap_p) -> None:
     xkbcommon.xkb_keymap_unref(keymap)
+
+
+def keymap_as_string(keymap: xkb_keymap_p) -> str:
+    p = xkbcommon.xkb_keymap_get_as_string(keymap, XKB_KEYMAP_FORMAT_TEXT_V1)
+    s = string_at(p).decode("utf-8")
+    libc.free(p)
+    return s
 
 
 def new_state(keymap: xkb_keymap_p) -> xkb_state_p:
@@ -422,6 +448,25 @@ class ForeignKeymap:
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         unref_keymap(self._keymap)
+
+    def check(self) -> bool:
+        """
+        Test if keymap compiles with corresponding RMLVO config.
+        """
+        try:
+            with self:
+                return bool(self._keymap)
+        except ValueError:
+            return False
+
+    def as_string(self) -> str:
+        try:
+            with self as keymap:
+                if not bool(keymap):
+                    return ""
+                return keymap_as_string(keymap)
+        except ValueError:
+            return ""
 
 
 class State:
