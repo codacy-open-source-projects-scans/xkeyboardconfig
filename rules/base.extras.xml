@@ -902,6 +902,16 @@
             </languageList>
           </configItem>
         </variant>
+        <variant>
+          <configItem popularity="exotic">
+            <name>diktor</name>
+            <shortDescription>diktor</shortDescription>
+            <description>Russian (Diktor)</description>
+            <languageList>
+              <iso639Id>rus</iso639Id>
+            </languageList>
+          </configItem>
+        </variant> 
       </variantList>
     </layout>
     <layout>
