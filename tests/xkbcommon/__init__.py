@@ -2,6 +2,7 @@
 
 import os
 from ctypes import (
+    CFUNCTYPE,
     POINTER,
     Structure,
     _Pointer,
@@ -11,15 +12,17 @@ from ctypes import (
     c_int,
     c_size_t,
     c_uint32,
+    c_void_p,
     cdll,
     create_string_buffer,
     string_at,
 )
 from ctypes.util import find_library
+from dataclasses import dataclass
 from enum import Enum, IntFlag
-from functools import reduce
+from functools import partial, reduce
 from pathlib import Path
-from typing import TYPE_CHECKING, Any, NamedTuple, Optional, TypeAlias
+from typing import TYPE_CHECKING, NamedTuple, Optional, TypeAlias
 
 ###############################################################################
 # Types
@@ -70,10 +73,10 @@ if TYPE_CHECKING:
     xkb_keymap_p: TypeAlias = _Pointer[xkb_keymap]
     xkb_state_p = _Pointer[xkb_state]
 else:
-    xkb_context_p = Any
-    xkb_rule_names_p = Any
-    xkb_keymap_p = Any
-    xkb_state_p = Any
+    xkb_context_p = POINTER(xkb_context)
+    xkb_rule_names_p = POINTER(xkb_rule_names)
+    xkb_keymap_p = POINTER(xkb_keymap)
+    xkb_state_p = POINTER(xkb_state)
 xkb_context_flags = c_int
 xkb_keymap_compile_flags = c_int
 xkb_keymap_format = c_int
@@ -85,6 +88,9 @@ xkb_level_index_t = c_uint32
 xkb_layout_index_t = c_uint32
 xkb_state_component = c_int
 xkb_consumed_mode = c_int
+xkb_keysym_flags = c_int
+
+xkb_keymap_key_iter_t = CFUNCTYPE(None, xkb_keymap_p, xkb_keycode_t, c_void_p)
 
 
 ###############################################################################
@@ -98,6 +104,7 @@ XKB_KEYCODE_INVALID = 0xFFFFFFFF
 XKB_STATE_MODS_EFFECTIVE = 1 << 3
 XKB_CONSUMED_MODE_XKB = 0
 XKB_KEYMAP_FORMAT_TEXT_V1 = 1
+XKB_KEYSYM_NO_FLAGS = 0
 
 
 class ModifierMask(IntFlag):
@@ -141,6 +148,9 @@ else:
     else:
         raise OSError("Cannot load libxbcommon")
 
+xkbcommon.xkb_keysym_from_name.argtypes = [c_char_p, xkb_keysym_flags]
+xkbcommon.xkb_keysym_from_name.restype = xkb_keysym_t
+
 xkbcommon.xkb_context_new.argtypes = [xkb_context_flags]
 xkbcommon.xkb_context_new.restype = POINTER(xkb_context)
 
@@ -157,6 +167,32 @@ xkbcommon.xkb_keymap_key_by_name.restype = xkb_keycode_t
 xkbcommon.xkb_keymap_get_as_string.argtypes = [POINTER(xkb_keymap), xkb_keymap_format]
 # Note: should be c_char_p; see comment in the definiton of allocated_c_char_p.
 xkbcommon.xkb_keymap_get_as_string.restype = allocated_c_char_p
+
+xkbcommon.xkb_keymap_key_for_each.argtypes = [
+    xkb_keymap_p,
+    xkb_keymap_key_iter_t,
+    c_void_p,
+]
+xkbcommon.xkb_keymap_key_for_each.restype = None
+
+xkbcommon.xkb_keymap_num_layouts_for_key.argtypes = [xkb_keymap_p, xkb_keycode_t]
+xkbcommon.xkb_keymap_num_layouts_for_key.restype = xkb_layout_index_t
+
+xkbcommon.xkb_keymap_num_levels_for_key.argtypes = [
+    xkb_keymap_p,
+    xkb_keycode_t,
+    xkb_layout_index_t,
+]
+xkbcommon.xkb_keymap_num_levels_for_key.restype = xkb_level_index_t
+
+xkbcommon.xkb_keymap_key_get_syms_by_level.argtypes = [
+    xkb_keymap_p,
+    xkb_keycode_t,
+    xkb_layout_index_t,
+    xkb_level_index_t,
+    POINTER(POINTER(xkb_keysym_t)),
+]
+xkbcommon.xkb_keymap_key_get_syms_by_level.restype = c_int
 
 xkbcommon.xkb_state_new.argtypes = [POINTER(xkb_keymap)]
 xkbcommon.xkb_state_new.restype = POINTER(xkb_state)
@@ -256,6 +292,31 @@ def keymap_as_string(keymap: xkb_keymap_p) -> str:
     return s
 
 
+def xkb_keymap_key_for_each(keymap: xkb_keymap_p, f, x):
+    xkbcommon.xkb_keymap_key_for_each(keymap, xkb_keymap_key_iter_t(f), x)
+
+
+def xkb_keymap_num_layouts_for_key(keymap: xkb_keymap_p, keycode: int) -> int:
+    return xkbcommon.xkb_keymap_num_layouts_for_key(keymap, keycode)
+
+
+def xkb_keymap_num_levels_for_key(
+    keymap: xkb_keymap_p, keycode: int, layout: int
+) -> int:
+    return xkbcommon.xkb_keymap_num_levels_for_key(keymap, keycode, layout)
+
+
+def xkb_keymap_key_get_syms_by_level(
+    keymap: xkb_keymap_p, keycode: int, layout: int, level: int
+) -> tuple[int, ...]:
+    keysyms_array_t = POINTER(xkb_keysym_t)
+    keysyms_array = keysyms_array_t()
+    count = xkbcommon.xkb_keymap_key_get_syms_by_level(
+        keymap, keycode, layout, level, byref(keysyms_array)
+    )
+    return tuple(keysyms_array[k] for k in range(0, count))
+
+
 def new_state(keymap: xkb_keymap_p) -> xkb_state_p:
     state = xkbcommon.xkb_state_new(keymap)
     if not state:
@@ -281,6 +342,10 @@ def unref_state(state: xkb_state_p) -> None:
 
 def xkb_keymap_led_get_name(keymap: xkb_keymap_p, led: int) -> str:
     return xkbcommon.xkb_keymap_led_get_name(keymap, led).decode("utf-8")
+
+
+def xkb_keysym_from_name(name: str) -> int:
+    return xkbcommon.xkb_keysym_from_name(name.encode("utf-8"), XKB_KEYSYM_NO_FLAGS)
 
 
 def xkb_keysym_get_name(keysym: int) -> str:
@@ -407,6 +472,18 @@ def process_key_event(
 ###############################################################################
 
 
+@dataclass
+class KeyLevel:
+    """
+    Output of a key at a specific group and level.
+    """
+
+    keycode: int
+    group: int
+    level: int
+    keysyms: tuple[int, ...]
+
+
 class ForeignKeymap:
     """
     Context manager to ensure proper handling of foreign `xkb_keymap` object.
@@ -460,6 +537,9 @@ class ForeignKeymap:
             return False
 
     def as_string(self) -> str:
+        """
+        Export a keymap as a string, or return an empty string on error.
+        """
         try:
             with self as keymap:
                 if not bool(keymap):
@@ -467,6 +547,30 @@ class ForeignKeymap:
                 return keymap_as_string(keymap)
         except ValueError:
             return ""
+
+    @classmethod
+    def __iter_key(
+        cls, result: list[KeyLevel], keymap: xkb_keymap_p, keycode: int, data: c_void_p
+    ):
+        """
+        Given a keymap and a keycode, iterate over its groups and levels and
+        append its outputs to a list of results.
+        """
+        max_groups = xkb_keymap_num_layouts_for_key(keymap, keycode)
+        for g in range(0, max_groups):
+            max_levels = xkb_keymap_num_levels_for_key(keymap, keycode, g)
+            for l in range(0, max_levels):
+                keysyms = xkb_keymap_key_get_syms_by_level(keymap, keycode, g, l)
+                result.append(KeyLevel(keycode, g, l, keysyms))
+
+    @classmethod
+    def get_keys_levels(cls, keymap: xkb_keymap_p) -> list[KeyLevel]:
+        """
+        Given a keymap, get the list of outputs for each key, group and level.
+        """
+        result: list[KeyLevel] = []
+        xkb_keymap_key_for_each(keymap, partial(cls.__iter_key, result), c_void_p())
+        return result
 
 
 class State:

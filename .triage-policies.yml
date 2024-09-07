@@ -6,91 +6,7 @@
 
 
 ################################################################################
-# Issues
-################################################################################
-
-.remind-stale-issue: &remind-stale-issue
-  name: "Remind of stale issues"
-  conditions:
-    date:
-      attribute: updated_at
-      condition: older_than
-      interval_type: months
-      interval: 12
-    state: opened
-    forbidden_labels:
-      - "bugbot::stale"
-  actions:
-    labels:
-      - "bugbot::stale"
-    comment: |
-      Hi {{author}}! Can you confirm if this issue is still relevant?
-      If so, please remove the ~"bugbot::stale" label and comment on this issue.
-
-      Without an update, this issue will be closed in 1 month.
-
-.close-stale-issue: &close-stale-issue
-  name: "Close stale issues"
-  conditions:
-    date:
-      attribute: updated_at
-      condition: older_than
-      interval_type: months
-      interval: 1
-    state: opened
-    labels:
-      - "bugbot::stale"
-  actions:
-    comment: |
-      Hi {{author}}! Since this stale issue has not been updated, it’s being closed.
-
-      If this issue is still relevant, please reopen, remove the ~"bugbot::stale" label and add a comment.
-    status: "close"
-
-################################################################################
-# Merge requests
-################################################################################
-
-.remind-stale-mr: &remind-stale-mr
-  name: "Remind of stale MRs"
-  conditions:
-    date:
-      attribute: updated_at
-      condition: older_than
-      interval_type: months
-      interval: 3
-    state: opened
-    forbidden_labels:
-      - "bugbot::stale"
-  actions:
-    labels:
-      - "bugbot::stale"
-    comment: |
-      Hi {{author}}! Can you confirm if you’re still working on this merge request?
-      If so, please remove the ~"bugbot::stale" label and comment on this issue.
-
-      Without an update, this merge request will be closed in 1 month.
-
-.close-stale-mr: &close-stale-mr
-  name: "Close stale MRs"
-  conditions:
-    date:
-      attribute: updated_at
-      condition: older_than
-      interval_type: months
-      interval: 1
-    state: opened
-    labels:
-      - "bugbot::stale"
-  actions:
-    comment: |
-      Hi {{author}}! Since this stale merge request has not been updated, it’s being closed.
-
-      If this merge request is still relevant, please reopen, remove the ~"bugbot::stale" label and add a comment.
-    status: "close"
-
-################################################################################
-# Miscellaneous
+# Rules definitions
 ################################################################################
 
 .too-exotic: &too-exotic
@@ -124,10 +40,6 @@ resource_rules:
   issues:
     rules:
       - *too-exotic
-      - *remind-stale-issue
-      - *close-stale-issue
   merge_requests:
     rules:
       - *too-exotic
-      - *remind-stale-mr
-      - *close-stale-mr

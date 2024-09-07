@@ -45,6 +45,11 @@ xkb_symbols "backspace" {
 };
 
 hidden partial modifier_keys
+xkb_symbols "return" {
+    key <CAPS> { [ Return ], type[group1] = "ONE_LEVEL" };
+};
+
+hidden partial modifier_keys
 xkb_symbols "super" {
     key <CAPS> { [ Super_L ], type[group1] = "ONE_LEVEL" };
     modifier_map Mod4 { <CAPS> };
