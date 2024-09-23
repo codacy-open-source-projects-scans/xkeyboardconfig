@@ -92,7 +92,7 @@ xkb_symbols "deadacute" {
 
 partial alphanumeric_keys
 xkb_symbols "e1" {
-    // German extended layout E1, based on DIN 2137-1:2020-11, for a 105-key keyboard.
+    // German extended layout E1, based on DIN 2137-1:2023-08, for a 105-key keyboard.
     // See https://de.wikipedia.org/wiki/E1_(Tastaturbelegung).
 
     name[Group1]="German (E1)";
@@ -110,7 +110,7 @@ xkb_symbols "e1" {
     key <AE09>	{[            9, parenright,         bracketright,  any,                U27E9,                U27EB ]};
     key <AE10>	{[            0,      equal,           braceright,  any,             division,                U2205 ]};
     key <AE11>	{[       ssharp,   question,            backslash,  any,             notequal,              notsign ]};
-    key <AE12>	{[   dead_acute, dead_grave,        dead_abovedot,  any,             sterling,                U035C ]};
+    key <AE12>	{[   dead_acute, dead_grave,        dead_abovedot,  any,             sterling,                U00A5 ]};
 
     key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC";
     key <AD01>	{[            q,          Q,                   at,  any,            masculine,                U2642 ]};
@@ -119,17 +119,18 @@ xkb_symbols "e1" {
     key <AD04>	{[            r,          R,     dead_doubleacute,  any,            trademark,           registered ]};
     key <AD05>	{[            t,          T,           dead_caron,  any,                thorn,                THORN ]};
     key <AD06>	{[            z,          Z,       dead_diaeresis,  any,                  ezh,                  EZH ]};
-    key <AD07>	{[            u,          U,           dead_breve,  any,           rightarrow,            leftarrow ]};
+    key <AD07>	{[            u,          U,           dead_breve,  any,            downarrow,              uparrow ]};
     key <AD08>	{[            i,          I,           dead_tilde,  any,             idotless,                U26A5 ]};
     key <AD09>	{[            o,          O,       dead_abovering,  any,               oslash,               Oslash ]};
-    key <AD10>	{[            p,          P,            dead_hook,  any,            downarrow,              uparrow ]};
+    key <AD10>	{[            p,          P,            dead_hook,  any,           rightarrow,            leftarrow ]};
     key <AD11>	{[   udiaeresis, Udiaeresis,            dead_horn,  any,                U2198,                U2197 ]};
     key.type[Group1] = "EIGHT_LEVEL";
     key <AD12>	{[         plus,   asterisk,           asciitilde,  any,            plusminus,                U2052 ]};
 
     key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC";
     // Per DIN 2137-1:2018-12, p. 11-12, AltGr+a can either invoke a selection possibility
-    // for emojis and/or special characters, or output the U+263A smiley.
+    // for emojis and/or special characters, or output the U+263A smiley.  The same holds for
+    // DIN 2137-1:2023-08.
     key <AC01>	{[            a,          A,            Multi_key,  any,                  any,                  any ]};
     key <AC02>	{[            s,          S,              seconds,  any,                U017F,                U2211 ]};
     key <AC03>	{[            d,          D,              minutes,  any,                  eth,                  ETH ]};
@@ -153,15 +154,16 @@ xkb_symbols "e1" {
     key <AB05>	{[            b,          B,                U2039,  any, rightdoublequotemark, rightsinglequotemark ]};
     key <AB06>	{[            n,          N,               endash,  any,                  eng,                  ENG ]};
     // Per DIN 2137-1:2018-12, p. 12, U+2217 should be replaced by the 'middle asterisk' character
-    // as soon as it has been added to Unicode (see Unicode proposal L2/17-152).
+    // as soon as it has been added to Unicode (see Unicode proposal L2/17-152).  Same holds for
+    // DIN 2137-1:2023-08.
     key <AB07>	{[            m,          M,                   mu,  any,                U200C,                U2217 ]};
     key.type[Group1] = "EIGHT_LEVEL";
-    key <AB08>	{[        comma,  semicolon,                U2011,  any,                U02BB,                U2661 ]};
+    key <AB08>	{[        comma,  semicolon,                U2011,  any,                U02BB,                U2665 ]};
     key <AB09>	{[       period,      colon,       periodcentered,  any,             ellipsis,                U2713 ]};
     key <AB10>	{[        minus, underscore,               hyphen,  any,                U2022,                U25E6 ]};
 
     key.type[Group1] = "EIGHT_LEVEL";
-    key <SPCE>	{[        space,      space,         nobreakspace,  any,                U200A,                U2009 ]};
+    key <SPCE>	{[        space,      space,         nobreakspace,  any,                U200A,                U200A ]};
 
     key.type[Group1] = "ONE_LEVEL";
     key <LFSH>	{[ Shift_L ]};
@@ -173,7 +175,7 @@ xkb_symbols "e1" {
 
 partial alphanumeric_keys
 xkb_symbols "e2" {
-    // German extended layout E2, based on DIN 2137-1:2020-11, for a 104-key keyboard.
+    // German extended layout E2, based on DIN 2137-1:2023-08, for a 104-key keyboard.
     // See https://de.wikipedia.org/wiki/E1_(Tastaturbelegung).
 
     include "de(e1)"
