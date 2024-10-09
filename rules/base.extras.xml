@@ -220,6 +220,12 @@
         </variant>
         <variant>
           <configItem popularity="exotic">
+            <name>noted</name>
+            <description>German (Noted)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem popularity="exotic">
             <name>ru-recom</name>
             <!-- Keyboard indicator for Russian layouts -->
             <shortDescription>ru</shortDescription>

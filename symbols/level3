@@ -105,6 +105,12 @@ xkb_symbols "bksl_switch" {
   key <BKSL> {[  ISO_Level3_Shift  ], type[group1]="ONE_LEVEL" };
 };
 
+// The AC11 key (while pressed) chooses the third shift level.
+partial modifier_keys
+xkb_symbols "ac11_switch" {
+  key <AC11> {[  ISO_Level3_Shift  ], type[Group1]="ONE_LEVEL" };
+};
+
 // The Less/Greater key (while pressed) chooses the third shift level.
 partial modifier_keys
 xkb_symbols "lsgt_switch" {
