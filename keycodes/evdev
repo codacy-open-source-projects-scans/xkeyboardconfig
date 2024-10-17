@@ -500,6 +500,8 @@ default xkb_keycodes "evdev" {
 	<I595> = 595;		// #define KEY_CAMERA_ACCESS_ENABLE 587
 	<I596> = 596;		// #define KEY_CAMERA_ACCESS_DISABLE 588
 	<I597> = 597;		// #define KEY_CAMERA_ACCESS_TOGGLE 589
+	<I598> = 598;		// #define KEY_ACCESSIBILITY       590
+	<I599> = 599;		// #define KEY_DO_NOT_DISTURB      591
 	<I600> = 600;		// #define KEY_BRIGHTNESS_MIN      592
 	<I601> = 601;		// #define KEY_BRIGHTNESS_MAX      593
 	<I616> = 616;		// #define KEY_KBDINPUTASSIST_PREV 608
