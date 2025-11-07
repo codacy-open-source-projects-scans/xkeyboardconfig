@@ -215,14 +215,14 @@ xkb_symbols "ug" {
 // To generate a raw ü, use AltGr + v.
 // V is used instead of ü for tones.
 //
-// AltGr+Shift+` triggers dead_abovering (˚), used by the Taiwanese
+// AltGr+Shift+` triggers dead_abovering (◌̊), used by the Taiwanese
 // Tongyong Pinyin variant for the "neutral" tone.
 //
-// AltGr+6 triggers dead_circumflex (^) for ê ẑ ĉ ŝ, etc.
+// AltGr+6 triggers dead_circumflex (◌̂) for ê ẑ ĉ ŝ, etc.
 // These can be stacked after tones to produce ế and ề; other tones require
 // combining characters, available through nobreakspace (AltGr+Space).
 //
-// AltGr+Shift+6 triggers dead_diaeresis (¨) for SASM/GNC
+// AltGr+Shift+6 triggers dead_diaeresis (◌̈) for SASM/GNC
 // romanization of tib, mon, and ug.
 //
 // This file should be used with an appropriate XCompose file with

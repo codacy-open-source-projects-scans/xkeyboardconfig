@@ -169,21 +169,21 @@ def main():
     parser.add_argument(
         "--template",
         type=argparse.FileType("r"),
-        default=open(".gitlab-ci/evdev.in"),
-        help="The template file (default: .gitlab-ci/evdev.in)",
+        default=".gitlab-ci/evdev.in",
+        help="The template file (default: %(default)s)",
     )
     parser.add_argument(
         "--output",
         type=str,
         default="keycodes/evdev",
         required=False,
-        help="The file to be written to (default: keycodes/evdev)",
+        help="The file to be written to (default: %(default)s)",
     )
     parser.add_argument(
         "--compare-with",
         type=argparse.FileType("r"),
-        default=open("keycodes/evdev"),
-        help="Compare generated output with the given file (default: keycodes/evdev)",
+        default="keycodes/evdev",
+        help="Compare generated output with the given file (default: %(default)s)",
     )
     parser.add_argument(
         "--verbose",

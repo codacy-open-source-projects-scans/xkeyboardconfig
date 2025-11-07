@@ -111,6 +111,7 @@ partial xkb_compatibility "assign_shift_left_action" {
     // <LFSH> bound to the Lock modifier, creating unwanted behaviour.
     // The following statement ensures Shift_L always sets the Shift
     // modifier.
+    setMods.clearLocks= True;
     interpret Shift_L {
 	action = SetMods(modifiers = Shift);
     };
@@ -122,6 +123,7 @@ partial xkb_compatibility "assign_shift_right_action" {
     // involving e.g symbols/shift(shift_both_capslock) and
     // symbols/group(lalt_lshift_toggle). The following statement
     // ensures Shift_R always sets the Shift modifier.
+    setMods.clearLocks= True;
     interpret Shift_R {
 	action = SetMods(modifiers = Shift);
     };

@@ -24,6 +24,12 @@
 
 ! $macvendorlayouts = ch de dk fi fr gb is it latam nl no pt se us
 
+// Macintosh vendor: country-specific variants
+! $mac_ch_variants = de fr nodeadkeys
+! $mac_de_variants = nodeadkeys Sundeadkeys sundeadkeys
+! $mac_dk_variants = macbookpro nodeadkeys
+! $mac_pt_variants = nodeadkeys Sundeadkeys sundeadkeys
+
 // The countries that predominantly have AZERTY or QWERTZ layouts:
 ! $azerty = be fr
 ! $qwertz = al ch cz de hr hu ro si sk
@@ -43,6 +49,6 @@
                 ru se sk tr tw ua us
 
 ! $sun_var =  sun_type6 sun_type6_suncompat sun_type6_de sun_type6_fr \
-              sun_type7 sun_type7_suncompat suncompat
+              sun_type7 sun_type7_suncompat suncompat basic
 
 ! $sun_compat = sun_type6 sun_type6_suncompat sun_type7_suncompat suncompat

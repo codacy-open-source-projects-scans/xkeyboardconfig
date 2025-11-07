@@ -104,7 +104,7 @@ xkb_symbols "simple" {
     key <AC07>	{[            Greek_xi,       Greek_XI ]}; // ξ Ξ
     key <AC08>	{[         Greek_kappa,    Greek_KAPPA ]}; // κ Κ
     key <AC09>	{[         Greek_lamda,    Greek_LAMDA ]}; // λ Λ
-    key <AC10>	{[          dead_acute, dead_diaeresis ]}; // ´ ¨
+    key <AC10>	{[          dead_acute, dead_diaeresis ]}; // ◌́ ◌̈
 
     key <AC11>	{[         apostrophe,        quotedbl ]}; // ' "
     key <BKSL>	{[          backslash,             bar ]}; // \ |
@@ -139,8 +139,8 @@ xkb_symbols "polytonic" {
     key <AD02>	{[Greek_finalsmallsigma,Greek_SIGMA, U03D9,U03D8 ]}; // ϙ Ϙ
     key <AD10>	{[ Greek_pi,     Greek_PI,         U03D6,  U03D5 ]}; // ϖ ϕ
     key.type[Group1] = "THREE_LEVEL";
-    key <AD11>	{[ dead_tilde,   dead_diaeresis,   dead_macron   ]}; // ~ ¨ ¯
-    key <AD12>	{[ dead_iota,    none,             dead_breve    ]}; // ͺ   ˘
+    key <AD11>	{[ dead_tilde,   dead_diaeresis,   dead_macron   ]}; // ◌̃ ◌̈ ◌̄
+    key <AD12>	{[ dead_iota,    none,             dead_breve    ]}; // ◌ͅ   ◌̆
 
     key.type[Group1] = "FOUR_LEVEL";
     key <AC02>	{[ Greek_sigma,  Greek_SIGMA,      U03DB,  U03DA ]}; // ϛ Ϛ (stigmata)

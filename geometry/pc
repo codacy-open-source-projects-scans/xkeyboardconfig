@@ -39,7 +39,7 @@ default xkb_geometry "pc101" {
     shape "CAPS" { { [ 33,18] }, { [2,1], [ 31,16] } };
     shape "LFSH" { { [ 42,18] }, { [2,1], [ 40,16] } };
     shape "RTSH" { { [ 52,18] }, { [2,1], [ 50,16] } };
-    shape "MODK" { { [ 27,18] }, { [2,1], [ 25,16] } };
+    shape "MODK" { { [ 28,18] }, { [2,1], [ 26,16] } };
     shape "SPCE" { { [133,18] }, { [2,1], [131,16] } };
     shape "KP0"  { { [ 37,18] }, { [2,1], [ 35,16] } };
     shape "KPAD" { { [ 18,37] }, { [2,1], [ 16,35] } };
@@ -121,9 +121,9 @@ default xkb_geometry "pc101" {
 	    top= 77;
 	    key.shape= "MODK";
 	    key.color= "grey20";
-	    keys { <LCTL>, { <LALT>, 21 },
+	    keys { <LCTL>, { <LALT>, 19 },
 		   { <SPCE>, "SPCE", color="white" },
-		   <RALT>, { <RCTL>, 21 }
+		   <RALT>, { <RCTL>, 19 }
 	    };
 	};
     }; // End of "Alpha" section
@@ -197,10 +197,10 @@ xkb_geometry "pc102" {
         { [0,0], [28,0], [28,37], [5,37], [5,18], [0,18] },
         { [2,1], [26,1], [26,35], [7,35], [7,16], [2,16] } };
     shape "CAPS" { { [ 33,18] }, { [2,1], [ 31,16] } };
-    shape "LFSH" { { [ 25,18] }, { [2,1], [ 23,16] } };
-    shape "RTSH" { { [ 50,18] }, { [2,1], [ 48,16] } };
-    shape "MODK" { { [ 27,18] }, { [2,1], [ 25,16] } };
-    shape "SPCE" { { [134,18] }, { [2,1], [132,16] } };
+    shape "LFSH" { { [ 23,18] }, { [2,1], [ 21,16] } };
+    shape "RTSH" { { [ 52,18] }, { [2,1], [ 50,16] } };
+    shape "MODK" { { [ 28,18] }, { [2,1], [ 26,16] } };
+    shape "SPCE" { { [133,18] }, { [2,1], [131,16] } };
     shape "KP0"  { { [ 37,18] }, { [2,1], [ 35,16] } };
     shape "KPAD" { { [ 18,37] }, { [2,1], [ 16,35] } };
 
@@ -234,8 +234,8 @@ xkb_geometry "pc102" {
 	top= 22;
 	row {
 	    top= 1;
-	    keys {  { <ESC>, "TABK", color="grey20" },
-		    { <FK01>, 10 }, <FK02>, <FK03>, <FK04>,
+	    keys {  { <ESC>, color="grey20" },
+		    { <FK01>, 20 }, <FK02>, <FK03>, <FK04>,
 		    { <FK05>, 11 }, <FK06>, <FK07>, <FK08>,
 		    { <FK09>, 11 }, <FK10>, <FK11>, <FK12>,
 		    { <PRSC>, 8 }, <SCLK>, <PAUS>
@@ -281,9 +281,9 @@ xkb_geometry "pc102" {
 	    top= 77;
 	    key.shape= "MODK";
 	    key.color= "grey20";
-	    keys { <LCTL>, { <LALT>, 20 },
+	    keys { <LCTL>, { <LALT>, 19 },
 		   { <SPCE>, "SPCE", color="white" },
-		   <RALT>, { <RCTL>, 21 }
+		   <RALT>, { <RCTL>, 19 }
 	    };
 	};
     }; // End of "Alpha" section
@@ -357,9 +357,9 @@ xkb_geometry "pc104" {
     shape "CAPS" { { [ 33,18] }, { [2,1], [ 31,16] } };
     shape "LFSH" { { [ 42,18] }, { [2,1], [ 40,16] } };
     shape "RTSH" { { [ 52,18] }, { [2,1], [ 50,16] } };
-    shape "MODK" { { [ 27,18] }, { [2,1], [ 25,16] } };
+    shape "MODK" { { [ 28,18] }, { [2,1], [ 26,16] } };
     shape "SMOD" { { [ 23,18] }, { [2,1], [ 21,16] } };
-    shape "SPCE" { { [113,18] }, { [2,1], [111,16] } };
+    shape "SPCE" { { [107,18] }, { [2,1], [105,16] } };
     shape "KP0"  { { [ 37,18] }, { [2,1], [ 35,16] } };
     shape "KPAD" { { [ 18,37] }, { [2,1], [ 16,35] } };
 
@@ -442,7 +442,7 @@ xkb_geometry "pc104" {
 	    key.color= "grey20";
 	    keys { { <LCTL>, "MODK" }, <LWIN>, <LALT>,
 		   { <SPCE>, "SPCE", color="white" },
-		   <RALT>, <RWIN>, <MENU>, <RCTL>
+		   <RALT>, <RWIN>, <MENU>, { <RCTL>, "MODK" }
 	    };
 	};
     }; // End of "Alpha" section
@@ -518,11 +518,11 @@ xkb_geometry "pc105" {
         { [2,1], [26,1], [26,35], [7,35], [7,16], [2,16] } ,
         approx = { [5,0], [28,37] } };
     shape "CAPS" { { [ 33,18] }, { [2,1], [ 31,16] } };
-    shape "LFSH" { { [ 25,18] }, { [2,1], [ 23,16] } };
-    shape "RTSH" { { [ 50,18] }, { [2,1], [ 48,16] } };
-    shape "MODK" { { [ 27,18] }, { [2,1], [ 25,16] } };
+    shape "LFSH" { { [ 23,18] }, { [2,1], [ 21,16] } };
+    shape "RTSH" { { [ 52,18] }, { [2,1], [ 50,16] } };
+    shape "MODK" { { [ 28,18] }, { [2,1], [ 26,16] } };
     shape "SMOD" { { [ 23,18] }, { [2,1], [ 21,16] } };
-    shape "SPCE" { { [113,18] }, { [2,1], [111,16] } };
+    shape "SPCE" { { [107,18] }, { [2,1], [105,16] } };
     shape "KP0"  { { [ 37,18] }, { [2,1], [ 35,16] } };
     shape "KPAD" { { [ 18,37] }, { [2,1], [ 16,35] } };
 
@@ -605,7 +605,7 @@ xkb_geometry "pc105" {
 	    key.color= "grey20";
 	    keys { { <LCTL>, "MODK" }, <LWIN>, <LALT>,
 		   { <SPCE>, "SPCE", color="white" },
-		   <RALT>, <RWIN>, <MENU>, <RCTL>
+		   <RALT>, <RWIN>, <MENU>, { <RCTL>, "MODK" }
 	    };
 	};
     }; // End of "Alpha" section
@@ -673,15 +673,15 @@ xkb_geometry "jp106" {
 
     shape.cornerRadius= 1;
     shape "NORM" { { [ 18,18] }, { [2,1], [ 16,17] } };
-    shape "BKSP" { { [ 18,18] }, { [2,1], [ 16,17] } };
+    shape "BKSP" { { [ 19,18] }, { [2,1], [ 17,17] } };
     shape "TABK" { { [ 28,18] }, { [2,1], [ 26,17] } };
-    shape "BKSL" { { [ 27,18] }, { [2,1], [ 25,17] } };
+    shape "BKSL" { { [ 28,18] }, { [2,1], [ 25,17] } };
     shape "RTRN" {
-        { [0,0],[ 27,0],[27,37],[4,37],[4,18],[0,18] } ,
-        { [2,1],[ 25,1],[25,36],[5,36],[5,17],[2,17] } };
-    shape "CAPS" { { [ 32,18] }, { [2,1], [ 30,17] } };
+        { [0,0],[ 28,0],[28,37],[5,37],[5,18],[0,18] } ,
+        { [2,1],[ 26,1],[26,36],[7,36],[7,17],[2,17] } };
+    shape "CAPS" { { [ 33,18] }, { [2,1], [ 31,17] } };
     shape "LFSH" { { [ 42,18] }, { [2,1], [ 40,17] } };
-    shape "RTSH" { { [ 32,18] }, { [2,1], [ 30,17] } };
+    shape "RTSH" { { [ 33,18] }, { [2,1], [ 31,17] } };
     shape "MODK" { { [ 28,18] }, { [2,1], [ 26,17] } };
     shape "SPCE" { { [ 46,18] }, { [2,1], [ 44,17] } };
     shape "KP0"  { { [ 37,18] }, { [2,1], [ 35,17] } };
@@ -691,19 +691,19 @@ xkb_geometry "jp106" {
     shape "LED"  { cornerRadius= 0, { [  5,  1 ] } };
     solid "LedPanel" {
 	shape= "LEDS";
-	top=  25;
-	left= 375;
+	top=  22;
+	left= 377;
 	color= "grey10";
     };
 
     indicator.onColor= "green";
     indicator.offColor= "green30";
-    indicator.top= 40;
+    indicator.top= 37;
     indicator.shape= "LED";
-    indicator "Num Lock"     { left= 379; };
-    indicator "Caps Lock"    { left= 404; };
-    indicator "Scroll Lock"  { left= 429; };
-    text.top= 28;
+    indicator "Num Lock"     { left= 382; };
+    indicator "Caps Lock"    { left= 407; };
+    indicator "Scroll Lock"  { left= 433; };
+    text.top= 25;
     text.color= "black";
     text "NumLockLabel"		{ left= 378; text="Num\nLock"; };
     text "CapsLockLabel"	{ left= 403; text="Caps\nLock"; };
@@ -714,11 +714,11 @@ xkb_geometry "jp106" {
     key.shape= "NORM";
     key.gap=  1;
     section "Function" {
-	top= 25;
+	top= 22;
 	row {
 	    top= 1;
 	    keys {  { <ESC>, color="grey20" },
-		    { <FK01>, 18 }, <FK02>, <FK03>, <FK04>,
+		    { <FK01>, 20 }, <FK02>, <FK03>, <FK04>,
 		    { <FK05>, 11 ,color="grey20"}, {<FK06>,color="grey20"},
 		    { <FK07>, color="grey20"}, {<FK08>,color="grey20"},
 		    { <FK09>, 11 }, <FK10>, <FK11>, <FK12>,
@@ -767,14 +767,14 @@ xkb_geometry "jp106" {
 	    key.color= "grey20";
 	    keys { <LCTL>, { <LALT>, 20 },<MUHE>,
 		   { <SPCE>, "SPCE", color="white" },
-		   <HENK>,<HKTG>,<RALT>, { <RCTL>, 17 }
+		   <HENK>,<HKTG>,<RALT>, { <RCTL>, 18 }
 	    };
 	};
     }; // End of "Alpha" section
 
     section "Editing" {
 	top= 61;
-	left= 310;
+	left= 312;
 	key.color= "grey20";
 	row {
 	    top= 1;
@@ -797,7 +797,7 @@ xkb_geometry "jp106" {
 
     section "Keypad" {
 	top= 61;
-	left= 375;
+	left= 376;
 	row {
 	    top= 1;
 	    key.color= "grey20";
@@ -844,11 +844,11 @@ xkb_geometry "abnt2" {
         { [2,1], [26,1], [26,35], [7,35], [7,16], [2,16] } ,
         approx = { [5,0], [28,37] } };
     shape "CAPS" { { [ 33,18] }, { [2,1], [ 31,16] } };
-    shape "LFSH" { { [ 25,18] }, { [2,1], [ 23,16] } };
-    shape "RTSH" { { [ 31,18] }, { [2,1], [29,16] } };
-    shape "MODK" { { [ 27,18] }, { [2,1], [ 25,16] } };
+    shape "LFSH" { { [ 23,18] }, { [2,1], [ 21,16] } };
+    shape "RTSH" { { [ 33,18] }, { [2,1], [ 31,16] } };
+    shape "MODK" { { [ 28,18] }, { [2,1], [ 26,16] } };
     shape "SMOD" { { [ 23,18] }, { [2,1], [ 21,16] } };
-    shape "SPCE" { { [113,18] }, { [2,1], [111,16] } };
+    shape "SPCE" { { [107,18] }, { [2,1], [105,16] } };
     shape "KP0"  { { [ 37,18] }, { [2,1], [ 35,16] } };
     shape "KPAD" { { [ 18,37] }, { [2,1], [ 16,35] } };
 
@@ -932,7 +932,7 @@ xkb_geometry "abnt2" {
 	    key.color= "grey20";
 	    keys { { <LCTL>, "MODK" }, <LWIN>, <LALT>,
 		   { <SPCE>, "SPCE", color="white" },
-		   <RALT>, <RWIN>, <MENU>, <RCTL>
+		   <RALT>, <RWIN>, <MENU>, { <RCTL>, "MODK" }
 	    };
 	};
     }; // End of "Alpha" section
@@ -1165,6 +1165,7 @@ xkb_geometry "kr106" {
 
     shape.cornerRadius= 1;
     shape "NORM" { { [ 18,18] }, { [2,1], [ 16,16] } };
+    shape "BKSP" { { [ 19,18] }, { [2,1], [ 17,16] } };
     shape "TABK" { { [ 28,18] }, { [2,1], [ 26,16] } };
     shape "RTRN" {
 	{ [0,0], [28,0], [28,37], [-14,37], [-14,19], [0,19] } ,
@@ -1173,9 +1174,9 @@ xkb_geometry "kr106" {
     shape "CAPS" { { [ 33,18] }, { [2,1], [ 31,16] } };
     shape "LFSH" { { [ 42,18] }, { [2,1], [ 40,16] } };
     shape "RTSH" { { [ 52,18] }, { [2,1], [ 50,16] } };
-    shape "MODK" { { [ 27,18] }, { [2,1], [ 25,16] } };
+    shape "MODK" { { [ 28,18] }, { [2,1], [ 26,16] } };
     shape "SMOD" { { [ 23,18] }, { [2,1], [ 21,16] } };
-    shape "SPCE" { { [ 75,18] }, { [2,1], [ 73,16] } };
+    shape "SPCE" { { [ 69,18] }, { [2,1], [ 67,16] } };
     shape "KP0"  { { [ 37,18] }, { [2,1], [ 35,16] } };
     shape "KPAD" { { [ 18,37] }, { [2,1], [ 16,35] } };
 
@@ -1225,7 +1226,7 @@ xkb_geometry "kr106" {
 	    keys { <TLDE>, <AE01>, <AE02>, <AE03>, <AE04>,
 		   <AE05>, <AE06>, <AE07>, <AE08>, <AE09>,
 		   <AE10>, <AE11>, <AE12>, <BKSL>,
-		   { <BKSP>, color="grey20" }
+		   { <BKSP>, "BKSP", color="grey20" }
 	    };
 	};
 	row {
@@ -1261,7 +1262,7 @@ xkb_geometry "kr106" {
 		   { <HNGL>, "NORM", color="white" },
 		   { <SPCE>, "SPCE", color="white" },
 		   { <HJCV>, "NORM", color="white" },
-		   <RALT>, <RWIN>, <MENU>, <RCTL>
+		   <RALT>, <RWIN>, <MENU>, { <RCTL>, "MODK" }
 	    };
 	};
     }; // End of "Alpha" section
@@ -1341,9 +1342,9 @@ xkb_geometry "pc104alt" {
     shape "CAPS" { { [ 33,18] }, { [2,1], [ 31,16] } };
     shape "LFSH" { { [ 42,18] }, { [2,1], [ 40,16] } };
     shape "RTSH" { { [ 52,18] }, { [2,1], [ 50,16] } };
-    shape "MODK" { { [ 27,18] }, { [2,1], [ 25,16] } };
+    shape "MODK" { { [ 28,18] }, { [2,1], [ 26,16] } };
     shape "SMOD" { { [ 23,18] }, { [2,1], [ 21,16] } };
-    shape "SPCE" { { [113,18] }, { [2,1], [111,16] } };
+    shape "SPCE" { { [107,18] }, { [2,1], [105,16] } };
     shape "KP0"  { { [ 37,18] }, { [2,1], [ 35,16] } };
     shape "KPAD" { { [ 18,37] }, { [2,1], [ 16,35] } };
 
@@ -1427,7 +1428,7 @@ xkb_geometry "pc104alt" {
 	    key.color= "grey20";
 	    keys { { <LCTL>, "MODK" }, <LWIN>, <LALT>,
 		   { <SPCE>, "SPCE", color="white" },
-		   <RALT>, <RWIN>, <MENU>, <RCTL>
+		   <RALT>, <RWIN>, <MENU>, { <RCTL>, "MODK" }
 	    };
 	};
     }; // End of "Alpha" section

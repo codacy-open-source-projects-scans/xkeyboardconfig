@@ -108,7 +108,10 @@ xkb_symbols "evdev" {
     key <FK20>   {      [ XF86AudioMicMute      ]       };
     key <FK21>   {      [ XF86TouchpadToggle    ]       };
     key <FK22>   {      [ XF86TouchpadOn        ]       };
-    key <FK23>   {      [ XF86TouchpadOff       ]       };
+    key <FK23>   {      [ XF86TouchpadOff, XF86Assistant ], type[Group1] = "PC_SHIFT_SUPER_LEVEL2" };
+    // <ZEHA> is sometimes used for touchpad toggle keys, while the usual
+    // Japanese Henkaku/Zankaku keys use <HZTG>.
+    key <ZEHA>   {      [ XF86TouchpadToggle    ]       };
 
 //  key <I120>   {      [ ]       }; // KEY_MACRO
     key <I126>   {      [ plusminus             ]       };
@@ -154,11 +157,6 @@ xkb_symbols "evdev" {
     key <I186>   {      [ XF86ScrollDown        ]       };
     key <I187>   {      [ parenleft             ]       };
     key <I188>   {      [ parenright            ]       };
-    key <I192>   {      [ XF86LaunchA           ]       };
-    key <I193>   {      [ XF86LaunchC           ]       };
-    key <I194>   {      [ XF86LaunchD           ]       };
-    key <I195>   {      [ XF86LaunchE           ]       };
-    key <I196>   {      [ XF86LaunchF           ]       };
     key <I208>   {      [ XF86AudioPlay         ]       };
     key <I209>   {      [ XF86AudioPause        ]       };
     key <I210>   {      [ XF86Launch3           ]       };

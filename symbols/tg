@@ -21,14 +21,14 @@ xkb_symbols "basic" {
 // |    | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 0  | °  | +  | <--   |
 // | ²  | &  | é ~| " #| ' {| ( [| - || è `| _ \| ç ^| à @| ) ]| = }|       |
 //  ========================================================================
-// | |<-  | A  | Z Ʒ| E  | R Ɛ| T Ɗ| Y Ƴ| U Ʊ| I Ɩ| O Ɔ| P  | ¨  | $  |   , |
-// |  ->| | a  | z ʒ| e €| r ɛ| t ɗ| y ƴ| u ʊ| i ɩ| o ɔ| p  | ^  ̌| £ ¤| <-' |
+// | |<-  | A  | Z Ʒ| E  | R Ɛ| T Ɗ| Y Ƴ| U Ʊ| I Ɩ| O Ɔ| P  | ◌̈  | $  |   , |
+// |  ->| | a  | z ʒ| e €| r ɛ| t ɗ| y ƴ| u ʊ| i ɩ| o ɔ| p  | ◌̂ ◌̌| £ ¤| <-' |
 //  ===================================================================¬    |
 // |       | Q Ǝ| S  | D Ɖ| F Ƒ| G Ɣ| H Ĥ| J Ɨ| K  | L  | M Ŋ| %  | µ  |    |
-// | MAJ   | q ǝ| s  | d ɖ| f ƒ| g ɣ| h ɦ| j ɨ| k  | l  | m ɲ| ù `| *  ́|    |
+// | MAJ   | q ǝ| s  | d ɖ| f ƒ| g ɣ| h ɦ| j ɨ| k  | l  | m ɲ| ù ◌̀| * ◌́|    |
 //  ========================================================================
 // | ^   | >  | W  | X  | C  | V Ʋ| B Ɓ| N Ŋ| ?  | .  | /  | §  |     |     |
-// | |   | <  | w  | x  | c  | v ʋ| b ɓ| n ŋ| ,  | ;  | : ¯| ! ~|     |     |
+// | |   | <  | w  | x  | c  | v ʋ| b ɓ| n ŋ| ,  | ;  | : ◌̄| ! ◌̃|     |     |
 //  ========================================================================
 // |      |      |      |                       |       |      |     |      |
 // | Ctrl | Super| Alt  | Space    Nobreakspace | AltGr | Super|Menu | Ctrl |
@@ -36,8 +36,8 @@ xkb_symbols "basic" {
 //
 // The different local languages in Togo all together use 17 symbols not found
 // in the French language: Ʒ, ɛ, Ɗ, Ƴ, Ʊ, Ɩ, Ɔ, Ǝ, Ɖ, Ƒ, Ɣ, Ĥ, Ɨ, Ɲ, Ʋ, Ɓ, Ŋ.
-// Togolese local languages use 9 tone markers: acute (´), grave (`), circumflex (ˆ),
-// caron (ˇ), macron (¯), tilde (~), tilde+acute (  ̃́), tilde+grave (  ̃̀), diaeresis (¨).
+// Togolese local languages use 9 tone markers: acute (◌́), grave (◌̀), circumflex (◌̂),
+// caron (◌̌), macron (◌̄), tilde (◌̃), tilde+acute (  ̃́), tilde+grave (  ̃̀), diaeresis (◌̈).
 // The vowels can use these tone markers except diaeresis.
 // 'Y' is not used as a vowel in most local languages, and can only use diaeresis.
 // Nasal consonants (m, n, ŋ) can only have have accent tones (acute and grave).

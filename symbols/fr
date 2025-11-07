@@ -95,14 +95,14 @@ xkb_symbols "nodeadkeys" {
 //   © 2003-2006 Nicolas Mailhot <nicolas.mailhot @ laposte.net>
 //
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
-// │ ³ ¸ │ 1  ̨ │ 2 É │ 3 ˘ │ 4 — │ 5 – │ 6 ‑ │ 7 È │ 8 ™ │ 9 Ç │ 0 À │ ° ≠ │ + ± ┃ ⌫ Retour┃
-// │ ² ¹ │ & ˇ │ é ~ │ " # │ ' { │ ( [ │ - | │ è ` │ _ \ │ ç ^ │ à @ │ ) ] │ = } ┃  arrière┃
+// │ ³ ◌̧ │ 1 ◌̨ │ 2 É │ 3 ◌̆ │ 4 — │ 5 – │ 6 ‑ │ 7 È │ 8 ™ │ 9 Ç │ 0 À │ ° ≠ │ + ± ┃ ⌫ Retour┃
+// │ ² ¹ │ & ◌̌ │ é ~ │ " # │ ' { │ ( [ │ - | │ è ` │ _ \ │ ç ^ │ à @ │ ) ] │ = } ┃  arrière┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃       ┃ A Æ │ Z Â │ E ¢ │ R Ê │ T Þ │ Y Ÿ │ U Û │ I Î │ O Œ │ P Ô │ ¨ ˚ │ £ Ø ┃Entrée ┃
-// ┃Tab ↹  ┃ a æ │ z â │ e € │ r ê │ t þ │ y ÿ │ u û │ i î │ o œ │ p ô │ ^ ~ │ $ ø ┃   ⏎   ┃
+// ┃       ┃ A Æ │ Z Â │ E ¢ │ R Ê │ T Þ │ Y Ÿ │ U Û │ I Î │ O Œ │ P Ô │ ◌̈ ◌̊ │ £ Ø ┃Entrée ┃
+// ┃Tab ↹  ┃ a æ │ z â │ e € │ r ê │ t þ │ y ÿ │ u û │ i î │ o œ │ p ô │ ◌̂ ◌̃ │ $ ø ┃   ⏎   ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
-// ┃        ┃ Q Ä │ S „ │ D Ë │ F ‚ │ G ¥ │ H Ð │ J Ü │ K Ï │ L Ŀ │ M Ö │ % Ù │ µ  ̄ ┃      ┃
-// ┃Maj ⇬   ┃ q ä │ s ß │ d ë │ f ‘ │ g ’ │ h ð │ j ü │ k ï │ l ŀ │ m ö │ ù ' │ * ` ┃      ┃
+// ┃        ┃ Q Ä │ S „ │ D Ë │ F ‚ │ G ¥ │ H Ð │ J Ü │ K Ï │ L Ŀ │ M Ö │ % Ù │ µ ◌̄ ┃      ┃
+// ┃Maj ⇬   ┃ q ä │ s ß │ d ë │ f ‘ │ g ’ │ h ð │ j ü │ k ï │ l ŀ │ m ö │ ù ◌́ │ * ◌̀ ┃      ┃
 // ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━┫
 // ┃       ┃ > ≥ │ W “ │ X ” │ C ® │ V ← │ B ↑ │ N → │ ? … │ . . │ / ∕ │ § − ┃             ┃
 // ┃Shift ⇧┃ < ≤ │ w « │ x » │ c © │ v ⍽ │ b ↓ │ n ¬ │ , ¿ │ ; × │ : ÷ │ ! ¡ ┃Shift ⇧      ┃
@@ -120,10 +120,10 @@ xkb_symbols "oss" {
     name[Group1]="French (alt.)";
 
     // First row
-    key <TLDE>	{ [      twosuperior,    threesuperior,          onesuperior,          dead_cedilla ] }; // ² ³ ¹ ¸
-    key <AE01>	{ [        ampersand,                1,           dead_caron,           dead_ogonek ] }; // & 1 ˇ ˛
+    key <TLDE>	{ [      twosuperior,    threesuperior,          onesuperior,          dead_cedilla ] }; // ² ³ ¹ ◌̧
+    key <AE01>	{ [        ampersand,                1,           dead_caron,           dead_ogonek ] }; // & 1 ◌̌ ◌̨
     key <AE02>	{ [           eacute,                2,           asciitilde,                Eacute ] }; // é 2 ~ É
-    key <AE03>	{ [         quotedbl,                3,           numbersign,            dead_breve ] }; // " 3 # ˘
+    key <AE03>	{ [         quotedbl,                3,           numbersign,            dead_breve ] }; // " 3 # ◌̆
     key <AE04>	{ [       apostrophe,                4,            braceleft,             0x1002014 ] }; // ' 4 { — (tiret cadratin)
     key <AE05>	{ [        parenleft,                5,          bracketleft,             0x1002013 ] }; // ( 5 [ – (tiret demi-cadratin)
     key <AE06>	{ [            minus,                6,                  bar,             0x1002011 ] }; // - 6 | ‑ (tiret insécable)
@@ -145,7 +145,7 @@ xkb_symbols "oss" {
     key <AD08>	{ [                i,                I,          icircumflex,           Icircumflex ] }; // i I î Î
     key <AD09>	{ [                o,                O,                   oe,                    OE ] }; // o O œ Œ
     key <AD10>	{ [                p,                P,          ocircumflex,           Ocircumflex ] }; // p P ô Ô
-    key <AD11>	{ [  dead_circumflex,   dead_diaeresis,           dead_tilde,        dead_abovering ] }; // ^ ¨ ˜ ˚
+    key <AD11>	{ [  dead_circumflex,   dead_diaeresis,           dead_tilde,        dead_abovering ] }; // ◌̂ ◌̈ ◌̃ ◌̊
     key <AD12>	{ [           dollar,         sterling,               oslash,                Oslash ] }; // $ £ ø Ø
 
     // Third row
@@ -159,8 +159,8 @@ xkb_symbols "oss" {
     key <AC08>	{ [                k,                K,           idiaeresis,            Idiaeresis ] }; // k K ï Ï
     key <AC09>	{ [                l,                L,            0x1000140,             0x100013F ] }; // l L ŀ Ŀ
     key <AC10>	{ [                m,                M,           odiaeresis,            Odiaeresis ] }; // m M ö Ö
-    key <AC11>	{ [           ugrave,          percent,           dead_acute,                Ugrave ] }; // ù % ´ Ù
-    key <BKSL>	{ [         asterisk,               mu,           dead_grave,           dead_macron ] }; // * µ ` ¯
+    key <AC11>	{ [           ugrave,          percent,           dead_acute,                Ugrave ] }; // ù % ◌́ Ù
+    key <BKSL>	{ [         asterisk,               mu,           dead_grave,           dead_macron ] }; // * µ ◌̀ ◌̄
 
     // Fourth row
     key <LSGT>  { [             less,          greater,        lessthanequal,      greaterthanequal ] }; // < > ≤ ≥
@@ -187,8 +187,8 @@ xkb_symbols "oss_latin9" {
     name[Group1]="French (alt., Latin-9 only)";
 
     // First row
-    key <AE01>	{ [        ampersand,                1,           dead_caron,          dead_cedilla ] }; // & 1 ˇ ¸
-    key <AE03>	{ [         quotedbl,                3,           numbersign,            dead_tilde ] }; // " 3 # ˜
+    key <AE01>	{ [        ampersand,                1,           dead_caron,          dead_cedilla ] }; // & 1 ◌̌ ◌̧
+    key <AE03>	{ [         quotedbl,                3,           numbersign,            dead_tilde ] }; // " 3 # ◌̃
     key <AE04>	{ [       apostrophe,                4,            braceleft,            underscore ] }; // ' 4 { _
     key <AE05>	{ [        parenleft,                5,          bracketleft,                 minus ] }; // ( 5 [ -
     key <AE06>	{ [            minus,                6,                  bar,                 minus ] }; // - 6 | -
@@ -200,7 +200,7 @@ xkb_symbols "oss_latin9" {
     key <AC04>	{ [                f,                F,           apostrophe,            apostrophe ] }; // f F ' '
     key <AC05>	{ [                g,                G,           apostrophe,                   yen ] }; // g G ' ¥
     key <AC09>	{ [                l,                L,       periodcentered,        periodcentered ] }; // l L · ·
-    key <BKSL>	{ [         asterisk,               mu,           dead_grave,       dead_circumflex ] }; // * µ ` ^
+    key <BKSL>	{ [         asterisk,               mu,           dead_grave,       dead_circumflex ] }; // * µ ◌̀ ◌̂
 
     // Fourth row
     key <LSGT>  { [             less,          greater,                 less,               greater ] }; // < > < >
@@ -265,16 +265,16 @@ xkb_symbols "oss_nodeadkeys" {
 // | s a| s = normal, a = AltGr
 //  ¯¯¯¯
 //  ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ _______
-// | œ "| 1 ·| 2 É| 3 ,| 4 '| 5 "| 6 || 7 È| 8 ¯| 9 Ç| 0 À| ° ÿ| + °| <--   |
-// | Œ "| & '| é ~| " #| ' {| ( [| - || è `| _ \| ç ^| à @| ) ]| = }|       |
+// | œ ”| 1 ·| 2 É| 3 ¸| 4 ´| 5 ¨| 6 || 7 È| 8 ¯| 9 Ç| 0 À| ° ÿ| + ◌̊| <--   |
+// | Œ “| & ◌́| é ~| " #| ' {| ( [| - || è ◌̀| _ \| ç ^| à @| ) ]| = }|       |
 //  ========================================================================
-// | |<-  | A ä| Z Å| E ¢| R Ç| T Þ| Y Ý| U ü| I ï| O ö| P '| " `| $ ë|   , |
-// |  ->| | a â| z å| e €| r ç| t þ| y ý| u û| i î| o ô| p ¶| ^ ~| £ ê| <-' |
+// | |<-  | A ä| Z Å| E ¢| R Ç| T Þ| Y Ý| U ü| I ï| O ö| P `| ◌̈ '| £ ë|   , |
+// |  ->| | a â| z å| e €| r ç| t þ| y ý| u û| i î| o ô| p ¶| ◌̂ ◌̃| $ ê| <-' |
 //  ===================================================================¬    |
 // |       | Q Ä| S Ø| D Ë| F ª| G Æ| H Ð| J Ü| K Ï| L Ö| M º| % Ù| µ ¥|    |
 // | MAJ   | q Â| s ø| d Ê| f ±| g æ| h ð| j Û| k Î| l Ô| m ¹| ù ²| * ³|    |
 //  ========================================================================
-// | ^   | >  | W  | X  | C  | V  | B  | N  | ?  | .  | /  | §  |     ^     |
+// | ^   | >  | W  | X  | C  | V  | B ẞ| N  | ?  | .  | /  | §  |     ^     |
 // | |   | < || w «| x »| c ©| v ®| b ß| n ¬| , ¿| ; ×| : ÷| ! ¡|     |     |
 //  ========================================================================
 // |      |      |      |                       |       |      |     |      |
@@ -285,9 +285,9 @@ xkb_symbols "oss_nodeadkeys" {
 //		« morts », i.e. fonctionnant comme l'accent circonflexe & le
 //		tréma des machines à écrire ; sont disponibles :
 //
-// (^) : accent circonflexe,
-// Shift+(^) : tréma,
-// AltGr+(^) : tilde,
+// (◌̂) : accent circonflexe,
+// Shift+(◌̂) : tréma,
+// AltGr+(◌̂) : tilde,
 // AltGr+(1) : accent aigu,
 // AltGr+(7) : accent grave
 //
@@ -396,14 +396,14 @@ xkb_symbols "latin9_nodeadkeys" {
 // │ # ¶ │ 1 „ │ 2 “ │ 3 ” │ 4 ≤ │ 5 ≥ │ 6   │ 7 ¬ │ 8 ¼ │ 9 ½ │ 0 ¾ │ ° ′ │ ` ″ ┃ ⌫ Retour┃
 // │ $ – │ " — │ « < │ » > │ ( [ │ ) ] │ @ ^ │ + ± │ - − │ / ÷ │ * × │ = ≠ │ % ‰ ┃  arrière┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃       ┃ B ¦ │ É ˝ │ P § │ O Œ │ È ` │ !   │ V   │ D Ð │ L   │ J Ĳ │ Z Ə │ W   ┃Entrée ┃
-// ┃Tab ↹  ┃ b | │ é ˊ │ p & │ o œ │ è ` │ ˆ ¡ │ v ˇ │ d ð │ l / │ j ĳ │ z ə │ w ̆  ┃   ⏎   ┃
+// ┃       ┃ B ¦ │ É ◌̋ │ P § │ O Œ │ È ` │ !   │ V   │ D Ð │ L   │ J Ĳ │ Z Ə │ W   ┃Entrée ┃
+// ┃Tab ↹  ┃ b | │ é ◌́ │ p & │ o œ │ è ◌̀ │ ◌̂ ¡ │ v ◌̌ │ d ð │ l ◌̷ │ j ĳ │ z ə │ w ◌̆ ┃   ⏎   ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
-// ┃        ┃ A Æ │ U Ù │ I ˙ │ E ¤ │ ; ̛  │ C ſ │ T Þ │ S ẞ │ R ™ │ N   │ M º │ Ç , ┃      ┃
-// ┃Maj ⇬   ┃ a æ │ u ù │ i ̈  │ e € │ , ’ │ c © │ t þ │ s ß │ r ® │ n ˜ │ m ¯ │ ç ¸ ┃      ┃
+// ┃        ┃ A Æ │ U Ù │ I ◌̇ │ E ¤ │ ; ◌̛ │ C ſ │ T Þ │ S ẞ │ R ™ │ N   │ M º │ Ç ◌̦ ┃      ┃
+// ┃Maj ⇬   ┃ a æ │ u ù │ i ◌̈ │ e € │ , ’ │ c © │ t þ │ s ß │ r ® │ n ◌̃ │ m ◌̄ │ ç ◌̧ ┃      ┃
 // ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━┫
-// ┃       ┃ Ê   │ À   │ Y ‘ │ X ’ │ : · │ K   │ ? ̉  │ Q ̣  │ G   │ H ‡ │ F ª ┃             ┃
-// ┃Shift ⇧┃ ê / │ à \ │ y { │ x } │ . … │ k ~ │ ' ¿ │ q ˚ │ g µ │ h † │ f ˛ ┃Shift ⇧      ┃
+// ┃       ┃ Ê   │ À   │ Y ‘ │ X ’ │ : · │ K   │ ? ◌̉ │ Q ◌̣ │ G   │ H ‡ │ F ª ┃             ┃
+// ┃Shift ⇧┃ ê / │ à \ │ y { │ x } │ . … │ k ~ │ ' ¿ │ q ◌̊ │ g µ │ h † │ f ◌̨ ┃Shift ⇧      ┃
 // ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┻━┳━━━━━━━┳━━━┛
 // ┃       ┃       ┃       ┃ Espace inséc.   Espace inséc. fin ┃       ┃       ┃       ┃
 // ┃Ctrl   ┃Meta   ┃Alt    ┃ ␣ (Espace)      _               ␣ ┃AltGr ⇮┃Menu   ┃Ctrl   ┃
@@ -433,31 +433,31 @@ xkb_symbols "bepo" {
 
     // Second row
     key <AD01> { [               b,            B,            bar,      brokenbar ] }; // b B | ¦
-    key <AD02> { [          eacute,       Eacute,     dead_acute, dead_doubleacute]}; // é É ˊ ˝
+    key <AD02> { [          eacute,       Eacute,     dead_acute, dead_doubleacute]}; // é É ◌́ ◌̋
     key <AD03> { [               p,            P,      ampersand,        section ] }; // p P & §
     key <AD04> { [               o,            O,             oe,             OE ] }; // o O œ Œ
-    key <AD05> { [          egrave,       Egrave,     dead_grave,          grave ] }; // è È ` `
-    key <AD06> { [ dead_circumflex,       exclam,     exclamdown                 ] }; // ^ ! ¡
-    key <AD07> { [               v,            V,     dead_caron                 ] }; // v V ˇ
+    key <AD05> { [          egrave,       Egrave,     dead_grave,          grave ] }; // è È ◌̀ `
+    key <AD06> { [ dead_circumflex,       exclam,     exclamdown                 ] }; // ◌̂ ! ¡
+    key <AD07> { [               v,            V,     dead_caron                 ] }; // v V ◌̌
     key <AD08> { [               d,            D,            eth,            ETH ] }; // d D ð Ð
-    key <AD09> { [               l,            L,    dead_stroke                 ] }; // l L /
+    key <AD09> { [               l,            L,    dead_stroke                 ] }; // l L ◌̷
     key <AD10> { [               j,            J,          U0133,          U0132 ] }; // j J ĳ Ĳ
     key <AD11> { [               z,            Z,          schwa,          SCHWA ] }; // z Z ə Ə
-    key <AD12> { [               w,            W,     dead_breve                 ] }; // w W ˘
+    key <AD12> { [               w,            W,     dead_breve                 ] }; // w W ◌̆
 
     // Third row
     key <AC01> { [               a,            A,             ae,             AE ] }; // a A æ Æ
     key <AC02> { [               u,            U,         ugrave,         Ugrave ] }; // u U ù Ù
-    key <AC03> { [               i,            I, dead_diaeresis,  dead_abovedot ] }; // i I ¨ ˙
+    key <AC03> { [               i,            I, dead_diaeresis,  dead_abovedot ] }; // i I ◌̈ ◌̇
     key <AC04> { [               e,            E,       EuroSign,  dead_currency ] }; // e E € ¤
-    key <AC05> { [           comma,    semicolon, rightsinglequotemark, dead_horn] }; // , ; ’  ̛
+    key <AC05> { [           comma,    semicolon, rightsinglequotemark, dead_horn] }; // , ; ’ ◌̛
     key <AC06> { [               c,            C,      copyright,          U017F ] }; // c C © ſ
     key <AC07> { [               t,            T,          thorn,          THORN ] }; // t T þ Þ
     key <AC08> { [               s,            S,         ssharp,          U1E9E ] }; // s S ß ẞ
     key <AC09> { [               r,            R,     registered,      trademark ] }; // r R ® ™
-    key <AC10> { [               n,            N,     dead_tilde                 ] }; // n N ˜
-    key <AC11> { [               m,            M,    dead_macron,      masculine ] }; // m M ¯ º
-    key <BKSL> { [        ccedilla,     Ccedilla,   dead_cedilla, dead_belowcomma ]}; // ç Ç ¸ ,
+    key <AC10> { [               n,            N,     dead_tilde                 ] }; // n N ◌̃
+    key <AC11> { [               m,            M,    dead_macron,      masculine ] }; // m M ◌̄ º
+    key <BKSL> { [        ccedilla,     Ccedilla,   dead_cedilla, dead_belowcomma ]}; // ç Ç ◌̧ ◌̦
 
     // Fourth row
     key <LSGT> { [     ecircumflex,  Ecircumflex,          slash                 ] }; // ê Ê /
@@ -466,11 +466,11 @@ xkb_symbols "bepo" {
     key <AB03> { [               x,            X,     braceright, rightsinglequotemark ] }; // x X } ’
     key <AB04> { [          period,        colon,       ellipsis, periodcentered ] }; // . : … ·
     key <AB05> { [               k,            K,     asciitilde                 ] }; // k K ~
-    key <AB06> { [      apostrophe,     question,   questiondown,      dead_hook ] }; // ' ? ¿  ̉
-    key <AB07> { [               q,            Q, dead_abovering,  dead_belowdot ] }; // q Q ˚  ̣
+    key <AB06> { [      apostrophe,     question,   questiondown,      dead_hook ] }; // ' ? ¿ ◌̉
+    key <AB07> { [               q,            Q, dead_abovering,  dead_belowdot ] }; // q Q ◌̊ ◌̣
     key <AB08> { [               g,            G,     dead_greek                 ] }; // g G µ
     key <AB09> { [               h,            H,         dagger,   doubledagger ] }; // h H † ‡
-    key <AB10> { [               f,            F,    dead_ogonek,    ordfeminine ] }; // f F ˛ ª
+    key <AB10> { [               f,            F,    dead_ogonek,    ordfeminine ] }; // f F ◌̨ ª
 
     key <SPCE> { [           space, nobreakspace,     underscore,          U202F ] }; // ␣ (espace insécable) _ (espace insécable fin)
 };
@@ -497,13 +497,13 @@ xkb_symbols "bepo_latin9" {
     key <AE12> { [         percent,        grave                                 ] }; // % `
 
     key <AD01> { [               b,            B,            bar                 ] }; // b B |
-    key <AD02> { [          eacute,       Eacute,     dead_acute                 ] }; // é É ˊ
+    key <AD02> { [          eacute,       Eacute,     dead_acute                 ] }; // é É ◌́
     key <AD10> { [               j,            J                                 ] }; // j J
     key <AD11> { [               z,            Z                                 ] }; // z Z
     key <AD12> { [               w,            W                                 ] }; // w W
 
-    key <AC03> { [               i,            I, dead_diaeresis                 ] }; // i I ¨
-    key <AC05> { [           comma,    semicolon,          comma,      dead_horn ] }; // , ; ,  ̛
+    key <AC03> { [               i,            I, dead_diaeresis                 ] }; // i I ◌̈
+    key <AC05> { [           comma,    semicolon,          comma,      dead_horn ] }; // , ; , ◌̛
     key <AC06> { [               c,            C,      copyright                 ] }; // c C ©
     key <AC08> { [               s,            S,         ssharp,          U1E9E ] }; // s S ß ẞ
     key <AC09> { [               r,            R,     registered                 ] }; // r R ®
@@ -529,13 +529,13 @@ xkb_symbols "bepo_latin9" {
 // │ $ –│ " —│ « <│ » >│ ( [│ ) ]║ @ ^│ + ±│ - −│ / ÷│ * ×│ = ≠│ % ‰║ <--     ║
 // ╔════╧══╗─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─┴──┬─╚══╦══════╣
 // ║  |<-  ║ B _│ É  │ P §│ O Œ│ È `║ !  │ V  │ D  │ L £│ J  │ Z  │ W  ║   |  ║
-// ║  ->|  ║ b |│ é ´│ p &│ o œ│ è `║ ˆ ¡│ v ˇ│ d ∞│ l /│ j  │ z ―│ w  ║ <-'  ║
+// ║  ->|  ║ b |│ é ◌́│ p &│ o œ│ è ◌̀║ ◌̂ ¡│ v ◌̌│ d ∞│ l ◌̷│ j  │ z ―│ w  ║ <-'  ║
 // ╠═══════╩╗───┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───┴┬───╚╗     ║
-// ║        ║ A Æ│ U Ù│ I ˙│ E ¤│ ; ,║ C ©│ T ™│ S ſ│ R ®│ N  │ M  │ Ç ©║     ║
-// ║  CAPS  ║ a æ│ u ù│ i ¨│ e €│ , '║ c ¸│ t ᵉ│ s ß│ r ˘│ n ~│ m ¯│ ç  ║     ║
+// ║        ║ A Æ│ U Ù│ I ◌̇│ E ¤│ ; ◌̦║ C ©│ T ™│ S ſ│ R ®│ N  │ M  │ Ç ©║     ║
+// ║  CAPS  ║ a æ│ u ù│ i ◌̈│ e €│ , '║ c ◌̧│ t ᵉ│ s ß│ r ◌̆│ n ◌̃│ m ◌̄│ ç  ║     ║
 // ╠══════╦═╝──┬─┴──┬─┴──┬─┴─══─┴──┬─┴──┬─┴─══─┴──┬─┴──┬─┴──┬─┴──╔═╧════╩═════╣
-// ║   ^  ║ Ê ^│ À ‚│ Y ‘│ X ’│ : ·│ K ‑║ ?  ̉│ Q  ̛│ G †│ H ‡│ F  ║     ^      ║
-// ║   |  ║ ê /│ à \│ y {│ x }│ . …│ k ~║ ’ ¿│ q °│ g µ│ h ̣ │ f ˛║     |      ║
+// ║   ^  ║ Ê ^│ À ‚│ Y ‘│ X ’│ : ·│ K ‑║ ? ◌̉│ Q ◌̛│ G †│ H ‡│ F  ║     ^      ║
+// ║   |  ║ ê /│ à \│ y {│ x }│ . …│ k ~║ ’ ¿│ q ◌̊│ g µ│ h ◌̣│ f ◌̨║     |      ║
 // ╠══════╩╦═══╧══╦═╧═══╦╧════╧════╧════╧════╧════╧═╦══╧══╦═╧════╬═════╦══════╣
 // ║       ║      ║     ║ Fine insécable  Insécable ║     ║      ║     ║      ║
 // ║ Ctrl  ║ WinG ║ Alt ║ Espace                  _ ║AltGr║ WinD ║WinM ║ Ctrl ║
@@ -560,29 +560,29 @@ xkb_symbols "bepo_afnor" {
 	key <AE12> { type[group1] = "FOUR_LEVEL", [ percent, grave, permille, seconds ] }; // % ` ‰ ″
 
 	key <AD01> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ b, B, bar, underscore ] }; // b B | _
-	key <AD02> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ eacute, Eacute, dead_acute, heart ] }; // é É ´ ♥
+	key <AD02> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ eacute, Eacute, dead_acute, heart ] }; // é É ◌́ ♥
 	key <AD03> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ p, P, ampersand, section ] }; // p P & §
 	key <AD04> { type[group1] = "FOUR_LEVEL_ALPHABETIC", [ o, O, oe, OE ] }; // o O œ Œ
-	key <AD05> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ egrave, Egrave, dead_grave, grave ] }; // è È ` `
-	key <AD06> { type[group1] = "FOUR_LEVEL", [ dead_circumflex, exclam, exclamdown, U2620 ] }; // ^ ! ¡ ☠
-	key <AD07> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ v, V, dead_caron, U2622 ] }; // v V ˇ ☢
+	key <AD05> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ egrave, Egrave, dead_grave, grave ] }; // è È ◌̀ `
+	key <AD06> { type[group1] = "FOUR_LEVEL", [ dead_circumflex, exclam, exclamdown, U2620 ] }; // ◌̂ ! ¡ ☠
+	key <AD07> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ v, V, dead_caron, U2622 ] }; // v V ◌̌ ☢
 	key <AD08> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ d, D, UFDD7, U2623 ] }; // d D ∞ ☣
-	key <AD09> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ l, L, dead_stroke, sterling ] }; // l L / £
+	key <AD09> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ l, L, dead_stroke, sterling ] }; // l L ◌̷ £
 	key <AD10> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ j, J, U262E, U262F ] }; // j J ☮ ☯
 	key <AD11> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ z, Z, UFDD8, U2619 ] }; // z Z ― ☙
 	key <AD12> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ w, W, U269C, U267F ] }; // w W ⚜ ♿
 
 	key <AC01> { type[group1] = "FOUR_LEVEL_ALPHABETIC", [ a, A, ae, AE ] }; // a A æ Æ
 	key <AC02> { type[group1] = "FOUR_LEVEL_ALPHABETIC", [ u, U, ugrave, Ugrave ] }; // u U ù Ù
-	key <AC03> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ i, I, dead_diaeresis, dead_abovedot ] }; // i I ¨ ˙
+	key <AC03> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ i, I, dead_diaeresis, dead_abovedot ] }; // i I ◌̈ ◌̇
 	key <AC04> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ e, E, EuroSign, dead_currency ] }; // e E € ¤
-	key <AC05> { type[group1] = "FOUR_LEVEL", [ comma, semicolon, apostrophe, dead_belowcomma ] }; // , ; ' ,
-	key <AC06> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ c, C, dead_cedilla, copyright ] }; // c C ¸ ©
+	key <AC05> { type[group1] = "FOUR_LEVEL", [ comma, semicolon, apostrophe, dead_belowcomma ] }; // , ; ' ◌̦
+	key <AC06> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ c, C, dead_cedilla, copyright ] }; // c C ◌̧ ©
 	key <AC07> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ t, T, UFDD5, trademark ] }; // t T ᵉ ™
 	key <AC08> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ s, S, UFDD4, U017F ] }; // s S ß ſ
-	key <AC09> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ r, R, dead_breve, registered ] }; // r R ˘ ®
-	key <AC10> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ n, N, dead_tilde, U2693 ] }; // n N ~ ⚓
-	key <AC11> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ m, M, dead_macron, U26FD ] }; // m M ¯ ⛽
+	key <AC09> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ r, R, dead_breve, registered ] }; // r R ◌̆ ®
+	key <AC10> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ n, N, dead_tilde, U2693 ] }; // n N ◌̃ ⚓
+	key <AC11> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ m, M, dead_macron, U26FD ] }; // m M ◌̄ ⛽
 	key <BKSL> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ ccedilla, Ccedilla, U2708, U1F12F ] }; // ç Ç ✈ 🄯
 
 	key <LSGT> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ ecircumflex, Ecircumflex, slash, asciicircum ] }; // ê Ê / ^
@@ -591,12 +591,12 @@ xkb_symbols "bepo_afnor" {
 	key <AB03> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ x, X, braceright, rightsinglequotemark ] }; // x X } ’
 	key <AB04> { type[group1] = "FOUR_LEVEL", [ period, colon, ellipsis, periodcentered ] }; // . : … ·
 	key <AB05> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ k, K, asciitilde, U2011 ] }; // k K ~ ‑
-	key <AB06> { type[group1] = "FOUR_LEVEL", [ rightsinglequotemark, question, questiondown, dead_hook ] }; // ’ ? ¿  ̉
-	key <AB07> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ q, Q, dead_abovering, dead_horn ] }; // q Q ˚ ̛
+	key <AB06> { type[group1] = "FOUR_LEVEL", [ rightsinglequotemark, question, questiondown, dead_hook ] }; // ’ ? ¿ ◌̉
+	key <AB07> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ q, Q, dead_abovering, dead_horn ] }; // q Q ◌̊ ◌̛
 	key <AB08> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ g, G, dead_greek, dagger ] }; // g G µ †
-	key <AB09> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ h, H, dead_belowdot, doubledagger ] }; // h H ̣ ‡
-	key <AB10> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ f, F, dead_ogonek, U26C4 ] }; // f F ˛ ⛄
-	key <SPCE> { type[group1] = "FOUR_LEVEL", [ space, U202F, underscore, nobreakspace ] }; //     _  
+	key <AB09> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ h, H, dead_belowdot, doubledagger ] }; // h H ◌̣ ‡
+	key <AB10> { type[group1] = "FOUR_LEVEL_SEMIALPHABETIC", [ f, F, dead_ogonek, U26C4 ] }; // f F ◌̨ ⛄
+	key <SPCE> { type[group1] = "FOUR_LEVEL", [ space, U202F, underscore, nobreakspace ] }; //   [ ] _ [ ]
 
 	include "level3(ralt_switch)"
 };
@@ -659,40 +659,40 @@ xkb_symbols "ergol" {
     key <AE10> {[ 0               , at              , U2080           , U2070           , degree          , VoidSymbol      ]}; // 0 @ ₀ ⁰ °
 
     // Letters, first row
-    key <AD01> {[ q               , Q               , asciicircum     , dead_circumflex , acircumflex     , Acircumflex     ]}; // q Q ^ ^ â Â
+    key <AD01> {[ q               , Q               , asciicircum     , dead_circumflex , acircumflex     , Acircumflex     ]}; // q Q ^ ◌̂ â Â
     key <AD02> {[ c               , C               , less            , lessthanequal   , ccedilla        , Ccedilla        ]}; // c C < ≤ ç Ç
     key <AD03> {[ o               , O               , greater         , greaterthanequal, oe              , OE              ]}; // o O > ≥ œ Œ
     key <AD04> {[ p               , P               , dollar          , dead_currency   , ocircumflex     , Ocircumflex     ]}; // p P $ ¤ ô Ô
     key <AD05> {[ w               , W               , percent         , U2030           , VoidSymbol      , VoidSymbol      ]}; // w W % ‰
-    key <AD06> {[ j               , J               , at              , dead_abovering  , VoidSymbol      , VoidSymbol      ]}; // j J @ ˚
+    key <AD06> {[ j               , J               , at              , dead_abovering  , VoidSymbol      , VoidSymbol      ]}; // j J @ ◌̊
     key <AD07> {[ m               , M               , ampersand       , VoidSymbol      , mu              , VoidSymbol      ]}; // m M &   µ
     key <AD08> {[ d               , D               , asterisk        , multiply        , underscore      , underscore      ]}; // d D * × _ _
-    key <AD09> {[ ISO_Level5_Latch, exclam          , apostrophe      , dead_acute      , dead_diaeresis  , exclamdown      ]}; // *¨ ! ' ´ ¨ ¡
-    key <AD10> {[ y               , Y               , grave           , dead_grave      , ucircumflex     , Ucircumflex     ]}; // y Y ` ` û Û
+    key <AD09> {[ ISO_Level5_Latch, exclam          , apostrophe      , dead_acute      , dead_diaeresis  , exclamdown      ]}; // ★ ! ' ◌́ ◌̈ ¡
+    key <AD10> {[ y               , Y               , grave           , dead_grave      , ucircumflex     , Ucircumflex     ]}; // y Y ` ◌̀ û Û
 
     // Letters, second row
-    key <AC01> {[ a               , A               , braceleft       , dead_caron      , agrave          , Agrave          ]}; // a A { ˇ à À
+    key <AC01> {[ a               , A               , braceleft       , dead_caron      , agrave          , Agrave          ]}; // a A { ◌̌ à À
     key <AC02> {[ s               , S               , parenleft       , VoidSymbol      , eacute          , Eacute          ]}; // s S (   é É
     key <AC03> {[ e               , E               , parenright      , VoidSymbol      , egrave          , Egrave          ]}; // e E )   è È
-    key <AC04> {[ n               , N               , braceright      , dead_abovedot   , ecircumflex     , Ecircumflex     ]}; // n N } ˙ ê Ê
+    key <AC04> {[ n               , N               , braceright      , dead_abovedot   , ecircumflex     , Ecircumflex     ]}; // n N } ◌̇ ê Ê
     key <AC05> {[ f               , F               , equal           , notequal        , ntilde          , Ntilde          ]}; // f F = ≠ ñ Ñ
-    key <AC06> {[ l               , L               , backslash       , dead_stroke     , parenleft       , VoidSymbol      ]}; // l L \ / (
+    key <AC06> {[ l               , L               , backslash       , dead_stroke     , parenleft       , VoidSymbol      ]}; // l L \ ◌̷ (
     key <AC07> {[ r               , R               , plus            , plusminus       , parenright      , VoidSymbol      ]}; // r R + ± )
-    key <AC08> {[ t               , T               , minus           , dead_macron     , icircumflex     , Icircumflex     ]}; // t T - ˉ î Î
+    key <AC08> {[ t               , T               , minus           , dead_macron     , icircumflex     , Icircumflex     ]}; // t T - ◌̄ î Î
     key <AC09> {[ i               , I               , slash           , division        , idiaeresis      , Idiaeresis      ]}; // i I / ÷ ï Ï
-    key <AC10> {[ u               , U               , quotedbl        , dead_doubleacute, ugrave          , Ugrave          ]}; // u U " ˝ ù Ù
+    key <AC10> {[ u               , U               , quotedbl        , dead_doubleacute, ugrave          , Ugrave          ]}; // u U " ◌̋ ù Ù
 
     // Letters, third row
-    key <AB01> {[ z               , Z               , asciitilde      , dead_tilde      , ae              , AE              ]}; // z Z ~ ~ æ Æ
-    key <AB02> {[ x               , X               , bracketleft     , dead_belowcomma , ssharp          , U1E9E           ]}; // x X [ , ß ẞ
-    key <AB03> {[ minus           , question        , bracketright    , dead_ogonek     , U2011           , questiondown    ]}; // - ? ] ˛ ‑ ¿
+    key <AB01> {[ z               , Z               , asciitilde      , dead_tilde      , ae              , AE              ]}; // z Z ~ ◌̃ æ Æ
+    key <AB02> {[ x               , X               , bracketleft     , dead_belowcomma , ssharp          , U1E9E           ]}; // x X [ ◌̦ ß ẞ
+    key <AB03> {[ minus           , question        , bracketright    , dead_ogonek     , U2011           , questiondown    ]}; // - ? ] ◌̨ ‑ ¿
     key <AB04> {[ v               , V               , underscore      , endash          , endash          , VoidSymbol      ]}; // v V _ – –
     key <AB05> {[ b               , B               , numbersign      , VoidSymbol      , emdash          , VoidSymbol      ]}; // b B #   —
     key <AB06> {[ period          , colon           , bar             , brokenbar       , ellipsis        , VoidSymbol      ]}; // . : | ¦ …
     key <AB07> {[ h               , H               , exclam          , notsign         , VoidSymbol      , VoidSymbol      ]}; // h H ! ¬
-    key <AB08> {[ g               , G               , semicolon       , dead_cedilla    , dead_greek      , VoidSymbol      ]}; // g G ; ¸ µ
+    key <AB08> {[ g               , G               , semicolon       , dead_cedilla    , dead_greek      , VoidSymbol      ]}; // g G ; ◌̧ µ
     key <AB09> {[ comma           , semicolon       , colon           , colon           , periodcentered  , U2022           ]}; // , ; : : · •
-    key <AB10> {[ k               , K               , question        , dead_breve      , VoidSymbol      , VoidSymbol      ]}; // k K ? ˘
+    key <AB10> {[ k               , K               , question        , dead_breve      , VoidSymbol      , VoidSymbol      ]}; // k K ? ◌̆
 
     // Pinky keys
     key <AE11> {[ slash           , underscore      , VoidSymbol      , VoidSymbol      , division        , endash          ]}; // / _     ÷ –
@@ -723,12 +723,12 @@ xkb_symbols "ergol_iso" {
     include "fr(ergol)"
     name[group1]= "French (Ergo‑L, ISO variant)";
 
-    key <AB01> {[ x               , X               , bracketleft     , dead_belowcomma , ssharp          , U1E9E           ]}; // x X [ , ß ẞ
-    key <AB02> {[ minus           , question        , bracketright    , dead_ogonek     , U2011           , questiondown    ]}; // - ? ] ˛ ‑ ¿
+    key <AB01> {[ x               , X               , bracketleft     , dead_belowcomma , ssharp          , U1E9E           ]}; // x X [ ◌̦ ß ẞ
+    key <AB02> {[ minus           , question        , bracketright    , dead_ogonek     , U2011           , questiondown    ]}; // - ? ] ◌̨ ‑ ¿
     key <AB03> {[ v               , V               , underscore      , endash          , endash          , VoidSymbol      ]}; // v V _ – –
     key <AB04> {[ b               , B               , numbersign      , VoidSymbol      , emdash          , VoidSymbol      ]}; // b B #   —
     key <AB05> {[ BackSpace       , BackSpace       , Delete          , Delete          , VoidSymbol      , VoidSymbol      ]}; // bsp bsp del del
-    key <LSGT> {[ z               , Z               , asciitilde      , dead_tilde      , ae              , AE              ]}; // z Z ~ ~ æ Æ
+    key <LSGT> {[ z               , Z               , asciitilde      , dead_tilde      , ae              , AE              ]}; // z Z ~ ◌̃ æ Æ
 };
 
 // Author   : Francis Leboutte, http://www.algo.be/ergo/dvorak-fr.html
@@ -739,10 +739,10 @@ xkb_symbols "ergol_iso" {
 // Base layer + dead AltGr key (`):
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
 // │ *   │ 1   │ 2   │ 3   │ 4   │ 5   │ 6   │ 7   │ 8   │ 9   │ 0   │ +   │ %   ┃          ┃
-// │ _   │ =   │ / ± │ - ¼ │ è ½ │ \ ¾ │ ^   │ (   │ ` ` │ )   │ "   │ [   │ ]   ┃ ⌫        ┃
+// │ _   │ =   │ / ± │ - ¼ │ è ½ │ \ ¾ │ ◌̂   │ (   │ ◌̀ ` │ )   │ "   │ [   │ ]   ┃ ⌫        ┃
 // ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┳━━━━━━━┫
 // ┃        ┃ ? Æ │ <   │ >   │ G   │ !   │ H   │ V   │ C Ç │ M   │ K   │ Z   │ &   ┃       ┃
-// ┃ ↹      ┃ : æ │ ' $ │ é É │ g € │ . ° │ h   │ v   │ c ç │ m µ │ k   │ z   │ ¨   ┃       ┃
+// ┃ ↹      ┃ : æ │ ' $ │ é É │ g € │ . ° │ h   │ v   │ c ç │ m µ │ k   │ z   │ ◌̈   ┃       ┃
 // ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
 // ┃         ┃ O Ò │ A À │ U Ù │ E È │ B   │ F   │ S   │ T   │ N   │ D   │ W   │ #   ┃      ┃
 // ┃ ⇬       ┃ o ò │ a à │ u ù │ e è │ b   │ f   │ s « │ t   │ n » │ d   │ w   │ ~   ┃      ┃
@@ -835,9 +835,9 @@ xkb_symbols "dvorak" {
   key <SPCE> { [            space,            space,    nobreakspace,     nobreakspace ] };
 };
 
-// C'HWERTY: Breton keyboard. Ar c'hlavier brezhoneg.
+// C’HWERTY: Breton keyboard. Ar c’hlavier brezhoneg.
 // Copyright © 2009 Dominique Pellé <dominique.pelle@gmail.com>
-// Version: 0.1
+// Version: 0.2
 //
 // ┌─────┐
 // │ S A │   S = Reol = Shift,  A = ArErl + Pennlizherenn = AltGr + Shift
@@ -845,17 +845,17 @@ xkb_symbols "dvorak" {
 // └─────┘
 //
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
-// │ $ Γ │ 1 Δ │ 2 Θ │ 3 Λ │ 4 Ξ │ 5 Π │ 6 Σ │ 7 Φ │ 8 Ψ │ 9 Ç │ 0 Ω │ ° ß │ + ¬ ┃ ⌫ Souzañ┃
-// │ ² ˙ │ & ¯ │ é ´ │ " # │ ' { │ ( [ │ - | │ è ` │ - \ │ ç ± │ à @ │ ) ] │ = } ┃         ┃
+// │ ◌̃ Γ │ 1 Δ │ 2 Θ │ 3 Λ │ 4 Ξ │ 5 Π │ 6 Σ │ 7 Φ │ 8 Ψ │ 9 Ç │ 0 Ω │ ◌̊ ß │ + ¬ ┃ ⌫ Souzañ┃
+// │ ² ◌̇ │ & ◌̄ │ é ◌́ │ " # │ ' { │ ( [ │ - | │ è ◌̀ │ - \ │ ç ± │ à @ │ ) ] │ = } ┃         ┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃Toalenn┃ C'h │ W ω │ E ε │ R ρ │ T τ │ Y ψ │ U υ │ I ι │ O OE│ P π │ ¨ ¥ │ * £ ┃Enankañ┃
-// ┃     ↹ ┃ c'h │ w   │ e € │ r   │ t   │ y   │ u   │ i ı │ o oe│ p   │ ^ « │ / » ┃   ⏎   ┃
+// ┃Toalenn┃C’h Α│ W Ω │ E ε │ R Ρ │ T Τ │ Y Ψ │ U Υ │ I ι │ O Œ│ P Π │ ◌̈ ¥ │ * £ ┃Enankañ┃
+// ┃     ↹ ┃c’h α│ w ω │ e € │ r ρ │ t τ │ y ψ │ u υ │ i ı │ o œ│ p π │ ◌̂ « │ / » ┃   ⏎   ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
-// ┃Prenn   ┃ A Æ │ S σ │ D δ │ F φ │ G γ │ H η │ J ς │ K κ │ L λ │ M μ │ Ù ® │ ! ¡ ┃      ┃
-// ┃Pennli ⇬┃ a æ │ s   │ d $ │ f   │ g   │ h   │ j   │ k   │ l   │ m   │ ù ŭ │ ? ¿ ┃      ┃
+// ┃Prenn   ┃ A Æ │ S Σ │ D δ │ F Φ │ G Γ │ H Η │ J ς │ K κ │ L Λ │ M Μ │ Ù ® │ ! ¡ ┃      ┃
+// ┃Pennli ⇬┃ a æ │ s σ │ d $ │ f φ │ g γ │ h η │ j ς │ k Κ │ l λ │ m μ │ ù ŭ │ ? ¿ ┃      ┃
 // ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━┫
-// ┃       ┃ Q θ │ Z ζ │ X ξ │ C χ │ V   │ B β │ N ν │ CH  │ Ñ   │ : © │ ;   ┃             ┃
-// ┃Shift ⇧┃ q < │ z > │ x   │ c ¢ │ v   │ b   │ n   │ ch  │ ñ   │ .   │ ,   ┃Shift ⇧      ┃
+// ┃       ┃ Q θ │ Z ζ │ X Ξ │ C ς │ V Ο │ B Β │ N Ν │CH Χ │ Ñ ◌̃ │ : © │ ; ‰ ┃             ┃
+// ┃Shift ⇧┃ q < │ z > │ x ξ │ c ¢ │ v ο │ b β │ n ν │ch χ │ ñ ~ │ . § │ , % ┃Shift ⇧      ┃
 // ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┻━┳━━━━━━━┳━━━┛
 // ┃       ┃       ┃       ┃ ⍽ Espace insécable              ␣ ┃       ┃       ┃       ┃
 // ┃Reol   ┃Meta   ┃Erl    ┃ ␣ Espace                        ␣ ┃ArErl ⇮┃Menu   ┃Reol   ┃
@@ -883,47 +883,47 @@ xkb_symbols "bre" {
     key <AE12> { [           equal,           plus,      braceright,        notsign ] };
 
     // Second row
-    // Handling the C'H key correctly requires the XIM input method.
-    key <AD01> { [             c_h,            C_h,             C_H,    Greek_alpha ] };
-    key <AD02> { [               w,              W,     Greek_omega,    Greek_omega ] };
+    // Handling the C’H key correctly requires an input method.
+    key <AD01> { [             c_h,            C_h,     Greek_alpha,    Greek_ALPHA, C_H ], type[group1]="FOUR_LEVEL_PLUS_LOCK" };
+    key <AD02> { [               w,              W,     Greek_omega,    Greek_OMEGA ] };
     key <AD03> { [               e,              E,        EuroSign,  Greek_epsilon ] };
-    key <AD04> { [               r,              R,       Greek_rho,      Greek_rho ] };
-    key <AD05> { [               t,              T,       Greek_tau,      Greek_tau ] };
-    key <AD06> { [               y,              Y,       Greek_psi,      Greek_psi ] };
-    key <AD07> { [               u,              U,   Greek_upsilon,  Greek_upsilon ] };
+    key <AD04> { [               r,              R,       Greek_rho,      Greek_RHO ] };
+    key <AD05> { [               t,              T,       Greek_tau,      Greek_TAU ] };
+    key <AD06> { [               y,              Y,       Greek_psi,      Greek_PSI ] };
+    key <AD07> { [               u,              U,   Greek_upsilon,  Greek_UPSILON ] };
     key <AD08> { [               i,              I,        idotless,     Greek_iota ] };
     key <AD09> { [               o,              O,              oe,             OE ] };
-    key <AD10> { [               p,              P,        Greek_pi,       Greek_pi ] };
+    key <AD10> { [               p,              P,        Greek_pi,       Greek_PI ] };
     key <AD11> { [ dead_circumflex, dead_diaeresis,   guillemotleft,            yen ] };
     key <AD12> { [           slash,       asterisk,  guillemotright,       sterling ] };
 
     // Third row
     key <AC01> { [               a,              A,              ae,             AE ] };
-    key <AC02> { [               s,              S,     Greek_sigma,    Greek_sigma ] };
+    key <AC02> { [               s,              S,     Greek_sigma,    Greek_SIGMA ] };
     key <AC03> { [               d,              D,          dollar,    Greek_delta ] };
-    key <AC04> { [               f,              F,       Greek_phi,      Greek_phi ] };
-    key <AC05> { [               g,              G,     Greek_gamma,    Greek_gamma ] };
-    key <AC06> { [               h,              H,       Greek_eta,      Greek_eta ] };
+    key <AC04> { [               f,              F,       Greek_phi,      Greek_PHI ] };
+    key <AC05> { [               g,              G,     Greek_gamma,    Greek_GAMMA ] };
+    key <AC06> { [               h,              H,       Greek_eta,      Greek_ETA ] };
     key <AC07> { [               j,              J, Greek_finalsmallsigma, Greek_finalsmallsigma ] };
-    key <AC08> { [               k,              K,       Greek_kappa,  Greek_kappa ] };
-    key <AC09> { [               l,              L,       Greek_lamda, Greek_lambda ] };
-    key <AC10> { [               m,              M,          Greek_mu,     Greek_mu ] };
-    key <AC11> { [          ugrave,         Ugrave,            ubreve,   registered ] };
-    key <BKSL> { [        question,         exclam,      questiondown,   exclamdown ] };
+    key <AC08> { [               k,              K,     Greek_kappa,    Greek_KAPPA ] };
+    key <AC09> { [               l,              L,     Greek_lamda,   Greek_LAMBDA ] };
+    key <AC10> { [               m,              M,        Greek_mu,       Greek_MU ] };
+    key <AC11> { [          ugrave,         Ugrave,          ubreve,     registered ] };
+    key <BKSL> { [        question,         exclam,    questiondown,     exclamdown ] };
 
     // Fourth row
     key <LSGT> { [               q,              Q,            less,    Greek_theta ] };
     key <AB01> { [               z,              Z,         greater,     Greek_zeta ] };
-    key <AB02> { [               x,              X,        Greek_xi,       Greek_xi ] };
-    key <AB03> { [               c,              C,            cent,      Greek_chi ] };
-    key <AB04> { [               v,              V                                  ] };
-    key <AB05> { [               b,              B,      Greek_beta,     Greek_beta ] };
-    key <AB06> { [               n,              N,        Greek_nu,       Greek_nu ] };
-    // Handling the CH key correctly requires the XIM input method.
-    key <AB07> { [              ch,             Ch,              CH,  Greek_omicron ] };
-    key <AB08> { [          ntilde,         Ntilde                                  ] };
+    key <AB02> { [               x,              X,        Greek_xi,       Greek_XI ] };
+    key <AB03> { [               c,              C,            cent, Greek_finalsmallsigma ] };
+    key <AB04> { [               v,              V,   Greek_omicron,  Greek_OMICRON ] };
+    key <AB05> { [               b,              B,      Greek_beta,     Greek_BETA ] };
+    key <AB06> { [               n,              N,        Greek_nu,       Greek_NU ] };
+    // Handling the CH key correctly requires an input method.
+    key <AB07> { [              ch,             Ch,       Greek_chi,      Greek_CHI, CH ], type[group1]="FOUR_LEVEL_PLUS_LOCK" };
+    key <AB08> { [          ntilde,         Ntilde,      asciitilde,     dead_tilde ] };
     key <AB09> { [          period,          colon,         section,      copyright ] };
-    key <AB10> { [           comma,      semicolon,         percent                 ] };
+    key <AB10> { [           comma,      semicolon,         percent,       permille ] };
 
     key <SPCE> { [           space,   nobreakspace,           space,   nobreakspace ] };
 
@@ -939,14 +939,14 @@ xkb_symbols "bre" {
 // - change position of æ, ü, î, û, œ, ô, ö, ï, â, ë
 //
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
-// │ ³ ¸ │ 1  ̨ │ 2 É │ 3 ˘ │ 4 — │ 5 – │ 6 ‑ │ 7 È │ 8 ™ │ 9 Ç │ 0 À │ ° ≠ │ + ± ┃ ⌫ Retour┃
-// │ ² ¹ │ & ˇ │ é ~ │ " # │ ' { │ ( [ │ - | │ è ` │ _ \ │ ç ^ │ à @ │ ) ] │ = } ┃  arrière┃
+// │ ³ ◌̧ │ 1 ◌̨ │ 2 É │ 3 ◌̆ │ 4 — │ 5 – │ 6 ‑ │ 7 È │ 8 ™ │ 9 Ç │ 0 À │ ° ≠ │ + ± ┃ ⌫ Retour┃
+// │ ² ¹ │ & ◌̌ │ é ~ │ " # │ ' { │ ( [ │ - | │ è ` │ _ \ │ ç ^ │ à @ │ ) ] │ = } ┃  arrière┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃       ┃ A Á │ Z Æ │ E ¢ │ R Ê │ T Ë │ Y Û │ U Ú │ I Í │ O Ó │ P Ò │ ¨ Œ │ £ Ø ┃Entrée ┃
-// ┃Tab ↹  ┃ a á │ z æ │ e € │ r ê │ t ë │ y û │ u ú │ i í │ o ó │ p ò │ ^ œ │ $ ø ┃   ⏎   ┃
+// ┃       ┃ A Á │ Z Æ │ E ¢ │ R Ê │ T Ë │ Y Û │ U Ú │ I Í │ O Ó │ P Ò │ ◌̈ Œ │ £ Ø ┃Entrée ┃
+// ┃Tab ↹  ┃ a á │ z æ │ e € │ r ê │ t ë │ y û │ u ú │ i í │ o ó │ p ò │ ◌̂ œ │ $ ø ┃   ⏎   ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
-// ┃        ┃ Q Ä │ S „ │ D Â │ F ‚ │ G ¥ │ H Ü │ J Î │ K Ï │ L Ô │ M Ö │ % Ù │ µ  ̄ ┃      ┃
-// ┃Maj ⇬   ┃ q ä │ s ß │ d â │ f ‘ │ g ’ │ h ü │ j î │ k ï │ l ô │ m ö │ ù ' │ * ` ┃      ┃
+// ┃        ┃ Q Ä │ S „ │ D Â │ F ‚ │ G ¥ │ H Ü │ J Î │ K Ï │ L Ô │ M Ö │ % Ù │ µ ◌̄ ┃      ┃
+// ┃Maj ⇬   ┃ q ä │ s ß │ d â │ f ‘ │ g ’ │ h ü │ j î │ k ï │ l ô │ m ö │ ù ◌́ │ * ◌̀ ┃      ┃
 // ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━┫
 // ┃       ┃ > ≥ │ W “ │ X ” │ C ® │ V ← │ B ↑ │ N Ñ │ ? … │ . . │ / ∕ │ § − ┃             ┃
 // ┃Shift ⇧┃ < ≤ │ w « │ x » │ c © │ v → │ b ↓ │ n ñ │ , ¿ │ ; × │ : ÷ │ ! ¡ ┃Shift ⇧      ┃
@@ -969,7 +969,7 @@ xkb_symbols "oci" {
     key <AD08>	{[               i,              I,           iacute,       Iacute ]}; // i I í Í
     key <AD09>	{[               o,              O,           oacute,       Oacute ]}; // o O ó Ó
     key <AD10>	{[               p,              P,           ograve,       Ograve ]}; // p P ò Ò
-    key <AD11>	{[ dead_circumflex, dead_diaeresis,               oe,           OE ]}; // ^  ̈ œ Œ
+    key <AD11>	{[ dead_circumflex, dead_diaeresis,               oe,           OE ]}; // ◌̂ ◌̈ œ Œ
 
     key <AC03>	{[               d,              D,      acircumflex,  Acircumflex ]}; // d D â Â
     key <AC06>	{[               h,              H,       udiaeresis,   Udiaeresis ]}; // h H ü Ü
@@ -1184,8 +1184,8 @@ partial alphanumeric_keys
 // |    | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 0  | °  | +  | <--   |
 // | ²  | &  | é ~| " #| ' {| ( [| - || è `| _ \| ç ^| à @| ) ]| = }|       |
 //  ========================================================================
-// | |<-  | A  | Z  | E  | R  | T  | Y  | U  | I  | O  | P  | ¨  | $  |   , |
-// |  ->| | a  | z  | e €| r  | t  | y  | u  | i  | o  | p  | ^  | £ ¤| <-' |
+// | |<-  | A  | Z  | E  | R  | T  | Y  | U  | I  | O  | P  | ◌̈  | $  |   , |
+// |  ->| | a  | z  | e €| r  | t  | y  | u  | i  | o  | p  | ◌̂  | £ ¤| <-' |
 //  ===================================================================¬    |
 // |       | Q  | S  | D  | F  | G  | H  | J  | K  | L  | M  | %  | µ  |    |
 // | MAJ   | q  | s  | d  | f  | g  | h  | j  | k  | l  | m  | ù  | *  |    |
@@ -1325,17 +1325,17 @@ xkb_symbols "us-azerty" {
 // Original author: Cimbali <me @ cimba.li>, © 2019.
 //
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
-// │ #  ̑ │ 1 À │ 2 É │ 3 È │ 4 Ê │ 5  ̋ │ 6  ̏ │ 7   │ 8 — │ 9 ‹ │ 0 › │ " ˚ │ ¨   ┃ ⌫ Retour┃
-// │ @  ̆ │ à § │ é  ́ │ è  ̀ │ ê & │ ( [ │ ) ] │ ‘  ̄ │ ’ _ │ « “ │ » ” │ ' ° │  ̂  ̌ ┃  arrière┃
+// │ # ◌̑ │ 1 À │ 2 É │ 3 È │ 4 Ê │ 5 ◌̋ │ 6 ◌̏ │ 7   │ 8 — │ 9 ‹ │ 0 › │ " ◌̊ │ ◌̈   ┃ ⌫ Retour┃
+// │ @ ◌̆ │ à § │ é ◌́ │ è ◌̀ │ ê & │ ( [ │ ) ] │ ‘ ◌̄ │ ’ _ │ « “ │ » ” │ ' ° │ ◌̂ ◌̌ ┃  arrière┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
-// ┃       ┃ A Æ │ Z   │ E   │ R   │ T ™ │ Y   │ U Ù │ I  ̣ │ O Œ │ P ‰ │ – ‑ │ ± ‡ ┃Entrée ┃
-// ┃Tab ↹  ┃ a æ │ z £ │ e € │ r ® │ t { │ y } │ u ù │ i  ̇ │ o œ │ p % │ - − │ + † ┃   ⏎   ┃
+// ┃       ┃ A Æ │ Z   │ E   │ R   │ T ™ │ Y   │ U Ù │ I ◌̣ │ O Œ │ P ‰ │ – ‑ │ ± ‡ ┃Entrée ┃
+// ┃Tab ↹  ┃ a æ │ z £ │ e € │ r ® │ t { │ y } │ u ù │ i ◌̇ │ o œ │ p % │ - − │ + † ┃   ⏎   ┃
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
-// ┃        ┃ Q   │ S ẞ │ D   │ F   │ G   │ H  ̱ │ J   │ K   │ L   │ M   │ \ √ │ ½ ¼ ┃      ┃
-// ┃Maj ⇬   ┃ q θ │ s ß │ d $ │ f ¤ │ g µ │ h   │ j   │ k  ̷ │ l | │ m ∞ │ / ÷ │ * × ┃      ┃
+// ┃        ┃ Q   │ S ẞ │ D   │ F   │ G   │ H ◌̱ │ J   │ K   │ L   │ M   │ \ √ │ ½ ¼ ┃      ┃
+// ┃Maj ⇬   ┃ q θ │ s ß │ d $ │ f ¤ │ g µ │ h Eu│ j   │ k ◌̷ │ l | │ m ∞ │ / ÷ │ * × ┃      ┃
 // ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━┫
-// ┃       ┃ > ≥ │ W Ʒ │ X   │ C Ç │ V ˛ │ B   │ N   │ ?   │ !  ̦ │ …   │ = ≠ ┃             ┃
-// ┃Shift ⇧┃ < ≤ │ w ʒ │ x © │ c ç │ v ¸ │ b  ̵ │ n ~ │ . ¿ │ , ¡ │ : · │ ; ≃ ┃Shift ⇧      ┃
+// ┃       ┃ > ≥ │ W Ʒ │ X   │ C Ç │ V ◌̨ │ B   │ N   │ ?   │ ! ◌̦ │ …   │ = ≠ ┃             ┃
+// ┃Shift ⇧┃ < ≤ │ w ʒ │ x © │ c ç │ v ◌̧ │ b ◌̵ │ n ◌̃ │ . ¿ │ , ¡ │ : · │ ; ≃ ┃Shift ⇧      ┃
 // ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┻━┳━━━━━━━┳━━━┛
 // ┃       ┃       ┃       ┃ ␣         Espace fine insécable ⍽ ┃       ┃       ┃       ┃
 // ┃Ctrl   ┃Meta   ┃Alt    ┃ ␣ Espace       Espace insécable ⍽ ┃AltGr ⇮┃Menu   ┃Ctrl   ┃
@@ -1345,41 +1345,41 @@ xkb_symbols "afnor" {
 
     name[Group1]="French (AZERTY, AFNOR)";
 
-    key <TLDE>	{[               at,     numbersign,        dead_breve, dead_invertedbreve ]}; // @ #  ̑  ̆
+    key <TLDE>	{[               at,     numbersign,        dead_breve, dead_invertedbreve ]}; // @ # ◌̑ ◌̆
     key <AE01>	{[           agrave,              1,           section,             Agrave ]}; // à 1 § À
-    key <AE02>	{[           eacute,              2,        dead_acute,             Eacute ]}; // é 2  ́ É
-    key <AE03>	{[           egrave,              3,        dead_grave,             Egrave ]}; // è 3  ̀ È
+    key <AE02>	{[           eacute,              2,        dead_acute,             Eacute ]}; // é 2 ◌́ É
+    key <AE03>	{[           egrave,              3,        dead_grave,             Egrave ]}; // è 3 ◌̀ È
     key <AE04>	{[      ecircumflex,              4,         ampersand,        Ecircumflex ]}; // ê 4 & Ê
-    key <AE05>	{[        parenleft,              5,       bracketleft,   dead_doubleacute ]}; // ( 5 [  ̋
-    key <AE06>	{[       parenright,              6,      bracketright,   dead_doublegrave ]}; // ) 6 ]  ̏
-    key <AE07>	{[  leftsinglequotemark,          7,       dead_macron,               none ]}; // ‘ 7  ̄
-    key <AE08>	{[ rightsinglequotemark,          8,        underscore,             emdash ]}; // ’ 8 _ —
-    key <AE09>	{[    guillemotleft,              9,   leftdoublequotemark,          U2039 ]}; // « 9 “ ‹
-    key <AE10>	{[   guillemotright,              0,  rightdoublequotemark,          U203A ]}; // » 0 ” ›
-    key <AE11>	{[       apostrophe,       quotedbl,            degree,     dead_abovering ]}; // ' " °  ̊
-    key <AE12>	{[  dead_circumflex, dead_diaeresis,        dead_caron,               none ]}; //  ̂  ̈  ̌
+    key <AE05>	{[        parenleft,              5,       bracketleft,   dead_doubleacute ]}; // ( 5 [ ◌̋
+    key <AE06>	{[       parenright,              6,      bracketright,   dead_doublegrave ]}; // ) 6 ] ◌̏
+    key <AE07>	{[  leftsinglequotemark,          7,       dead_macron,               none, singlelowquotemark, U203A ], type[Group1]="EIGHT_LEVEL" }; // ‘ 7 ◌̄ ‚ ›
+    key <AE08>	{[ rightsinglequotemark,          8,        underscore,             emdash, leftsinglequotemark, U2039 ], type[Group1]="EIGHT_LEVEL" }; // ’ 8 _ — ‘ ‹
+    key <AE09>	{[    guillemotleft,              9,   leftdoublequotemark,          U2039, doublelowquotemark, guillemotright ], type[Group1]="EIGHT_LEVEL" }; // « 9 “ ‹ „ »
+    key <AE10>	{[   guillemotright,              0,  rightdoublequotemark,          U203A, leftdoublequotemark, guillemotleft ], type[Group1]="EIGHT_LEVEL" }; // » 0 ” › “ «
+    key <AE11>	{[       apostrophe,       quotedbl,            degree,     dead_abovering, rightsinglequotemark, none ], type[Group1]="EIGHT_LEVEL" }; // ' " ° ◌̊ ’
+    key <AE12>	{[  dead_circumflex, dead_diaeresis,        dead_caron,               none ]}; // ◌̂ ◌̈ ◌̌
 
-    key <AD01>	{[                a,              A,                ae,                 AE ]}; // a A æ Æ
+    key <AD01>	{[                a,              A,                ae,                 AE, ordfeminine, ordfeminine ], type[Group1]="EIGHT_LEVEL_ALPHABETIC" }; // a A æ Æ ª
     key <AD02>	{[                z,              Z,          sterling,               none ]}; // z Z £
-    key <AD03>	{[                e,              E,          EuroSign,               none ]}; // e E €
+    key <AD03>	{[                e,              E,          EuroSign,               none, schwa, SCHWA ], type[Group1]="EIGHT_LEVEL_SEMIALPHABETIC" }; // e E € ə Ə
     key <AD04>	{[                r,              R,        registered,               none ]}; // r R ®
-    key <AD05>	{[                t,              T,         braceleft,          trademark ]}; // t T { ™
+    key <AD05>	{[                t,              T,         braceleft,          trademark, thorn, THORN ], type[Group1]="EIGHT_LEVEL_SEMIALPHABETIC" }; // t T { ™ þ Þ
     key <AD06>	{[                y,              Y,        braceright,               none ]}; // y Y }
     key <AD07>	{[                u,              U,            ugrave,             Ugrave ]}; // u U ù Ù
-    key <AD08>	{[                i,              I,     dead_abovedot,      dead_belowdot ]}; // i I  ̇  ̣
-    key <AD09>	{[                o,              O,                oe,                 OE ]}; // o O œ Œ
+    key <AD08>	{[                i,              I,     dead_abovedot,      dead_belowdot, idotless, Iabovedot ], type[Group1]="EIGHT_LEVEL_SEMIALPHABETIC" }; // i I ◌̇ ◌̣ ı İ
+    key <AD09>	{[                o,              O,                oe,                 OE, ordmasculine, ordmasculine ], type[Group1]="EIGHT_LEVEL_ALPHABETIC" }; // o O œ Œ º
     key <AD10>	{[                p,              P,           percent,           permille ]}; // p P % ‰
-    key <AD11>	{[            minus,         endash,             U2212,              U2011 ]}; // - – − ‑ // signe moins (minus sign), trait d'union insécable (non-breaking hyphen)
+    key <AD11>	{[            minus,         endash,             U2212,              U2011 ]}; // - – − ‑ // minus sign, non-breaking hyphen
     key <AD12>	{[             plus,      plusminus,            dagger,       doubledagger ]}; // + ± † ‡
 
-    key <AC01>	{[                q,              Q,       Greek_theta,               none ]}; // q Q θ
-    key <AC02>	{[                s,              S,            ssharp,              U1E9E ]}; // s S ß ẞ // lettre majuscule latine S dur (latin capital letter sharp s)
-    key <AC03>	{[                d,              D,            dollar,               none ]}; // d D $
+    key <AC01>	{[                q,              Q,       Greek_theta,        Greek_THETA ]}; // q Q θ Θ
+    key <AC02>	{[                s,              S,            ssharp,              U1E9E, U017F, S ], type[Group1]="EIGHT_LEVEL_ALPHABETIC" }; // s S ß ẞ ſ // latin capital letter sharp s
+    key <AC03>	{[                d,              D,            dollar,               none, eth, ETH ], type[Group1]="EIGHT_LEVEL_SEMIALPHABETIC" }; // d D $  ð Ð
     key <AC04>	{[                f,              F,     dead_currency,               none ]}; // f F ¤
-    key <AC05>	{[                g,              G,        dead_greek,               none ]}; // g G µ
-    key <AC06>	{[                h,              H,              none,   dead_belowmacron ]}; // h H    ̱ // Missing deadkey for other european characters (ªəƏþÞıİºſðÐƞȠĳĲ)
-    key <AC07>	{[                j,              J,              none,               none ]}; // j J
-    key <AC08>	{[                k,              K,       dead_stroke,               none ]}; // k K  ̷
+    key <AC05>	{[                g,              G,        dead_greek,               none, eng, ENG ], type[Group1]="EIGHT_LEVEL_SEMIALPHABETIC" }; // g G µ  ŋ Ŋ
+    key <AC06>	{[                h,              H,  ISO_Level5_Latch,   dead_belowmacron ]}; // h H Eu ◌̱
+    key <AC07>	{[                j,              J,              none,               none, U0133, U0132 ], type[Group1]="EIGHT_LEVEL_ALPHABETIC" }; // j J   ĳ Ĳ
+    key <AC08>	{[                k,              K,       dead_stroke,               none ]}; // k K ◌̷
     key <AC09>	{[                l,              L,               bar,               none ]}; // l L |
     key <AC10>	{[                m,              M,          infinity,               none ]}; // m M ∞
     key <AC11>	{[            slash,      backslash,          division,            radical ]}; // / \ ÷ √
@@ -1389,11 +1389,11 @@ xkb_symbols "afnor" {
     key <AB01>	{[                w,              W,               ezh,               EZH ]}; // w W ʒ Ʒ
     key <AB02>	{[                x,              X,         copyright,              none ]}; // x X ©
     key <AB03>	{[                c,              C,          ccedilla,          Ccedilla ]}; // c C ç Ç
-    key <AB04>	{[                v,              V,      dead_cedilla,       dead_ogonek ]}; // v V  ̧  ̨
-    key <AB05>	{[                b,              B,       dead_stroke,              none ]}; // b B  ̵
-    key <AB06>	{[                n,              N,        dead_tilde,              none ]}; // n N  ̃
+    key <AB04>	{[                v,              V,      dead_cedilla,       dead_ogonek ]}; // v V ◌̧ ◌̨
+    key <AB05>	{[                b,              B,       dead_stroke,              none ]}; // b B ◌̵
+    key <AB06>	{[                n,              N,        dead_tilde,              none ]}; // n N ◌̃
     key <AB07>	{[           period,       question,      questiondown,              none ]}; // . ? ¿
-    key <AB08>	{[            comma,         exclam,        exclamdown,   dead_belowcomma ]}; // , ! ¡  ̦
+    key <AB08>	{[            comma,         exclam,        exclamdown,   dead_belowcomma ]}; // , ! ¡ ◌̦
     key <AB09>	{[            colon,       ellipsis,    periodcentered,              none ]}; // : … ·
     key <AB10>	{[        semicolon,          equal,      similarequal,          notequal ]}; // ; = ≃ ≠
 

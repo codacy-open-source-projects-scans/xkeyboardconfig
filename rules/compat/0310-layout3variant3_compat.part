@@ -6,4 +6,4 @@
   de		 bone_eszett_home	= +caps(caps_lock):3+misc(assign_shift_left_action):3+level5(level5_lock):3
   de		 neo_qwertz		= +caps(caps_lock):3+misc(assign_shift_left_action):3+level5(level5_lock):3
   de		 neo_qwerty		= +caps(caps_lock):3+misc(assign_shift_left_action):3+level5(level5_lock):3
-  jp		$sun_compat		= +complete+japan(kana_lock):3
+  jp		$sun_compat		= +japan(kana_lock):3

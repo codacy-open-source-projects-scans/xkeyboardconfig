@@ -184,6 +184,11 @@ default xkb_keycodes "evdev" {
 	// Extended keys that may be generated on "Internet" keyboards.
 	// evdev has standardize names for these.
 
+	<ZEHA> =  93;	// #define KEY_ZENKAKUHANKAKU      85
+			// Besides the name given by the kernel, the usual
+			// Japanese Hankaku/Zenkaku key is <HZTG>. <ZEHA> is
+			// generally unused, except by some notebooks which use
+			// it to toggle the touchpad.
 	<LNFD> = 109;	// #define KEY_LINEFEED            101
 
 	@evdevkeys@

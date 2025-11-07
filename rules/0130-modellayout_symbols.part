@@ -7,12 +7,13 @@
   *		empty			=	empty(basic)
   jollasbj	$nonlatin		=	jolla_vndr/sbj(common)+us+%l%(v):2
   jollasbj	*			=	jolla_vndr/sbj(common)+%l%(v)
- $sun		$sun_custom		=	pc+sun_vndr/%l%(v)
+ $sun		$sun_custom		=	pc+sun_vndr/%l
   pc98		jp			=	nec_vndr/jp(pc98)+nec_vndr/jp(jp):2
   pc98		*			=	nec_vndr/jp(pc98)+%l%(v)
   applealu_jis	jp			=	macintosh_vndr/apple(alukbd)+macintosh_vndr/jp(usmac)+macintosh_vndr/jp(mac):2
   applealu_jis	*			=	macintosh_vndr/apple(alukbd)+%l%(v)+macintosh_vndr/jp(mac):2
- $applealu	$macvendorlayouts	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l%(v)
+  applealu_iso	us			=	macintosh_vndr/apple(alukbd)+macintosh_vndr/us(applealu_iso)
+ $applealu	$macvendorlayouts	=	macintosh_vndr/apple(alukbd)+macintosh_vndr/%l
  $applealu	*			=	macintosh_vndr/apple(alukbd)+%l%(v)
   olpc		$olpclayouts		=	olpc+%l%(m)
   olpc		*			=	olpc+%l%(v)

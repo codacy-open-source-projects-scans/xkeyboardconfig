@@ -3,19 +3,30 @@
 # Call with pytest. Requires XKB_CONFIG_ROOT to be set
 
 import os
-import pytest
-from pathlib import Path
 import xml.etree.ElementTree as ET
+from pathlib import Path
+from typing import Iterator
+
+import pytest
 
 
-def _xkb_config_root():
-    path = os.getenv("XKB_CONFIG_ROOT")
-    assert path is not None, "Environment variable XKB_CONFIG_ROOT must be set"
-    print(f"Using XKB_CONFIG_ROOT={path}")
+def _xkb_config_root() -> list[Path]:
+    roots: list[Path] = []
 
-    xkbpath = Path(path)
-    assert (xkbpath / "rules").exists(), f"{path} is not an XKB installation"
-    return xkbpath
+    # XKB_CONFIG_EXTRA_PATH is not mandatory
+    if path := os.getenv("XKB_CONFIG_EXTRA_PATH"):
+        roots.append(Path(path))
+        print(f"Using XKB_CONFIG_EXTRA_PATH={path}")
+
+    if path := os.getenv("XKB_CONFIG_ROOT"):
+        xkbpath = Path(path)
+        assert (xkbpath / "symbols").exists(), f"{path} is not an XKB installation"
+        roots.append(xkbpath)
+        print(f"Using XKB_CONFIG_ROOT={path}")
+    else:
+        raise ValueError("Environment variable XKB_CONFIG_ROOT must be set")
+
+    return roots
 
 
 @pytest.fixture
@@ -46,17 +57,32 @@ def iterate_config_items(rules_xml):
     return root.iter("configItem")
 
 
+def get_registry_files() -> Iterator[Path]:
+    """
+    List all registry files in <XKB_ROOT>/rules/*.xml and ensure unique name.
+    """
+    found: set[Path] = set()
+    for xkb_root in _xkb_config_root():
+        for path in xkb_root.glob("rules/*.xml"):
+            if (file := path.relative_to(xkb_root)) in found:
+                continue
+            else:
+                yield path
+                found.add(file)
+
+
 def pytest_generate_tests(metafunc):
-    # for any test_foo function with an argument named rules_xml,
-    # make it the list of XKB_CONFIG_ROOT/rules/*.xml files.
+    # For any test_foo function with an argument named rules_xml,
+    # make it the list of <XKB_ROOT>/rules/*.xml files.
+    # Use only the first XKB root.
     if "rules_xml" in metafunc.fixturenames:
-        rules_xml = list(_xkb_config_root().glob("rules/*.xml"))
+        rules_xml = list(get_registry_files())
         assert rules_xml
         metafunc.parametrize("rules_xml", rules_xml)
     # for any test_foo function with an argument named layout,
     # make it a Layout wrapper class for all layout(variant) combinations
     elif "layout" in metafunc.fixturenames:
-        rules_xml = list(_xkb_config_root().glob("rules/*.xml"))
+        rules_xml = list(get_registry_files())
         assert rules_xml
         layouts = []
         for f in rules_xml:
@@ -64,7 +90,7 @@ def pytest_generate_tests(metafunc):
                 layouts.append(Layout(f, l, v))
         metafunc.parametrize("layout", layouts)
     elif "config_item" in metafunc.fixturenames:
-        rules_xml = list(_xkb_config_root().glob("rules/*.xml"))
+        rules_xml = list(get_registry_files())
         assert rules_xml
         config_items = []
         for f in rules_xml:
@@ -192,9 +218,9 @@ def test_duplicate_layouts(rules_xml):
         variants = {}
         for variant in layout.iter("variant"):
             vci = ConfigItem.from_elem(variant)
-            assert (
-                vci.name not in variants
-            ), f"{rules_xml}: duplicate variant {ci.name}({vci.name}):\n{prettyxml(variant)}"
+            assert vci.name not in variants, (
+                f"{rules_xml}: duplicate variant {ci.name}({vci.name}):\n{prettyxml(variant)}"
+            )
             variants[vci.name] = True
 
 
@@ -211,19 +237,19 @@ def test_duplicate_models(rules_xml):
 def test_exotic(config_item):
     """All items in extras should be marked exotic"""
     if config_item.rulesfile.stem.endswith("extras"):
-        assert (
-            config_item.popularity == "exotic"
-        ), f"{config_item.rulesfile}: item {config_item.name} does not have popularity exotic"
+        assert config_item.popularity == "exotic", (
+            f"{config_item.rulesfile}: item {config_item.name} does not have popularity exotic"
+        )
     else:
-        assert (
-            config_item.popularity != "exotic"
-        ), f"{config_item.rulesfile}: item {config_item.name} has popularity exotic"
+        assert config_item.popularity != "exotic", (
+            f"{config_item.rulesfile}: item {config_item.name} has popularity exotic"
+        )
 
 
 def test_short_description(layout):
-    assert (
-        layout.shortDescription
-    ), f"{layout.rulesfile}: layout {layout.name} missing shortDescription"
+    assert layout.shortDescription, (
+        f"{layout.rulesfile}: layout {layout.name} missing shortDescription"
+    )
 
 
 def test_iso3166(layout):
@@ -241,13 +267,13 @@ def test_iso3166(layout):
     ]
 
     for code in layout.iso3166:
-        assert (
-            code in country_codes
-        ), f'{layout.rulesfile}: unknown country code "{code}" in {layout.name}'
+        assert code in country_codes, (
+            f'{layout.rulesfile}: unknown country code "{code}" in {layout.name}'
+        )
 
-    assert (
-        layout.iso3166 or layout.layout.name in expected_without_country
-    ), f"{layout.rulesfile}: layout {layout.name} has no countries associated"
+    assert layout.iso3166 or layout.layout.name in expected_without_country, (
+        f"{layout.rulesfile}: layout {layout.name} has no countries associated"
+    )
 
 
 def test_iso639(layout):
@@ -267,9 +293,9 @@ def test_iso639(layout):
 
     for code in layout.iso639:
         try:
-            assert (
-                code in language_codes
-            ), f'{layout.rulesfile}: unknown language code "{code}" in {layout.name}'
+            assert code in language_codes, (
+                f'{layout.rulesfile}: unknown language code "{code}" in {layout.name}'
+            )
         except AssertionError as e:
             # needs pycountry 23.12.7, this code can be removed when our CI has pycountry new enough
             if code in ["pzh", "szy", "uon"]:
@@ -277,6 +303,6 @@ def test_iso639(layout):
             else:
                 raise e
 
-    assert (
-        layout.iso639 or layout.layout.name in expected_without_language
-    ), f"{layout.rulesfile}: layout {layout.name} has no languages associated"
+    assert layout.iso639 or layout.layout.name in expected_without_language, (
+        f"{layout.rulesfile}: layout {layout.name} has no languages associated"
+    )

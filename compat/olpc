@@ -9,6 +9,8 @@ default xkb_compatibility "olpc" {
 
     virtual_modifiers  Square,Cross,Triangle,Circle;
 
+    setMods.clearLocks= True;
+
     interpret KP_Home+Any {
         virtualModifier= Square;
         action = SetMods(modifiers=modMapMods);

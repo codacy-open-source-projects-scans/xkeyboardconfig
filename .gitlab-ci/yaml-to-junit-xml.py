@@ -5,10 +5,11 @@
 # This file is formatted with Python Black
 
 import argparse
-import yaml
-import sys
 import pathlib
+import sys
 from xml.dom import minidom
+
+import yaml
 
 parser = argparse.ArgumentParser(description="Converts YAML to JUnit XML")
 parser.add_argument(
@@ -48,9 +49,15 @@ with args.inputfile.open() as fd:
     for testcase in yml:
         ntests += 1
         node = doc.createElement("testcase")
-        node.setAttribute("classname", f"{testcase['rmlvo'][0]} rules layout test")
+        # Handle long and short outputs from xkbcommon `xkeyboard-config-test.py` script
+        if (rmlvo := testcase.get("rmlvo")) is None:
+            rmlvo = testcase
+        r = rmlvo["rules"]
+        l = rmlvo.get("layout")
+        v = rmlvo.get("variant")
+        o = rmlvo.get("option")
+        node.setAttribute("classname", f"{r} rules layout test")
         # We don't care about rules and model here, LVO is enough
-        r, m, l, v, o = testcase["rmlvo"]
         if v:
             name = f"{l}({v})"
         else:
@@ -69,9 +76,9 @@ with args.inputfile.open() as fd:
                 nerrors += 1
                 f = doc.createElement("error")
             f.setAttribute("message", testcase["error"])
-            cdata = doc.createCDATASection(
-                f"Error message: {testcase['error']} in command {testcase['cmd']}"
-            )
+            if cmd := testcase.get("cmd", ""):
+                cmd = f" in command {testcase['cmd']}"
+            cdata = doc.createCDATASection(f"Error message: {testcase['error']}{cmd}")
             f.appendChild(cdata)
             node.appendChild(f)
 

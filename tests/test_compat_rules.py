@@ -6,9 +6,10 @@ import functools
 import itertools
 import os
 import re
+from collections.abc import Generator
 from dataclasses import dataclass
 from pathlib import Path
-from typing import ClassVar, Generator, Optional, Union, TYPE_CHECKING
+from typing import TYPE_CHECKING, ClassVar, Optional, Union
 
 if TYPE_CHECKING:
     import builtins
@@ -47,9 +48,9 @@ class Layout:
 
     def __str__(self):
         if self.variant:
-            return "{}({})".format(self.layout, self.variant)
+            return f"{self.layout}({self.variant})"
         else:
-            return "{}".format(self.layout)
+            return f"{self.layout}"
 
     def __lt__(self, other):
         """
@@ -108,17 +109,24 @@ def pytest_generate_tests(metafunc: pytest.Metafunc):
 @pytest.fixture(scope="session")
 def xkb_base():
     """Get the xkeyboard-config directory from the environment."""
-    path = os.environ.get("XKB_CONFIG_ROOT")
-    if path:
-        return Path(path)
+    roots: list[Path] = []
+
+    # XKB_CONFIG_EXTRA_PATH is not mandatory
+    if path := os.environ.get("XKB_CONFIG_EXTRA_PATH"):
+        roots.append(Path(path))
+
+    if path := os.environ.get("XKB_CONFIG_ROOT"):
+        roots.append(Path(path))
     else:
         raise ValueError("XKB_CONFIG_ROOT environment variable is not defined")
 
+    return roots
+
 
 def compile_keymap(
-    xkb_base: Path,
+    xkb_base: list[Path],
     rules: str,
-    ls: tuple[Union[Layout, "builtins.ellipsis"], ...],
+    ls: tuple[Union[Layout, builtins.ellipsis], ...],
     layout: Layout,
 ) -> tuple[str, str, str]:
     lsʹ: tuple[Layout, ...] = tuple(layout if x is Ellipsis else x for x in ls)
@@ -130,8 +138,24 @@ def compile_keymap(
     return alias_layout, alias_variant, km.as_string()
 
 
+COMPONENT_NAME_PATTERN = re.compile(
+    r"""
+    (?P<component>xkb_(?:keycodes|types|compatibility|symbols))
+    \s+
+    "[^"]*"
+    """,
+    re.VERBOSE,
+)
+
+
+def drop_component_name(match: re.Match[str]) -> str:
+    return match.group("component")
+
+
 @pytest.mark.parametrize("rules", ("base", "evdev"))
-def test_compat_layout(xkb_base: Path, rules: str, mapping: tuple[Layout, Layout]):
+def test_compat_layout(
+    xkb_base: list[Path], rules: str, mapping: tuple[Layout, Layout]
+):
     alias = mapping[0]
     target = mapping[1]
     us = Layout("us", "")
@@ -157,16 +181,24 @@ def test_compat_layout(xkb_base: Path, rules: str, mapping: tuple[Layout, Layout
         )
         assert target_string != "", (rules, target_layout, target_variant)
 
-        # [HACK]: fix keycodes aliases
+        # [HACK] Fix keycodes aliases
         if alias.layout == "de" and target.layout != "de":
+            # libxkbcommon ≤ 1.11
             alias_string = alias_string.replace(
                 "<LatZ>         = <AD06>", "<LatY>         = <AD06>"
             )
             alias_string = alias_string.replace(
                 "<LatY>         = <AB01>", "<LatZ>         = <AB01>"
             )
+            # libxkbcommon ≥ 1.12
+            alias_string = alias_string.replace("<LatZ> = <AD06>", "<LatZ> = <AB01>")
+            alias_string = alias_string.replace("<LatY> = <AB01>", "<LatY> = <AD06>")
 
-        # Keymap obtain using alias should be the same as if using its target directly
+        # [HACK] Discard components names
+        alias_string = COMPONENT_NAME_PATTERN.sub(drop_component_name, alias_string)
+        target_string = COMPONENT_NAME_PATTERN.sub(drop_component_name, target_string)
+
+        # Keymap obtained using alias should be the same as if using its target directly
         assert alias_string == target_string, (
             rules,
             alias_layout,

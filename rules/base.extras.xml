@@ -42,6 +42,15 @@
             </languageList>
           </configItem>
         </variant>
+        <variant>
+          <configItem popularity="exotic">
+            <name>got-alt</name>
+            <description>Gothic (Alternative)</description>
+            <languageList>
+              <iso639Id>got</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -917,7 +926,7 @@
               <iso639Id>rus</iso639Id>
             </languageList>
           </configItem>
-        </variant> 
+        </variant>
         <variant>
           <configItem popularity="exotic">
             <name>ruintl_ru</name>
@@ -931,7 +940,7 @@
               <iso639Id>ukr</iso639Id>
             </languageList>
           </configItem>
-        </variant> 
+        </variant>
         <variant>
           <configItem popularity="exotic">
             <name>ruintl_en</name>
@@ -960,7 +969,7 @@
               <iso639Id>est</iso639Id>
             </languageList>
           </configItem>
-        </variant> 
+        </variant>
       </variantList>
     </layout>
     <layout>

@@ -1,28 +1,44 @@
 project('xkeyboard-config',
-        version: '2.43',
+        version: '2.46',
         license: 'MIT/Expat',
-        meson_version: '>= 0.56.0')
+        meson_version: '>= 0.61.0')
 
-dir_data        = join_paths(get_option('prefix'), get_option('datadir'))
-dir_xkb_base    = join_paths(dir_data, 'X11', 'xkb')
-dir_xkb_rules   = join_paths(dir_xkb_base, 'rules')
-dir_man7        = join_paths(get_option('prefix'), get_option('mandir'), 'man7')
-dir_pkgconfig   = join_paths(dir_data, 'pkgconfig')
+xkc_version = meson.project_version().split('.')
+xkc_version_major = xkc_version[0]
+dir_data         = join_paths(get_option('prefix'), get_option('datadir'))
+dir_xkb_base     = join_paths(dir_data, f'xkeyboard-config-@xkc_version_major@')
+dir_xkb_base_x11 = join_paths(dir_data, 'X11', 'xkb')
+dir_xkb_rules    = join_paths(dir_xkb_base, 'rules')
+dir_man7         = join_paths(get_option('prefix'), get_option('mandir'), 'man7')
+dir_pkgconfig    = join_paths(dir_data, 'pkgconfig')
 
 i18n = import('i18n')
 
 pkgconfig = import('pkgconfig')
+pkgconfig_file = f'xkeyboard-config-@xkc_version_major@'
 pkgconfig.generate(
-    filebase: 'xkeyboard-config',
+    filebase: pkgconfig_file,
     name: 'XKeyboardConfig',
     description: 'X Keyboard configuration data',
     version: meson.project_version(),
     variables: [
-        'datadir=@0@'.format(dir_data),
-        'xkb_base=@0@'.format(dir_xkb_base),
+        f'datadir=@dir_data@',
+        # Canonical XKB root: /usr/share/xkeyboard-config-N/
+        f'xkb_root=@dir_xkb_base@',
+        # Legacy X11 XKB root, for backward-compatibility: /usr/share/X11/xkb
+        f'xkb_base=@dir_xkb_base_x11@',
     ],
     install_dir: dir_pkgconfig,
     dataonly: true,
+)
+# Symbolic link for legacy unversioned file
+if xkc_version_major != '2'
+    error('This symlink is intended only while there is a single database format')
+endif
+install_symlink(
+    'xkeyboard-config.pc',
+    install_dir: dir_pkgconfig,
+    pointing_to: f'@pkgconfig_file@.pc',
 )
 
 # KcG.T only need to be installed as-is
@@ -49,38 +65,32 @@ if xsltproc.found()
                        configuration: man_substs,
                        install: false)
   # evdev_ruleset is set by rules/meson.build
+  man_page_file = f'xkeyboard-config-@xkc_version_major@.7'
   manpage = custom_target('man page',
-                          output: 'xkeyboard-config.7',
+                          output: man_page_file,
                           build_by_default: true,
                           command: [xsltproc, '-nonet', xsl, evdev_ruleset],
                           capture: true,
                           install:true,
                           install_dir: dir_man7)
+  # Symlink for legacy unversioned man page
+  if xkc_version_major != '2'
+      error('This symlink is intended only while there is a single database format')
+  endif
+  install_symlink(
+      'xkeyboard-config.7',
+      install_dir: dir_man7,
+      pointing_to: man_page_file,
+  )
 
   verify_group_names = find_program('tests/verify-group-names.sh')
   test('verify group names', verify_group_names)
 endif
 
-# If needed, copy our data files over to the build directory
-# so we can use the builddir as XKB_CONFIG_ROOT
 pymod = import('python')
 python = pymod.find_installation('python3',
                                  modules: ['pytest'],
                                  required: false)
-pytest = find_program('pytest-3', 'pytest', required: false)
-enable_pytest = python.found() and pytest.found()
-if get_option('non-latin-layouts-list') or enable_pytest
-    foreach dir: ['compat', 'geometry', 'keycodes', 'symbols', 'types']
-        # Copy directory but exclude some symbols files that are generated
-        # to include compatibility sections
-        run_command(
-            'tests/copydir.py',
-            dir,
-            dir == 'symbols' ? compat_symbols : [],
-            check: true
-        )
-    endforeach
-endif
 
 # Latin layout list
 # Needed e.g. for a distribution installer, in order to check if user can
@@ -99,16 +109,29 @@ if get_option('non-latin-layouts-list')
                       build_by_default: true,
                       command: [pyregistry,
                                 '--xkb-root', meson.project_build_root(),
+                                '--xkb-root', meson.project_source_root(),
                                 '--rules', ruleset,
                                 'layouts',
                                 '--non-latin',
                                 '--csv', '@OUTPUT@'],
                       output: 'non-latin-layouts-@0@.csv'.format(ruleset),
+                      depends: rules_files,
+                      depend_files: registry_files,
                       install: false)
     endforeach
 endif
 
+# Legacy X11 symlink
+fs = import('fs')
+install_symlink(
+    fs.name(dir_xkb_base_x11),
+    install_dir: fs.parent(dir_xkb_base_x11),
+    pointing_to: dir_xkb_base,
+)
+
 # pytest suite
+pytest = find_program('pytest-3', 'pytest', required: false)
+enable_pytest = python.found() and pytest.found()
 if enable_pytest
     pytest_args = ['--verbose', '--log-level=DEBUG']
     if get_option('compat-rules')
@@ -126,7 +149,11 @@ if enable_pytest
 
     test('pytest', pytest,
          args: pytest_args,
-         env: ['XKB_CONFIG_ROOT=@0@'.format(meson.project_build_root())],
+         env: {
+            'XKB_CONFIG_ROOT': meson.project_source_root(),
+            'XKB_CONFIG_EXTRA_PATH': meson.project_build_root(),
+         },
+         depends: rules_files,
          workdir: meson.project_source_root(),
          timeout: 60)
 endif

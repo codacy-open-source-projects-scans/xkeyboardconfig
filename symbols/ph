@@ -25,17 +25,17 @@
 // http://en.wikipedia.org/wiki/QWERTY
 //
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━┓
-// │ ~ ̃◌ │ ! ¡ │ @ ¤ │ # £ │ $ € │ % ° │ ^ ̂◌ │ & ← │ * → │ ( ↑ │ ) ↓ │ _ ◌͠  │ + ∓ ┃ ⌫ Bak ┃
-// │ ` ̀◌ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¼ │ 5 ½ │ 6 ¾ │ 7 ⅛ │ 8 ⅜ │ 9 ⅝ │ 0 ⅞ │ - ¬ │ = ± ┃ Space ┃
+// │ ~ ◌̃ │ ! ¡ │ @ ¤ │ # £ │ $ € │ % ° │ ^ ◌̂ │ & ← │ * → │ ( ↑ │ ) ↓ │ _ ◌͠◌│ + ∓ ┃ ⌫ Bak ┃
+// │ ` ◌̀ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¼ │ 5 ½ │ 6 ¾ │ 7 ⅛ │ 8 ⅜ │ 9 ⅝ │ 0 ⅞ │ - ¬ │ = ± ┃ Space ┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┯━━━━━┩
 // ┃       ┃ Q   │ W   │ E Œ │ R ¶ │ T   │ Y   │ U   │ I İ │ O Ø │ P   │ {   │ }   │ | Ə │
 // ┃Tab ↹  ┃ q   │ w   │ e œ │ r ® │ t ™ │ y ¥ │ u   │ i ı │ o ø │ p ₱ │ [   │ ]   │ \ ə │
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┲━━━━┷━━━━━┪
-// ┃        ┃ A Æ │ S   │ D   │ F ª │ G   │ H   │ J   │ K   │ L   │ :   │ " ̋◌ ┃ Enter    ┃
-// ┃Caps ⇬  ┃ a æ │ s § │ d   │ f   │ g   │ h   │ j   │ k   │ l   │ ;   │ ' ́◌ ┃   ⏎      ┃
+// ┃        ┃ A Æ │ S   │ D   │ F ª │ G   │ H   │ J   │ K   │ L   │ :   │ " ◌̋ ┃ Enter    ┃
+// ┃Caps ⇬  ┃ a æ │ s § │ d   │ f   │ g   │ h   │ j   │ k   │ l   │ ;   │ ' ◌́ ┃   ⏎      ┃
 // ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┻━━━━━━━━━━┫
-// ┃       ┃   ¦ │ Z » │ X · │ C ¢ │ V ‘ │ B ’ │ N Ñ │ M º │ < ̨◌ │ > ␣ │ ? ¿ ┃           ┃
-// ┃Shift ⇧┃     │ z « │ x × │ c © │ v “ │ b ” │ n ñ │ m µ │ , ̧◌ │ . … │ / ÷ ┃Shift ⇧    ┃
+// ┃       ┃   ¦ │ Z » │ X · │ C ¢ │ V ‘ │ B ’ │ N Ñ │ M º │ < ◌̨ │ > ␣ │ ? ¿ ┃           ┃
+// ┃Shift ⇧┃     │ z « │ x × │ c © │ v “ │ b ” │ n ñ │ m µ │ , ◌̧ │ . … │ / ÷ ┃Shift ⇧    ┃
 // ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┷━┳━━━┻━━━┳━━━━━━━┫
 // ┃       ┃Win    ┃       ┃ ␣ Space             Space ␣ ┃       ┃Win    ┃       ┃       ┃
 // ┃Ctrl   ┃Super  ┃Alt    ┃ ␣ Space             Space ␣ ┃AltGr ⇮┃Meta   ┃Menu   ┃Ctrl   ┃
@@ -51,14 +51,14 @@ xkb_symbols "basic" {
 //			Base		Shift		AltGr		AltGr+Shift
 
     // E row; Numerals row, left side
-	key <TLDE> { [	U0060,		U007E,		U0300,		U0303		] }; // ` ~ ̀◌ ̃◌ (combining grave accent) (combining tilde)
+	key <TLDE> { [	U0060,		U007E,		U0300,		U0303		] }; // ` ~ ◌̀ ◌̃ (combining grave accent) (combining tilde)
 	key <AE01> { [	U0031,		U0021,		U00B9,		U00A1		] }; // 1 ! ¹ ¡
 	key <AE02> { [	U0032,		U0040,		U00B2,		U00A4		] }; // 2 @ ² ¤
 	key <AE03> { [	U0033,		U0023,		U00B3,		U00A3		] }; // 3 # ³ £
 	key <AE04> { [	U0034,		U0024,		U00BC,		U20AC		] }; // 4 $ ¼ €
 	key <AE05> { [	U0035,		U0025,		U00BD,		U00B0		] }; // 5 % ½ °
     // E row; Numerals row, right side
-	key <AE06> { [	U0036,		U005E,		U00BE,		U0302		] }; // 6 ^ ¾ ̂◌ (combining circumflex accent)
+	key <AE06> { [	U0036,		U005E,		U00BE,		U0302		] }; // 6 ^ ¾ ◌̂ (combining circumflex accent)
 	key <AE07> { [	U0037,		U0026,		U215B,		U2190		] }; // 7 & ⅛ ←
 	key <AE08> { [	U0038,		U002A,		U215C,		U2192		] }; // 8 * ⅜ →
 	key <AE09> { [	U0039,		U0028,		U215D,		U2191		] }; // 9 ( ⅝ ↑
@@ -94,7 +94,7 @@ xkb_symbols "basic" {
 	key <AC08> { [	U006B,		U004B,		VoidSymbol,	VoidSymbol	] }; // k K
 	key <AC09> { [	U006C,		U004C,		VoidSymbol,	VoidSymbol	] }; // l L
 	key <AC10> { [	U003B,		U003A,		VoidSymbol,	VoidSymbol	] }; // ; :
-	key <AC11> { [	U0027,		U0022,		U0301,		U030B		] }; // ' " ́◌ ̋◌ (combining acute accent) (combining double-acute accent)
+	key <AC11> { [	U0027,		U0022,		U0301,		U030B		] }; // ' " ◌́ ◌̋ (combining acute accent) (combining double-acute accent)
 
     // B row; Lower row, left side
 	key <AB00> { [	VoidSymbol,	VoidSymbol,	VoidSymbol,	U00A6		] }; //       ¦
@@ -106,7 +106,7 @@ xkb_symbols "basic" {
     // B row; Lower row, right side
 	key <AB06> { [	U006E,		U004E,		U00F1,		U00D1		] }; // n N ñ Ñ
 	key <AB07> { [	U006D,		U004D,		U00B5,		U00BA		] }; // m M µ º
-	key <AB08> { [	U002C,		U003C,		U0327,		U0328		] }; // , < ̧◌ ̨◌ (combining cedilla) (combining ogonek)
+	key <AB08> { [	U002C,		U003C,		U0327,		U0328		] }; // , < ◌̧ ◌̨ (combining cedilla) (combining ogonek)
 	key <AB09> { [	U002E,		U003E,		U2026,		U2423		] }; // . > … ␣
 	key <AB10> { [	U002F,		U003F,		U00F7,		U00BF		] }; // / ? ÷ ¿
 
@@ -216,11 +216,11 @@ xkb_symbols "qwerty-bay" {
 // http://www.michaelcapewell.com/projects/keyboard/index.htm#The_Capewell-Dvorak_Layout
 //
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━┓
-// │ ~ ̃◌ │ ! ¡ │ @ ¤ │ # £ │ $ € │ % ° │ ^ ̂◌ │ & → │ * → │ ( ↑ │ ) ↓ │ {   │ }   ┃ ⌫ Bak ┃
-// │ ` ̀◌ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¼ │ 5 ½ │ 6 ¾ │ 7 ⅛ │ 8 ⅜ │ 9 ⅝ │ 0 ⅞ │ [   │ ]   ┃ Space ┃
+// │ ~ ◌̃ │ ! ¡ │ @ ¤ │ # £ │ $ € │ % ° │ ^ ◌̂ │ & → │ * → │ ( ↑ │ ) ↓ │ {   │ }   ┃ ⌫ Bak ┃
+// │ ` ◌̀ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¼ │ 5 ½ │ 6 ¾ │ 7 ⅛ │ 8 ⅜ │ 9 ⅝ │ 0 ⅞ │ [   │ ]   ┃ Space ┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┯━━━━━┩
-// ┃       ┃ " ̋◌ │ < ̨◌ │ > ␣ │ P   │ Y   │ Q   │ F ª │ G   │ R ¶ │ K   │ ? ¿ │ + ∓ │ | Ə │
-// ┃Tab ↹  ┃ ' ́◌ │ , ̧◌ │ . … │ p ₱ │ y ¥ │ q   │ f   │ g   │ r ® │ k   │ / ÷ │ = ± │ \ ə │
+// ┃       ┃ " ◌̋ │ < ◌̨ │ > ␣ │ P   │ Y   │ Q   │ F ª │ G   │ R ¶ │ K   │ ? ¿ │ + ∓ │ | Ə │
+// ┃Tab ↹  ┃ ' ◌́ │ , ◌̧ │ . … │ p ₱ │ y ¥ │ q   │ f   │ g   │ r ® │ k   │ / ÷ │ = ± │ \ ə │
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┲━━━━┷━━━━━┪
 // ┃        ┃ O Ø │ A Æ │ E Œ │ I İ │ U   │ D   │ H   │ T   │ N Ñ │ S   │ _ ◌͠  ┃ Enter    ┃
 // ┃Caps ⇬  ┃ o ø │ a æ │ e œ │ i ı │ u   │ d   │ h   │ t ™ │ n ñ │ s § │ - ¬ ┃   ⏎      ┃
@@ -242,14 +242,14 @@ xkb_symbols "capewell-dvorak" {
 //			Base		Shift		AltGr		AltGr+Shift
 
     // E row; Numerals row, left side
-	key <TLDE> { [	U0060,		U007E,		U0300,		U0303		] }; // ` ~ ̀◌ ̃◌ (combining grave accent) (combining tilde)
+	key <TLDE> { [	U0060,		U007E,		U0300,		U0303		] }; // ` ~ ◌̀ ◌̃ (combining grave accent) (combining tilde)
 	key <AE01> { [	U0031,		U0021,		U00B9,		U00A1		] }; // 1 ! ¹ ¡
 	key <AE02> { [	U0032,		U0040,		U00B2,		U00A4		] }; // 2 @ ² ¤
 	key <AE03> { [	U0033,		U0023,		U00B3,		U00A3		] }; // 3 # ³ £
 	key <AE04> { [	U0034,		U0024,		U00BC,		U20AC		] }; // 4 $ ¼ €
 	key <AE05> { [	U0035,		U0025,		U00BD,		U00B0		] }; // 5 % ½ °
     // E row; Numerals row, right side
-	key <AE06> { [	U0036,		U005E,		U00BE,		U0302		] }; // 6 ^ ¾ ̂◌ (combining circumflex accent)
+	key <AE06> { [	U0036,		U005E,		U00BE,		U0302		] }; // 6 ^ ¾ ◌̂ (combining circumflex accent)
 	key <AE07> { [	U0037,		U0026,		U215B,		U2190		] }; // 7 & ⅛ ←
 	key <AE08> { [	U0038,		U002A,		U215C,		U2192		] }; // 8 * ⅜ →
 	key <AE09> { [	U0039,		U0028,		U215D,		U2191		] }; // 9 ( ⅝ ↑
@@ -258,8 +258,8 @@ xkb_symbols "capewell-dvorak" {
 	key <AE12> { [	U005D,		U007D,		VoidSymbol,	VoidSymbol	] }; // ] }
 
     // D row; Upper row, left side
-	key <AD01> { [	U0027,		U0022,		U0301,		U030B		] }; // ' " ́◌ ̋◌ (combining acute accent) (combining double-acute accent)
-	key <AD02> { [	U002C,		U003C,		U0327,		U0328		] }; // , < ̧◌ ̨◌ (combining cedilla) (combining ogonek)
+	key <AD01> { [	U0027,		U0022,		U0301,		U030B		] }; // ' " ◌́ ◌̋ (combining acute accent) (combining double-acute accent)
+	key <AD02> { [	U002C,		U003C,		U0327,		U0328		] }; // , < ◌̧ ◌̨ (combining cedilla) (combining ogonek)
 	key <AD03> { [	U002E,		U003E,		U2026,		U2423		] }; // . > … ␣
 	key <AD04> { [	U0070,		U0050,		U20B1,		VoidSymbol	] }; // p P ₱
 	key <AD05> { [	U0079,		U0059,		U00A5,		VoidSymbol	] }; // y Y ¥
@@ -407,17 +407,17 @@ xkb_symbols "capewell-dvorak-bay" {
 // http://www.michaelcapewell.com/projects/keyboard/index.htm#The_QWERF_Layout
 //
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━┓
-// │ ~ ̃◌ │ ! ¡ │ @ ¤ │ # £ │ $ € │ % ° │ ^ ̂◌ │ & → │ * → │ ( ↑ │ ) ↓ │ _ ◌͠  │ + ∓ ┃ ⌫ Bak ┃
-// │ ` ̀◌ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¼ │ 5 ½ │ 6 ¾ │ 7 ⅛ │ 8 ⅜ │ 9 ⅝ │ 0 ⅞ │ - ¬ │ = ± ┃ Space ┃
+// │ ~ ◌̃ │ ! ¡ │ @ ¤ │ # £ │ $ € │ % ° │ ^ ◌̂ │ & → │ * → │ ( ↑ │ ) ↓ │ _ ◌͠  │ + ∓ ┃ ⌫ Bak ┃
+// │ ` ◌̀ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¼ │ 5 ½ │ 6 ¾ │ 7 ⅛ │ 8 ⅜ │ 9 ⅝ │ 0 ⅞ │ - ¬ │ = ± ┃ Space ┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┯━━━━━┩
 // ┃       ┃ Q   │ W   │ E Œ │ R ¶ │ F ª │ J   │ Y   │ K   │ L   │ :   │ {   │ }   │ | Ə │
 // ┃Tab ↹  ┃ q   │ w   │ e œ │ r ® │ f   │ j   │ y ¥ │ k   │ l   │ ;   │ [   │ ]   │ \ ə │
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┲━━━━┷━━━━━┪
-// ┃        ┃ A Æ │ S   │ D   │ T   │ G   │ H   │ U   │ I İ │ O Ø │ P   │ " ̋◌ ┃ Enter    ┃
-// ┃Caps ⇬  ┃ a æ │ s § │ d   │ t ™ │ g   │ h   │ u   │ i ı │ o ø │ p ₱ │ ' ́◌ ┃   ⏎      ┃
+// ┃        ┃ A Æ │ S   │ D   │ T   │ G   │ H   │ U   │ I İ │ O Ø │ P   │ " ◌̋ ┃ Enter    ┃
+// ┃Caps ⇬  ┃ a æ │ s § │ d   │ t ™ │ g   │ h   │ u   │ i ı │ o ø │ p ₱ │ ' ◌́ ┃   ⏎      ┃
 // ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┻━━━━━━━━━━┫
-// ┃       ┃   ¦ │ Z » │ X · │ C ¢ │ V ‘ │ B ’ │ N Ñ │ M º │ < ̨◌ │ > ␣ │ ? ¿ ┃           ┃
-// ┃Shift ⇧┃     │ z « │ x × │ c © │ v “ │ b ” │ n ñ │ m µ │ , ̧◌ │ . … │ / ÷ ┃Shift ⇧    ┃
+// ┃       ┃   ¦ │ Z » │ X · │ C ¢ │ V ‘ │ B ’ │ N Ñ │ M º │ < ◌̨ │ > ␣ │ ? ¿ ┃           ┃
+// ┃Shift ⇧┃     │ z « │ x × │ c © │ v “ │ b ” │ n ñ │ m µ │ , ◌̧ │ . … │ / ÷ ┃Shift ⇧    ┃
 // ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┷━┳━━━┻━━━┳━━━━━━━┫
 // ┃       ┃Win    ┃       ┃ ␣ Space             Space ␣ ┃       ┃Win    ┃       ┃       ┃
 // ┃Ctrl   ┃Super  ┃Alt    ┃ ␣ Space             Space ␣ ┃AltGr ⇮┃Meta   ┃Menu   ┃Ctrl   ┃
@@ -433,14 +433,14 @@ xkb_symbols "capewell-qwerf2k6" {
 //			Base		Shift		AltGr		AltGr+Shift
 
     // E row; Numerals row, left side
-	key <TLDE> { [	U0060,		U007E,		U0300,		U0303		] }; // ` ~ ̀◌ ̃◌ (combining grave accent) (combining tilde)
+	key <TLDE> { [	U0060,		U007E,		U0300,		U0303		] }; // ` ~ ◌̀ ◌̃ (combining grave accent) (combining tilde)
 	key <AE01> { [	U0031,		U0021,		U00B9,		U00A1		] }; // 1 ! ¹ ¡
 	key <AE02> { [	U0032,		U0040,		U00B2,		U00A4		] }; // 2 @ ² ¤
 	key <AE03> { [	U0033,		U0023,		U00B3,		U00A3		] }; // 3 # ³ £
 	key <AE04> { [	U0034,		U0024,		U00BC,		U20AC		] }; // 4 $ ¼ €
 	key <AE05> { [	U0035,		U0025,		U00BD,		U00B0		] }; // 5 % ½ °
     // E row; Numerals row, right side
-	key <AE06> { [	U0036,		U005E,		U00BE,		U0302		] }; // 6 ^ ¾ ̂◌ (combining circumflex accent)
+	key <AE06> { [	U0036,		U005E,		U00BE,		U0302		] }; // 6 ^ ¾ ◌̂ (combining circumflex accent)
 	key <AE07> { [	U0037,		U0026,		U215B,		U2190		] }; // 7 & ⅛ ←
 	key <AE08> { [	U0038,		U002A,		U215C,		U2192		] }; // 8 * ⅜ →
 	key <AE09> { [	U0039,		U0028,		U215D,		U2191		] }; // 9 ( ⅝ ↑
@@ -476,7 +476,7 @@ xkb_symbols "capewell-qwerf2k6" {
 	key <AC08> { [	U0069,		U0049,		U0131,		U0130		] }; // i I ı İ
 	key <AC09> { [	U006F,		U004F,		U00F8,		U00D8		] }; // o O ø Ø
 	key <AC10> { [	U0070,		U0050,		U20B1,		VoidSymbol	] }; // p P ₱
-	key <AC11> { [	U0027,		U0022,		U0301,		U030B		] }; // ' " ́◌ ̋◌ (combining acute accent) (combining double-acute accent)
+	key <AC11> { [	U0027,		U0022,		U0301,		U030B		] }; // ' " ◌́ ◌̋ (combining acute accent) (combining double-acute accent)
 
     // B row; Lower row, left side
 	key <AB00> { [	VoidSymbol,	VoidSymbol,	VoidSymbol,	U00A6		] }; //       ¦
@@ -488,7 +488,7 @@ xkb_symbols "capewell-qwerf2k6" {
     // B row; Lower row, right side
 	key <AB06> { [	U006E,		U004E,		U00F1,		U00D1		] }; // n N ñ Ñ
 	key <AB07> { [	U006D,		U004D,		U00B5,		U00BA		] }; // m M µ º
-	key <AB08> { [	U002C,		U003C,		U0327,		U0328		] }; // , < ̧◌ ̨◌ (combining cedilla) (combining ogonek)
+	key <AB08> { [	U002C,		U003C,		U0327,		U0328		] }; // , < ◌̧ ◌̨ (combining cedilla) (combining ogonek)
 	key <AB09> { [	U002E,		U003E,		U2026,		U2423		] }; // . > … ␣
 	key <AB10> { [	U002F,		U003F,		U00F7,		U00BF		] }; // / ? ÷ ¿
 
@@ -598,17 +598,17 @@ xkb_symbols "capewell-qwerf2k6-bay" {
 // http://colemak.com
 //
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━┓
-// │ ~ ̃◌ │ ! ¡ │ @ ¤ │ # £ │ $ € │ % ° │ ^ ̂◌ │ & → │ * → │ ( ↑ │ ) ↓ │ _ ◌͠  │ + ∓ ┃ ⌫ Bak ┃
-// │ ` ̀◌ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¼ │ 5 ½ │ 6 ¾ │ 7 ⅛ │ 8 ⅜ │ 9 ⅝ │ 0 ⅞ │ - ¬ │ = ± ┃ Space ┃
+// │ ~ ◌̃ │ ! ¡ │ @ ¤ │ # £ │ $ € │ % ° │ ^ ◌̂ │ & → │ * → │ ( ↑ │ ) ↓ │ _ ◌͠  │ + ∓ ┃ ⌫ Bak ┃
+// │ ` ◌̀ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¼ │ 5 ½ │ 6 ¾ │ 7 ⅛ │ 8 ⅜ │ 9 ⅝ │ 0 ⅞ │ - ¬ │ = ± ┃ Space ┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┯━━━━━┩
 // ┃       ┃ Q   │ W   │ F ª │ P   │ G   │ J   │ L   │ U   │ Y   │ :   │ {   │ }   │ | Ə │
 // ┃Tab ↹  ┃ q   │ w   │ f   │ p ₱ │ g   │ j   │ l   │ u   │ y ¥ │ ;   │ [   │ ]   │ \ ə │
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┲━━━━┷━━━━━┪
-// ┃        ┃ A Æ │ R ¶ │ S   │ T   │ D   │ H   │ N Ñ │ E Œ │ I İ │ O Ø │ " ̋◌ ┃ Enter    ┃
-// ┃Caps ⇬  ┃ a æ │ r ® │ s § │ t ™ │ d   │ h   │ n ñ │ e œ │ i ı │ o ø │ ' ́◌ ┃   ⏎      ┃
+// ┃        ┃ A Æ │ R ¶ │ S   │ T   │ D   │ H   │ N Ñ │ E Œ │ I İ │ O Ø │ " ◌̋ ┃ Enter    ┃
+// ┃Caps ⇬  ┃ a æ │ r ® │ s § │ t ™ │ d   │ h   │ n ñ │ e œ │ i ı │ o ø │ ' ◌́ ┃   ⏎      ┃
 // ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┻━━━━━━━━━━┫
-// ┃       ┃   ¦ │ Z » │ X · │ C ¢ │ V ‘ │ B ’ │ K   │ M º │ < ̨◌ │ > ␣ │ ? ¿ ┃           ┃
-// ┃Shift ⇧┃     │ z « │ x × │ c © │ v “ │ b ” │ k   │ m µ │ , ̧◌ │ . … │ / ÷ ┃Shift ⇧    ┃
+// ┃       ┃   ¦ │ Z » │ X · │ C ¢ │ V ‘ │ B ’ │ K   │ M º │ < ◌̨ │ > ␣ │ ? ¿ ┃           ┃
+// ┃Shift ⇧┃     │ z « │ x × │ c © │ v “ │ b ” │ k   │ m µ │ , ◌̧ │ . … │ / ÷ ┃Shift ⇧    ┃
 // ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┷━┳━━━┻━━━┳━━━━━━━┫
 // ┃       ┃Win    ┃       ┃ ␣ Space             Space ␣ ┃       ┃Win    ┃       ┃       ┃
 // ┃Ctrl   ┃Super  ┃Alt    ┃ ␣ Space             Space ␣ ┃AltGr ⇮┃Meta   ┃Menu   ┃Ctrl   ┃
@@ -624,14 +624,14 @@ xkb_symbols "colemak" {
 //			Base		Shift		AltGr		AltGr+Shift
 
     // E row; Numerals row, left side
-	key <TLDE> { [	U0060,		U007E,		U0300,		U0303		] }; // ` ~ ̀◌ ̃◌ (combining grave accent) (combining tilde)
+	key <TLDE> { [	U0060,		U007E,		U0300,		U0303		] }; // ` ~ ◌̀ ◌̃ (combining grave accent) (combining tilde)
 	key <AE01> { [	U0031,		U0021,		U00B9,		U00A1		] }; // 1 ! ¹ ¡
 	key <AE02> { [	U0032,		U0040,		U00B2,		U00A4		] }; // 2 @ ² ¤
 	key <AE03> { [	U0033,		U0023,		U00B3,		U00A3		] }; // 3 # ³ £
 	key <AE04> { [	U0034,		U0024,		U00BC,		U20AC		] }; // 4 $ ¼ €
 	key <AE05> { [	U0035,		U0025,		U00BD,		U00B0		] }; // 5 % ½ °
     // E row; Numerals row, right side
-	key <AE06> { [	U0036,		U005E,		U00BE,		U0302		] }; // 6 ^ ¾ ̂◌ (combining circumflex accent)
+	key <AE06> { [	U0036,		U005E,		U00BE,		U0302		] }; // 6 ^ ¾ ◌̂ (combining circumflex accent)
 	key <AE07> { [	U0037,		U0026,		U215B,		U2190		] }; // 7 & ⅛ ←
 	key <AE08> { [	U0038,		U002A,		U215C,		U2192		] }; // 8 * ⅜ →
 	key <AE09> { [	U0039,		U0028,		U215D,		U2191		] }; // 9 ( ⅝ ↑
@@ -667,7 +667,7 @@ xkb_symbols "colemak" {
 	key <AC08> { [	U0065,		U0045,		U0153,		U0152		] }; // e E œ Œ
 	key <AC09> { [	U0069,		U0049,		U0131,		U0130		] }; // i I ı İ
 	key <AC10> { [	U006F,		U004F,		U00F8,		U00D8		] }; // o O ø Ø
-	key <AC11> { [	U0027,		U0022,		U0301,		U030B		] }; // ' " ́◌ ̋◌ (combining acute accent) (combining double-acute accent)
+	key <AC11> { [	U0027,		U0022,		U0301,		U030B		] }; // ' " ◌́ ◌̋ (combining acute accent) (combining double-acute accent)
 
     // B row; Lower row, left side
 	key <AB00> { [	VoidSymbol,	VoidSymbol,	VoidSymbol,	U00A6		] }; //       ¦
@@ -679,7 +679,7 @@ xkb_symbols "colemak" {
     // B row; Lower row, right side
 	key <AB06> { [	U006B,		U004B,		VoidSymbol,	VoidSymbol	] }; // k K
 	key <AB07> { [	U006D,		U004D,		U00B5,		U00BA		] }; // m M µ º
-	key <AB08> { [	U002C,		U003C,		U0327,		U0328		] }; // , < ̧◌ ̨◌ (combining cedilla) (combining ogonek)
+	key <AB08> { [	U002C,		U003C,		U0327,		U0328		] }; // , < ◌̧ ◌̨ (combining cedilla) (combining ogonek)
 	key <AB09> { [	U002E,		U003E,		U2026,		U2423		] }; // . > … ␣
 	key <AB10> { [	U002F,		U003F,		U00F7,		U00BF		] }; // / ? ÷ ¿
 
@@ -789,11 +789,11 @@ xkb_symbols "colemak-bay" {
 // http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard
 //
 // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━┓
-// │ ~ ̃◌ │ ! ¡ │ @ ¤ │ # £ │ $ € │ % ° │ ^ ̂◌ │ & → │ * → │ ( ↑ │ ) ↓ │ {   │ }   ┃ ⌫ Bak ┃
-// │ ` ̀◌ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¼ │ 5 ½ │ 6 ¾ │ 7 ⅛ │ 8 ⅜ │ 9 ⅝ │ 0 ⅞ │ [   │ ]   ┃ Space ┃
+// │ ~ ◌̃ │ ! ¡ │ @ ¤ │ # £ │ $ € │ % ° │ ^ ◌̂ │ & → │ * → │ ( ↑ │ ) ↓ │ {   │ }   ┃ ⌫ Bak ┃
+// │ ` ◌̀ │ 1 ¹ │ 2 ² │ 3 ³ │ 4 ¼ │ 5 ½ │ 6 ¾ │ 7 ⅛ │ 8 ⅜ │ 9 ⅝ │ 0 ⅞ │ [   │ ]   ┃ Space ┃
 // ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┯━━━━━┩
-// ┃       ┃ " ̋◌ │ < ̨◌ │ > ␣ │ P   │ Y   │ F ª │ G   │ C ¢ │ R ¶ │ L   │ ? ¿ │ + ∓ │ | Ə │
-// ┃Tab ↹  ┃ ' ́◌ │ , ̧◌ │ . … │ p ₱ │ y ¥ │ f   │ g   │ c © │ r ® │ l   │ / ÷ │ = ± │ \ ə │
+// ┃       ┃ " ◌̋ │ < ◌̨ │ > ␣ │ P   │ Y   │ F ª │ G   │ C ¢ │ R ¶ │ L   │ ? ¿ │ + ∓ │ | Ə │
+// ┃Tab ↹  ┃ ' ◌́ │ , ◌̧ │ . … │ p ₱ │ y ¥ │ f   │ g   │ c © │ r ® │ l   │ / ÷ │ = ± │ \ ə │
 // ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┲━━━━┷━━━━━┪
 // ┃        ┃ A Æ │ O Ø │ E Œ │ U   │ I İ │ D   │ H   │ T   │ N Ñ │ S   │ _ ◌͠  ┃ Enter    ┃
 // ┃Caps ⇬  ┃ a æ │ o ø │ e œ │ u   │ i ı │ d   │ h   │ t ™ │ n ñ │ s § │ - ¬ ┃   ⏎      ┃
@@ -815,14 +815,14 @@ xkb_symbols "dvorak" {
 //			Base		Shift		AltGr		AltGr+Shift
 
     // E row; Numerals row, left side
-	key <TLDE> { [	U0060,		U007E,		U0300,		U0303		] }; // ` ~ ̀◌ ̃◌ (combining grave accent) (combining tilde)
+	key <TLDE> { [	U0060,		U007E,		U0300,		U0303		] }; // ` ~ ◌̀ ◌̃ (combining grave accent) (combining tilde)
 	key <AE01> { [	U0031,		U0021,		U00B9,		U00A1		] }; // 1 ! ¹ ¡
 	key <AE02> { [	U0032,		U0040,		U00B2,		U00A4		] }; // 2 @ ² ¤
 	key <AE03> { [	U0033,		U0023,		U00B3,		U00A3		] }; // 3 # ³ £
 	key <AE04> { [	U0034,		U0024,		U00BC,		U20AC		] }; // 4 $ ¼ €
 	key <AE05> { [	U0035,		U0025,		U00BD,		U00B0		] }; // 5 % ½ °
     // E row; Numerals row, right side
-	key <AE06> { [	U0036,		U005E,		U00BE,		U0302		] }; // 6 ^ ¾ ̂◌ (combining circumflex accent)
+	key <AE06> { [	U0036,		U005E,		U00BE,		U0302		] }; // 6 ^ ¾ ◌̂ (combining circumflex accent)
 	key <AE07> { [	U0037,		U0026,		U215B,		U2190		] }; // 7 & ⅛ ←
 	key <AE08> { [	U0038,		U002A,		U215C,		U2192		] }; // 8 * ⅜ →
 	key <AE09> { [	U0039,		U0028,		U215D,		U2191		] }; // 9 ( ⅝ ↑
@@ -831,8 +831,8 @@ xkb_symbols "dvorak" {
 	key <AE12> { [	U005D,		U007D,		VoidSymbol,	VoidSymbol	] }; // ] }
 
     // D row; Upper row, left side
-	key <AD01> { [	U0027,		U0022,		U0301,		U030B		] }; // ' " ́◌ ̋◌ (combining acute accent) (combining double-acute accent)
-	key <AD02> { [	U002C,		U003C,		U0327,		U0328		] }; // , < ̧◌ ̨◌ (combining cedilla) (combining ogonek)
+	key <AD01> { [	U0027,		U0022,		U0301,		U030B		] }; // ' " ◌́ ◌̋ (combining acute accent) (combining double-acute accent)
+	key <AD02> { [	U002C,		U003C,		U0327,		U0328		] }; // , < ◌̧ ◌̨ (combining cedilla) (combining ogonek)
 	key <AD03> { [	U002E,		U003E,		U2026,		U2423		] }; // . > … ␣
 	key <AD04> { [	U0070,		U0050,		U20B1,		VoidSymbol	] }; // p P ₱
 	key <AD05> { [	U0079,		U0059,		U00A5,		VoidSymbol	] }; // y Y ¥

@@ -108,7 +108,10 @@ xkb_symbols "evdev" {
     key <FK20>   {      [ XF86AudioMicMute      ]       };
     key <FK21>   {      [ XF86TouchpadToggle    ]       };
     key <FK22>   {      [ XF86TouchpadOn        ]       };
-    key <FK23>   {      [ XF86TouchpadOff       ]       };
+    key <FK23>   {      [ XF86TouchpadOff, XF86Assistant ], type[Group1] = "PC_SHIFT_SUPER_LEVEL2" };
+    // <ZEHA> is sometimes used for touchpad toggle keys, while the usual
+    // Japanese Henkaku/Zankaku keys use <HZTG>.
+    key <ZEHA>   {      [ XF86TouchpadToggle    ]       };
 
 //  key <I120>   {      [ ]       }; // KEY_MACRO
     key <I126>   {      [ plusminus             ]       };
@@ -154,11 +157,6 @@ xkb_symbols "evdev" {
     key <I186>   {      [ XF86ScrollDown        ]       };
     key <I187>   {      [ parenleft             ]       };
     key <I188>   {      [ parenright            ]       };
-    key <I192>   {      [ XF86LaunchA           ]       };
-    key <I193>   {      [ XF86LaunchC           ]       };
-    key <I194>   {      [ XF86LaunchD           ]       };
-    key <I195>   {      [ XF86LaunchE           ]       };
-    key <I196>   {      [ XF86LaunchF           ]       };
     key <I208>   {      [ XF86AudioPlay         ]       };
     key <I209>   {      [ XF86AudioPause        ]       };
     key <I210>   {      [ XF86Launch3           ]       };
@@ -226,18 +224,55 @@ xkb_symbols "evdev" {
    key <I254>   {       [ XF86WWAN                       ]      }; // KEY_WWAN
    key <I255>   {       [ XF86RFKill                     ]      }; // KEY_RFKILL
    key <I256>   {       [ XF86AudioMicMute               ]      }; // KEY_MICMUTE
+   key <I360>   {       [ XF86OK                         ]      }; // KEY_OK
+   key <I361>   {       [ XF86Select                     ]      }; // KEY_SELECT
+   key <I362>   {       [ XF86GoTo                       ]      }; // KEY_GOTO
+   key <I363>   {       [ XF86Clear                      ]      }; // KEY_CLEAR
+   key <I365>   {       [ XF86Option                     ]      }; // KEY_OPTION
    key <I366>   {       [ XF86Info                       ]      }; // KEY_INFO
+   key <I367>   {       [ XF86Time                       ]      }; // KEY_TIME
+   key <I368>   {       [ XF86VendorLogo                 ]      }; // KEY_VENDOR
+   key <I370>   {       [ XF86MediaSelectProgramGuide    ]      }; // KEY_PROGRAM
+   key <I371>   {       [ XF86NextFavorite               ]      }; // KEY_CHANNEL
+// key <I372>   {       [ XF86Favorites                  ]      }; // KEY_FAVORITES
+   key <I373>   {       [ XF86MediaSelectProgramGuide    ]      }; // KEY_EPG
+   key <I374>   {       [ XF86MediaSelectHome            ]      }; // KEY_PVR
+   key <I376>   {       [ XF86MediaLanguageMenu          ]      }; // KEY_LANGUAGE
+   key <I377>   {       [ XF86MediaTitleMenu             ]      }; // KEY_TITLE
+   key <I378>   {       [ XF86Subtitle                   ]      }; // KEY_SUBTITLE
    key <I379>   {       [ XF86CycleAngle                 ]      }; // KEY_ANGLE
    key <I380>   {       [ XF86FullScreen                 ]      }; // KEY_FULL_SCREEN
+   key <I381>   {       [ XF86AudioChannelMode           ]      }; // KEY_MODE
+// key <I382>   {       [ XF86Keyboard                   ]      }; // KEY_KEYBOARD
    key <I383>   {       [ XF86AspectRatio                ]      }; // KEY_ASPECT_RATIO
+   key <I384>   {       [ XF86MediaSelectPC              ]      }; // KEY_PC
+   key <I385>   {       [ XF86MediaSelectTV              ]      }; // KEY_TV
+   key <I386>   {       [ XF86MediaSelectCable           ]      }; // KEY_TV2
+   key <I387>   {       [ XF86MediaSelectVCR             ]      }; // KEY_VCR
+   key <I388>   {       [ XF86MediaSelectVCRPlus         ]      }; // KEY_VCR2
+   key <I389>   {       [ XF86MediaSelectSatellite       ]      }; // KEY_SAT
+   key <I391>   {       [ XF86MediaSelectCD              ]      }; // KEY_CD
+   key <I392>   {       [ XF86MediaSelectTape            ]      }; // KEY_TAPE
+   key <I393>   {       [ XF86MediaSelectRadio           ]      }; // KEY_RADIO
+   key <I394>   {       [ XF86MediaSelectTuner           ]      }; // KEY_TUNER
+   key <I395>   {       [ XF86MediaPlayer                ]      }; // KEY_PLAYER
+   key <I396>   {       [ XF86MediaSelectTeletext        ]      }; // KEY_TEXT
    key <I397>   {       [ XF86DVD                        ]      }; // KEY_DVD
+   key <I398>   {       [ XF86MediaSelectAuxiliary       ]      }; // KEY_AUX
    key <I400>   {       [ XF86Audio                      ]      }; // KEY_AUDIO
    key <I401>   {       [ XF86Video                      ]      }; // KEY_VIDEO
+   key <I404>   {       [ XF86Memo                       ]      }; // KEY_MEMO
    key <I405>   {       [ XF86Calendar                   ]      }; // KEY_CALENDAR
+   key <I406>   {       [ XF86Red                        ]      }; // KEY_RED
+   key <I407>   {       [ XF86Green                      ]      }; // KEY_GREEN
+   key <I408>   {       [ XF86Yellow                     ]      }; // KEY_YELLOW
+   key <I409>   {       [ XF86Blue                       ]      }; // KEY_BLUE
    key <I410>   {       [ XF86ChannelUp                  ]      }; // KEY_CHANNELUP
    key <I411>   {       [ XF86ChannelDown                ]      }; // KEY_CHANNELDOWN
+   key <I417>   {       [ XF86MediaPlaySlow              ]      }; // KEY_SLOW
    key <I418>   {       [ XF86AudioRandomPlay            ]      }; // KEY_SHUFFLE
    key <I419>   {       [ XF86Break                      ]      }; // KEY_BREAK
+   key <I421>   {       [ XF86NumberEntryMode            ]      }; // KEY_DIGITS
    key <I424>   {       [ XF86VideoPhone                 ]      }; // KEY_VIDEOPHONE
    key <I425>   {       [ XF86Game                       ]      }; // KEY_GAMES
    key <I426>   {       [ XF86ZoomIn                     ]      }; // KEY_ZOOMIN
