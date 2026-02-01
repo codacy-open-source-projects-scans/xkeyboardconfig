@@ -112,24 +112,6 @@ container-prep:
     - if test x"$NINJA_EXTRA_COMMAND" != "x"; then ninja -C "$BUILDDIR" $NINJA_EXTRA_COMMAND; fi
 
 #
-# Verify that the merge request has the allow-collaboration checkbox ticked
-#
-
-check-merge-request:
-  extends:
-    - .all_but_schedule
-    - .fdo.ci-fairy
-  stage: gitlab
-  script:
-    - ci-fairy check-merge-request --require-allow-collaboration --junit-xml=results.xml
-  artifacts:
-    when: on_failure
-    reports:
-      junit: results.xml
-  allow_failure: true
-  dependencies: []
-
-#
 # Verify that commit messages are as expected
 #
 
