@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xkeyboard-config\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-20 19:03+0000\n"
+"POT-Creation-Date: 2026-02-04 23:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4379,299 +4379,303 @@ msgid "Shift does not cancel Num Lock, chooses 3rd level instead"
 msgstr ""
 
 #: rules/base.xml:7973
-msgid "Map Hyper to Mod3 (conflict with LevelFive)"
+msgid "Map Hyper to Mod2 (conflict with NumLock)"
 msgstr ""
 
 #: rules/base.xml:7979
-msgid "Map Hyper to Mod4 (conflict with Super)"
+msgid "Map Hyper to Mod3 (conflict with LevelFive)"
 msgstr ""
 
 #: rules/base.xml:7985
-msgid "Map Scroll Lock to Mod3"
+msgid "Map Hyper to Mod4 (conflict with Super)"
 msgstr ""
 
 #: rules/base.xml:7991
-msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server"
+msgid "Map Scroll Lock to Mod3"
 msgstr ""
 
 #: rules/base.xml:7997
-msgid "Apple Aluminium emulates Pause, PrtSc, Scroll Lock"
+msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server"
 msgstr ""
 
 #: rules/base.xml:8003
-msgid "Japanese Apple keyboards emulate OADG109A backslash"
+msgid "Apple Aluminium emulates Pause, PrtSc, Scroll Lock"
 msgstr ""
 
 #: rules/base.xml:8009
-msgid "Japanese Apple keyboards emulate PC106 backslash"
+msgid "Japanese Apple keyboards emulate OADG109A backslash"
 msgstr ""
 
 #: rules/base.xml:8015
-msgid "Shift cancels Caps Lock"
+msgid "Japanese Apple keyboards emulate PC106 backslash"
 msgstr ""
 
 #: rules/base.xml:8021
-msgid "Enable extra typographic characters"
+msgid "Shift cancels Caps Lock"
 msgstr ""
 
 #: rules/base.xml:8027
-msgid "Enable APL overlay characters"
+msgid "Enable extra typographic characters"
 msgstr ""
 
 #: rules/base.xml:8033
-msgid "Both Shifts together enable Caps Lock"
+msgid "Enable APL overlay characters"
 msgstr ""
 
 #: rules/base.xml:8039
-msgid "Both Shifts together enable Caps Lock; one Shift key disables it"
+msgid "Both Shifts together enable Caps Lock"
 msgstr ""
 
 #: rules/base.xml:8045
-msgid "Both Shifts together enable Shift Lock"
+msgid "Both Shifts together enable Caps Lock; one Shift key disables it"
 msgstr ""
 
 #: rules/base.xml:8051
-msgid "Shift + Num Lock enables PointerKeys"
+msgid "Both Shifts together enable Shift Lock"
 msgstr ""
 
 #: rules/base.xml:8057
-msgid "Allow breaking grabs with keyboard actions (warning: security risk)"
+msgid "Shift + Num Lock enables PointerKeys"
 msgstr ""
 
 #: rules/base.xml:8063
+msgid "Allow breaking grabs with keyboard actions (warning: security risk)"
+msgstr ""
+
+#: rules/base.xml:8069
 msgid "Allow grab and window tree logging"
 msgstr ""
 
-#: rules/base.xml:8071
+#: rules/base.xml:8077
 msgid "Currency signs"
 msgstr ""
 
-#: rules/base.xml:8076
+#: rules/base.xml:8082
 msgid "Euro on E, third level"
 msgstr ""
 
-#: rules/base.xml:8082
+#: rules/base.xml:8088
 msgid "Euro on E, fourth level"
 msgstr ""
 
-#: rules/base.xml:8088
+#: rules/base.xml:8094
 msgid "Euro on 2"
 msgstr ""
 
-#: rules/base.xml:8094
+#: rules/base.xml:8100
 msgid "Euro on 4"
 msgstr ""
 
-#: rules/base.xml:8100
+#: rules/base.xml:8106
 msgid "Euro on 5"
 msgstr ""
 
-#: rules/base.xml:8106
+#: rules/base.xml:8112
 msgid "Rupee on 4"
 msgstr ""
 
-#: rules/base.xml:8113
+#: rules/base.xml:8119
 msgid "Key to choose the 5th level"
 msgstr ""
 
-#: rules/base.xml:8118
+#: rules/base.xml:8124
 msgid "Caps Lock chooses 5th level"
 msgstr ""
 
-#: rules/base.xml:8124
+#: rules/base.xml:8130
 msgid "The \"&lt; &gt;\" key chooses 5th level"
 msgstr ""
 
-#: rules/base.xml:8130
+#: rules/base.xml:8136
 msgid "Right Alt chooses 5th level"
 msgstr ""
 
-#: rules/base.xml:8136
+#: rules/base.xml:8142
 msgid "Menu chooses 5th level"
 msgstr ""
 
-#: rules/base.xml:8142
+#: rules/base.xml:8148
 msgid "Right Ctrl chooses 5th level"
 msgstr ""
 
-#: rules/base.xml:8148
+#: rules/base.xml:8154
 msgid ""
 "The \"&lt; &gt;\" key chooses 5th level and acts as a one-time lock if "
 "pressed with another 5th level chooser"
 msgstr ""
 
-#: rules/base.xml:8154
+#: rules/base.xml:8160
 msgid ""
 "Right Alt chooses 5th level and acts as a one-time lock if pressed with "
 "another 5th level chooser"
 msgstr ""
 
-#: rules/base.xml:8160
+#: rules/base.xml:8166
 msgid ""
 "Left Win chooses 5th level and acts as a one-time lock if pressed with "
 "another 5th level chooser"
 msgstr ""
 
-#: rules/base.xml:8166
+#: rules/base.xml:8172
 msgid ""
 "Right Win chooses 5th level and acts as a one-time lock if pressed with "
 "another 5th level chooser"
 msgstr ""
 
-#: rules/base.xml:8174
+#: rules/base.xml:8180
 msgid "Non-breaking space input"
 msgstr ""
 
-#: rules/base.xml:8179
+#: rules/base.xml:8185
 msgid "Usual space at any level"
 msgstr ""
 
-#: rules/base.xml:8185
+#: rules/base.xml:8191
 msgid "Non-breaking space at the 2nd level"
 msgstr ""
 
-#: rules/base.xml:8191
+#: rules/base.xml:8197
 msgid "Non-breaking space at the 3rd level"
 msgstr ""
 
-#: rules/base.xml:8197
+#: rules/base.xml:8203
 msgid ""
 "Non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr ""
 
-#: rules/base.xml:8203
+#: rules/base.xml:8209
 msgid "Non-breaking space at the 4th level"
 msgstr ""
 
-#: rules/base.xml:8209
+#: rules/base.xml:8215
 msgid ""
 "Non-breaking space at the 4th level, thin non-breaking space at the 6th level"
 msgstr ""
 
-#: rules/base.xml:8215
+#: rules/base.xml:8221
 msgid ""
 "Non-breaking space at the 4th level, thin non-breaking space at the 6th "
 "level (via Ctrl+Shift)"
 msgstr ""
 
-#: rules/base.xml:8221
+#: rules/base.xml:8227
 msgid "Zero-width non-joiner at the 2nd level"
 msgstr ""
 
-#: rules/base.xml:8227
+#: rules/base.xml:8233
 msgid ""
 "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level"
 msgstr ""
 
-#: rules/base.xml:8233
+#: rules/base.xml:8239
 msgid ""
 "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level, "
 "non-breaking space at the 4th level"
 msgstr ""
 
-#: rules/base.xml:8239
-msgid ""
-"Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level"
-msgstr ""
-
 #: rules/base.xml:8245
 msgid ""
-"Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, "
-"zero-width joiner at the 4th level"
+"Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level"
 msgstr ""
 
 #: rules/base.xml:8251
 msgid ""
 "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, "
-"thin non-breaking space at the 4th level"
+"zero-width joiner at the 4th level"
 msgstr ""
 
 #: rules/base.xml:8257
 msgid ""
+"Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, "
+"thin non-breaking space at the 4th level"
+msgstr ""
+
+#: rules/base.xml:8263
+msgid ""
 "Zero-width non-joiner at the 3rd level, zero-width joiner at the 4th level"
 msgstr ""
 
-#: rules/base.xml:8264
+#: rules/base.xml:8270
 msgid "Japanese keyboard options"
 msgstr ""
 
-#: rules/base.xml:8269
+#: rules/base.xml:8275
 msgid "Kana Lock key is locking"
 msgstr ""
 
-#: rules/base.xml:8275
+#: rules/base.xml:8281
 msgid "NICOLA-F style Backspace"
 msgstr ""
 
-#: rules/base.xml:8281
+#: rules/base.xml:8287
 msgid "Make Zenkaku Hankaku an additional Esc"
 msgstr ""
 
-#: rules/base.xml:8288
+#: rules/base.xml:8294
 msgid "Korean Hangul/Hanja keys"
 msgstr ""
 
-#: rules/base.xml:8293
+#: rules/base.xml:8299
 msgid "Make right Alt a Hangul key"
 msgstr ""
 
-#: rules/base.xml:8299
+#: rules/base.xml:8305
 msgid "Make right Ctrl a Hangul key"
 msgstr ""
 
-#: rules/base.xml:8305
+#: rules/base.xml:8311
 msgid "Make right Alt a Hanja key"
 msgstr ""
 
-#: rules/base.xml:8311
+#: rules/base.xml:8317
 msgid "Make right Ctrl a Hanja key"
 msgstr ""
 
-#: rules/base.xml:8318
+#: rules/base.xml:8324
 msgid "Esperanto letters with superscripts"
 msgstr ""
 
-#: rules/base.xml:8323
+#: rules/base.xml:8329
 msgid "At the corresponding key in a QWERTY layout"
 msgstr ""
 
-#: rules/base.xml:8329
+#: rules/base.xml:8335
 msgid "At the corresponding key in a Dvorak layout"
 msgstr ""
 
-#: rules/base.xml:8335
+#: rules/base.xml:8341
 msgid "At the corresponding key in a Colemak layout"
 msgstr ""
 
-#: rules/base.xml:8342
+#: rules/base.xml:8348
 msgid "Old Solaris keycodes compatibility"
 msgstr ""
 
-#: rules/base.xml:8347
+#: rules/base.xml:8353
 msgid "Sun key compatibility"
 msgstr ""
 
-#: rules/base.xml:8354
+#: rules/base.xml:8360
 msgid "Key sequence to kill the X server"
 msgstr ""
 
-#: rules/base.xml:8359
+#: rules/base.xml:8365
 msgid "Ctrl+Alt+Backspace"
 msgstr ""
 
-#: rules/base.xml:8366
+#: rules/base.xml:8372
 msgid "Function keys"
 msgstr ""
 
-#: rules/base.xml:8371
+#: rules/base.xml:8377
 msgid "Use F13-F24 as usual function keys"
 msgstr ""
 
-#: rules/base.xml:8378
+#: rules/base.xml:8384
 msgid "Miscellaneous options"
 msgstr ""
 
-#: rules/base.xml:8383
+#: rules/base.xml:8389
 msgid "Use user-defined custom XKB types"
 msgstr ""
 
