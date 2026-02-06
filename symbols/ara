@@ -481,6 +481,7 @@ xkb_symbols "basic_ext_digits" {
 };
 
 // An Ergonomic implementation of the basic Arabic keyboard (PC). Brings all letters to the middle 30 keys.
+partial alphanumeric_keys
 xkb_symbols "ergoarabic" {
     include "ara(basic)"
     name[Group1]= "Arabic (ErgoArabic)";
