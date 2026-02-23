@@ -677,6 +677,12 @@
             <description>Polish (lefty)</description>
           </configItem>
         </variant>
+        <variant>
+           <configItem popularity="exotic">
+            <name>slaviature</name>
+            <description>Polish (Slavistic Phonetic Alphabet)</description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>

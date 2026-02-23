@@ -579,3 +579,68 @@ xkb_symbols "glagolica"
 
     include "level3(ralt_switch)"
 };
+
+// (pl)Slawiatura/(en)Slaviature
+// A custom keyboard layout for the Slavistic Phonetic Alphabet
+// See https://is-umk.github.io/Slaviature/ for description
+// by Daniel Lesiński and Michał Pierzchalski (pierzcham@umk.pl)
+partial alphanumeric_keys
+xkb_symbols "slaviature" {
+
+    name[Group1]="Polish (Slavistic Phonetic Alphabet)";
+
+    key <TLDE>	{ [        grave,  asciitilde,              U02B9, combining_tilde ]	}; // `, ~, ʹ, ̃◌
+    key <AE01>	{ [            1,      exclam,         VoidSymbol,      VoidSymbol ]	}; // 1, !
+    key <AE02>	{ [            2,          at,         VoidSymbol,      VoidSymbol ]	}; // 2, @
+    key <AE03>	{ [            3,  numbersign,         VoidSymbol,      VoidSymbol ]	}; // 3, #
+    key <AE04>	{ [            4,      dollar,         VoidSymbol,      VoidSymbol ]	}; // 4, $
+    key <AE05>	{ [            5,     percent,           EuroSign,      VoidSymbol ]	}; // 5, %, €
+    key <AE06>	{ [            6, asciicircum,         VoidSymbol,      VoidSymbol ]	}; // 6, ^
+    key <AE07>	{ [            7,   ampersand,         VoidSymbol,      VoidSymbol ]	}; // 7, &
+    key <AE08>	{ [            8,    asterisk,              U030A,      VoidSymbol ]	}; // 8, *, ◌̊
+    key <AE09>	{ [            9,   parenleft,              U032F,      VoidSymbol ]	}; // 9, (, ̯◌
+    key <AE10>	{ [            0,  parenright,              U032E,      VoidSymbol ]	}; // 0, ), ̮◌
+    key <AE11>	{ [        minus,  underscore,         VoidSymbol,      VoidSymbol ]	}; // -, _
+    key <AE12>	{ [        equal,        plus,         VoidSymbol,      VoidSymbol ]	}; // =, +
+
+    key <AD01>	{ [            q,           Q,         VoidSymbol,      VoidSymbol ]	}; // q, Q
+    key <AD02>	{ [            w,           W,         VoidSymbol,      VoidSymbol ]	}; // w, W
+    key <AD03>	{ [            e,           E,          eabovedot,       Eabovedot ]	}; // e, E, ė, Ė
+    key <AD04>	{ [            r,           R,           rcedilla,        Rcedilla ]	}; // r, R, ŗ, Ŗ
+    key <AD05>	{ [            t,           T,              U1E6D,           U1E6C ]	}; // t, T, ṭ, Ṭ
+    key <AD06>	{ [            y,           Y,        Greek_gamma,     Greek_GAMMA ]	}; // y, Y, γ, Γ
+    key <AD07>	{ [            u,           U,         udiaeresis,      Udiaeresis ]	}; // u, U, ü, Ü
+    key <AD08>	{ [            i,           I,             itilde,          Itilde ]	}; // i, I, ĩ, Ĩ
+    key <AD09>	{ [            o,           O,              U022F,           U022E ]	}; // o, O, ȯ, Ȯ
+    key <AD10>	{ [            p,           P,         VoidSymbol,      VoidSymbol ]	}; // p, P
+    key <AD11>	{ [  bracketleft,   braceleft,         VoidSymbol,      VoidSymbol ]	}; // [, {
+    key <AD12>	{ [ bracketright,  braceright,         VoidSymbol,      VoidSymbol ]	}; // ], }
+
+    key <AC01>	{ [            a,           A,         adiaeresis,      Adiaeresis ]	}; // a, A, ä, Ä
+    key <AC02>	{ [            s,           S,             sacute,          Sacute ]	}; // s, S, ś, Ś
+    key <AC03>	{ [            d,           D,              U1E0D,           U1E0C ]	}; // d, D, ḍ, Ḍ
+    key <AC04>	{ [            f,           F,         VoidSymbol,      VoidSymbol ]	}; // f, F
+    key <AC05>	{ [            g,           G,              U01F5,           U01F4 ]	}; // g, G, ǵ, Ǵ
+    key <AC06>	{ [            h,           H,         VoidSymbol,      VoidSymbol ]	}; // h, H
+    key <AC07>	{ [            j,           J,         VoidSymbol,      VoidSymbol ]	}; // j, J
+    key <AC08>	{ [            k,           K,              U1E31,           U1E30 ]	}; // k, K, ḱ, Ḱ
+    key <AC09>	{ [            l,           L,           lcedilla,        Lcedilla ]	}; // l, L, ļ, Ļ
+    key <AC10>	{ [    semicolon,       colon,              U0328,           U0308 ]	}; // ;, :, ◌̨, ◌̈
+    key <AC11>	{ [   apostrophe,    quotedbl,    combining_acute,      VoidSymbol ]	}; // ', ", ◌́
+
+    key <BKSL>	{ [    backslash,         bar,         VoidSymbol,      VoidSymbol ]	}; // \ |
+    key <AB01>	{ [            z,           Z,                ezh,             EZH ]	}; // z, Z, ʒ, Ʒ
+    key <AB02>	{ [    Greek_chi,   Greek_CHI,             zacute,          Zacute ]	}; // χ, Χ, ź, Ź
+    key <AB03>	{ [            c,           C,             cacute,          Cacute ]	}; // c, C, ć, Ć
+    key <AB04>	{ [            v,           V,              U030C,      VoidSymbol ]	}; // v, V, ◌̌
+    key <AB05>	{ [            b,           B,              U1E47,           U1E46 ]	}; // b, B, ṇ, Ṇ
+    key <AB06>	{ [            n,           N,             nacute,          Nacute ]	}; // n, N, ń, Ń
+    key <AB07>	{ [            m,           M,                eng,             ENG ]	}; // m, M, ŋ, Ŋ
+    key <AB08>	{ [        comma,        less,              U0326,      VoidSymbol ]	}; // ,, <, ◌̧
+    key <AB09>	{ [       period,     greater, combining_belowdot,      VoidSymbol ]	}; // ., >, ◌̣
+    key <AB10>	{ [        slash,    question,              U0329,      VoidSymbol ]	}; // /, ?, ◌̩
+
+    key <SPCE> { [         space,       space,       nobreakspace,    nobreakspace ] };
+
+    include "level3(ralt_switch)"
+};
