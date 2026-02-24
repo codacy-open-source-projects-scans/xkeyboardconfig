@@ -4,14 +4,14 @@
 # Nilgün Belma Bugüner <nilgun@buguner.name.tr>, 2003, ..., 2007, 2015.
 # Muhammet Kara <muhammetk@gmail.com>, 2016.
 # Mehmet Kececi <mkececi@mehmetkececi.com>, 2017.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2017-2025.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2017-2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xkeyboard-config 2.45.99\n"
+"Project-Id-Version: xkeyboard-config 2.46.99\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-20 19:03+0000\n"
-"PO-Revision-Date: 2025-09-23 08:00+0300\n"
+"POT-Creation-Date: 2026-02-04 23:53+0000\n"
+"PO-Revision-Date: 2026-02-07 08:00+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -4364,278 +4364,282 @@ msgid "Shift does not cancel Num Lock, chooses 3rd level instead"
 msgstr "Shift tuşu Num Lock tuşunu iptal etmez, onun yerine 3. düzeyini seçer"
 
 #: rules/base.xml:7973
+msgid "Map Hyper to Mod2 (conflict with NumLock)"
+msgstr "Hyper’i Mod2’ye eşle (NumLock ile çakışır)"
+
+#: rules/base.xml:7979
 msgid "Map Hyper to Mod3 (conflict with LevelFive)"
 msgstr "Hyper’i Mod3’e eşle (LevelFive ile çakışır)"
 
-#: rules/base.xml:7979
+#: rules/base.xml:7985
 msgid "Map Hyper to Mod4 (conflict with Super)"
 msgstr "Hyper’i Mod4’e eşle (Super ile çakışır)"
 
-#: rules/base.xml:7985
+#: rules/base.xml:7991
 msgid "Map Scroll Lock to Mod3"
 msgstr "Scroll Lock’u Mod3’e eşle"
 
-#: rules/base.xml:7991
+#: rules/base.xml:7997
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server"
 msgstr "Sunucuda işlenen özel tuşlar (Ctrl+Alt+&lt;tuş&gt;)"
 
-#: rules/base.xml:7997
+#: rules/base.xml:8003
 msgid "Apple Aluminium emulates Pause, PrtSc, Scroll Lock"
 msgstr "Apple Aluminium; Pause, PrtSc, Scroll Lock'u öykünür"
 
-#: rules/base.xml:8003
+#: rules/base.xml:8009
 msgid "Japanese Apple keyboards emulate OADG109A backslash"
 msgstr "Japonca Apple klavyeleri; OADG109A ters bölüyü öykünür"
 
-#: rules/base.xml:8009
+#: rules/base.xml:8015
 msgid "Japanese Apple keyboards emulate PC106 backslash"
 msgstr "Japonca Apple klavyeleri; PC106 ters bölüyü öykünür"
 
-#: rules/base.xml:8015
+#: rules/base.xml:8021
 msgid "Shift cancels Caps Lock"
 msgstr "Shift tuşu Caps Lock tuşunu iptal eder"
 
-#: rules/base.xml:8021
+#: rules/base.xml:8027
 msgid "Enable extra typographic characters"
 msgstr "Fazladan tipografik karakterleri etkinleştir"
 
-#: rules/base.xml:8027
+#: rules/base.xml:8033
 msgid "Enable APL overlay characters"
 msgstr "APL örten tabaka karakterlerini etkinleştir"
 
-#: rules/base.xml:8033
+#: rules/base.xml:8039
 msgid "Both Shifts together enable Caps Lock"
 msgstr "Her iki Shift birlikte Caps Lock'u etkinleştirir"
 
-#: rules/base.xml:8039
+#: rules/base.xml:8045
 msgid "Both Shifts together enable Caps Lock; one Shift key disables it"
 msgstr "Her iki Shift birlikte Caps Lock'u etkinleştirir; tek Shift iptal eder"
 
-#: rules/base.xml:8045
+#: rules/base.xml:8051
 msgid "Both Shifts together enable Shift Lock"
 msgstr "Her iki Shift birlikte Shift Lock'u etkinleştirir"
 
-#: rules/base.xml:8051
+#: rules/base.xml:8057
 msgid "Shift + Num Lock enables PointerKeys"
 msgstr "Shift + Num Lock, PointerKeys'i etkinleştirir"
 
-#: rules/base.xml:8057
+#: rules/base.xml:8063
 msgid "Allow breaking grabs with keyboard actions (warning: security risk)"
 msgstr "Klavye eylemleriyle yakalamaya izin ver (uyarı: güvenlik tehlikesi)"
 
-#: rules/base.xml:8063
+#: rules/base.xml:8069
 msgid "Allow grab and window tree logging"
 msgstr "Yakalama ve pencere ağacı günlüklemeye izin ver"
 
-#: rules/base.xml:8071
+#: rules/base.xml:8077
 msgid "Currency signs"
 msgstr "Para birimi simgeleri"
 
-#: rules/base.xml:8076
+#: rules/base.xml:8082
 msgid "Euro on E, third level"
 msgstr "E üzerinde Avro, üçüncü düzey"
 
-#: rules/base.xml:8082
+#: rules/base.xml:8088
 msgid "Euro on E, fourth level"
 msgstr "E üzerindee Avro, dördüncü düzey"
 
-#: rules/base.xml:8088
+#: rules/base.xml:8094
 msgid "Euro on 2"
 msgstr "2 üzerinde Avro"
 
-#: rules/base.xml:8094
+#: rules/base.xml:8100
 msgid "Euro on 4"
 msgstr "4 üzerinde Avro"
 
-#: rules/base.xml:8100
+#: rules/base.xml:8106
 msgid "Euro on 5"
 msgstr "5 üzerinde Avro"
 
-#: rules/base.xml:8106
+#: rules/base.xml:8112
 msgid "Rupee on 4"
 msgstr "4 üzerinde Rupi"
 
-#: rules/base.xml:8113
+#: rules/base.xml:8119
 msgid "Key to choose the 5th level"
 msgstr "5. düzeyi seçecek tuş"
 
-#: rules/base.xml:8118
+#: rules/base.xml:8124
 msgid "Caps Lock chooses 5th level"
 msgstr "Caps Lock tuşu 5. düzeyi seçer"
 
-#: rules/base.xml:8124
+#: rules/base.xml:8130
 msgid "The \"&lt; &gt;\" key chooses 5th level"
 msgstr "\"&lt; &gt;\" tuşu 5. düzeyi seçer"
 
-#: rules/base.xml:8130
+#: rules/base.xml:8136
 msgid "Right Alt chooses 5th level"
 msgstr "Sağ Alt tuşu 5. düzeyi seçer"
 
-#: rules/base.xml:8136
+#: rules/base.xml:8142
 msgid "Menu chooses 5th level"
 msgstr "Menü tuşu 5. düzeyi seçer"
 
-#: rules/base.xml:8142
+#: rules/base.xml:8148
 msgid "Right Ctrl chooses 5th level"
 msgstr "Sağ Ctrl tuşu 5. düzeyi seçer"
 
-#: rules/base.xml:8148
+#: rules/base.xml:8154
 msgid "The \"&lt; &gt;\" key chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "\"&lt; &gt;\" tuşu 5. düzeyi seçer; diğer 5. düzey seçici ile basılıyken bir kereliğine kilit olarak çalışır"
 
-#: rules/base.xml:8154
+#: rules/base.xml:8160
 msgid "Right Alt chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Sağ Alt, 5. düzeyi seçer ve diğer 5. düzey seçici ile basılıyken bir kereliğine kilit olarak çalışır"
 
-#: rules/base.xml:8160
+#: rules/base.xml:8166
 msgid "Left Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Sol Win, 5. düzeyi seçer ve diğer 5. düzey seçici ile basılıyken bir kereliğine kilit olarak çalışır"
 
-#: rules/base.xml:8166
+#: rules/base.xml:8172
 msgid "Right Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Sağ Win, 5. düzeyi seçer ve diğer 5. düzey seçici ile basılıyken bir kereliğine kilit olarak çalışır"
 
-#: rules/base.xml:8174
+#: rules/base.xml:8180
 msgid "Non-breaking space input"
 msgstr "Bölünemez boşluk girişi"
 
-#: rules/base.xml:8179
+#: rules/base.xml:8185
 msgid "Usual space at any level"
 msgstr "Herhangi bir düzeyde normal boşluk"
 
-#: rules/base.xml:8185
+#: rules/base.xml:8191
 msgid "Non-breaking space at the 2nd level"
 msgstr "2. düzeyde bölünemez boşluk"
 
-#: rules/base.xml:8191
+#: rules/base.xml:8197
 msgid "Non-breaking space at the 3rd level"
 msgstr "3. düzeyde bölünemez boşluk"
 
-#: rules/base.xml:8197
+#: rules/base.xml:8203
 msgid "Non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr "3. düzeyde bölünemez boşluk, 4. düzeyde ince bölünemez boşluk"
 
-#: rules/base.xml:8203
+#: rules/base.xml:8209
 msgid "Non-breaking space at the 4th level"
 msgstr "4. düzeyde bölünemez boşluk"
 
-#: rules/base.xml:8209
+#: rules/base.xml:8215
 msgid "Non-breaking space at the 4th level, thin non-breaking space at the 6th level"
 msgstr "4. düzeyde bölünemez boşluk, 6. düzeyde ince bölünemez boşluk"
 
-#: rules/base.xml:8215
+#: rules/base.xml:8221
 msgid "Non-breaking space at the 4th level, thin non-breaking space at the 6th level (via Ctrl+Shift)"
 msgstr "4. düzeyde bölünemez boşluk, 6. düzeyde ince bölünemez boşluk (Ctrl+Shift yoluyla)"
 
-#: rules/base.xml:8221
+#: rules/base.xml:8227
 msgid "Zero-width non-joiner at the 2nd level"
 msgstr "2. düzeyde sıfır genişlik ayırıcı"
 
-#: rules/base.xml:8227
+#: rules/base.xml:8233
 msgid "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level"
 msgstr "2. düzeyde sıfır genişlik ayırıcı, 3. düzeyde sıfır genişlik birleştirici"
 
-#: rules/base.xml:8233
+#: rules/base.xml:8239
 msgid "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level, non-breaking space at the 4th level"
 msgstr "2. düzeyde sıfır genişlik ayırıcı, 3. düzeyde sıfır genişlik birleştirici, 4. düzeyde bölünemez boşluk"
 
-#: rules/base.xml:8239
+#: rules/base.xml:8245
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level"
 msgstr "2. düzeyde sıfır genişlik ayırıcı, 3. düzeyde bölünemez boşluk"
 
-#: rules/base.xml:8245
+#: rules/base.xml:8251
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, zero-width joiner at the 4th level"
 msgstr "2. düzeyde sıfır genişlik ayırıcı, 3. düzeyde bölünemez boşluk, 4. düzeyde sıfır genişlik birleştirici"
 
-#: rules/base.xml:8251
+#: rules/base.xml:8257
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr "2. düzeyde sıfır genişlik ayırıcı, 3. düzeyde bölünemez boşluk, 4. düzeyde ince bölünemez boşluk"
 
-#: rules/base.xml:8257
+#: rules/base.xml:8263
 msgid "Zero-width non-joiner at the 3rd level, zero-width joiner at the 4th level"
 msgstr "3. düzeyde sıfır genişlik ayırıcı, 4. düzeyde sıfır genişlik birleştirici"
 
-#: rules/base.xml:8264
+#: rules/base.xml:8270
 msgid "Japanese keyboard options"
 msgstr "Japonca klavye seçenekleri"
 
-#: rules/base.xml:8269
+#: rules/base.xml:8275
 msgid "Kana Lock key is locking"
 msgstr "Kana Lock tuşu kilitler"
 
-#: rules/base.xml:8275
+#: rules/base.xml:8281
 msgid "NICOLA-F style Backspace"
 msgstr "NICOLA-F tarzı Geri Silme"
 
-#: rules/base.xml:8281
+#: rules/base.xml:8287
 msgid "Make Zenkaku Hankaku an additional Esc"
 msgstr "Zenkaku Hankaku'yu ek ESC yap"
 
-#: rules/base.xml:8288
+#: rules/base.xml:8294
 msgid "Korean Hangul/Hanja keys"
 msgstr "Korece Hangul/Hanja tuşları"
 
-#: rules/base.xml:8293
+#: rules/base.xml:8299
 msgid "Make right Alt a Hangul key"
 msgstr "Sağ Alt tuşunu Hangul tuşu yap"
 
-#: rules/base.xml:8299
+#: rules/base.xml:8305
 msgid "Make right Ctrl a Hangul key"
 msgstr "Sağ Ctrl tuşunu Hangul tuşu yap"
 
-#: rules/base.xml:8305
+#: rules/base.xml:8311
 msgid "Make right Alt a Hanja key"
 msgstr "Sağ Alt tuşunu Hanja tuşu yap"
 
-#: rules/base.xml:8311
+#: rules/base.xml:8317
 msgid "Make right Ctrl a Hanja key"
 msgstr "Sağ Ctrl tuşunu Hanja tuşu yap"
 
-#: rules/base.xml:8318
+#: rules/base.xml:8324
 msgid "Esperanto letters with superscripts"
 msgstr "Esperanto harfleri, üslerle birlikte"
 
-#: rules/base.xml:8323
+#: rules/base.xml:8329
 msgid "At the corresponding key in a QWERTY layout"
 msgstr "QWERTY düzeninde karşılık gelen tuşta"
 
-#: rules/base.xml:8329
+#: rules/base.xml:8335
 msgid "At the corresponding key in a Dvorak layout"
 msgstr "Dvorak düzeninde karşılık gelen tuşta"
 
-#: rules/base.xml:8335
+#: rules/base.xml:8341
 msgid "At the corresponding key in a Colemak layout"
 msgstr "Colemak düzeninde karşılık gelen tuşta"
 
-#: rules/base.xml:8342
+#: rules/base.xml:8348
 msgid "Old Solaris keycodes compatibility"
 msgstr "Eski Solaris tuş kodları uyumluluğu"
 
-#: rules/base.xml:8347
+#: rules/base.xml:8353
 msgid "Sun key compatibility"
 msgstr "Sun tuşu uyumu"
 
-#: rules/base.xml:8354
+#: rules/base.xml:8360
 msgid "Key sequence to kill the X server"
 msgstr "X sunucusunu kapatmak için tuş dizisi"
 
-#: rules/base.xml:8359
+#: rules/base.xml:8365
 msgid "Ctrl+Alt+Backspace"
 msgstr "Ctrl+Alt+Backspace"
 
-#: rules/base.xml:8366
+#: rules/base.xml:8372
 msgid "Function keys"
 msgstr "Fonksiyon tuşları"
 
-#: rules/base.xml:8371
+#: rules/base.xml:8377
 msgid "Use F13-F24 as usual function keys"
 msgstr "F13-F24’ü olağan fonksiyon tuşları olarak kullan"
 
-#: rules/base.xml:8378
+#: rules/base.xml:8384
 msgid "Miscellaneous options"
 msgstr "Türlü seçenekler"
 
-#: rules/base.xml:8383
+#: rules/base.xml:8389
 msgid "Use user-defined custom XKB types"
 msgstr "Kullanıcı tanımlı özel XKB türleri kullan"
 

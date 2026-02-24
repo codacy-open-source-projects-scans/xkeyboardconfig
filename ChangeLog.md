@@ -1,3 +1,62 @@
+xkeyboard-config [2.47] - 2026-02-23
+====================================
+
+[2.47]: https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/tree/xkeyboard-config-2.47
+
+# Layouts
+
+## New
+
+- Added the Slavistic Phonetic Alphabet variant for Polish
+
+# Miscellaneous
+
+## Breaking changes
+
+- Made <ZEHA> behave like <FK24>
+
+  On Linux Kernel before v6.17, the scancode for F24 was bound to the otherwise
+  unused <ZEHA> keycode. v6.17 fixed this. To have a consistent behaviour across
+  kernel versions, make both <ZEHA> and <FK24> behave the same.
+
+## New
+
+- Added keycodes from recent Linux kernels:
+  - `<I455>` for `KEY_LINK_PHONE`
+  - `<I709>` for `KEY_PERFORMANCE`
+- inet: Added mapping to the following new keysyms:
+  - `XF86LinkPhone`
+  - `XF86Fn_F1`
+  - `XF86Fn_F2`
+  - `XF86Fn_F3`
+  - `XF86Fn_F4`
+  - `XF86Fn_F5`
+  - `XF86Fn_F6`
+  - `XF86Fn_F7`
+  - `XF86Fn_F8`
+  - `XF86Fn_F9`
+  - `XF86Fn_F10`
+  - `XF86Fn_F11`
+  - `XF86Fn_F12`
+  - `XF86Fn_1`
+  - `XF86Fn_2`
+  - `XF86Fn_D`
+  - `XF86Fn_E`
+  - `XF86Fn_F`
+  - `XF86Fn_S`
+  - `XF86Fn_B`
+  - `XF86PerformanceMode`
+  - `XF86AudioBassBoost`
+
+  Relevant upstream merge requests: [xorgproto-102] and [xorgproto-103].
+
+  [xorgproto-102]: https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/merge_requests/102
+  [xorgproto-103]: https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/merge_requests/103
+- inet: Mapped `F19` for the rare occasion that it exists e.g. on custom keyboards.
+- inet: Mapped `F24`, which has a special alternative function as pressing the
+  touchpad toggle key on some notebooks produces the key sequence `Super + Control + F24`.
+
+
 xkeyboard-config [2.46] - 2025-09-30
 ====================================
 

@@ -1,16 +1,16 @@
 # Swedish messages for xkeyboard-config.
-# Copyright © 2004, 2006-2012, 2014-2025 Free Software Foundation, Inc.
+# Copyright © 2004, 2006-2012, 2014-2026 Free Software Foundation, Inc.
 # This file is distributed under the same license as the xkeyboard-config package.
 # Christian Rose <menthos@menthos.com>, 2004.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xkeyboard-config 2.45.99\n"
+"Project-Id-Version: xkeyboard-config 2.46.99\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-20 19:03+0000\n"
-"PO-Revision-Date: 2025-09-21 21:00+0200\n"
+"POT-Creation-Date: 2026-02-04 23:53+0000\n"
+"PO-Revision-Date: 2026-02-05 18:02+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: rules/base.xml:9
 msgid "Generic 86-key PC"
@@ -4363,278 +4363,282 @@ msgid "Shift does not cancel Num Lock, chooses 3rd level instead"
 msgstr "Skift avbryter inte Num Lock, väljer tredje nivån i stället"
 
 #: rules/base.xml:7973
+msgid "Map Hyper to Mod2 (conflict with NumLock)"
+msgstr "Mappa Hyper till Mod2 (konflikt med NumLock)"
+
+#: rules/base.xml:7979
 msgid "Map Hyper to Mod3 (conflict with LevelFive)"
 msgstr "Mappa Hyper till Mod3 (konflikt med femte nivån)"
 
-#: rules/base.xml:7979
+#: rules/base.xml:7985
 msgid "Map Hyper to Mod4 (conflict with Super)"
 msgstr "Mappa Hyper till Mod4 (konflikt med Super)"
 
-#: rules/base.xml:7985
+#: rules/base.xml:7991
 msgid "Map Scroll Lock to Mod3"
 msgstr "Mappa Scroll Lock till Mod3"
 
-#: rules/base.xml:7991
+#: rules/base.xml:7997
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server"
 msgstr "Specialtangenter (Ctrl+Alt+‹tangent›) hanteras i en server"
 
-#: rules/base.xml:7997
+#: rules/base.xml:8003
 msgid "Apple Aluminium emulates Pause, PrtSc, Scroll Lock"
 msgstr "Apple Aluminium emulerar Pause, PrtSc och Scroll Lock"
 
-#: rules/base.xml:8003
+#: rules/base.xml:8009
 msgid "Japanese Apple keyboards emulate OADG109A backslash"
 msgstr "Japanska Apple-tangentbord emulerar OADG109A-bakåtstreck"
 
-#: rules/base.xml:8009
+#: rules/base.xml:8015
 msgid "Japanese Apple keyboards emulate PC106 backslash"
 msgstr "Japanska Apple-tangentbord emulerar PC106-bakåtstreck"
 
-#: rules/base.xml:8015
+#: rules/base.xml:8021
 msgid "Shift cancels Caps Lock"
 msgstr "Skift avbryter Caps Lock"
 
-#: rules/base.xml:8021
+#: rules/base.xml:8027
 msgid "Enable extra typographic characters"
 msgstr "Aktivera extra typografiska tecken"
 
-#: rules/base.xml:8027
+#: rules/base.xml:8033
 msgid "Enable APL overlay characters"
 msgstr "Aktivera APL-överläggstecken"
 
-#: rules/base.xml:8033
+#: rules/base.xml:8039
 msgid "Both Shifts together enable Caps Lock"
 msgstr "Båda Skift tillsammans aktiverar Caps Lock"
 
-#: rules/base.xml:8039
+#: rules/base.xml:8045
 msgid "Both Shifts together enable Caps Lock; one Shift key disables it"
 msgstr "Båda Skift tillsammans aktiverar Caps Lock, en Skifttangent inaktiverar"
 
-#: rules/base.xml:8045
+#: rules/base.xml:8051
 msgid "Both Shifts together enable Shift Lock"
 msgstr "Båda Skift tillsammans aktiverar Shift Lock"
 
-#: rules/base.xml:8051
+#: rules/base.xml:8057
 msgid "Shift + Num Lock enables PointerKeys"
 msgstr "Skift + Num Lock aktiverar pekartangenter"
 
-#: rules/base.xml:8057
+#: rules/base.xml:8063
 msgid "Allow breaking grabs with keyboard actions (warning: security risk)"
 msgstr "Tillåt avbrott av fångad inmatning med tangentbordsåtgärder (varning: säkerhetsrisk)"
 
-#: rules/base.xml:8063
+#: rules/base.xml:8069
 msgid "Allow grab and window tree logging"
 msgstr "Tillåt loggning av fångst och fönsterträd"
 
-#: rules/base.xml:8071
+#: rules/base.xml:8077
 msgid "Currency signs"
 msgstr "Valutatecken"
 
-#: rules/base.xml:8076
+#: rules/base.xml:8082
 msgid "Euro on E, third level"
 msgstr "Euro på E, tredje nivån"
 
-#: rules/base.xml:8082
+#: rules/base.xml:8088
 msgid "Euro on E, fourth level"
 msgstr "Euro på E, fjärde nivån"
 
-#: rules/base.xml:8088
+#: rules/base.xml:8094
 msgid "Euro on 2"
 msgstr "Euro på 2"
 
-#: rules/base.xml:8094
+#: rules/base.xml:8100
 msgid "Euro on 4"
 msgstr "Euro på 4"
 
-#: rules/base.xml:8100
+#: rules/base.xml:8106
 msgid "Euro on 5"
 msgstr "Euro på 5"
 
-#: rules/base.xml:8106
+#: rules/base.xml:8112
 msgid "Rupee on 4"
 msgstr "Rupee på 4"
 
-#: rules/base.xml:8113
+#: rules/base.xml:8119
 msgid "Key to choose the 5th level"
 msgstr "Tangent för att välja femte nivån"
 
-#: rules/base.xml:8118
+#: rules/base.xml:8124
 msgid "Caps Lock chooses 5th level"
 msgstr "Caps Lock väljer femte nivån"
 
-#: rules/base.xml:8124
+#: rules/base.xml:8130
 msgid "The \"&lt; &gt;\" key chooses 5th level"
 msgstr "Tangenten \"&lt; &gt;\" väljer femte nivån"
 
-#: rules/base.xml:8130
+#: rules/base.xml:8136
 msgid "Right Alt chooses 5th level"
 msgstr "Höger Alt väljer femte nivån"
 
-#: rules/base.xml:8136
+#: rules/base.xml:8142
 msgid "Menu chooses 5th level"
 msgstr "Meny väljer femte nivån"
 
-#: rules/base.xml:8142
+#: rules/base.xml:8148
 msgid "Right Ctrl chooses 5th level"
 msgstr "Höger Ctrl väljer femte nivån"
 
-#: rules/base.xml:8148
+#: rules/base.xml:8154
 msgid "The \"&lt; &gt;\" key chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Tangenten \"&lt; &gt;\" väljer femte nivån och agerar som ett engångslås om den trycks ned tillsammans med en annan femtenivåväljare"
 
-#: rules/base.xml:8154
+#: rules/base.xml:8160
 msgid "Right Alt chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Höger Alt väljer femte nivån och agerar som ett engångslås om den trycks ned tillsammans med en annan femtenivåväljare"
 
-#: rules/base.xml:8160
+#: rules/base.xml:8166
 msgid "Left Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Vänster Win väljer femte nivån och agerar som ett engångslås om den trycks ned tillsammans med en annan femtenivåväljare"
 
-#: rules/base.xml:8166
+#: rules/base.xml:8172
 msgid "Right Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Höger Win väljer femte nivån och agerar som ett engångslås om den trycks ned tillsammans med en annan femtenivåväljare"
 
-#: rules/base.xml:8174
+#: rules/base.xml:8180
 msgid "Non-breaking space input"
 msgstr "Inmatning av icke-brytande blanksteg"
 
-#: rules/base.xml:8179
+#: rules/base.xml:8185
 msgid "Usual space at any level"
 msgstr "Vanligt blanksteg på alla nivåer"
 
-#: rules/base.xml:8185
+#: rules/base.xml:8191
 msgid "Non-breaking space at the 2nd level"
 msgstr "Icke-brytande blanksteg på andra nivån"
 
-#: rules/base.xml:8191
+#: rules/base.xml:8197
 msgid "Non-breaking space at the 3rd level"
 msgstr "Icke-brytande blanksteg på tredje nivån"
 
-#: rules/base.xml:8197
+#: rules/base.xml:8203
 msgid "Non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr "Icke-brytande blanksteg på tredje nivån, tunt icke-brytande blanksteg på fjärde nivån"
 
-#: rules/base.xml:8203
+#: rules/base.xml:8209
 msgid "Non-breaking space at the 4th level"
 msgstr "Icke-brytande blanksteg på fjärde nivån"
 
-#: rules/base.xml:8209
+#: rules/base.xml:8215
 msgid "Non-breaking space at the 4th level, thin non-breaking space at the 6th level"
 msgstr "Icke-brytande blanksteg på fjärde nivån, tunt icke-brytande blanksteg på sjätte nivån"
 
-#: rules/base.xml:8215
+#: rules/base.xml:8221
 msgid "Non-breaking space at the 4th level, thin non-breaking space at the 6th level (via Ctrl+Shift)"
 msgstr "Icke-brytande blanksteg på fjärde nivån, tunt icke-brytande blanksteg på sjätte nivån (via Ctrl+Skift)"
 
-#: rules/base.xml:8221
+#: rules/base.xml:8227
 msgid "Zero-width non-joiner at the 2nd level"
 msgstr "Noll-bredd, icke-sammanfogande på andra nivån"
 
-#: rules/base.xml:8227
+#: rules/base.xml:8233
 msgid "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level"
 msgstr "Noll-bredd, icke-sammanfogande på andra nivån, noll-bredd, sammanfogande på tredje nivån"
 
-#: rules/base.xml:8233
+#: rules/base.xml:8239
 msgid "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level, non-breaking space at the 4th level"
 msgstr "Noll-bredd, icke-sammanfogande på andra nivån, noll-bredd, sammanfogande på tredje nivån, icke-brytande blanksteg på fjärde nivån"
 
-#: rules/base.xml:8239
+#: rules/base.xml:8245
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level"
 msgstr "Noll-bredd, icke-sammanfogande på andra nivån, icke-brytande blanksteg på tredje nivån"
 
-#: rules/base.xml:8245
+#: rules/base.xml:8251
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, zero-width joiner at the 4th level"
 msgstr "Noll-bredd, icke-sammanfogande på andra nivån, icke-brytande blanksteg på tredje nivån, noll-bredd sammanfogande på fjärde nivån"
 
-#: rules/base.xml:8251
+#: rules/base.xml:8257
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr "Noll-bredd, icke-sammanfogande på andra nivån, icke-brytande blanksteg på tredje nivån, tunt icke-brytande blanksteg på fjärde nivån"
 
-#: rules/base.xml:8257
+#: rules/base.xml:8263
 msgid "Zero-width non-joiner at the 3rd level, zero-width joiner at the 4th level"
 msgstr "Noll-bredd, icke-sammanfogande på tredje nivån, noll-bredd, sammanfogande på fjärde nivån"
 
-#: rules/base.xml:8264
+#: rules/base.xml:8270
 msgid "Japanese keyboard options"
 msgstr "Tangentbordsalternativ för japanska"
 
-#: rules/base.xml:8269
+#: rules/base.xml:8275
 msgid "Kana Lock key is locking"
 msgstr "Kana Lock-tangent låser"
 
-#: rules/base.xml:8275
+#: rules/base.xml:8281
 msgid "NICOLA-F style Backspace"
 msgstr "Backsteg i NICOLA-F-stil"
 
-#: rules/base.xml:8281
+#: rules/base.xml:8287
 msgid "Make Zenkaku Hankaku an additional Esc"
 msgstr "Gör Zenkaku Hankaku till ytterligare en Esc-tangent"
 
-#: rules/base.xml:8288
+#: rules/base.xml:8294
 msgid "Korean Hangul/Hanja keys"
 msgstr "Koreanska Hangul/Hanja-tangenter"
 
-#: rules/base.xml:8293
+#: rules/base.xml:8299
 msgid "Make right Alt a Hangul key"
 msgstr "Gör höger Alt till en Hangul-tangent"
 
-#: rules/base.xml:8299
+#: rules/base.xml:8305
 msgid "Make right Ctrl a Hangul key"
 msgstr "Gör höger Ctrl till en Hangul-tangent"
 
-#: rules/base.xml:8305
+#: rules/base.xml:8311
 msgid "Make right Alt a Hanja key"
 msgstr "Gör höger Alt till en Hanja-tangent"
 
-#: rules/base.xml:8311
+#: rules/base.xml:8317
 msgid "Make right Ctrl a Hanja key"
 msgstr "Gör höger Ctrl till en Hanja-tangent"
 
-#: rules/base.xml:8318
+#: rules/base.xml:8324
 msgid "Esperanto letters with superscripts"
 msgstr "Esperantobokstäver med övertecken"
 
-#: rules/base.xml:8323
+#: rules/base.xml:8329
 msgid "At the corresponding key in a QWERTY layout"
 msgstr "Vid motsvarande tangent i en QWERTY-layout"
 
-#: rules/base.xml:8329
+#: rules/base.xml:8335
 msgid "At the corresponding key in a Dvorak layout"
 msgstr "Vid motsvarande tangent i en Dvorak-layout"
 
-#: rules/base.xml:8335
+#: rules/base.xml:8341
 msgid "At the corresponding key in a Colemak layout"
 msgstr "Vid motsvarande tangent i en Colemak-layout"
 
-#: rules/base.xml:8342
+#: rules/base.xml:8348
 msgid "Old Solaris keycodes compatibility"
 msgstr "Kompatibilitet med gamla Solaris-tangentkoder"
 
-#: rules/base.xml:8347
+#: rules/base.xml:8353
 msgid "Sun key compatibility"
 msgstr "Kompatibilitet med Sun-tangenter"
 
-#: rules/base.xml:8354
+#: rules/base.xml:8360
 msgid "Key sequence to kill the X server"
 msgstr "Tangentsekvens för att döda X-servern"
 
-#: rules/base.xml:8359
+#: rules/base.xml:8365
 msgid "Ctrl+Alt+Backspace"
 msgstr "Ctrl+Alt+Backsteg"
 
-#: rules/base.xml:8366
+#: rules/base.xml:8372
 msgid "Function keys"
 msgstr "Funktionstangenter"
 
-#: rules/base.xml:8371
+#: rules/base.xml:8377
 msgid "Use F13-F24 as usual function keys"
 msgstr "Använd F13-F24 som vanliga funktionstangenter"
 
-#: rules/base.xml:8378
+#: rules/base.xml:8384
 msgid "Miscellaneous options"
 msgstr "Diverse alternativ"
 
-#: rules/base.xml:8383
+#: rules/base.xml:8389
 msgid "Use user-defined custom XKB types"
 msgstr "Använd användardefinierade anpassade XKB-typer"
 

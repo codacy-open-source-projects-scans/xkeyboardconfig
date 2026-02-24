@@ -23,10 +23,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xkeyboard-config 2.45.99\n"
+"Project-Id-Version: xkeyboard-config 2.46.99\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-20 19:03+0000\n"
-"PO-Revision-Date: 2025-09-22 03:12+0800\n"
+"POT-Creation-Date: 2026-02-04 23:53+0000\n"
+"PO-Revision-Date: 2026-02-06 01:31+0800\n"
 "Last-Translator: Wenbin Lv <wenbin816@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -35,7 +35,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: rules/base.xml:9
 msgid "Generic 86-key PC"
@@ -4378,278 +4378,282 @@ msgid "Shift does not cancel Num Lock, chooses 3rd level instead"
 msgstr "Shift 不取消 Num Lock，改为选择第三层"
 
 #: rules/base.xml:7973
+msgid "Map Hyper to Mod2 (conflict with NumLock)"
+msgstr "将 Hyper 映射到 Mod2（与 NumLock 冲突）"
+
+#: rules/base.xml:7979
 msgid "Map Hyper to Mod3 (conflict with LevelFive)"
 msgstr "将 Hyper 映射到 Mod3（与 LevelFive 冲突）"
 
-#: rules/base.xml:7979
+#: rules/base.xml:7985
 msgid "Map Hyper to Mod4 (conflict with Super)"
 msgstr "将 Hyper 映射到 Mod4（与 Super 冲突）"
 
-#: rules/base.xml:7985
+#: rules/base.xml:7991
 msgid "Map Scroll Lock to Mod3"
 msgstr "将 Scroll Lock 映射到 Mod3"
 
-#: rules/base.xml:7991
+#: rules/base.xml:7997
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server"
 msgstr "由服务器处理特殊键（Ctrl+Alt+&lt;键&gt;）"
 
-#: rules/base.xml:7997
+#: rules/base.xml:8003
 msgid "Apple Aluminium emulates Pause, PrtSc, Scroll Lock"
 msgstr "苹果 Aluminium 模拟 Pause、PrtSc、Scroll Lock"
 
-#: rules/base.xml:8003
+#: rules/base.xml:8009
 msgid "Japanese Apple keyboards emulate OADG109A backslash"
 msgstr "日文苹果键盘模拟 OADG109A 反斜杠"
 
-#: rules/base.xml:8009
+#: rules/base.xml:8015
 msgid "Japanese Apple keyboards emulate PC106 backslash"
 msgstr "日文苹果键盘模拟 PC106 反斜杠"
 
-#: rules/base.xml:8015
+#: rules/base.xml:8021
 msgid "Shift cancels Caps Lock"
 msgstr "Shift 取消 Caps Lock"
 
-#: rules/base.xml:8021
+#: rules/base.xml:8027
 msgid "Enable extra typographic characters"
 msgstr "启用额外的排版字符"
 
-#: rules/base.xml:8027
+#: rules/base.xml:8033
 msgid "Enable APL overlay characters"
 msgstr "启用 APL 覆盖字符"
 
-#: rules/base.xml:8033
+#: rules/base.xml:8039
 msgid "Both Shifts together enable Caps Lock"
 msgstr "同时按两个 Shift 启用 Caps Lock"
 
-#: rules/base.xml:8039
+#: rules/base.xml:8045
 msgid "Both Shifts together enable Caps Lock; one Shift key disables it"
 msgstr "同时按两个 Shift 启用 Caps Lock，只按一个 Shift 键将其禁用"
 
-#: rules/base.xml:8045
+#: rules/base.xml:8051
 msgid "Both Shifts together enable Shift Lock"
 msgstr "同时按两个 Shift 启用 Shift 锁定"
 
-#: rules/base.xml:8051
+#: rules/base.xml:8057
 msgid "Shift + Num Lock enables PointerKeys"
 msgstr "Shift + Num Lock 启用指针键"
 
-#: rules/base.xml:8057
+#: rules/base.xml:8063
 msgid "Allow breaking grabs with keyboard actions (warning: security risk)"
 msgstr "允许使用键盘动作跳出捕获（警告：有安全风险）"
 
-#: rules/base.xml:8063
+#: rules/base.xml:8069
 msgid "Allow grab and window tree logging"
 msgstr "允许捕获和窗口树日志"
 
-#: rules/base.xml:8071
+#: rules/base.xml:8077
 msgid "Currency signs"
 msgstr "货币符号"
 
-#: rules/base.xml:8076
+#: rules/base.xml:8082
 msgid "Euro on E, third level"
 msgstr "欧元符号在 E 键上，第三层"
 
-#: rules/base.xml:8082
+#: rules/base.xml:8088
 msgid "Euro on E, fourth level"
 msgstr "欧元符号在 E 键上，第四层"
 
-#: rules/base.xml:8088
+#: rules/base.xml:8094
 msgid "Euro on 2"
 msgstr "欧元符号在 2 键上"
 
-#: rules/base.xml:8094
+#: rules/base.xml:8100
 msgid "Euro on 4"
 msgstr "欧元符号在 4 键上"
 
-#: rules/base.xml:8100
+#: rules/base.xml:8106
 msgid "Euro on 5"
 msgstr "欧元符号在 5 键上"
 
-#: rules/base.xml:8106
+#: rules/base.xml:8112
 msgid "Rupee on 4"
 msgstr "卢比符号在 4 键上"
 
-#: rules/base.xml:8113
+#: rules/base.xml:8119
 msgid "Key to choose the 5th level"
 msgstr "选择第五层的键"
 
-#: rules/base.xml:8118
+#: rules/base.xml:8124
 msgid "Caps Lock chooses 5th level"
 msgstr "Caps Lock 选择第五层"
 
-#: rules/base.xml:8124
+#: rules/base.xml:8130
 msgid "The \"&lt; &gt;\" key chooses 5th level"
 msgstr "“&lt; &gt;”键选择第五层"
 
-#: rules/base.xml:8130
+#: rules/base.xml:8136
 msgid "Right Alt chooses 5th level"
 msgstr "右 Alt 选择第五层"
 
-#: rules/base.xml:8136
+#: rules/base.xml:8142
 msgid "Menu chooses 5th level"
 msgstr "菜单键选择第五层"
 
-#: rules/base.xml:8142
+#: rules/base.xml:8148
 msgid "Right Ctrl chooses 5th level"
 msgstr "右 Ctrl 选择第五层"
 
-#: rules/base.xml:8148
+#: rules/base.xml:8154
 msgid "The \"&lt; &gt;\" key chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "“&lt; &gt;”键选择第五层，且在和另一个第五层选择键同时按下时进行一次性锁定"
 
-#: rules/base.xml:8154
+#: rules/base.xml:8160
 msgid "Right Alt chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "右 Alt 选择第五层，且在和另一个第五层选择键同时按下时进行一次性锁定"
 
-#: rules/base.xml:8160
+#: rules/base.xml:8166
 msgid "Left Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "左 Win 选择第五层，且在和另一个第五层选择键同时按下时进行一次性锁定"
 
-#: rules/base.xml:8166
+#: rules/base.xml:8172
 msgid "Right Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "右 Win 选择第五层，且在和另一个第五层选择键同时按下时进行一次性锁定"
 
-#: rules/base.xml:8174
+#: rules/base.xml:8180
 msgid "Non-breaking space input"
 msgstr "不换行空格输入"
 
-#: rules/base.xml:8179
+#: rules/base.xml:8185
 msgid "Usual space at any level"
 msgstr "任何层都为普通空格"
 
-#: rules/base.xml:8185
+#: rules/base.xml:8191
 msgid "Non-breaking space at the 2nd level"
 msgstr "第二层上为不换行空格"
 
-#: rules/base.xml:8191
+#: rules/base.xml:8197
 msgid "Non-breaking space at the 3rd level"
 msgstr "第三层上为不换行空格"
 
-#: rules/base.xml:8197
+#: rules/base.xml:8203
 msgid "Non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr "第三层上为不换行空格，第四层上为短不换行空格"
 
-#: rules/base.xml:8203
+#: rules/base.xml:8209
 msgid "Non-breaking space at the 4th level"
 msgstr "第四层上为不换行空格"
 
-#: rules/base.xml:8209
+#: rules/base.xml:8215
 msgid "Non-breaking space at the 4th level, thin non-breaking space at the 6th level"
 msgstr "第四层上为不换行空格，第六层上为短不换行空格"
 
-#: rules/base.xml:8215
+#: rules/base.xml:8221
 msgid "Non-breaking space at the 4th level, thin non-breaking space at the 6th level (via Ctrl+Shift)"
 msgstr "第四层上为不换行空格，第六层上为短不换行空格（使用 Ctrl+Shift）"
 
-#: rules/base.xml:8221
+#: rules/base.xml:8227
 msgid "Zero-width non-joiner at the 2nd level"
 msgstr "第二层上为零宽不连字"
 
-#: rules/base.xml:8227
+#: rules/base.xml:8233
 msgid "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level"
 msgstr "第二层上为零宽不连字，第三层上为零宽连字"
 
-#: rules/base.xml:8233
+#: rules/base.xml:8239
 msgid "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level, non-breaking space at the 4th level"
 msgstr "第二层上为零宽不连字，第三层上为零宽连字，第四层上为不换行空格"
 
-#: rules/base.xml:8239
+#: rules/base.xml:8245
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level"
 msgstr "第二层上为零宽不连字，第三层上为不换行空格"
 
-#: rules/base.xml:8245
+#: rules/base.xml:8251
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, zero-width joiner at the 4th level"
 msgstr "第二层上为零宽不连字，第三层上为不换行空格，第四层上为零宽连字"
 
-#: rules/base.xml:8251
+#: rules/base.xml:8257
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr "第二层上为零宽不连字，第三层上为不换行空格，第四层上为短不换行空格"
 
-#: rules/base.xml:8257
+#: rules/base.xml:8263
 msgid "Zero-width non-joiner at the 3rd level, zero-width joiner at the 4th level"
 msgstr "第三层上为零宽不连字，第四层上为零宽连字"
 
-#: rules/base.xml:8264
+#: rules/base.xml:8270
 msgid "Japanese keyboard options"
 msgstr "日语键盘选项"
 
-#: rules/base.xml:8269
+#: rules/base.xml:8275
 msgid "Kana Lock key is locking"
 msgstr "假名锁定键带有锁定"
 
-#: rules/base.xml:8275
+#: rules/base.xml:8281
 msgid "NICOLA-F style Backspace"
 msgstr "NICOLA-F 风格 Backspace"
 
-#: rules/base.xml:8281
+#: rules/base.xml:8287
 msgid "Make Zenkaku Hankaku an additional Esc"
 msgstr "将半角/全角键作为额外的 Esc"
 
-#: rules/base.xml:8288
+#: rules/base.xml:8294
 msgid "Korean Hangul/Hanja keys"
 msgstr "韩语谚文/汉字键"
 
-#: rules/base.xml:8293
+#: rules/base.xml:8299
 msgid "Make right Alt a Hangul key"
 msgstr "令右 Alt 为谚文键"
 
-#: rules/base.xml:8299
+#: rules/base.xml:8305
 msgid "Make right Ctrl a Hangul key"
 msgstr "令右 Ctrl 为谚文键"
 
-#: rules/base.xml:8305
+#: rules/base.xml:8311
 msgid "Make right Alt a Hanja key"
 msgstr "令右 Alt 为汉字键"
 
-#: rules/base.xml:8311
+#: rules/base.xml:8317
 msgid "Make right Ctrl a Hanja key"
 msgstr "令右 Ctrl 为汉字键"
 
-#: rules/base.xml:8318
+#: rules/base.xml:8324
 msgid "Esperanto letters with superscripts"
 msgstr "带上标的世界语字母"
 
-#: rules/base.xml:8323
+#: rules/base.xml:8329
 msgid "At the corresponding key in a QWERTY layout"
 msgstr "位于 QWERTY 布局中对应的键"
 
-#: rules/base.xml:8329
+#: rules/base.xml:8335
 msgid "At the corresponding key in a Dvorak layout"
 msgstr "位于 Dvorak 布局中对应的键"
 
-#: rules/base.xml:8335
+#: rules/base.xml:8341
 msgid "At the corresponding key in a Colemak layout"
 msgstr "位于 Colemak 布局中对应的键"
 
-#: rules/base.xml:8342
+#: rules/base.xml:8348
 msgid "Old Solaris keycodes compatibility"
 msgstr "旧式 Solaris 键码兼容性"
 
-#: rules/base.xml:8347
+#: rules/base.xml:8353
 msgid "Sun key compatibility"
 msgstr "Sun 键盘兼容性"
 
-#: rules/base.xml:8354
+#: rules/base.xml:8360
 msgid "Key sequence to kill the X server"
 msgstr "杀死 X 服务器的按键序列"
 
-#: rules/base.xml:8359
+#: rules/base.xml:8365
 msgid "Ctrl+Alt+Backspace"
 msgstr "Ctrl+Alt+Backspace"
 
-#: rules/base.xml:8366
+#: rules/base.xml:8372
 msgid "Function keys"
 msgstr "功能键"
 
-#: rules/base.xml:8371
+#: rules/base.xml:8377
 msgid "Use F13-F24 as usual function keys"
 msgstr "将 F13-F24 用作平常的功能键"
 
-#: rules/base.xml:8378
+#: rules/base.xml:8384
 msgid "Miscellaneous options"
 msgstr "杂项"
 
-#: rules/base.xml:8383
+#: rules/base.xml:8389
 msgid "Use user-defined custom XKB types"
 msgstr "使用用户自定义的 XKB 类型"
 

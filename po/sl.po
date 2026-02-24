@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the xkeyboard-config package.
 #
 # Matej Urbančič <matej.urban@gmail.com>, 2006 - 2012.
-# Martin Srebotnjak  <miles@filmsi.net>, 2011 - 2012, 2024, 2025.
+# Martin Srebotnjak  <miles@filmsi.net>, 2011 - 2012, 2024, 2025, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xkeyboard-config 2.45.99\n"
+"Project-Id-Version: xkeyboard-config 2.46.99\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-20 19:03+0000\n"
-"PO-Revision-Date: 2025-09-21 13:02+0200\n"
+"POT-Creation-Date: 2026-02-04 23:53+0000\n"
+"PO-Revision-Date: 2026-02-05 23:42+0100\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <translation-team-sl@lists.sourceforge.net>\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Bugs: Report translation errors to the Language-Team address.\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #: rules/base.xml:9
 msgid "Generic 86-key PC"
@@ -4364,278 +4364,282 @@ msgid "Shift does not cancel Num Lock, chooses 3rd level instead"
 msgstr "Dvigalka (Shift) ne prekliče številčne Num Lock, namesto tega izbere tretjo raven"
 
 #: rules/base.xml:7973
+msgid "Map Hyper to Mod2 (conflict with NumLock)"
+msgstr "Preslikaj Hyper v Mod2 (spor z NumLock)"
+
+#: rules/base.xml:7979
 msgid "Map Hyper to Mod3 (conflict with LevelFive)"
 msgstr "Preslikaj Hyper v Mod3 (spor z LevelFive)"
 
-#: rules/base.xml:7979
+#: rules/base.xml:7985
 msgid "Map Hyper to Mod4 (conflict with Super)"
 msgstr "Preslikaj Hyper v Mod4 (spor s Super)"
 
-#: rules/base.xml:7985
+#: rules/base.xml:7991
 msgid "Map Scroll Lock to Mod3"
 msgstr "Preslikaj Scroll Lock v Mod3"
 
-#: rules/base.xml:7991
+#: rules/base.xml:7997
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server"
 msgstr "Posebne tipke (krmilka+izmenjalka+&lt;tipka&gt; / Ctrl+Alt+&lt;tipka&gt;), ki jih obravnava strežnik"
 
-#: rules/base.xml:7997
+#: rules/base.xml:8003
 msgid "Apple Aluminium emulates Pause, PrtSc, Scroll Lock"
 msgstr "Apple - aluminijasta tipkovnica: emulira tipke Pause, PrtSc, Scroll Lock"
 
-#: rules/base.xml:8003
+#: rules/base.xml:8009
 msgid "Japanese Apple keyboards emulate OADG109A backslash"
 msgstr "Japonske tipkovnice Apple posnemajo levo poševnico OADG109A"
 
-#: rules/base.xml:8009
+#: rules/base.xml:8015
 msgid "Japanese Apple keyboards emulate PC106 backslash"
 msgstr "Japonske tipkovnice Apple posnemajo levo poševnico PC106"
 
-#: rules/base.xml:8015
+#: rules/base.xml:8021
 msgid "Shift cancels Caps Lock"
 msgstr "Dvigalka (Shift) prekliče Caps Lock"
 
-#: rules/base.xml:8021
+#: rules/base.xml:8027
 msgid "Enable extra typographic characters"
 msgstr "Omogoči dodatne tipografske znake"
 
-#: rules/base.xml:8027
+#: rules/base.xml:8033
 msgid "Enable APL overlay characters"
 msgstr "Omogoči prekrivne znake APL"
 
-#: rules/base.xml:8033
+#: rules/base.xml:8039
 msgid "Both Shifts together enable Caps Lock"
 msgstr "Obe dvigalki (Shift) hkrati omogočita Caps Lock"
 
-#: rules/base.xml:8039
+#: rules/base.xml:8045
 msgid "Both Shifts together enable Caps Lock; one Shift key disables it"
 msgstr "Obe dvigalki (Shift) hkrati omogočita Caps Lock, ena dvigalka (Shift) jo deaktivira"
 
-#: rules/base.xml:8045
+#: rules/base.xml:8051
 msgid "Both Shifts together enable Shift Lock"
 msgstr "Obe dvigalki (Shift) hkrati omogočita Shift Lock"
 
-#: rules/base.xml:8051
+#: rules/base.xml:8057
 msgid "Shift + Num Lock enables PointerKeys"
 msgstr "Dvigalka + Num Lock omogoča PointerKeys"
 
-#: rules/base.xml:8057
+#: rules/base.xml:8063
 msgid "Allow breaking grabs with keyboard actions (warning: security risk)"
 msgstr "Dovoli prekinitev prijemov z dejanji tipkovnice (opozorilo: varnostno tveganje)"
 
-#: rules/base.xml:8063
+#: rules/base.xml:8069
 msgid "Allow grab and window tree logging"
 msgstr "Dovoli beleženje drevesa grabljenja in oken"
 
-#: rules/base.xml:8071
+#: rules/base.xml:8077
 msgid "Currency signs"
 msgstr "Valutni znaki"
 
-#: rules/base.xml:8076
+#: rules/base.xml:8082
 msgid "Euro on E, third level"
 msgstr "Evro na E, tretja raven"
 
-#: rules/base.xml:8082
+#: rules/base.xml:8088
 msgid "Euro on E, fourth level"
 msgstr "Evro na E, četrta raven"
 
-#: rules/base.xml:8088
+#: rules/base.xml:8094
 msgid "Euro on 2"
 msgstr "Z evro-znakom na tipki 2"
 
-#: rules/base.xml:8094
+#: rules/base.xml:8100
 msgid "Euro on 4"
 msgstr "Z evro-znakom na tipki 4"
 
-#: rules/base.xml:8100
+#: rules/base.xml:8106
 msgid "Euro on 5"
 msgstr "Z evro-znakom na tipki 5"
 
-#: rules/base.xml:8106
+#: rules/base.xml:8112
 msgid "Rupee on 4"
 msgstr "Z znakom za rupijo na tipki 4"
 
-#: rules/base.xml:8113
+#: rules/base.xml:8119
 msgid "Key to choose the 5th level"
 msgstr "Tipka za izbor pete ravni"
 
-#: rules/base.xml:8118
+#: rules/base.xml:8124
 msgid "Caps Lock chooses 5th level"
 msgstr "Caps Lock izbere 5. raven"
 
-#: rules/base.xml:8124
+#: rules/base.xml:8130
 msgid "The \"&lt; &gt;\" key chooses 5th level"
 msgstr "Tipka »&lt; &gt;« izbere 5. raven"
 
-#: rules/base.xml:8130
+#: rules/base.xml:8136
 msgid "Right Alt chooses 5th level"
 msgstr "Desna izmenjalka (Alt) izbere 5. raven"
 
-#: rules/base.xml:8136
+#: rules/base.xml:8142
 msgid "Menu chooses 5th level"
 msgstr "Meni izbere 5. raven"
 
-#: rules/base.xml:8142
+#: rules/base.xml:8148
 msgid "Right Ctrl chooses 5th level"
 msgstr "Desna krmilka (Ctrl) izbere 5. raven"
 
-#: rules/base.xml:8148
+#: rules/base.xml:8154
 msgid "The \"&lt; &gt;\" key chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Tipka »&lt; &gt;« izbere 5. raven in deluje kot enkratni zaklep, ko je pritisnjena skupaj z drugim izbirnikom 5. ravni"
 
-#: rules/base.xml:8154
+#: rules/base.xml:8160
 msgid "Right Alt chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Desna izmenjalka (Alt) izbere peto raven in deluje kot enkraten zaklep ravni, če je pritisnjen hkrati z drugim izbirnikom pete ravni"
 
-#: rules/base.xml:8160
+#: rules/base.xml:8166
 msgid "Left Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Leva tipka Win izbere peto raven in deluje kot enkraten zaklep ravni, če je pritisnjena hkrati z drugim izbirnikom pete ravni"
 
-#: rules/base.xml:8166
+#: rules/base.xml:8172
 msgid "Right Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Desna tipka Win izbere peto raven in deluje kot enkraten zaklep ravni, če je pritisnjena hkrati z drugim izbirnikom pete ravni"
 
-#: rules/base.xml:8174
+#: rules/base.xml:8180
 msgid "Non-breaking space input"
 msgstr "Vnos neprelomnega presledka"
 
-#: rules/base.xml:8179
+#: rules/base.xml:8185
 msgid "Usual space at any level"
 msgstr "Običajni presledek na vseh ravneh"
 
-#: rules/base.xml:8185
+#: rules/base.xml:8191
 msgid "Non-breaking space at the 2nd level"
 msgstr "Neprelomni presledek na drugi ravni"
 
-#: rules/base.xml:8191
+#: rules/base.xml:8197
 msgid "Non-breaking space at the 3rd level"
 msgstr "Neprelomni presledek na tretji ravni"
 
-#: rules/base.xml:8197
+#: rules/base.xml:8203
 msgid "Non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr "Neprelomni presledek na tretji ravni, ozki neprelomni presledek na četrti ravni"
 
-#: rules/base.xml:8203
+#: rules/base.xml:8209
 msgid "Non-breaking space at the 4th level"
 msgstr "Neprelomni presledek na četrti ravni"
 
-#: rules/base.xml:8209
+#: rules/base.xml:8215
 msgid "Non-breaking space at the 4th level, thin non-breaking space at the 6th level"
 msgstr "Neprelomni presledek na četrti ravni, ozki neprelomni presledek na šesti ravni"
 
-#: rules/base.xml:8215
+#: rules/base.xml:8221
 msgid "Non-breaking space at the 4th level, thin non-breaking space at the 6th level (via Ctrl+Shift)"
 msgstr "Neprelomni presledek na četrti ravni, ozki neprelomni presledek na šesti ravni (via krmilka+dvigalka/Ctrl+Shift)"
 
-#: rules/base.xml:8221
+#: rules/base.xml:8227
 msgid "Zero-width non-joiner at the 2nd level"
 msgstr "Nespojnik ničelne širine na drugi ravni"
 
-#: rules/base.xml:8227
+#: rules/base.xml:8233
 msgid "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level"
 msgstr "Nespojnik ničelne širine na tretji ravni, spojnik ničelne širine na tretji ravni"
 
-#: rules/base.xml:8233
+#: rules/base.xml:8239
 msgid "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level, non-breaking space at the 4th level"
 msgstr "Nespojnik ničelne širine na drugi ravni, spojnik ničelne širine na tretji ravni, neprelomni presledek na četrti ravni"
 
-#: rules/base.xml:8239
+#: rules/base.xml:8245
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level"
 msgstr "Nespojnik ničelne širine na drugi ravni, neprelomni presledek na tretji ravni"
 
-#: rules/base.xml:8245
+#: rules/base.xml:8251
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, zero-width joiner at the 4th level"
 msgstr "Nespojnik ničelne širine na drugi ravni, neprelomni presledek na tretji ravni, spojnik ničelne širine na četrti ravni"
 
-#: rules/base.xml:8251
+#: rules/base.xml:8257
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr "Nespojnik ničelne širine na drugi ravni, neprelomni presledek na tretji ravni, ozek neprelomni presledek na četrti ravni"
 
-#: rules/base.xml:8257
+#: rules/base.xml:8263
 msgid "Zero-width non-joiner at the 3rd level, zero-width joiner at the 4th level"
 msgstr "Nespojnik ničelne širine na tretji ravni, spojnik ničelne širine na četrti ravni"
 
-#: rules/base.xml:8264
+#: rules/base.xml:8270
 msgid "Japanese keyboard options"
 msgstr "Japonske možnosti tipkovnice"
 
-#: rules/base.xml:8269
+#: rules/base.xml:8275
 msgid "Kana Lock key is locking"
 msgstr "Tipka za zaklep Kana lahko zaklepa"
 
-#: rules/base.xml:8275
+#: rules/base.xml:8281
 msgid "NICOLA-F style Backspace"
 msgstr "Vračalka v slogu NICOLA-F"
 
-#: rules/base.xml:8281
+#: rules/base.xml:8287
 msgid "Make Zenkaku Hankaku an additional Esc"
 msgstr "Zenkaku Hankaku naj bo dodatna ubežnica (Esc)"
 
-#: rules/base.xml:8288
+#: rules/base.xml:8294
 msgid "Korean Hangul/Hanja keys"
 msgstr "Korejske tipke Hangul/Hanja"
 
-#: rules/base.xml:8293
+#: rules/base.xml:8299
 msgid "Make right Alt a Hangul key"
 msgstr "Desno izmenjalko (Alt) pretvori v tipko Hangul"
 
-#: rules/base.xml:8299
+#: rules/base.xml:8305
 msgid "Make right Ctrl a Hangul key"
 msgstr "Desno krmilko (Ctrl) pretvori v tipko Hangul"
 
-#: rules/base.xml:8305
+#: rules/base.xml:8311
 msgid "Make right Alt a Hanja key"
 msgstr "Desno izmenjalko (Alt) pretvori v tipko Hanja"
 
-#: rules/base.xml:8311
+#: rules/base.xml:8317
 msgid "Make right Ctrl a Hanja key"
 msgstr "Desno krmilko (Ctrl) pretvori v tipko Hanja"
 
-#: rules/base.xml:8318
+#: rules/base.xml:8324
 msgid "Esperanto letters with superscripts"
 msgstr "Esperantske črke z nadpisanimi"
 
-#: rules/base.xml:8323
+#: rules/base.xml:8329
 msgid "At the corresponding key in a QWERTY layout"
 msgstr "Na ustrezno tipko postavitve QWERTY"
 
-#: rules/base.xml:8329
+#: rules/base.xml:8335
 msgid "At the corresponding key in a Dvorak layout"
 msgstr "Na ustrezno tipko postavitve Dvorak"
 
-#: rules/base.xml:8335
+#: rules/base.xml:8341
 msgid "At the corresponding key in a Colemak layout"
 msgstr "Na ustrezno tipko postavitve Colemak"
 
-#: rules/base.xml:8342
+#: rules/base.xml:8348
 msgid "Old Solaris keycodes compatibility"
 msgstr "Združljivost s starimi kodami tipk Solaris"
 
-#: rules/base.xml:8347
+#: rules/base.xml:8353
 msgid "Sun key compatibility"
 msgstr "Združljivost s tipkami Sun"
 
-#: rules/base.xml:8354
+#: rules/base.xml:8360
 msgid "Key sequence to kill the X server"
 msgstr "Zaporedje tipk, ki ubijejo strežnik X"
 
-#: rules/base.xml:8359
+#: rules/base.xml:8365
 msgid "Ctrl+Alt+Backspace"
 msgstr "Krmilka (Ctrl) + izmenjalka (Alt) + vračalka"
 
-#: rules/base.xml:8366
+#: rules/base.xml:8372
 msgid "Function keys"
 msgstr "Funkcijske tipke"
 
-#: rules/base.xml:8371
+#: rules/base.xml:8377
 msgid "Use F13-F24 as usual function keys"
 msgstr "Uporabi F13-F24 kot običajne funkcijske tipke"
 
-#: rules/base.xml:8378
+#: rules/base.xml:8384
 msgid "Miscellaneous options"
 msgstr "Razne možnosti"
 
-#: rules/base.xml:8383
+#: rules/base.xml:8389
 msgid "Use user-defined custom XKB types"
 msgstr "Uporabi uporabniško določene vrst XKB po meri"
 

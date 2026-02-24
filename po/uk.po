@@ -7,13 +7,13 @@
 # Andriy Rysin <arysin@bcsii.com>, 2007, 2008.
 # Andriy Rysin <arysin@gmail.com>, 2008.
 # Maxim V. Dziumanenko <dziumanenko@gmail.com>, 2004-2011.
-# Yuri Chornoivan <yurchor@ukr.net>, 2011-2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2011-2025, 2026.
 msgid ""
 msgstr ""
-"Project-Id-Version: xkeyboard-config-2.45.99\n"
+"Project-Id-Version: xkeyboard-config-2.46.99\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-20 19:03+0000\n"
-"PO-Revision-Date: 2025-09-21 13:37+0300\n"
+"POT-Creation-Date: 2026-02-04 23:53+0000\n"
+"PO-Revision-Date: 2026-02-05 18:10+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -4365,278 +4365,282 @@ msgid "Shift does not cancel Num Lock, chooses 3rd level instead"
 msgstr "Shift не скасовує Num Lock, а вибирає третій рівень"
 
 #: rules/base.xml:7973
+msgid "Map Hyper to Mod2 (conflict with NumLock)"
+msgstr "Hyper — Mod2 (конфлікт з NumLock)"
+
+#: rules/base.xml:7979
 msgid "Map Hyper to Mod3 (conflict with LevelFive)"
 msgstr "Hyper — Mod3 (конфлікт з LevelFive)"
 
-#: rules/base.xml:7979
+#: rules/base.xml:7985
 msgid "Map Hyper to Mod4 (conflict with Super)"
 msgstr "Hyper — Mod4 (конфлікт з Super)"
 
-#: rules/base.xml:7985
+#: rules/base.xml:7991
 msgid "Map Scroll Lock to Mod3"
 msgstr "Scroll Lock — Mod3"
 
-#: rules/base.xml:7991
+#: rules/base.xml:7997
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server"
 msgstr "Сліпі клавіші (Ctrl+Alt+&lt;key&gt;) обробляються на сервері"
 
-#: rules/base.xml:7997
+#: rules/base.xml:8003
 msgid "Apple Aluminium emulates Pause, PrtSc, Scroll Lock"
 msgstr "Apple Aluminium емулює Pause, PrtSc, Scroll Lock"
 
-#: rules/base.xml:8003
+#: rules/base.xml:8009
 msgid "Japanese Apple keyboards emulate OADG109A backslash"
 msgstr "Японські клавіатури Apple з емуляцією риски OADG109A"
 
-#: rules/base.xml:8009
+#: rules/base.xml:8015
 msgid "Japanese Apple keyboards emulate PC106 backslash"
 msgstr "Японські клавіатури Apple з емуляцією риски PC106"
 
-#: rules/base.xml:8015
+#: rules/base.xml:8021
 msgid "Shift cancels Caps Lock"
 msgstr "Shift скасовує Caps Lock"
 
-#: rules/base.xml:8021
+#: rules/base.xml:8027
 msgid "Enable extra typographic characters"
 msgstr "Увімкнути додаткові типографські символи"
 
-#: rules/base.xml:8027
+#: rules/base.xml:8033
 msgid "Enable APL overlay characters"
 msgstr "Увімкнути клавіші-накладки APL"
 
-#: rules/base.xml:8033
+#: rules/base.xml:8039
 msgid "Both Shifts together enable Caps Lock"
 msgstr "Обидві Shift разом перемикають стан Caps Lock"
 
-#: rules/base.xml:8039
+#: rules/base.xml:8045
 msgid "Both Shifts together enable Caps Lock; one Shift key disables it"
 msgstr "Натискання обох клавіш Shift вмикають Caps Lock, одна клавіша Shift — вимикає"
 
-#: rules/base.xml:8045
+#: rules/base.xml:8051
 msgid "Both Shifts together enable Shift Lock"
 msgstr "Обидві клавіші Shift разом перемикають стан Shift"
 
-#: rules/base.xml:8051
+#: rules/base.xml:8057
 msgid "Shift + Num Lock enables PointerKeys"
 msgstr "Shift + Num Lock перемикає PointerKeys"
 
-#: rules/base.xml:8057
+#: rules/base.xml:8063
 msgid "Allow breaking grabs with keyboard actions (warning: security risk)"
 msgstr "Дозволити скасування захоплення діями з клавіатури (увага: небезпечно)"
 
-#: rules/base.xml:8063
+#: rules/base.xml:8069
 msgid "Allow grab and window tree logging"
 msgstr "Дозволити захоплення і журналювання ієрархії вікон"
 
-#: rules/base.xml:8071
+#: rules/base.xml:8077
 msgid "Currency signs"
 msgstr "Знаки валют"
 
-#: rules/base.xml:8076
+#: rules/base.xml:8082
 msgid "Euro on E, third level"
 msgstr "Євро на E, третій рівень"
 
-#: rules/base.xml:8082
+#: rules/base.xml:8088
 msgid "Euro on E, fourth level"
 msgstr "Євро на E, четвертий рівень"
 
-#: rules/base.xml:8088
+#: rules/base.xml:8094
 msgid "Euro on 2"
 msgstr "Євро на 2"
 
-#: rules/base.xml:8094
+#: rules/base.xml:8100
 msgid "Euro on 4"
 msgstr "Євро на 4"
 
-#: rules/base.xml:8100
+#: rules/base.xml:8106
 msgid "Euro on 5"
 msgstr "Євро на 5"
 
-#: rules/base.xml:8106
+#: rules/base.xml:8112
 msgid "Rupee on 4"
 msgstr "Символ рупії на 4"
 
-#: rules/base.xml:8113
+#: rules/base.xml:8119
 msgid "Key to choose the 5th level"
 msgstr "Клавіша для вибору 5-го ряду"
 
-#: rules/base.xml:8118
+#: rules/base.xml:8124
 msgid "Caps Lock chooses 5th level"
 msgstr "Caps Lock вибирає 5-й рівень"
 
-#: rules/base.xml:8124
+#: rules/base.xml:8130
 msgid "The \"&lt; &gt;\" key chooses 5th level"
 msgstr "Клавіша «&lt; &gt;» вибирає 5-й рівень"
 
-#: rules/base.xml:8130
+#: rules/base.xml:8136
 msgid "Right Alt chooses 5th level"
 msgstr "Права Alt вибирає 5-й рівень"
 
-#: rules/base.xml:8136
+#: rules/base.xml:8142
 msgid "Menu chooses 5th level"
 msgstr "Клавіша меню вибирає 5-й рівень"
 
-#: rules/base.xml:8142
+#: rules/base.xml:8148
 msgid "Right Ctrl chooses 5th level"
 msgstr "Права Ctrl вибирає 5-й рівень"
 
-#: rules/base.xml:8148
+#: rules/base.xml:8154
 msgid "The \"&lt; &gt;\" key chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Клавіша «&lt; &gt;» вибирає 5-й рівень, фіксується, якщо натиснути разом з іншою комбінацією вибору 5-го рівня"
 
-#: rules/base.xml:8154
+#: rules/base.xml:8160
 msgid "Right Alt chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Права Alt вибирає 5-й рівень, фіксується, якщо натиснути разом з іншою комбінацією вибору 5-го рівня"
 
-#: rules/base.xml:8160
+#: rules/base.xml:8166
 msgid "Left Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Ліва Win вибирає 5-й рівень, фіксується, якщо натиснути разом з іншою комбінацією вибору 5-го рівня"
 
-#: rules/base.xml:8166
+#: rules/base.xml:8172
 msgid "Right Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Права Win вибирає 5-й рівень, фіксується, якщо натиснути разом з іншою комбінацією вибору 5-го рівня"
 
-#: rules/base.xml:8174
+#: rules/base.xml:8180
 msgid "Non-breaking space input"
 msgstr "Введення нерозривного пробілу"
 
-#: rules/base.xml:8179
+#: rules/base.xml:8185
 msgid "Usual space at any level"
 msgstr "Звичайний пробіл на будь-якому рівні"
 
-#: rules/base.xml:8185
+#: rules/base.xml:8191
 msgid "Non-breaking space at the 2nd level"
 msgstr "Символ нерозривного пробілу на 2-му рівні"
 
-#: rules/base.xml:8191
+#: rules/base.xml:8197
 msgid "Non-breaking space at the 3rd level"
 msgstr "Символ нерозривного пробілу на 3-му рівні"
 
-#: rules/base.xml:8197
+#: rules/base.xml:8203
 msgid "Non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr "Символ нерозривного пробілу на 3-му рівні, символ тонкого нерозривного пробілу на 4-му рівні"
 
-#: rules/base.xml:8203
+#: rules/base.xml:8209
 msgid "Non-breaking space at the 4th level"
 msgstr "Символ нерозривного пробілу на 4-му рівні"
 
-#: rules/base.xml:8209
+#: rules/base.xml:8215
 msgid "Non-breaking space at the 4th level, thin non-breaking space at the 6th level"
 msgstr "Символ нерозривного пробілу на 4-му рівні, символ тонкого нерозривного пробілу на 6-му рівні"
 
-#: rules/base.xml:8215
+#: rules/base.xml:8221
 msgid "Non-breaking space at the 4th level, thin non-breaking space at the 6th level (via Ctrl+Shift)"
 msgstr "Символ нерозривного пробілу на 4-му рівні, символ тонкого нерозривного пробілу на 6-му рівні (з Ctrl+Shift)"
 
-#: rules/base.xml:8221
+#: rules/base.xml:8227
 msgid "Zero-width non-joiner at the 2nd level"
 msgstr "Незв'язувальний нульової ширини на 2-му рівні"
 
-#: rules/base.xml:8227
+#: rules/base.xml:8233
 msgid "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level"
 msgstr "Незв'язувальний нульової ширини на 2-му рівні, зв'язувальний символ нульової ширини на 3-му"
 
-#: rules/base.xml:8233
+#: rules/base.xml:8239
 msgid "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level, non-breaking space at the 4th level"
 msgstr "Незв. нуль-ширини на 2-му рівні, зв. нуль-ширини на 3-му рівні, нерозр. пробіл на 4-му рівні"
 
-#: rules/base.xml:8239
+#: rules/base.xml:8245
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level"
 msgstr "Незв'язувальний нульової ширини на 2-му рівні, нерозривний пробіл на 3-му рівні"
 
-#: rules/base.xml:8245
+#: rules/base.xml:8251
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, zero-width joiner at the 4th level"
 msgstr "Незв'язувальний нуль-ширини на 2-му рівні, нерозр. пробіл на 3-му рівні, зв'яз. нуль-ширини на 4-му"
 
-#: rules/base.xml:8251
+#: rules/base.xml:8257
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr "Незв. нуль-ширини на 2-му рівні, нерозр. пробіл на 3-му рівні, вузький нерозр. пробіл на 4-му рівні"
 
-#: rules/base.xml:8257
+#: rules/base.xml:8263
 msgid "Zero-width non-joiner at the 3rd level, zero-width joiner at the 4th level"
 msgstr "Незв'язувальний нуль-ширини на 3-му рівні, зв'яз. нуль-ширини на 4-му"
 
-#: rules/base.xml:8264
+#: rules/base.xml:8270
 msgid "Japanese keyboard options"
 msgstr "Параметри японської клавіатури"
 
-#: rules/base.xml:8269
+#: rules/base.xml:8275
 msgid "Kana Lock key is locking"
 msgstr "Клавіша Kana Lock фіксується"
 
-#: rules/base.xml:8275
+#: rules/base.xml:8281
 msgid "NICOLA-F style Backspace"
 msgstr "NICOLA-F style Backspace"
 
-#: rules/base.xml:8281
+#: rules/base.xml:8287
 msgid "Make Zenkaku Hankaku an additional Esc"
 msgstr "Клавіша повних/половинних форм — додаткова клавіша Esc"
 
-#: rules/base.xml:8288
+#: rules/base.xml:8294
 msgid "Korean Hangul/Hanja keys"
 msgstr "Корейські клавіші хангиля/ханчі"
 
-#: rules/base.xml:8293
+#: rules/base.xml:8299
 msgid "Make right Alt a Hangul key"
 msgstr "Зробити праву Alt клавішею хангиля"
 
-#: rules/base.xml:8299
+#: rules/base.xml:8305
 msgid "Make right Ctrl a Hangul key"
 msgstr "Зробити праву Ctrl клавішею хангиля"
 
-#: rules/base.xml:8305
+#: rules/base.xml:8311
 msgid "Make right Alt a Hanja key"
 msgstr "Зробити праву Alt клавішею ханчі"
 
-#: rules/base.xml:8311
+#: rules/base.xml:8317
 msgid "Make right Ctrl a Hanja key"
 msgstr "Зробити праву Ctrl клавішею ханчі"
 
-#: rules/base.xml:8318
+#: rules/base.xml:8324
 msgid "Esperanto letters with superscripts"
 msgstr "Літери та верхні індекси есперанто"
 
-#: rules/base.xml:8323
+#: rules/base.xml:8329
 msgid "At the corresponding key in a QWERTY layout"
 msgstr "На відповідну клавішу у розкладці QWERTY"
 
-#: rules/base.xml:8329
+#: rules/base.xml:8335
 msgid "At the corresponding key in a Dvorak layout"
 msgstr "На відповідну клавішу у розкладці Дворака"
 
-#: rules/base.xml:8335
+#: rules/base.xml:8341
 msgid "At the corresponding key in a Colemak layout"
 msgstr "На відповідну клавішу у розкладці Коулмака"
 
-#: rules/base.xml:8342
+#: rules/base.xml:8348
 msgid "Old Solaris keycodes compatibility"
 msgstr "Сумісність із старими кодами клавіш Solaris"
 
-#: rules/base.xml:8347
+#: rules/base.xml:8353
 msgid "Sun key compatibility"
 msgstr "Сумісність з кодами клавіш Sun"
 
-#: rules/base.xml:8354
+#: rules/base.xml:8360
 msgid "Key sequence to kill the X server"
 msgstr "Комбінація клавіш для переривання роботи X-сервера"
 
-#: rules/base.xml:8359
+#: rules/base.xml:8365
 msgid "Ctrl+Alt+Backspace"
 msgstr "Ctrl+Alt+Backspace"
 
-#: rules/base.xml:8366
+#: rules/base.xml:8372
 msgid "Function keys"
 msgstr "Функціональні клавіші"
 
-#: rules/base.xml:8371
+#: rules/base.xml:8377
 msgid "Use F13-F24 as usual function keys"
 msgstr "F13-F24 — звичайні функціональні клавіші"
 
-#: rules/base.xml:8378
+#: rules/base.xml:8384
 msgid "Miscellaneous options"
 msgstr "Інші параметри"
 
-#: rules/base.xml:8383
+#: rules/base.xml:8389
 msgid "Use user-defined custom XKB types"
 msgstr "Користувацькі нестандартні типи XKB"
 

@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the xkeyboard-config package.
 # Tommi Vainikainen <Tommi.Vainikainen@iki.fi>, 2005, 2007-2010.
 # Ilkka Tuohela <hile@iki.fi>, 2007.
-# Tommi Nieminen <translator@legisign.org>, 2013-2025.
+# Tommi Nieminen <translator@legisign.org>, 2013-2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: xkeyboard-config 2.45.99\n"
+"Project-Id-Version: xkeyboard-config 2.46.99\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-20 19:03+0000\n"
-"PO-Revision-Date: 2025-09-27 09:06+0300\n"
+"POT-Creation-Date: 2026-02-04 23:53+0000\n"
+"PO-Revision-Date: 2026-02-05 22:14+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <translation-team-fi@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -4366,278 +4366,282 @@ msgid "Shift does not cancel Num Lock, chooses 3rd level instead"
 msgstr "Vaihto ei kumoa numerolukkoa vaan valitsee 3. tason"
 
 #: rules/base.xml:7973
+msgid "Map Hyper to Mod2 (conflict with NumLock)"
+msgstr "Kytke Hyper Mod2:een (ristiriita numerolukon kanssa)"
+
+#: rules/base.xml:7979
 msgid "Map Hyper to Mod3 (conflict with LevelFive)"
 msgstr "Kytke Hyper Mod3:een (ristiriita 5. tason kanssa)"
 
-#: rules/base.xml:7979
+#: rules/base.xml:7985
 msgid "Map Hyper to Mod4 (conflict with Super)"
 msgstr "Kytke Hyper Mod4:ään (ristiriita Superin kanssa)"
 
-#: rules/base.xml:7985
+#: rules/base.xml:7991
 msgid "Map Scroll Lock to Mod3"
 msgstr "Kytke vierityslukko Mod3:een"
 
-#: rules/base.xml:7991
+#: rules/base.xml:7997
 msgid "Special keys (Ctrl+Alt+&lt;key&gt;) handled in a server"
 msgstr "Erikoisnäppäimet (Ctrl+Alt+&lt;näppäin&gt;) käsitellään palvelimessa"
 
-#: rules/base.xml:7997
+#: rules/base.xml:8003
 msgid "Apple Aluminium emulates Pause, PrtSc, Scroll Lock"
 msgstr "Apple Aluminium matkii Pause-, PrtScr- ja Scroll Lock -näppäimiä"
 
-#: rules/base.xml:8003
+#: rules/base.xml:8009
 msgid "Japanese Apple keyboards emulate OADG109A backslash"
 msgstr "Japanilaiset Apple-näppäimistöt emuloivat OADG109A-kenoviivaa"
 
-#: rules/base.xml:8009
+#: rules/base.xml:8015
 msgid "Japanese Apple keyboards emulate PC106 backslash"
 msgstr "Japanilaiset Apple-näppäimistöt emuloivat PC106-kenoviivaa"
 
-#: rules/base.xml:8015
+#: rules/base.xml:8021
 msgid "Shift cancels Caps Lock"
 msgstr "Vaihtonäppäin kumoaa vaihtolukon"
 
-#: rules/base.xml:8021
+#: rules/base.xml:8027
 msgid "Enable extra typographic characters"
 msgstr "Ota käyttöön ylimääräiset typografiset merkit"
 
-#: rules/base.xml:8027
+#: rules/base.xml:8033
 msgid "Enable APL overlay characters"
 msgstr "Käytä APL-lisämerkkejä"
 
-#: rules/base.xml:8033
+#: rules/base.xml:8039
 msgid "Both Shifts together enable Caps Lock"
 msgstr "Kumpikin vaihtonäppäin yhdessä ottaa käyttöön vaihtolukon"
 
-#: rules/base.xml:8039
+#: rules/base.xml:8045
 msgid "Both Shifts together enable Caps Lock; one Shift key disables it"
 msgstr "Kumpikin vaihtonäppäin yhdessä ottaa  käyttöön vaihtolukon, toinen vaihtonäppäin poistaa sen käytöstä"
 
-#: rules/base.xml:8045
+#: rules/base.xml:8051
 msgid "Both Shifts together enable Shift Lock"
 msgstr "Kumpikin vaihtonäppäin yhdessä ottaa käyttöön vaihtolukon"
 
-#: rules/base.xml:8051
+#: rules/base.xml:8057
 msgid "Shift + Num Lock enables PointerKeys"
 msgstr "Vaihto+numerolukko ottaa käyttöön osoitinnäppäimet"
 
-#: rules/base.xml:8057
+#: rules/base.xml:8063
 msgid "Allow breaking grabs with keyboard actions (warning: security risk)"
 msgstr "Salli kaappausten murtaminen näppäintoiminnoin (varoitus: turvallisuusriski)"
 
-#: rules/base.xml:8063
+#: rules/base.xml:8069
 msgid "Allow grab and window tree logging"
 msgstr "Salli kaappaus ja ikkunapuun loki"
 
-#: rules/base.xml:8071
+#: rules/base.xml:8077
 msgid "Currency signs"
 msgstr "Valuuttamerkit"
 
-#: rules/base.xml:8076
+#: rules/base.xml:8082
 msgid "Euro on E, third level"
 msgstr "Euro E:ssä kolmannella tasolla"
 
-#: rules/base.xml:8082
+#: rules/base.xml:8088
 msgid "Euro on E, fourth level"
 msgstr "Euro E:ssä neljännellä tasolla"
 
-#: rules/base.xml:8088
+#: rules/base.xml:8094
 msgid "Euro on 2"
 msgstr "Euro 2:ssa"
 
-#: rules/base.xml:8094
+#: rules/base.xml:8100
 msgid "Euro on 4"
 msgstr "Euro 4:ssa"
 
-#: rules/base.xml:8100
+#: rules/base.xml:8106
 msgid "Euro on 5"
 msgstr "Euro 5:ssa"
 
-#: rules/base.xml:8106
+#: rules/base.xml:8112
 msgid "Rupee on 4"
 msgstr "Rupia 4:ssa"
 
-#: rules/base.xml:8113
+#: rules/base.xml:8119
 msgid "Key to choose the 5th level"
 msgstr "Viidennen tason valintanäppäin"
 
-#: rules/base.xml:8118
+#: rules/base.xml:8124
 msgid "Caps Lock chooses 5th level"
 msgstr "Vaihtolukko valitsee viidennen tason"
 
-#: rules/base.xml:8124
+#: rules/base.xml:8130
 msgid "The \"&lt; &gt;\" key chooses 5th level"
 msgstr "”&lt; &gt;” -näppäin valitsee 5. tason"
 
-#: rules/base.xml:8130
+#: rules/base.xml:8136
 msgid "Right Alt chooses 5th level"
 msgstr "Oikea Alt ei koskaan valitse 5. tasoa"
 
-#: rules/base.xml:8136
+#: rules/base.xml:8142
 msgid "Menu chooses 5th level"
 msgstr "Valikkonäppäin valitsee viidennen tason"
 
-#: rules/base.xml:8142
+#: rules/base.xml:8148
 msgid "Right Ctrl chooses 5th level"
 msgstr "Oikea Ctrl valitsee viidennen tason"
 
-#: rules/base.xml:8148
+#: rules/base.xml:8154
 msgid "The \"&lt; &gt;\" key chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "”&lt; &gt;” -näppäin valitsee 5. tason ja toimii kertalukkona, jos painetaan yhdessä toisen 5. tason valitsinnäppäimen kanssa"
 
-#: rules/base.xml:8154
+#: rules/base.xml:8160
 msgid "Right Alt chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Oikea Alt vaihtaa 5. tasolle ja toimii kertalukkona painettaessa yhtä aikaa toisen 5. tason valintanäppäimen kanssa"
 
-#: rules/base.xml:8160
+#: rules/base.xml:8166
 msgid "Left Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Vasen Win vaihtaa 5. tasolle ja toimii kertalukkona painettaessa yhtä aikaa toisen 5. tason valintanäppäimen kanssa"
 
-#: rules/base.xml:8166
+#: rules/base.xml:8172
 msgid "Right Win chooses 5th level and acts as a one-time lock if pressed with another 5th level chooser"
 msgstr "Oikea Win vaihtaa 5. tasolle ja toimii kertalukkona painettaessa yhtä aikaa toisen 5. tason valintanäppäimen kanssa"
 
-#: rules/base.xml:8174
+#: rules/base.xml:8180
 msgid "Non-breaking space input"
 msgstr "Sitovan sanavälin syöttäminen"
 
-#: rules/base.xml:8179
+#: rules/base.xml:8185
 msgid "Usual space at any level"
 msgstr "Tavallinen sanaväli kaikilla tasoilla"
 
-#: rules/base.xml:8185
+#: rules/base.xml:8191
 msgid "Non-breaking space at the 2nd level"
 msgstr "Sitova sanaväli 2. tasolla"
 
-#: rules/base.xml:8191
+#: rules/base.xml:8197
 msgid "Non-breaking space at the 3rd level"
 msgstr "Sitova sanaväli 3. tasolla"
 
-#: rules/base.xml:8197
+#: rules/base.xml:8203
 msgid "Non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr "Sitova sanaväli 3. tasolla, sitova ohuke 4. tasolla"
 
-#: rules/base.xml:8203
+#: rules/base.xml:8209
 msgid "Non-breaking space at the 4th level"
 msgstr "Sitova sanaväli 4. tasolla"
 
-#: rules/base.xml:8209
+#: rules/base.xml:8215
 msgid "Non-breaking space at the 4th level, thin non-breaking space at the 6th level"
 msgstr "Sitova sanaväli 4. tasolla, ohut sitova sanaväli 6. tasolla"
 
-#: rules/base.xml:8215
+#: rules/base.xml:8221
 msgid "Non-breaking space at the 4th level, thin non-breaking space at the 6th level (via Ctrl+Shift)"
 msgstr "Sitova sanaväli 4. tasolla, ohut sitova sanaväli 6. tasolla (Ctrl+Vaihdolla)"
 
-#: rules/base.xml:8221
+#: rules/base.xml:8227
 msgid "Zero-width non-joiner at the 2nd level"
 msgstr "Leveydetön ei-yhdistävä merkki 2. tasolla"
 
-#: rules/base.xml:8227
+#: rules/base.xml:8233
 msgid "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level"
 msgstr "Leveydetön ei-yhdistävä merkki 2. tasolla, leveydetön yhdistävä merkki 3. tasolla"
 
-#: rules/base.xml:8233
+#: rules/base.xml:8239
 msgid "Zero-width non-joiner at the 2nd level, zero-width joiner at the 3rd level, non-breaking space at the 4th level"
 msgstr "Leveydetön ei-yhdistävä merkki 2. tasolla, leveydetön yhdistävä merkki 3. tasolla, sitova sanaväli 4. tasolla"
 
-#: rules/base.xml:8239
+#: rules/base.xml:8245
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level"
 msgstr "Leveydetön ei-yhdistävä merkki 2. tasolla, sitova sanaväli 3. tasolla"
 
-#: rules/base.xml:8245
+#: rules/base.xml:8251
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, zero-width joiner at the 4th level"
 msgstr "Leveydetön ei-yhdistävä merkki 2. tasolla, sitova sanaväli 3. tasolla, leveydetön yhdistävä merkki 4. tasolla"
 
-#: rules/base.xml:8251
+#: rules/base.xml:8257
 msgid "Zero-width non-joiner at the 2nd level, non-breaking space at the 3rd level, thin non-breaking space at the 4th level"
 msgstr "Leveydetön ei-yhdistävä merkki 2. tasolla, sitova sanaväli 3. tasolla, ohut sitova sanaväli 4. tasolla"
 
-#: rules/base.xml:8257
+#: rules/base.xml:8263
 msgid "Zero-width non-joiner at the 3rd level, zero-width joiner at the 4th level"
 msgstr "Leveydetön ei-yhdistävä merkki 3. tasolla, leveydetön yhdistävä merkki 4. tasolla"
 
-#: rules/base.xml:8264
+#: rules/base.xml:8270
 msgid "Japanese keyboard options"
 msgstr "Japanilaisen näppäimistön asetukset"
 
-#: rules/base.xml:8269
+#: rules/base.xml:8275
 msgid "Kana Lock key is locking"
 msgstr "Kana-lukitusnäppäin lukitsee"
 
-#: rules/base.xml:8275
+#: rules/base.xml:8281
 msgid "NICOLA-F style Backspace"
 msgstr "NICOLA-F-tyylin askelpalautin"
 
-#: rules/base.xml:8281
+#: rules/base.xml:8287
 msgid "Make Zenkaku Hankaku an additional Esc"
 msgstr "Tee Zenkaku Hankakusta ylimääräinen Esc"
 
-#: rules/base.xml:8288
+#: rules/base.xml:8294
 msgid "Korean Hangul/Hanja keys"
 msgstr "Korealaiset hangul/hanja-näppäimet"
 
-#: rules/base.xml:8293
+#: rules/base.xml:8299
 msgid "Make right Alt a Hangul key"
 msgstr "Tee oikeasta Alt-näppäimestä Hangul-näppäin"
 
-#: rules/base.xml:8299
+#: rules/base.xml:8305
 msgid "Make right Ctrl a Hangul key"
 msgstr "Tee oikeasta Ctrl-näppäimestä Hangul-näppäin"
 
-#: rules/base.xml:8305
+#: rules/base.xml:8311
 msgid "Make right Alt a Hanja key"
 msgstr "Tee oikeasta Alt-näppäimestä Hanja-näppäin"
 
-#: rules/base.xml:8311
+#: rules/base.xml:8317
 msgid "Make right Ctrl a Hanja key"
 msgstr "Tee oikeasta Ctrl-näppäimestä Hanja-näppäin"
 
-#: rules/base.xml:8318
+#: rules/base.xml:8324
 msgid "Esperanto letters with superscripts"
 msgstr "Esperanton kirjaimet tarkkein"
 
-#: rules/base.xml:8323
+#: rules/base.xml:8329
 msgid "At the corresponding key in a QWERTY layout"
 msgstr "Vastaavaan näppäimeen QWERTY-asettelussa"
 
-#: rules/base.xml:8329
+#: rules/base.xml:8335
 msgid "At the corresponding key in a Dvorak layout"
 msgstr "Vastaavaan näppäimeen Dvorak-asettelussa"
 
-#: rules/base.xml:8335
+#: rules/base.xml:8341
 msgid "At the corresponding key in a Colemak layout"
 msgstr "Vastaavaan näppäimeen Colemak-asettelussa"
 
-#: rules/base.xml:8342
+#: rules/base.xml:8348
 msgid "Old Solaris keycodes compatibility"
 msgstr "Vanha Solaris-näppäinkoodiyhteensopivuus"
 
-#: rules/base.xml:8347
+#: rules/base.xml:8353
 msgid "Sun key compatibility"
 msgstr "Sun-näppäinyhteensopivuus"
 
-#: rules/base.xml:8354
+#: rules/base.xml:8360
 msgid "Key sequence to kill the X server"
 msgstr "X-palvelimen tappava näppäinyhdistelmä"
 
-#: rules/base.xml:8359
+#: rules/base.xml:8365
 msgid "Ctrl+Alt+Backspace"
 msgstr "Ctrl+Alt+askelpalautin"
 
-#: rules/base.xml:8366
+#: rules/base.xml:8372
 msgid "Function keys"
 msgstr "Funktionäppäimet"
 
-#: rules/base.xml:8371
+#: rules/base.xml:8377
 msgid "Use F13-F24 as usual function keys"
 msgstr "F13–F24 tavallisina funktionäppäiminä"
 
-#: rules/base.xml:8378
+#: rules/base.xml:8384
 msgid "Miscellaneous options"
 msgstr "Sekalaisia valintoja"
 
-#: rules/base.xml:8383
+#: rules/base.xml:8389
 msgid "Use user-defined custom XKB types"
 msgstr "Käytä käyttäjän määrittämiä mukautettuja XKB-tyyppejä"
 
