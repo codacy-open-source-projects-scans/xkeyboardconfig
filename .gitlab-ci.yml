@@ -213,7 +213,7 @@ xkbcommon build:
     - meson compile -C "$BUILDDIR"
     - meson install -C "$BUILDDIR"
     # We want also the test script. It requires "xkbcli-compile-keymap".
-    - cp "$BUILDDIR/xkeyboard-config-test" "$XKBCOMMON_INST_DIR/bin"
+    - cp "$BUILDDIR/test/xkeyboard-config-test" "$XKBCOMMON_INST_DIR/bin"
   artifacts:
     when: on_success
     name: xkbcommon build

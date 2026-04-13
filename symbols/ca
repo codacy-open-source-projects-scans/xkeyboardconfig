@@ -234,9 +234,9 @@ xkb_symbols "multix" {
     key.type[group1]="EIGHT_LEVEL";
     key <TLDE> {[     slash,  backslash,            bar, NoSymbol,       NoSymbol,        hyphen ]};
     key <AE01> {[         1,     exclam,      plusminus, NoSymbol,    onesuperior,    exclamdown ]};
-    key <AE02> {[         2,         at,             at, NoSymbol,    twosuperior,      NoSymbol ]};
+    key <AE02> {[         2,         at,             at, NoSymbol,    twosuperior,     oneeighth ]};
     key <AE03> {[         3, numbersign,       sterling, NoSymbol,  threesuperior,      sterling ]};
-    key <AE04> {[         4,     dollar,       currency, NoSymbol,     onequarter,      EuroSign ]};
+    key <AE04> {[         4,     dollar,       currency, NoSymbol,     onequarter,      EuroSign, currency ]};
     key <AE05> {[         5,    percent,       NoSymbol, NoSymbol,        onehalf,  threeeighths ]};
     key <AE06> {[         6,   question,       NoSymbol, NoSymbol,  threequarters,   fiveeighths ]};
     key <AE07> {[         7,  ampersand,      braceleft, NoSymbol,       NoSymbol,  seveneighths ]};
@@ -267,7 +267,7 @@ xkb_symbols "multix" {
     key <AC01> {[         a,          A,       NoSymbol, NoSymbol,             ae,            AE ]};
     key <AC02> {[         s,          S,       NoSymbol, NoSymbol,         ssharp,       section ]};
     key <AC03> {[         d,          D,       NoSymbol, NoSymbol,            eth,           ETH ]};
-    key <AC04> {[         f,          F,       NoSymbol, NoSymbol,       NoSymbol,   ordfeminine ]};
+    key <AC04> {[         f,          F,       NoSymbol, NoSymbol,        dstroke,   ordfeminine ]};
     key <AC05> {[         g,          G,       NoSymbol, NoSymbol,            eng,           ENG ]};
     key <AC06> {[         h,          H,       NoSymbol, NoSymbol,        hstroke,       Hstroke ]};
     key <AC07> {[         j,          J,       NoSymbol, NoSymbol,          U0133,         U0132 ]}; // ĳ Ĳ
