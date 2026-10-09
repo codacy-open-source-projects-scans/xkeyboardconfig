@@ -79,7 +79,9 @@ class Layout:
         with path.open("rt", encoding="utf-8") as fd:
             for line in fd:
                 # Remove optional comment
-                line = line.split("//")[0]
+                line = line.split("//")[0].strip()
+                if not line:
+                    continue
                 # Split on whitespaces
                 groups = tuple(line.split())
                 length = len(groups)
@@ -96,7 +98,7 @@ class Layout:
 
 def pytest_generate_tests(metafunc: pytest.Metafunc):
     if "mapping" in metafunc.fixturenames:
-        if files := metafunc.config.getoption("layout_compat_config"):
+        if files := metafunc.config.getoption("migrations_config"):
             # Read all files
             mappings = tuple(
                 itertools.chain.from_iterable(map(Layout.read_file, files)),

@@ -73,3 +73,77 @@ xkb_symbols "unicodeus" {
     include "rs(latinunicodeyz)"
     name[Group1]= "Croatian (US, with Croatian digraphs)";
 };
+
+partial alphanumeric_keys
+xkb_symbols "glag" {
+
+    name[Group1]= "Croatian (Glagolitic)";
+    include "rs(common)"
+
+    key <TLDE> { [ any,     any,     U2C55,     U2C25       ] };
+    key <AE01> { [ any,     any,     U0484                  ] };
+    key <AE04> { [ any,     any,     U0483                  ] };
+    key <AE05> { [ any,     any,     U00B7                  ] };
+    key <AE06> { [ any,     any,     U2059,     U2E2C       ] };
+    key <AE07> { [ any,     any,     backslash, bar         ] };
+    key <AE08> { [ any,     any,     U10FB                  ] };
+    key <AE09> { [ any,     any,     U2056                  ] };
+    key <AE10> { [ any,     any,     U2E2A,     U2E2B       ] };
+    key <AE11> { [ any,     any,     UFE2E,     UFE2F       ] };
+    key <AE12> { [ any,     any,     U0304                  ] };
+
+    key.type[Group1] = "FOUR_LEVEL_ALPHABETIC";
+    key <AD01> { [ U2C51,   U2C21,   U2C57,     U2C27       ] }; // q (ije)
+    key <AD02> { [ U2C53,   U2C23,   U2C59,     U2C29       ] }; // w (ju)
+    key <AD03> { [ U2C35,   U2C05,   U2C54,     U2C24       ] }; // e
+    key <AD04> { [ U2C43,   U2C13                           ] }; // r
+    key <AD05> { [ U2C45,   U2C15,   U2C5A,     U2C2A       ] }; // t
+    key <AD06> { [ U2C38,   U2C08,   U2C37,     U2C07       ] }; // y (z)
+    key <AD07> { [ U2C46,   U2C16,   U2C58,     U2C28       ] }; // u
+    key <AD08> { [ U2C3B,   U2C0B,   U2C5B,     U2C2B       ] }; // i
+    key <AD09> { [ U2C41,   U2C11,   U2C49,     U2C19       ] }; // o
+    key <AD10> { [ U2C42,   U2C12,   U2C4A,     U2C1A       ] }; // p
+    key <AD11> { [ U2C4E,   U2C1E                           ] }; // [ (š)
+    key <AD12> { [ U2C3C,   U2C0C                           ] }; // ] (đ)
+
+    key <AC01> { [ U2C30,   U2C00,   U2C5D,     U2C2D       ] }; // a
+    key.type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC";
+    key <AC02> { [ U2C44,   U2C14,   doublelowquotemark,  guillemotright ] }; // s
+    key <AC03> { [ U2C34,   U2C04,   leftdoublequotemark, guillemotleft  ] }; // d
+    key <AC04> { [ U2C47,   U2C17,   bracketleft            ] }; // f
+    key <AC05> { [ U2C33,   U2C03,   bracketright           ] }; // g
+    key.type[Group1] = "FOUR_LEVEL_ALPHABETIC";
+    key <AC06> { [ U2C48,   U2C18,   U2C52,     U2C22       ] }; // h
+    key <AC07> { [ U2C39,   U2C09,   U2C3A,     U2C0A       ] }; // j
+    key <AC08> { [ U2C3D,   U2C0D                           ] }; // k
+    key <AC09> { [ U2C3E,   U2C0E                           ] }; // l
+    key <AC10> { [ U2C4D,   U2C1D,   U2C5F,     U2C2F       ] }; // ; : (č)
+    key <AC11> { [ U2C4B,   U2C1B                           ] }; // ' " (ć)
+    key <BKSL> { [ U2C36,   U2C06                           ] }; // \ | (ž)
+
+    key <AB01> { [ U2C4F,   U2C1F,   U2C56,     U2C26       ] }; // z (ъ)
+    key <AB02> { [ U2C50,   U2C20,   U2C5C,     U2C2C       ] }; // x (ь)
+    key <AB03> { [ U2C4C,   U2C1C                           ] }; // c
+    key.type[Group1] = "FOUR_LEVEL_SEMIALPHABETIC";
+    key <AB04> { [ U2C32,   U2C02,   at,        asciicircum ] }; // v
+    key <AB05> { [ U2C31,   U2C01,   braceleft              ] }; // b
+    key <AB06> { [ U2C40,   U2C10,   braceright             ] }; // n
+    key <AB07> { type[Group1] = "FOUR_LEVEL_ALPHABETIC",
+                 [ U2C3F,   U2C0F,   U2C5E,     U2C2E       ] }; // m
+    key.type[Group1] = "FOUR_LEVEL";
+    key <AB08> { [ any,     any,     less                   ] }; // , <
+    key <AB09> { [ any,     any,     greater                ] }; // . >
+    key <AB10> { [ any,     any,     emdash,    endash      ] }; // / ?
+
+    include "level3(ralt_switch)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "glagyz" {
+
+    name[Group1]= "Croatian (Glagolitic, Zemlja and Jeru swapped)";
+    include "hr(glag)"
+
+    key <AB01> { [ U2C38,   U2C08,   U2C37,     U2C07       ] }; // z
+    key <AD06> { [ U2C4F,   U2C1F,   U2C56,     U2C26       ] }; // y (ъ)
+};

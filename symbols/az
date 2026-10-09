@@ -32,6 +32,89 @@ xkb_symbols "latin" {
   include "level3(ralt_switch)"
 };
 
+// Azerbaijani (standard) layout, based on the AZS 495-2010 standard,
+// “Language-dependent keyboard layout of letters of the alphabet of Azerbaijan”.
+// It is known locally as “PÜŞUD”, after the first five keys of the top letter
+// row, the same way QWERTY is named.  Microsoft has been shipping it as
+// “Azerbaijani (Standard)” (KBDAZST) since Windows 8.1.
+//
+// Levels 1 and 2 reproduce the standard exactly.  The standard assigns nothing
+// to <BKSL>, and provides none of ' / \ | ` $ & ^ [ ] { } on any key.  Compared
+// with the "latin" layout above, the characters actually lost are / \ | and `,
+// which one cannot do without; the others are missing from "latin" too.  They
+// are made available on levels 3 and 4, each one on the physical key that
+// carries it in the US layout, so that no position defined by the standard is
+// altered.
+//
+// Note that W, which is not a letter of the Azerbaijani alphabet, is
+// deliberately *not* added: it is absent from the "latin" layout as well, and
+// adding a foreign letter to a national standard is not something to do without
+// the standards body's blessing.  It has been asked about; if the answer is
+// yes, the place for it is level 3 of <AD02>.
+// 2026 - Orkhan Guliyev <orkhan@our.az>
+partial alphanumeric_keys
+xkb_symbols "standard" {
+
+  include "us"
+
+  name[Group1]= "Azerbaijani (standard)";
+
+  key <AB01> {[ ccedilla,   Ccedilla                             ]};
+  key <AB02> {[ f,          F                                    ]};
+  key <AB03> {[ v,          V                                    ]};
+  key <AB04> {[ t,          T                                    ]};
+  key <AB05> {[ k,          K                                    ]};
+  key <AB06> {[ e,          E                                    ]};
+  key <AB07> {[ q,          Q                                    ]};
+  key <AB08> {[ z,          Z,          less                     ]};
+  key <AB09> {[ odiaeresis, Odiaeresis, greater                  ]};
+  key <AB10> {[ period,     comma,      slash                    ]};
+
+  key <AC01> {[ g,          G                                    ]};
+  key <AC02> {[ idotless,   I                                    ]};
+  key <AC03> {[ s,          S                                    ]};
+  key <AC04> {[ a,          A                                    ]};
+  key <AC05> {[ r,          R                                    ]};
+  key <AC06> {[ n,          N                                    ]};
+  key <AC07> {[ schwa,      SCHWA                                ]};
+  key <AC08> {[ l,          L                                    ]};
+  key <AC09> {[ i,          Iabovedot                            ]};
+  key <AC10> {[ c,          C                                    ]};
+  key <AC11> {[ gbreve,     Gbreve,     apostrophe,   quotedbl   ]};
+
+  key <AD01> {[ p,          P                                    ]};
+  key <AD02> {[ udiaeresis, Udiaeresis                           ]};
+  key <AD03> {[ scedilla,   Scedilla                             ]};
+  key <AD04> {[ u,          U                                    ]};
+  key <AD05> {[ d,          D                                    ]};
+  key <AD06> {[ b,          B                                    ]};
+  key <AD07> {[ m,          M                                    ]};
+  key <AD08> {[ y,          Y                                    ]};
+  key <AD09> {[ o,          O                                    ]};
+  key <AD10> {[ h,          H                                    ]};
+  key <AD11> {[ x,          X,          bracketleft,  braceleft  ]};
+  key <AD12> {[ j,          J,          bracketright, braceright ]};
+
+  key <AE01> {[ 1,          exclam                               ]};
+  key <AE02> {[ 2,          quotedbl,   at                       ]};
+  key <AE03> {[ 3,          numerosign                           ]};
+  key <AE04> {[ 4,          semicolon,  U20BC,        dollar     ]}; // ₼ (manat sign)
+  key <AE05> {[ 5,          percent                              ]};
+  key <AE06> {[ 6,          colon,      asciicircum              ]};
+  key <AE07> {[ 7,          question,   ampersand                ]};
+  key <AE08> {[ 8,          asterisk                             ]};
+  key <AE09> {[ 9,          parenleft                            ]};
+  key <AE10> {[ 0,          parenright                           ]};
+  key <AE11> {[ minus,      underscore                           ]};
+  key <AE12> {[ equal,      plus                                 ]};
+
+  key <BKSL> {[ backslash,  bar                                  ]};
+
+  key <TLDE> {[ numbersign, asciitilde, grave                    ]};
+
+  include "level3(ralt_switch)"
+};
+
 partial alphanumeric_keys
 xkb_symbols "cyrillic" {
 

@@ -43,24 +43,28 @@ xkb_symbols "ctrl_alt_win" {
     modifier_map Mod4 { <LCTL>, <RCTL> };
 };
 
-// Meta is mapped to the Super keys.
-partial modifier_keys
-xkb_symbols "meta_win" {
-    key <LALT> {[  Alt_L,  Alt_L  ]};
-    key <RALT> {[  Alt_R,  Alt_R  ], type[group1] = "TWO_LEVEL" };
-    key <LWIN> {[  Meta_L  ]};
-    key <RWIN> {[  Meta_R  ]};
-    modifier_map Mod1 { <LALT>, <RALT> };
-    modifier_map Mod4 { <META>, Meta_L, Meta_R };
-};
-
 // Meta is mapped to the left Super key.
 partial modifier_keys
 xkb_symbols "left_meta_win" {
     key <LALT> {[  Alt_L,  Alt_L  ]};
     key <LWIN> {[  Meta_L  ]};
-    modifier_map Mod1 { <LALT> };
-    modifier_map Mod4 { <META>, Meta_L };
+    // Clear key modifier maps and avoid encoding Meta with Mod1 via Meta_{L,R}
+    modifier_map None { <LALT>, <LWIN>, Meta_L, Meta_R };
+    include "meta(mod4)"
+};
+
+// Meta is mapped to the Super keys.
+partial modifier_keys
+xkb_symbols "meta_win" {
+    include "altwin(left_meta_win)"
+
+    // The following could be moved to a dedicated section “right_meta_win”,
+    // if deemed relevant.
+    key <RALT> {[  Alt_R,  Alt_R  ], type[group1] = "TWO_LEVEL" };
+    key <RWIN> {[  Meta_R  ]};
+    // Clear key modifier maps and avoid encoding Meta with Mod1 via Meta_{L,R}
+    modifier_map None { <RALT>, <RWIN>, Meta_L, Meta_R };
+    include "meta(mod4)"
 };
 
 // Hyper is mapped to the Super keys.

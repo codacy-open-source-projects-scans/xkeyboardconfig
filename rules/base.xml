@@ -172,6 +172,13 @@
       </configItem>
     </model>
     <model>
+        <configItem>
+            <name>blackberry-key2</name>
+            <description>BlackBerry KEY2</description>
+            <vendor>BlackBerry</vendor>
+        </configItem>
+    </model>
+    <model>
       <configItem>
         <name>brother</name>
         <description>Brother Internet</description>
@@ -1724,6 +1731,12 @@
             <description>Azerbaijani (Cyrillic)</description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>standard</name>
+            <description>Azerbaijani (standard)</description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -1835,6 +1848,12 @@
           <configItem>
             <name>phonetic</name>
             <description>Belarusian (phonetic)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>typographic</name>
+            <description>Belarusian (typo.)</description>
           </configItem>
         </variant>
         <variant>
@@ -5833,6 +5852,12 @@
         </variant>
         <variant>
           <configItem>
+            <name>thinkpad_nodeadkeys</name>
+            <description>Portuguese (Brazil, IBM/Lenovo ThinkPad, no dead keys)</description>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>nativo-epo</name>
             <description>Esperanto (Brazil, Nativo)</description>
             <languageList>
@@ -6871,6 +6896,17 @@
             </languageList>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>brahui</name>
+            <!-- Keyboard indicator for Brahui layouts -->
+            <shortDescription>brh</shortDescription>
+            <description>Brahui (Pakistan)</description>
+            <languageList>
+              <iso639Id>brh</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -7719,6 +7755,12 @@
       </option>
       <option>
         <configItem>
+          <name>caps:shift_shifted_capslock</name>
+          <description>Make Caps Lock an additional Shift and Shift + Caps Lock the regular Caps Lock</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
           <name>caps:ctrl_modifier</name>
           <description>Make Caps Lock act as an additional Ctrl modifier, but keep identifying as Caps Lock</description>
         </configItem>
@@ -8005,6 +8047,36 @@
         <configItem>
           <name>hyper:mod4</name>
           <description>Map Hyper to Mod4 (conflict with Super)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>hyper:mod5</name>
+          <description>Map Hyper to Mod5 (conflict with LevelThree)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>meta:mod2</name>
+          <description>Map Meta to Mod2 (conflict with NumLock)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>meta:mod3</name>
+          <description>Map Meta to Mod3 (conflict with LevelFive)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>meta:mod4</name>
+          <description>Map Meta to Mod4 (conflict with Super)</description>
+        </configItem>
+      </option>
+      <option>
+        <configItem>
+          <name>meta:mod5</name>
+          <description>Map Meta to Mod5 (conflict with LevelThree)</description>
         </configItem>
       </option>
       <option>

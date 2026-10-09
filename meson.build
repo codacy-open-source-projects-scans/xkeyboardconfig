@@ -1,5 +1,5 @@
 project('xkeyboard-config',
-        version: '2.47',
+        version: '2.48',
         license: 'MIT/Expat',
         meson_version: '>= 0.61.0')
 
@@ -137,8 +137,7 @@ if enable_pytest
     if get_option('compat-rules')
         pytest_args += [
             'tests',
-            '--layout-compat-config', layout_mappings,
-            '--layout-compat-config', variant_mappings,
+            '--migrations-config', migrations,
         ]
     endif
     # use pytest xdist if available, it really speeds up the tests cases

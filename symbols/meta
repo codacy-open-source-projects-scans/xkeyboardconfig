@@ -1,0 +1,21 @@
+default partial
+xkb_symbols "mod1" {
+    modifier_map Mod1 { <META> };
+};
+
+partial
+xkb_symbols "mod2" {
+    modifier_map Mod2 { <META> };
+};
+
+xkb_symbols "mod3" {
+    modifier_map Mod3 { <META> };
+};
+
+xkb_symbols "mod4" {
+    modifier_map Mod4 { <META> };
+};
+
+xkb_symbols "mod5" {
+    modifier_map Mod5 { <META> };
+};

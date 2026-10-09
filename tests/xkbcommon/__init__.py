@@ -1,5 +1,7 @@
 # SPDX-License-Identifier: MIT
 
+from __future__ import annotations
+
 import os
 from collections.abc import Iterable
 from ctypes import (
@@ -457,11 +459,13 @@ def process_key_event(
     consumed_mods = reduce(
         (lambda acc, m: acc | ModifierMask(1 << m)),
         filter(
-            lambda m: xkbcommon.xkb_state_mod_index_is_active(
-                state, m, XKB_STATE_MODS_EFFECTIVE
-            )
-            and xkbcommon.xkb_state_mod_index_is_consumed2(
-                state, keycode, m, XKB_CONSUMED_MODE_XKB
+            lambda m: (
+                xkbcommon.xkb_state_mod_index_is_active(
+                    state, m, XKB_STATE_MODS_EFFECTIVE
+                )
+                and xkbcommon.xkb_state_mod_index_is_consumed2(
+                    state, keycode, m, XKB_CONSUMED_MODE_XKB
+                )
             ),
             range(0, mods_count),
         ),

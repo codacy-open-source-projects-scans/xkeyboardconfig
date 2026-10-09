@@ -516,3 +516,66 @@ xkb_symbols "pak_urdu_phonetic" {
 
     include "level3(ralt_switch)"
 };
+
+// Brahui keyboard layout for Pakistan.
+
+partial alphanumeric_keys
+xkb_symbols "brahui" {
+    name[Group1] = "Brahui (Pakistan)";
+
+    key <AB01> { [ U0632, U0630, VoidSymbol, VoidSymbol ] }; // ز ذ
+    key <AB02> { [ U0634, U0698, VoidSymbol, VoidSymbol ] }; // ش ژ
+    key <AB03> { [ U0686, U062B, VoidSymbol, VoidSymbol ] }; // چ ث
+    key <AB04> { [ U0637, U0638, VoidSymbol, VoidSymbol ] }; // ط ظ
+    key <AB05> { [ U0628, U064B, VoidSymbol, VoidSymbol ] }; // ب ً
+    key <AB06> { [ U0646, U06BA, VoidSymbol, VoidSymbol ] }; // ن ں
+    key <AB07> { [ U0645, VoidSymbol, VoidSymbol, VoidSymbol ] }; // م
+    key <AB08> { [ U060C, U003C, U002C, VoidSymbol ] }; // ، < ,
+    key <AB09> { [ U06D4, U003E, U002E, VoidSymbol ] }; // ۔ > .
+    key <AB10> { [ U002F, U061F, U003F, VoidSymbol ] }; // / ؟ ?
+
+    key <AC01> { [ U0627, U0622, U0623, U0625 ] }; // ا آ أ إ
+    key <AC02> { [ U0633, U0635, VoidSymbol, VoidSymbol ] }; // س ص
+    key <AC03> { [ U062F, U0688, VoidSymbol, VoidSymbol ] }; // د ڈ
+    key <AC04> { [ U0641, U06A4, VoidSymbol, VoidSymbol ] }; // ف ڤ
+    key <AC05> { [ U06AF, U063A, VoidSymbol, VoidSymbol ] }; // گ غ
+    key <AC06> { [ U062D, U06BE, U0647, VoidSymbol ] }; // ح ھ ه
+    key <AC07> { [ U062C, U0636, VoidSymbol, VoidSymbol ] }; // ج ض
+    key <AC08> { [ U06A9, U062E, U0643, VoidSymbol ] }; // ک خ ك
+    key <AC09> { [ U0644, U06B7, VoidSymbol, VoidSymbol ] }; // ل ڷ
+    key <AC10> { [ U061B, U003A, U201C, U2018 ] }; // ؛ : “ ‘
+    key <AC11> { [ U0027, U0022, U201D, U2019 ] }; // ' " ” ’
+
+    key <AD01> { [ U0642, U0652, VoidSymbol, VoidSymbol ] }; // ق ْ
+    key <AD02> { [ U0648, U0651, U0624, VoidSymbol ] }; // و ّ ؤ
+    key <AD03> { [ U0639, U0670, VoidSymbol, VoidSymbol ] }; // ع ٰ
+    key <AD04> { [ U0631, U0691, VoidSymbol, VoidSymbol ] }; // ر ڑ
+    key <AD05> { [ U062A, U0679, VoidSymbol, VoidSymbol ] }; // ت ٹ
+    key <AD06> { [ U06D2, U064E, U06D3, VoidSymbol ] }; // ے َ ۓ
+    key <AD07> { [ U0626, U0621, U0654, U0655 ] }; // ئ ء ٔ ٕ
+    key <AD08> { [ U06CC, U0650, U064A, U0649 ] }; // ی ِ ي ى
+    key <AD09> { [ U06C1, U06C3, U06C2, U0629 ] }; // ہ ۃ ۂ ة
+    key <AD10> { [ U067E, U064F, VoidSymbol, VoidSymbol ] }; // پ ُ
+    key <AD11> { [ U005B, U007B, VoidSymbol, VoidSymbol ] }; // [ {
+    key <AD12> { [ U005D, U007D, VoidSymbol, VoidSymbol ] }; // ] }
+
+    key <AE01> { [ U0031, U0021, U06F1, VoidSymbol ] };
+    key <AE02> { [ U0032, U0040, U06F2, VoidSymbol ] };
+    key <AE03> { [ U0033, U0023, U06F3, VoidSymbol ] };
+    key <AE04> { [ U0034, U0024, U06F4, VoidSymbol ] };
+    key <AE05> { [ U0035, U0025, U06F5, U066A ] };
+    key <AE06> { [ U0036, U005E, U06F6, U0609 ] };
+    key <AE07> { [ U0037, U0026, U06F7, U066B ] };
+    key <AE08> { [ U0038, U002A, U06F8, U066C ] };
+    key <AE09> { [ U0039, U0029, U06F9, U2030 ] };
+    key <AE10> { [ U0030, U0028, U06F0, U2026 ] };
+    key <AE11> { [ U002D, U005F, U2011, U2013 ] };
+    key <AE12> { [ U003D, U002B, U2212, VoidSymbol ] };
+
+    key <BKSL> { [ U005C, U007C, U003B, VoidSymbol ] };
+    key <LSGT> { [ VoidSymbol, VoidSymbol, VoidSymbol, VoidSymbol ] };
+    key <SPCE> { [ U0020, U0020, U200C, U200D ] };
+    key <TLDE> { [ U064D, U064C, U0060, U007E ] };
+
+    include "level3(ralt_switch)"
+};

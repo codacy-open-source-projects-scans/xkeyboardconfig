@@ -1,0 +1,47 @@
+// https://en.wikipedia.org/wiki/BlackBerry_Key2
+
+partial alphanumeric_keys
+
+xkb_symbols "key2" {
+	key.type = "EIGHT_LEVEL";
+	// 1st row
+	key <AD01>	{ [	q,		Q,		numbersign,	none,		asciitilde] };
+	key <AD02>	{ [	w,		W,		1,		none,		grave] };
+	key <AD03>	{ [	e,		E,		2,		none,		braceleft] };
+	key <AD04>	{ [	r,		R,		3,		none,		braceright] };
+	key <AD05>	{ [	t,		T,		parenleft,	none,		bracketleft] };
+	key <AD06>	{ [	y,		Y,		parenright,	none,		bracketright] };
+	key <AD07>	{ [	u,		U,		underscore,	none,		less] };
+	key <AD08>	{ [	i,		I,		minus,          none,	        greater] };
+	key <AD09>	{ [	o,		O,		plus,           none,	        asciicircum] };
+	key <AD10>	{ [	p,		P,		at,		none,		percent] };
+
+	// 2nd row
+	key <AC01>	{ [	a,		A,		asterisk,	none,		equal] };
+	key <AC02>	{ [	s,		S,		4,		none,		division] };
+	key <AC03>	{ [	d,		D,		5,		none,		plusminus] };
+	key <AC04>	{ [	f,		F,		6,		none,		U2022] };
+	key <AC05>	{ [	g,		G,		slash,		none,		backslash] };
+	key <AC06>	{ [	h,		H,		colon,		none,		bar] };
+	key <AC07>	{ [	j,		J,		semicolon,	none,		ampersand] };
+	key <AC08>	{ [	k,		K,		apostrophe,	none,		leftdoublequotemark] };
+	key <AC09>	{ [	l,		L,		quotedbl,	none,		rightdoublequotemark] };
+
+	// 3rd row
+	key <AB01>	{ [	z,		Z,		7,		none,		U00AB] };
+	key <AB02>	{ [	x,		X,		8,		none,		U00BB] };
+	key <AB03>	{ [	c,		C,		9,		none,		trademark] };
+	key <AB04>	{ [	v,		V,		question,	none,		questiondown] };
+	key <AB05>	{ [	b,		B,		exclam,		none,		exclamdown] };
+	key <AB06>	{ [	n,		N,		comma,		none,		brokenbar] };
+	key <AB07>	{ [	m,		M,		period,		none,		U00A7] };
+	// This key has a speaker symbol on it.	 It doesn't do anything in Android AFAICT, but let's make it mute
+	key <I442>	{ [	dollar,		EuroSign,	XF86AudioMute,	none,		dollar] };
+
+	// 4th row
+	key <SPCE>	{ [	space,		space,		space,		space,		space] };
+	key <I594>	{ [	XF86Dictate,	none,		0] };
+
+	include "level3(lalt_switch)"
+	include "level5(ralt_switch)"
+};

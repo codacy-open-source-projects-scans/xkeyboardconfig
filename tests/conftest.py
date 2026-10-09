@@ -22,7 +22,7 @@ except ImportError:
 
 def pytest_addoption(parser: pytest.Parser):
     parser.addoption(
-        "--layout-compat-config",
+        "--migrations-config",
         action="append",
         default=[],
         type=Path,

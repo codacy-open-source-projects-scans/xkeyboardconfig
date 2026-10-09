@@ -3,8 +3,8 @@
 default partial alphanumeric_keys
 xkb_symbols "basic" {
 
-    // Visualisation and description: http://podziemie.net/xkb/pl
-    // Contact: Michał Górny <zrchos+freedesktop@gmail.com>
+    // Visualization and description: https://michalgorny.net/pl/polska-klawiatura
+    // Contact: Michał Górny <contact@michalgorny.net>
 
     include "latin"
 
@@ -17,7 +17,7 @@ xkb_symbols "basic" {
     key <AE05>	{ [         5,    percent,     EuroSign,     permille ]	};
     key <AE06>	{ [         6, asciicircum,     onehalf,   logicaland ]	};
     key <AE07>	{ [         7,  ampersand,      section,        U2248 ]	};
-    key <AE08>	{ [         8,   asterisk, periodcentered, threequarters ] };
+    key <AE08>	{ [         8,   asterisk,        U22C5, threequarters ] };
     key <AE09>	{ [         9,  parenleft, guillemotleft,   plusminus ]	};
     key <AE10>	{ [         0, parenright, guillemotright,     degree ]	};
     key <AE11>	{ [     minus, underscore,       endash,       emdash ]	};
@@ -43,7 +43,7 @@ xkb_symbols "basic" {
     key <AB04>	{ [         v,          V, doublelowquotemark, leftsinglequotemark ] };
     key <AB05>	{ [         b,          B, rightdoublequotemark, leftdoublequotemark ] };
     key <AB06>	{ [         n,          N,       nacute,       Nacute ]	};
-    key <AB07>	{ [         m,          M,           mu,     infinity ]	};
+    key <AB07>	{ [         m,          M,     Greek_mu,     infinity ]	};
     key <AB08>	{ [     comma,       less, lessthanequal,    multiply ]	};
     key <AB09>	{ [    period,    greater, greaterthanequal, division ]	};
 
@@ -530,6 +530,19 @@ xkb_symbols "colemak_dh" {
 
     key <LSGT> { [            z,            Z,       zabovedot,        Zabovedot ] };
     key <AB05> { [    backslash,          bar,      asciitilde,        brokenbar ] };
+};
+
+// Colemak-DH (ortholinear), Polish variant, https://colemakmods.github.io/mod-dh/
+partial alphanumeric_keys
+xkb_symbols "colemak_dh_ortho" {
+    include "pl(colemak_dh_ansi)"
+    name[Group1]= "Polish (Colemak-DH Ortholinear)";
+
+    key <AB01> { [            z,            Z,      zabovedot,         Zabovedot ] };
+    key <AB02> { [            x,            X,         zacute,            Zacute ] };
+    key <AB03> { [            c,            C,         cacute,            Cacute ] };
+    key <AB04> { [            d,            D, dead_diaeresis,        asciitilde ] };
+    key <AB05> { [            v,            V,             oe,                OE ] };
 };
 
 partial alphanumeric_keys

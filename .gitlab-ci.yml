@@ -398,8 +398,7 @@ keymap_tests:
     # Run the tests
     - pytest --junitxml=results.xml
              tests
-             --layout-compat-config rules/compat/layoutsMapping.lst
-             --layout-compat-config rules/compat/variantsMapping.lst
+             --migrations-config rules/compat/migrations.lst
   artifacts:
     reports:
       junit: results.xml

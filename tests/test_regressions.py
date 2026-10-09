@@ -16,6 +16,7 @@ from xkbcommon import (
     Control,
     Lock,
     Mod1,
+    Mod2,
     Mod3,
     Mod4,
     Mod5,
@@ -91,6 +92,7 @@ class Keymap:
     Meta: int
     Super: int
     Hyper: int
+    Num: int
     Level3: int
     Level5: int
 
@@ -112,6 +114,8 @@ class Keymap:
         self.Super = (1 << mod) if mod != xkbcommon.XKB_MOD_INVALID else 0
         mod = xkbcommon.xkb_keymap_mod_get_index(keymap, "Hyper")
         self.Hyper = (1 << mod) if mod != xkbcommon.XKB_MOD_INVALID else 0
+        mod = xkbcommon.xkb_keymap_mod_get_index(keymap, "NumLock")
+        self.Num = (1 << mod) if mod != xkbcommon.XKB_MOD_INVALID else 0
         mod = xkbcommon.xkb_keymap_mod_get_index(keymap, "LevelThree")
         self.Level3 = (1 << mod) if mod != xkbcommon.XKB_MOD_INVALID else 0
         mod = xkbcommon.xkb_keymap_mod_get_index(keymap, "LevelFive")
@@ -327,7 +331,7 @@ class TestExample:
             r = keymap.tap_and_check("AC01", "AE", level=4)
             # We can also check (real) modifiers directly
             Level3 = keymap.Level3 if keymap.has_vmod_queries else NoModifier
-            assert r.active_mods == Shift | Mod5 | Level3 == r.consumed_mods
+            assert r.active_mods == (Shift | Mod5 | Level3) == r.consumed_mods
 
 
 ###############################################################################
@@ -344,10 +348,10 @@ class TestIssue382:
         with keymap.key_down(mod_key):
             r = keymap.tap_and_check("AD01", "adiaeresis", level=3)
             Level3 = keymap.Level3 if keymap.has_vmod_queries else NoModifier
-            assert r.active_mods == Mod5 | Level3 == r.consumed_mods
+            assert r.active_mods == (Mod5 | Level3) == r.consumed_mods
             with keymap.key_down("LFSH"):
                 r = keymap.tap_and_check("AD01", "Adiaeresis", level=4)
-                assert r.active_mods == Shift | Mod5 | Level3 == r.consumed_mods
+                assert r.active_mods == (Shift | Mod5 | Level3) == r.consumed_mods
 
     def test_ShiftAlt(self, keymap: Keymap):
         """LALT+LFSH works as if there was no option"""
@@ -357,8 +361,76 @@ class TestIssue382:
             r = keymap.tap_and_check("AC10", "colon", level=2)
             Alt = keymap.Alt if keymap.has_vmod_queries else NoModifier
             Meta = keymap.Meta if keymap.has_vmod_queries else NoModifier
-            assert r.active_mods == Shift | Mod1 | Alt | Meta
+            assert r.active_mods == (Shift | Mod1 | Alt | Meta)
             assert r.consumed_mods == Shift
+
+
+# https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/issues/514
+@pytest.mark.parametrize(
+    "layout,variant,options,meta_key,meta_encoding,conflicting_mod_name",
+    [
+        # altwin:meta_win + lv3:ralt_switch
+        ("us", "colemak_dh", "altwin:meta_win,lv3:ralt_switch", "LWIN", Mod4, "Super"),
+        (
+            "us",
+            "colemak_dh",
+            "altwin:meta_win,lv3:ralt_switch,meta:mod3",
+            "LWIN",
+            Mod3,
+            "Level5",
+        ),
+        # ctrl:lctrl_meta
+        ("us", "colemak_dh", "ctrl:lctrl_meta", "LCTL", Mod4, "Super"),
+        ("us", "colemak_dh", "ctrl:lctrl_meta,meta:mod2", "LCTL", Mod2, "Num"),
+    ],
+)
+class TestIssue514:
+    def test_LevelThree(
+        self,
+        keymap: Keymap,
+        meta_key: str,
+        meta_encoding: ModifierMask,
+        conflicting_mod_name: str,
+    ):
+        """LevelThree is encoded as: Mod5"""
+        with keymap.key_down("RALT"):
+            r = keymap.tap_and_check("AD01", "adiaeresis", level=3)
+            Level3 = keymap.Level3 if keymap.has_vmod_queries else NoModifier
+            assert r.active_mods == (Mod5 | Level3) == r.consumed_mods
+
+    def test_Alt(
+        self,
+        keymap: Keymap,
+        meta_key: str,
+        meta_encoding: ModifierMask,
+        conflicting_mod_name: str,
+    ):
+        """Alt is encoded as Mod1"""
+        Alt = keymap.Alt if keymap.has_vmod_queries else NoModifier
+        with keymap.key_down("LALT"):
+            r = keymap.tap_and_check("AD01", "q", level=1)
+            assert r.active_mods == (Mod1 | Alt)
+            assert r.consumed_mods == NoModifier
+
+    def test_Meta(
+        self,
+        keymap: Keymap,
+        meta_key: str,
+        meta_encoding: ModifierMask,
+        conflicting_mod_name: str,
+    ):
+        """Meta is encoded as Mod2, Mod3 or Mod4"""
+        Meta = keymap.Meta if keymap.has_vmod_queries else NoModifier
+        # Conflicting modififier depends on the option `meta:mod*`
+        conflicting_mod = (
+            getattr(keymap, conflicting_mod_name, NoModifier)
+            if keymap.has_vmod_queries
+            else NoModifier
+        )
+        with keymap.key_down(meta_key):
+            r = keymap.tap_and_check("AD01", "q", level=1)
+            assert r.active_mods == (meta_encoding | Meta | conflicting_mod)
+            assert r.consumed_mods == NoModifier
 
 
 # https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/issues/90
@@ -444,7 +516,7 @@ class TestIssue383:
             assert r.group == 1  # only defined on first group
             r = keymap.tap_and_check(key, typo_keysym, group=group, level=3)
             Level3 = keymap.Level3 if keymap.has_vmod_queries else NoModifier
-            assert r.active_mods == Mod5 | Level3 == r.consumed_mods
+            assert r.active_mods == (Mod5 | Level3) == r.consumed_mods
 
 
 # https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config/-/issues/500
@@ -456,7 +528,7 @@ class TestIssue500:
         with keymap.key_down("AC11"):
             r = keymap.tap_and_check("AD01", "quotedbl", level=3)
             Level3 = keymap.Level3 if keymap.has_vmod_queries else NoModifier
-            assert r.active_mods == Mod5 | Level3 == r.consumed_mods
+            assert r.active_mods == (Mod5 | Level3) == r.consumed_mods
 
     def test_no_conflict(self, keymap: Keymap):
         """LevelFive and Super are independent; no Hyper mapping"""
@@ -464,12 +536,12 @@ class TestIssue500:
         with keymap.key_down("AB10"):
             r = keymap.tap_and_check("AD01", "Prior", level=5)
             Level5 = keymap.Level5 if keymap.has_vmod_queries else NoModifier
-            assert r.active_mods == Mod3 | Level5 == r.consumed_mods
+            assert r.active_mods == (Mod3 | Level5) == r.consumed_mods
         # Super
         with keymap.key_down("LWIN"):
             r = keymap.tap_and_check("AD01", "q", level=1)
             Super = keymap.Super if keymap.has_vmod_queries else NoModifier
-            assert r.active_mods == Mod4 | Super
+            assert r.active_mods == (Mod4 | Super)
             assert r.consumed_mods == 0
         # Hyper is not mapped
         with keymap.key_down("HYPR"):
@@ -492,7 +564,7 @@ class TestIssue500:
         for mod_key in (level5_key, hyper_key):
             with keymap.key_down(mod_key):
                 r = keymap.tap_and_check("AD01", "Prior", level=5)
-                assert r.active_mods == Mod3 | Level5 | Hyper == r.consumed_mods
+                assert r.active_mods == (Mod3 | Level5 | Hyper) == r.consumed_mods
         # Control
         with keymap.key_down(control_key):
             r = keymap.tap_and_check("AD01", "q", level=1)
@@ -502,7 +574,7 @@ class TestIssue500:
         with keymap.key_down("LWIN"):
             r = keymap.tap_and_check("AD01", "q", level=1)
             Super = keymap.Super if keymap.has_vmod_queries else NoModifier
-            assert r.active_mods == Mod4 | Super
+            assert r.active_mods == (Mod4 | Super)
             assert r.consumed_mods == 0
 
     @pytest.mark.parametrize(
@@ -521,7 +593,7 @@ class TestIssue500:
         with keymap.key_down("AB10"):
             r = keymap.tap_and_check("AD01", "Prior", level=5)
             Level5 = keymap.Level5 if keymap.has_vmod_queries else NoModifier
-            assert r.active_mods == Mod3 | Level5 == r.consumed_mods
+            assert r.active_mods == (Mod3 | Level5) == r.consumed_mods
         # Control
         with keymap.key_down(control_key):
             r = keymap.tap_and_check("AD01", "q", level=1)
@@ -534,7 +606,7 @@ class TestIssue500:
                 r = keymap.tap_and_check("AD01", "q", level=1)
                 Super = keymap.Super if keymap.has_vmod_queries else NoModifier
                 Hyper = keymap.Hyper if keymap.has_vmod_queries else NoModifier
-                assert r.active_mods == Mod4 | Super | Hyper
+                assert r.active_mods == (Mod4 | Super | Hyper)
                 assert r.consumed_mods == 0
 
 

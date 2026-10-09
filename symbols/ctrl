@@ -8,7 +8,9 @@ xkb_symbols "nocaps" {
 // Make the left Ctrl key a left Meta.
 xkb_symbols "lctrl_meta" {
     replace key <LCTL> { [ Meta_L ] };
-    modifier_map Mod4 { <LCTL> };
+    // Clear <LCTL> modifier map and avoid encoding Meta with Mod1 via Meta_{L,R}
+    modifier_map None { <LCTL>, Meta_L, Meta_R };
+    include "meta(mod4)"
 };
 
 // Swap the functions of the CapsLock key and the left Ctrl key.

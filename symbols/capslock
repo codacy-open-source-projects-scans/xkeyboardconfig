@@ -73,6 +73,12 @@ xkb_symbols "numlock" {
 };
 
 hidden partial modifier_keys
+xkb_symbols "shift_shifted_capslock" {
+    key <CAPS> { [  Shift_L,  Caps_Lock  ], type[group1]="ALPHABETIC" };
+    modifier_map Shift { <CAPS> };
+};
+
+hidden partial modifier_keys
 xkb_symbols "ctrl_shifted_capslock" {
     key <CAPS> {
         type[Group1] = "TWO_LEVEL",
